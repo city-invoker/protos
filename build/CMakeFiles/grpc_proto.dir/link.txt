@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../lib/libgrpc_proto.a CMakeFiles/grpc_proto.dir/protos_pkg/ggg_template_server.grpc.pb.cc.o CMakeFiles/grpc_proto.dir/protos_pkg/ggg_template_server.pb.cc.o CMakeFiles/grpc_proto.dir/protos_pkg/ggg_test_server.grpc.pb.cc.o CMakeFiles/grpc_proto.dir/protos_pkg/ggg_test_server.pb.cc.o
+/usr/bin/ranlib ../lib/libgrpc_proto.a
