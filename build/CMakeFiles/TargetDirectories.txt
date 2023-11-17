@@ -1,0 +1,3 @@
+/home/skylanwei/workspaces/ssz_project/ssz_protos/build/CMakeFiles/trpc_proto.dir
+/home/skylanwei/workspaces/ssz_project/ssz_protos/build/CMakeFiles/edit_cache.dir
+/home/skylanwei/workspaces/ssz_project/ssz_protos/build/CMakeFiles/rebuild_cache.dir
