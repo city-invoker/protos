@@ -17,35 +17,35 @@
 
 PROTOBUF_PRAGMA_INIT_SEG
 namespace ssz {
-constexpr GetAccessTokenRequest::GetAccessTokenRequest(
+constexpr GetAccessTokenReq::GetAccessTokenReq(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : code_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , appid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , uuid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , query_type_(0){}
-struct GetAccessTokenRequestDefaultTypeInternal {
-  constexpr GetAccessTokenRequestDefaultTypeInternal()
+struct GetAccessTokenReqDefaultTypeInternal {
+  constexpr GetAccessTokenReqDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GetAccessTokenRequestDefaultTypeInternal() {}
+  ~GetAccessTokenReqDefaultTypeInternal() {}
   union {
-    GetAccessTokenRequest _instance;
+    GetAccessTokenReq _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GetAccessTokenRequestDefaultTypeInternal _GetAccessTokenRequest_default_instance_;
-constexpr GetAccessTokenResponse::GetAccessTokenResponse(
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GetAccessTokenReqDefaultTypeInternal _GetAccessTokenReq_default_instance_;
+constexpr GetAccessTokenRsp::GetAccessTokenRsp(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : uuid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , access_token_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , expire_time_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
-struct GetAccessTokenResponseDefaultTypeInternal {
-  constexpr GetAccessTokenResponseDefaultTypeInternal()
+struct GetAccessTokenRspDefaultTypeInternal {
+  constexpr GetAccessTokenRspDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~GetAccessTokenResponseDefaultTypeInternal() {}
+  ~GetAccessTokenRspDefaultTypeInternal() {}
   union {
-    GetAccessTokenResponse _instance;
+    GetAccessTokenRsp _instance;
   };
 };
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GetAccessTokenResponseDefaultTypeInternal _GetAccessTokenResponse_default_instance_;
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GetAccessTokenRspDefaultTypeInternal _GetAccessTokenRsp_default_instance_;
 }  // namespace ssz
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_ssz_5fweixin_5fopen_5fserver_2eproto[2];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_ssz_5fweixin_5fopen_5fserver_2eproto = nullptr;
@@ -53,46 +53,46 @@ static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_s
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_ssz_5fweixin_5fopen_5fserver_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenReq, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenRequest, query_type_),
-  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenRequest, code_),
-  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenRequest, appid_),
-  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenRequest, uuid_),
+  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenReq, query_type_),
+  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenReq, code_),
+  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenReq, appid_),
+  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenReq, uuid_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenRsp, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenResponse, uuid_),
-  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenResponse, access_token_),
-  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenResponse, expire_time_),
+  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenRsp, uuid_),
+  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenRsp, access_token_),
+  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenRsp, expire_time_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::ssz::GetAccessTokenRequest)},
-  { 9, -1, sizeof(::ssz::GetAccessTokenResponse)},
+  { 0, -1, sizeof(::ssz::GetAccessTokenReq)},
+  { 9, -1, sizeof(::ssz::GetAccessTokenRsp)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ssz::_GetAccessTokenRequest_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ssz::_GetAccessTokenResponse_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ssz::_GetAccessTokenReq_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ssz::_GetAccessTokenRsp_default_instance_),
 };
 
 const char descriptor_table_protodef_ssz_5fweixin_5fopen_5fserver_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\034ssz_weixin_open_server.proto\022\003ssz\"V\n\025G"
-  "etAccessTokenRequest\022\022\n\nquery_type\030\001 \001(\005"
-  "\022\014\n\004code\030\002 \001(\t\022\r\n\005appid\030\003 \001(\t\022\014\n\004uuid\030\004 "
-  "\001(\t\"Q\n\026GetAccessTokenResponse\022\014\n\004uuid\030\001 "
-  "\001(\t\022\024\n\014access_token\030\002 \001(\t\022\023\n\013expire_time"
-  "\030\003 \001(\t2`\n\021WeiXinOpenService\022K\n\016GetAccess"
-  "Token\022\032.ssz.GetAccessTokenRequest\032\033.ssz."
-  "GetAccessTokenResponse\"\000b\006proto3"
+  "\n\034ssz_weixin_open_server.proto\022\003ssz\"R\n\021G"
+  "etAccessTokenReq\022\022\n\nquery_type\030\001 \001(\005\022\014\n\004"
+  "code\030\002 \001(\t\022\r\n\005appid\030\003 \001(\t\022\014\n\004uuid\030\004 \001(\t\""
+  "L\n\021GetAccessTokenRsp\022\014\n\004uuid\030\001 \001(\t\022\024\n\014ac"
+  "cess_token\030\002 \001(\t\022\023\n\013expire_time\030\003 \001(\t2^\n"
+  "\021WeiXinOpenService\022I\n\025GetAccessTokenHand"
+  "ler\022\026.ssz.GetAccessTokenReq\032\026.ssz.GetAcc"
+  "essTokenRsp\"\000b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_ssz_5fweixin_5fopen_5fserver_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ssz_5fweixin_5fopen_5fserver_2eproto = {
-  false, false, 312, descriptor_table_protodef_ssz_5fweixin_5fopen_5fserver_2eproto, "ssz_weixin_open_server.proto", 
+  false, false, 301, descriptor_table_protodef_ssz_5fweixin_5fopen_5fserver_2eproto, "ssz_weixin_open_server.proto", 
   &descriptor_table_ssz_5fweixin_5fopen_5fserver_2eproto_once, nullptr, 0, 2,
   schemas, file_default_instances, TableStruct_ssz_5fweixin_5fopen_5fserver_2eproto::offsets,
   file_level_metadata_ssz_5fweixin_5fopen_5fserver_2eproto, file_level_enum_descriptors_ssz_5fweixin_5fopen_5fserver_2eproto, file_level_service_descriptors_ssz_5fweixin_5fopen_5fserver_2eproto,
@@ -109,17 +109,17 @@ namespace ssz {
 
 // ===================================================================
 
-class GetAccessTokenRequest::_Internal {
+class GetAccessTokenReq::_Internal {
  public:
 };
 
-GetAccessTokenRequest::GetAccessTokenRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+GetAccessTokenReq::GetAccessTokenReq(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ssz.GetAccessTokenRequest)
+  // @@protoc_insertion_point(arena_constructor:ssz.GetAccessTokenReq)
 }
-GetAccessTokenRequest::GetAccessTokenRequest(const GetAccessTokenRequest& from)
+GetAccessTokenReq::GetAccessTokenReq(const GetAccessTokenReq& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   code_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -138,41 +138,41 @@ GetAccessTokenRequest::GetAccessTokenRequest(const GetAccessTokenRequest& from)
       GetArena());
   }
   query_type_ = from.query_type_;
-  // @@protoc_insertion_point(copy_constructor:ssz.GetAccessTokenRequest)
+  // @@protoc_insertion_point(copy_constructor:ssz.GetAccessTokenReq)
 }
 
-void GetAccessTokenRequest::SharedCtor() {
+void GetAccessTokenReq::SharedCtor() {
 code_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 appid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 query_type_ = 0;
 }
 
-GetAccessTokenRequest::~GetAccessTokenRequest() {
-  // @@protoc_insertion_point(destructor:ssz.GetAccessTokenRequest)
+GetAccessTokenReq::~GetAccessTokenReq() {
+  // @@protoc_insertion_point(destructor:ssz.GetAccessTokenReq)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void GetAccessTokenRequest::SharedDtor() {
+void GetAccessTokenReq::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   code_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   appid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   uuid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-void GetAccessTokenRequest::ArenaDtor(void* object) {
-  GetAccessTokenRequest* _this = reinterpret_cast< GetAccessTokenRequest* >(object);
+void GetAccessTokenReq::ArenaDtor(void* object) {
+  GetAccessTokenReq* _this = reinterpret_cast< GetAccessTokenReq* >(object);
   (void)_this;
 }
-void GetAccessTokenRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void GetAccessTokenReq::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void GetAccessTokenRequest::SetCachedSize(int size) const {
+void GetAccessTokenReq::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void GetAccessTokenRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:ssz.GetAccessTokenRequest)
+void GetAccessTokenReq::Clear() {
+// @@protoc_insertion_point(message_clear_start:ssz.GetAccessTokenReq)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -184,7 +184,7 @@ void GetAccessTokenRequest::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* GetAccessTokenRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* GetAccessTokenReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
@@ -203,7 +203,7 @@ const char* GetAccessTokenRequest::_InternalParse(const char* ptr, ::PROTOBUF_NA
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_code();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ssz.GetAccessTokenRequest.code"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ssz.GetAccessTokenReq.code"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -212,7 +212,7 @@ const char* GetAccessTokenRequest::_InternalParse(const char* ptr, ::PROTOBUF_NA
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_appid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ssz.GetAccessTokenRequest.appid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ssz.GetAccessTokenReq.appid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -221,7 +221,7 @@ const char* GetAccessTokenRequest::_InternalParse(const char* ptr, ::PROTOBUF_NA
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           auto str = _internal_mutable_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ssz.GetAccessTokenRequest.uuid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ssz.GetAccessTokenReq.uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -247,9 +247,9 @@ failure:
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* GetAccessTokenRequest::_InternalSerialize(
+::PROTOBUF_NAMESPACE_ID::uint8* GetAccessTokenReq::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ssz.GetAccessTokenRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:ssz.GetAccessTokenReq)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -264,7 +264,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_code().data(), static_cast<int>(this->_internal_code().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ssz.GetAccessTokenRequest.code");
+      "ssz.GetAccessTokenReq.code");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_code(), target);
   }
@@ -274,7 +274,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_appid().data(), static_cast<int>(this->_internal_appid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ssz.GetAccessTokenRequest.appid");
+      "ssz.GetAccessTokenReq.appid");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_appid(), target);
   }
@@ -284,7 +284,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_uuid().data(), static_cast<int>(this->_internal_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ssz.GetAccessTokenRequest.uuid");
+      "ssz.GetAccessTokenReq.uuid");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_uuid(), target);
   }
@@ -293,12 +293,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ssz.GetAccessTokenRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:ssz.GetAccessTokenReq)
   return target;
 }
 
-size_t GetAccessTokenRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ssz.GetAccessTokenRequest)
+size_t GetAccessTokenReq::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ssz.GetAccessTokenReq)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -342,23 +342,23 @@ size_t GetAccessTokenRequest::ByteSizeLong() const {
   return total_size;
 }
 
-void GetAccessTokenRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ssz.GetAccessTokenRequest)
+void GetAccessTokenReq::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:ssz.GetAccessTokenReq)
   GOOGLE_DCHECK_NE(&from, this);
-  const GetAccessTokenRequest* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GetAccessTokenRequest>(
+  const GetAccessTokenReq* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GetAccessTokenReq>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ssz.GetAccessTokenRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ssz.GetAccessTokenReq)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ssz.GetAccessTokenRequest)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:ssz.GetAccessTokenReq)
     MergeFrom(*source);
   }
 }
 
-void GetAccessTokenRequest::MergeFrom(const GetAccessTokenRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ssz.GetAccessTokenRequest)
+void GetAccessTokenReq::MergeFrom(const GetAccessTokenReq& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ssz.GetAccessTokenReq)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -378,25 +378,25 @@ void GetAccessTokenRequest::MergeFrom(const GetAccessTokenRequest& from) {
   }
 }
 
-void GetAccessTokenRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ssz.GetAccessTokenRequest)
+void GetAccessTokenReq::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:ssz.GetAccessTokenReq)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void GetAccessTokenRequest::CopyFrom(const GetAccessTokenRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ssz.GetAccessTokenRequest)
+void GetAccessTokenReq::CopyFrom(const GetAccessTokenReq& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ssz.GetAccessTokenReq)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool GetAccessTokenRequest::IsInitialized() const {
+bool GetAccessTokenReq::IsInitialized() const {
   return true;
 }
 
-void GetAccessTokenRequest::InternalSwap(GetAccessTokenRequest* other) {
+void GetAccessTokenReq::InternalSwap(GetAccessTokenReq* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   code_.Swap(&other->code_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
@@ -405,24 +405,24 @@ void GetAccessTokenRequest::InternalSwap(GetAccessTokenRequest* other) {
   swap(query_type_, other->query_type_);
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GetAccessTokenRequest::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata GetAccessTokenReq::GetMetadata() const {
   return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
-class GetAccessTokenResponse::_Internal {
+class GetAccessTokenRsp::_Internal {
  public:
 };
 
-GetAccessTokenResponse::GetAccessTokenResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+GetAccessTokenRsp::GetAccessTokenRsp(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ssz.GetAccessTokenResponse)
+  // @@protoc_insertion_point(arena_constructor:ssz.GetAccessTokenRsp)
 }
-GetAccessTokenResponse::GetAccessTokenResponse(const GetAccessTokenResponse& from)
+GetAccessTokenRsp::GetAccessTokenRsp(const GetAccessTokenRsp& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -440,40 +440,40 @@ GetAccessTokenResponse::GetAccessTokenResponse(const GetAccessTokenResponse& fro
     expire_time_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_expire_time(), 
       GetArena());
   }
-  // @@protoc_insertion_point(copy_constructor:ssz.GetAccessTokenResponse)
+  // @@protoc_insertion_point(copy_constructor:ssz.GetAccessTokenRsp)
 }
 
-void GetAccessTokenResponse::SharedCtor() {
+void GetAccessTokenRsp::SharedCtor() {
 uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 access_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 expire_time_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-GetAccessTokenResponse::~GetAccessTokenResponse() {
-  // @@protoc_insertion_point(destructor:ssz.GetAccessTokenResponse)
+GetAccessTokenRsp::~GetAccessTokenRsp() {
+  // @@protoc_insertion_point(destructor:ssz.GetAccessTokenRsp)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void GetAccessTokenResponse::SharedDtor() {
+void GetAccessTokenRsp::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   uuid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   access_token_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   expire_time_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
-void GetAccessTokenResponse::ArenaDtor(void* object) {
-  GetAccessTokenResponse* _this = reinterpret_cast< GetAccessTokenResponse* >(object);
+void GetAccessTokenRsp::ArenaDtor(void* object) {
+  GetAccessTokenRsp* _this = reinterpret_cast< GetAccessTokenRsp* >(object);
   (void)_this;
 }
-void GetAccessTokenResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+void GetAccessTokenRsp::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 }
-void GetAccessTokenResponse::SetCachedSize(int size) const {
+void GetAccessTokenRsp::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 
-void GetAccessTokenResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:ssz.GetAccessTokenResponse)
+void GetAccessTokenRsp::Clear() {
+// @@protoc_insertion_point(message_clear_start:ssz.GetAccessTokenRsp)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -484,7 +484,7 @@ void GetAccessTokenResponse::Clear() {
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* GetAccessTokenResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* GetAccessTokenRsp::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
@@ -496,7 +496,7 @@ const char* GetAccessTokenResponse::_InternalParse(const char* ptr, ::PROTOBUF_N
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ssz.GetAccessTokenResponse.uuid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ssz.GetAccessTokenRsp.uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -505,7 +505,7 @@ const char* GetAccessTokenResponse::_InternalParse(const char* ptr, ::PROTOBUF_N
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_access_token();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ssz.GetAccessTokenResponse.access_token"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ssz.GetAccessTokenRsp.access_token"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -514,7 +514,7 @@ const char* GetAccessTokenResponse::_InternalParse(const char* ptr, ::PROTOBUF_N
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_expire_time();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ssz.GetAccessTokenResponse.expire_time"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ssz.GetAccessTokenRsp.expire_time"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -540,9 +540,9 @@ failure:
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* GetAccessTokenResponse::_InternalSerialize(
+::PROTOBUF_NAMESPACE_ID::uint8* GetAccessTokenRsp::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ssz.GetAccessTokenResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:ssz.GetAccessTokenRsp)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -551,7 +551,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_uuid().data(), static_cast<int>(this->_internal_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ssz.GetAccessTokenResponse.uuid");
+      "ssz.GetAccessTokenRsp.uuid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_uuid(), target);
   }
@@ -561,7 +561,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_access_token().data(), static_cast<int>(this->_internal_access_token().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ssz.GetAccessTokenResponse.access_token");
+      "ssz.GetAccessTokenRsp.access_token");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_access_token(), target);
   }
@@ -571,7 +571,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_expire_time().data(), static_cast<int>(this->_internal_expire_time().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ssz.GetAccessTokenResponse.expire_time");
+      "ssz.GetAccessTokenRsp.expire_time");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_expire_time(), target);
   }
@@ -580,12 +580,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ssz.GetAccessTokenResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:ssz.GetAccessTokenRsp)
   return target;
 }
 
-size_t GetAccessTokenResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ssz.GetAccessTokenResponse)
+size_t GetAccessTokenRsp::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:ssz.GetAccessTokenRsp)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -622,23 +622,23 @@ size_t GetAccessTokenResponse::ByteSizeLong() const {
   return total_size;
 }
 
-void GetAccessTokenResponse::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ssz.GetAccessTokenResponse)
+void GetAccessTokenRsp::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:ssz.GetAccessTokenRsp)
   GOOGLE_DCHECK_NE(&from, this);
-  const GetAccessTokenResponse* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GetAccessTokenResponse>(
+  const GetAccessTokenRsp* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GetAccessTokenRsp>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ssz.GetAccessTokenResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ssz.GetAccessTokenRsp)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ssz.GetAccessTokenResponse)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:ssz.GetAccessTokenRsp)
     MergeFrom(*source);
   }
 }
 
-void GetAccessTokenResponse::MergeFrom(const GetAccessTokenResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ssz.GetAccessTokenResponse)
+void GetAccessTokenRsp::MergeFrom(const GetAccessTokenRsp& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:ssz.GetAccessTokenRsp)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -655,25 +655,25 @@ void GetAccessTokenResponse::MergeFrom(const GetAccessTokenResponse& from) {
   }
 }
 
-void GetAccessTokenResponse::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ssz.GetAccessTokenResponse)
+void GetAccessTokenRsp::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:ssz.GetAccessTokenRsp)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-void GetAccessTokenResponse::CopyFrom(const GetAccessTokenResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ssz.GetAccessTokenResponse)
+void GetAccessTokenRsp::CopyFrom(const GetAccessTokenRsp& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:ssz.GetAccessTokenRsp)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
-bool GetAccessTokenResponse::IsInitialized() const {
+bool GetAccessTokenRsp::IsInitialized() const {
   return true;
 }
 
-void GetAccessTokenResponse::InternalSwap(GetAccessTokenResponse* other) {
+void GetAccessTokenRsp::InternalSwap(GetAccessTokenRsp* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   uuid_.Swap(&other->uuid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
@@ -681,7 +681,7 @@ void GetAccessTokenResponse::InternalSwap(GetAccessTokenResponse* other) {
   expire_time_.Swap(&other->expire_time_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 
-::PROTOBUF_NAMESPACE_ID::Metadata GetAccessTokenResponse::GetMetadata() const {
+::PROTOBUF_NAMESPACE_ID::Metadata GetAccessTokenRsp::GetMetadata() const {
   return GetMetadataStatic();
 }
 
@@ -689,11 +689,11 @@ void GetAccessTokenResponse::InternalSwap(GetAccessTokenResponse* other) {
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace ssz
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::ssz::GetAccessTokenRequest* Arena::CreateMaybeMessage< ::ssz::GetAccessTokenRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ssz::GetAccessTokenRequest >(arena);
+template<> PROTOBUF_NOINLINE ::ssz::GetAccessTokenReq* Arena::CreateMaybeMessage< ::ssz::GetAccessTokenReq >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::ssz::GetAccessTokenReq >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ssz::GetAccessTokenResponse* Arena::CreateMaybeMessage< ::ssz::GetAccessTokenResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ssz::GetAccessTokenResponse >(arena);
+template<> PROTOBUF_NOINLINE ::ssz::GetAccessTokenRsp* Arena::CreateMaybeMessage< ::ssz::GetAccessTokenRsp >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::ssz::GetAccessTokenRsp >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

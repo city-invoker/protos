@@ -11,16 +11,16 @@
 namespace ssz {
 
 static const std::vector<std::vector<std::string_view>> WeiXinOpenService_method_names = {
-  {"/ssz.WeiXinOpenService/GetAccessToken"},
+  {"/ssz.WeiXinOpenService/GetAccessTokenHandler"},
 };
 
 WeiXinOpenService::WeiXinOpenService() {
   for (const std::string_view& method : WeiXinOpenService_method_names[0]) {
-    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::RpcMethodHandler<::ssz::GetAccessTokenRequest, ::ssz::GetAccessTokenResponse>(std::bind(&WeiXinOpenService::GetAccessToken, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3))));
+    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::RpcMethodHandler<::ssz::GetAccessTokenReq, ::ssz::GetAccessTokenRsp>(std::bind(&WeiXinOpenService::GetAccessTokenHandler, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3))));
   }
 }
 
-::trpc::Status WeiXinOpenService::GetAccessToken(::trpc::ServerContextPtr context, const ::ssz::GetAccessTokenRequest* request, ::ssz::GetAccessTokenResponse* response) {
+::trpc::Status WeiXinOpenService::GetAccessTokenHandler(::trpc::ServerContextPtr context, const ::ssz::GetAccessTokenReq* request, ::ssz::GetAccessTokenRsp* response) {
   (void)context;
   (void)request;
   (void)response;
@@ -29,32 +29,32 @@ WeiXinOpenService::WeiXinOpenService() {
 
 AsyncWeiXinOpenService::AsyncWeiXinOpenService() : ::trpc::AsyncRpcServiceImpl() {
   for (const std::string_view& method : WeiXinOpenService_method_names[0]) {
-    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::AsyncRpcMethodHandler<::ssz::GetAccessTokenRequest, ::ssz::GetAccessTokenResponse>(std::bind(&AsyncWeiXinOpenService::GetAccessToken, this, std::placeholders::_1, std::placeholders::_2))));
+    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::AsyncRpcMethodHandler<::ssz::GetAccessTokenReq, ::ssz::GetAccessTokenRsp>(std::bind(&AsyncWeiXinOpenService::GetAccessTokenHandler, this, std::placeholders::_1, std::placeholders::_2))));
   }
 }
 
-::trpc::Future<::ssz::GetAccessTokenResponse> AsyncWeiXinOpenService::GetAccessToken(const ::trpc::ServerContextPtr& context, const ::ssz::GetAccessTokenRequest* request) {
-  return ::trpc::MakeExceptionFuture<::ssz::GetAccessTokenResponse>(::trpc::CommonException("Unimplemented"));
+::trpc::Future<::ssz::GetAccessTokenRsp> AsyncWeiXinOpenService::GetAccessTokenHandler(const ::trpc::ServerContextPtr& context, const ::ssz::GetAccessTokenReq* request) {
+  return ::trpc::MakeExceptionFuture<::ssz::GetAccessTokenRsp>(::trpc::CommonException("Unimplemented"));
 }
 
-::trpc::Status WeiXinOpenServiceServiceProxy::GetAccessToken(const ::trpc::ClientContextPtr& context, const ::ssz::GetAccessTokenRequest& request, ::ssz::GetAccessTokenResponse* response) {
+::trpc::Status WeiXinOpenServiceServiceProxy::GetAccessTokenHandler(const ::trpc::ClientContextPtr& context, const ::ssz::GetAccessTokenReq& request, ::ssz::GetAccessTokenRsp* response) {
   if (context->GetFuncName().empty()) context->SetFuncName(WeiXinOpenService_method_names[0][0].data());
-  return UnaryInvoke<::ssz::GetAccessTokenRequest, ::ssz::GetAccessTokenResponse>(context, request, response);
+  return UnaryInvoke<::ssz::GetAccessTokenReq, ::ssz::GetAccessTokenRsp>(context, request, response);
 }
 
-::trpc::Future<::ssz::GetAccessTokenResponse> WeiXinOpenServiceServiceProxy::AsyncGetAccessToken(const ::trpc::ClientContextPtr& context, const ::ssz::GetAccessTokenRequest& request) {
+::trpc::Future<::ssz::GetAccessTokenRsp> WeiXinOpenServiceServiceProxy::AsyncGetAccessTokenHandler(const ::trpc::ClientContextPtr& context, const ::ssz::GetAccessTokenReq& request) {
   if (context->GetFuncName().empty()) context->SetFuncName(WeiXinOpenService_method_names[0][0].data());
-  return AsyncUnaryInvoke<::ssz::GetAccessTokenRequest, ::ssz::GetAccessTokenResponse>(context, request);
+  return AsyncUnaryInvoke<::ssz::GetAccessTokenReq, ::ssz::GetAccessTokenRsp>(context, request);
 }
 
-::trpc::Status WeiXinOpenServiceServiceProxy::GetAccessToken(const ::trpc::ClientContextPtr& context, const ::ssz::GetAccessTokenRequest& request) {
+::trpc::Status WeiXinOpenServiceServiceProxy::GetAccessTokenHandler(const ::trpc::ClientContextPtr& context, const ::ssz::GetAccessTokenReq& request) {
   if (context->GetFuncName().empty()) context->SetFuncName(WeiXinOpenService_method_names[0][0].data());
-  return OnewayInvoke<::ssz::GetAccessTokenRequest>(context, request);
+  return OnewayInvoke<::ssz::GetAccessTokenReq>(context, request);
 }
 
-::trpc::Future<::ssz::GetAccessTokenResponse> AsyncWeiXinOpenServiceServiceProxy::GetAccessToken(const ::trpc::ClientContextPtr& context, const ::ssz::GetAccessTokenRequest& request) {
+::trpc::Future<::ssz::GetAccessTokenRsp> AsyncWeiXinOpenServiceServiceProxy::GetAccessTokenHandler(const ::trpc::ClientContextPtr& context, const ::ssz::GetAccessTokenReq& request) {
   if (context->GetFuncName().empty()) context->SetFuncName(WeiXinOpenService_method_names[0][0].data());
-  return AsyncUnaryInvoke<::ssz::GetAccessTokenRequest, ::ssz::GetAccessTokenResponse>(context, request);
+  return AsyncUnaryInvoke<::ssz::GetAccessTokenReq, ::ssz::GetAccessTokenRsp>(context, request);
 }
 
 } // end namespace ssz

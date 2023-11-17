@@ -16,27 +16,27 @@ class WeiXinOpenService : public ::trpc::RpcServiceImpl {
  public:
   WeiXinOpenService();
 
-  virtual ::trpc::Status GetAccessToken(::trpc::ServerContextPtr context, const ::ssz::GetAccessTokenRequest* request, ::ssz::GetAccessTokenResponse* response);
+  virtual ::trpc::Status GetAccessTokenHandler(::trpc::ServerContextPtr context, const ::ssz::GetAccessTokenReq* request, ::ssz::GetAccessTokenRsp* response);
 };
 
 class AsyncWeiXinOpenService : public ::trpc::AsyncRpcServiceImpl {
  public:
   AsyncWeiXinOpenService();
   
-  virtual ::trpc::Future<::ssz::GetAccessTokenResponse> GetAccessToken(const ::trpc::ServerContextPtr& context, const ::ssz::GetAccessTokenRequest* request);
+  virtual ::trpc::Future<::ssz::GetAccessTokenRsp> GetAccessTokenHandler(const ::trpc::ServerContextPtr& context, const ::ssz::GetAccessTokenReq* request);
 };
 
 class WeiXinOpenServiceServiceProxy : public ::trpc::RpcServiceProxy {
  public:
-  virtual ::trpc::Status GetAccessToken(const ::trpc::ClientContextPtr& context, const ::ssz::GetAccessTokenRequest& request, ::ssz::GetAccessTokenResponse* response);
-  virtual ::trpc::Future<::ssz::GetAccessTokenResponse> AsyncGetAccessToken(const ::trpc::ClientContextPtr& context, const ::ssz::GetAccessTokenRequest& request);
+  virtual ::trpc::Status GetAccessTokenHandler(const ::trpc::ClientContextPtr& context, const ::ssz::GetAccessTokenReq& request, ::ssz::GetAccessTokenRsp* response);
+  virtual ::trpc::Future<::ssz::GetAccessTokenRsp> AsyncGetAccessTokenHandler(const ::trpc::ClientContextPtr& context, const ::ssz::GetAccessTokenReq& request);
   // oneway, only send
-  virtual ::trpc::Status GetAccessToken(const ::trpc::ClientContextPtr& context, const ::ssz::GetAccessTokenRequest& request);
+  virtual ::trpc::Status GetAccessTokenHandler(const ::trpc::ClientContextPtr& context, const ::ssz::GetAccessTokenReq& request);
 };
 
 class AsyncWeiXinOpenServiceServiceProxy : public ::trpc::RpcServiceProxy {
  public:
-  ::trpc::Future<::ssz::GetAccessTokenResponse> GetAccessToken(const ::trpc::ClientContextPtr& context, const ::ssz::GetAccessTokenRequest& request);
+  ::trpc::Future<::ssz::GetAccessTokenRsp> GetAccessTokenHandler(const ::trpc::ClientContextPtr& context, const ::ssz::GetAccessTokenReq& request);
   // TODO: one-way
 };
 

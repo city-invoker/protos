@@ -3,17 +3,17 @@ syntax = "proto3";
 package ssz;
 
 service WeiXinOpenService{
-  rpc GetAccessToken(GetAccessTokenRequest) returns (GetAccessTokenResponse) {};
+  rpc GetAccessTokenHandler(GetAccessTokenReq) returns (GetAccessTokenRsp) {};
 }
 
-message GetAccessTokenRequest {
+message GetAccessTokenReq {
   int32 query_type = 1;
   string code = 2;
   string appid = 3;
   string uuid = 4;
 }
 
-message GetAccessTokenResponse {
+message GetAccessTokenRsp {
   string uuid = 1;
   string access_token = 2;
   string expire_time = 3;   
