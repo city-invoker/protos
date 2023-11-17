@@ -1,7 +1,7 @@
 CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.o: \
- /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.pb.cc \
+ /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.pb.cc \
  /usr/include/stdc-predef.h \
- /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.pb.h \
+ /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.pb.h \
  /usr/include/c++/11/limits \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

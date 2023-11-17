@@ -1,3 +1,3 @@
 # Hashes of file build rules.
-983e433e2f2061a10a2706afba5bba59 /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.pb.cc
-23d19537b3bad0c338e6984d7730c6c4 /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.trpc.pb.cc
+f91fcbab9b656e1309df90a43c390e41 /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.pb.cc
+ad12daf62442d0f54bafd81fb9c23e22 /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.trpc.pb.cc

@@ -1,2 +1,2 @@
-/usr/bin/ar qc /home/skylanwei/workspaces/ssz_project/ssz_protos/lib/libtrpc_proto.a CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.o CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.trpc.pb.cc.o
-/usr/bin/ranlib /home/skylanwei/workspaces/ssz_project/ssz_protos/lib/libtrpc_proto.a
+/usr/bin/ar qc /home/skylanwei/workspaces/ssz_project/protos/lib/libtrpc_proto.a CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.o CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.trpc.pb.cc.o
+/usr/bin/ranlib /home/skylanwei/workspaces/ssz_project/protos/lib/libtrpc_proto.a

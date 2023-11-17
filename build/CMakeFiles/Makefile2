@@ -57,10 +57,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/skylanwei/workspaces/ssz_project/ssz_protos
+CMAKE_SOURCE_DIR = /home/skylanwei/workspaces/ssz_project/protos
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/skylanwei/workspaces/ssz_project/ssz_protos/build
+CMAKE_BINARY_DIR = /home/skylanwei/workspaces/ssz_project/protos/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -84,14 +84,14 @@ clean: CMakeFiles/trpc_proto.dir/clean
 CMakeFiles/trpc_proto.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/trpc_proto.dir/build.make CMakeFiles/trpc_proto.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/trpc_proto.dir/build.make CMakeFiles/trpc_proto.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skylanwei/workspaces/ssz_project/ssz_protos/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target trpc_proto"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/skylanwei/workspaces/ssz_project/protos/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target trpc_proto"
 .PHONY : CMakeFiles/trpc_proto.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/trpc_proto.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/skylanwei/workspaces/ssz_project/ssz_protos/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/skylanwei/workspaces/ssz_project/protos/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/trpc_proto.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/skylanwei/workspaces/ssz_project/ssz_protos/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/skylanwei/workspaces/ssz_project/protos/build/CMakeFiles 0
 .PHONY : CMakeFiles/trpc_proto.dir/rule
 
 # Convenience name for target.

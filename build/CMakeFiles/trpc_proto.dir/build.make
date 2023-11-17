@@ -56,10 +56,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/skylanwei/workspaces/ssz_project/ssz_protos
+CMAKE_SOURCE_DIR = /home/skylanwei/workspaces/ssz_project/protos
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/skylanwei/workspaces/ssz_project/ssz_protos/build
+CMAKE_BINARY_DIR = /home/skylanwei/workspaces/ssz_project/protos/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/trpc_proto.dir/depend.make
@@ -72,47 +72,47 @@ include CMakeFiles/trpc_proto.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/trpc_proto.dir/flags.make
 
-/home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.pb.cc: /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.proto
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/skylanwei/workspaces/ssz_project/ssz_protos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.pb.cc, /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.pb.h"
-	cd /home/skylanwei/workspaces/ssz_project/ssz_protos && /usr/local/trpc-cpp/trpc/bin/protoc -I /home/skylanwei/workspaces/ssz_project/ssz_protos -I /src --cpp_out=. ssz_weixin_open_server.proto
+/home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.pb.cc: /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.proto
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/skylanwei/workspaces/ssz_project/protos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.pb.cc, /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.pb.h"
+	cd /home/skylanwei/workspaces/ssz_project/protos && /usr/local/trpc-cpp/trpc/bin/protoc -I /home/skylanwei/workspaces/ssz_project/protos -I /src --cpp_out=. ssz_weixin_open_server.proto
 
-/home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.pb.h: /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.pb.cc
-	@$(CMAKE_COMMAND) -E touch_nocreate /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.pb.h
+/home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.pb.h: /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.pb.cc
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.pb.h
 
-/home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.trpc.pb.cc: /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.proto
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/skylanwei/workspaces/ssz_project/ssz_protos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.trpc.pb.cc, /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.trpc.pb.h"
-	cd /home/skylanwei/workspaces/ssz_project/ssz_protos && /usr/local/trpc-cpp/trpc/bin/protoc --plugin=protoc-gen-trpc=/usr/local/trpc-cpp/trpc/bin/trpc_cpp_plugin -I /src --trpc_out=. -I. ./ssz_weixin_open_server.proto
+/home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.trpc.pb.cc: /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.proto
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/skylanwei/workspaces/ssz_project/protos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.trpc.pb.cc, /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.trpc.pb.h"
+	cd /home/skylanwei/workspaces/ssz_project/protos && /usr/local/trpc-cpp/trpc/bin/protoc --plugin=protoc-gen-trpc=/usr/local/trpc-cpp/trpc/bin/trpc_cpp_plugin -I /src --trpc_out=. -I. ./ssz_weixin_open_server.proto
 
-/home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.trpc.pb.h: /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.trpc.pb.cc
-	@$(CMAKE_COMMAND) -E touch_nocreate /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.trpc.pb.h
+/home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.trpc.pb.h: /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.trpc.pb.cc
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.trpc.pb.h
 
 CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.o: CMakeFiles/trpc_proto.dir/flags.make
-CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.o: /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.pb.cc
+CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.o: /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.pb.cc
 CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.o: CMakeFiles/trpc_proto.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skylanwei/workspaces/ssz_project/ssz_protos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.o -MF CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.o.d -o CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.o -c /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skylanwei/workspaces/ssz_project/protos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.o -MF CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.o.d -o CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.o -c /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.pb.cc
 
 CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.pb.cc > CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.pb.cc > CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.i
 
 CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.pb.cc -o CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.pb.cc -o CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.s
 
 CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.trpc.pb.cc.o: CMakeFiles/trpc_proto.dir/flags.make
-CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.trpc.pb.cc.o: /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.trpc.pb.cc
+CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.trpc.pb.cc.o: /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.trpc.pb.cc
 CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.trpc.pb.cc.o: CMakeFiles/trpc_proto.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skylanwei/workspaces/ssz_project/ssz_protos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.trpc.pb.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.trpc.pb.cc.o -MF CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.trpc.pb.cc.o.d -o CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.trpc.pb.cc.o -c /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.trpc.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/skylanwei/workspaces/ssz_project/protos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.trpc.pb.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.trpc.pb.cc.o -MF CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.trpc.pb.cc.o.d -o CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.trpc.pb.cc.o -c /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.trpc.pb.cc
 
 CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.trpc.pb.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.trpc.pb.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.trpc.pb.cc > CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.trpc.pb.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.trpc.pb.cc > CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.trpc.pb.cc.i
 
 CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.trpc.pb.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.trpc.pb.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.trpc.pb.cc -o CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.trpc.pb.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.trpc.pb.cc -o CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.trpc.pb.cc.s
 
 # Object files for target trpc_proto
 trpc_proto_OBJECTS = \
@@ -122,26 +122,26 @@ trpc_proto_OBJECTS = \
 # External object files for target trpc_proto
 trpc_proto_EXTERNAL_OBJECTS =
 
-/home/skylanwei/workspaces/ssz_project/ssz_protos/lib/libtrpc_proto.a: CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.o
-/home/skylanwei/workspaces/ssz_project/ssz_protos/lib/libtrpc_proto.a: CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.trpc.pb.cc.o
-/home/skylanwei/workspaces/ssz_project/ssz_protos/lib/libtrpc_proto.a: CMakeFiles/trpc_proto.dir/build.make
-/home/skylanwei/workspaces/ssz_project/ssz_protos/lib/libtrpc_proto.a: CMakeFiles/trpc_proto.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/skylanwei/workspaces/ssz_project/ssz_protos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library /home/skylanwei/workspaces/ssz_project/ssz_protos/lib/libtrpc_proto.a"
+/home/skylanwei/workspaces/ssz_project/protos/lib/libtrpc_proto.a: CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.pb.cc.o
+/home/skylanwei/workspaces/ssz_project/protos/lib/libtrpc_proto.a: CMakeFiles/trpc_proto.dir/ssz_weixin_open_server.trpc.pb.cc.o
+/home/skylanwei/workspaces/ssz_project/protos/lib/libtrpc_proto.a: CMakeFiles/trpc_proto.dir/build.make
+/home/skylanwei/workspaces/ssz_project/protos/lib/libtrpc_proto.a: CMakeFiles/trpc_proto.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/skylanwei/workspaces/ssz_project/protos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library /home/skylanwei/workspaces/ssz_project/protos/lib/libtrpc_proto.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/trpc_proto.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/trpc_proto.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/trpc_proto.dir/build: /home/skylanwei/workspaces/ssz_project/ssz_protos/lib/libtrpc_proto.a
+CMakeFiles/trpc_proto.dir/build: /home/skylanwei/workspaces/ssz_project/protos/lib/libtrpc_proto.a
 .PHONY : CMakeFiles/trpc_proto.dir/build
 
 CMakeFiles/trpc_proto.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/trpc_proto.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/trpc_proto.dir/clean
 
-CMakeFiles/trpc_proto.dir/depend: /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.pb.cc
-CMakeFiles/trpc_proto.dir/depend: /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.pb.h
-CMakeFiles/trpc_proto.dir/depend: /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.trpc.pb.cc
-CMakeFiles/trpc_proto.dir/depend: /home/skylanwei/workspaces/ssz_project/ssz_protos/ssz_weixin_open_server.trpc.pb.h
-	cd /home/skylanwei/workspaces/ssz_project/ssz_protos/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/skylanwei/workspaces/ssz_project/ssz_protos /home/skylanwei/workspaces/ssz_project/ssz_protos /home/skylanwei/workspaces/ssz_project/ssz_protos/build /home/skylanwei/workspaces/ssz_project/ssz_protos/build /home/skylanwei/workspaces/ssz_project/ssz_protos/build/CMakeFiles/trpc_proto.dir/DependInfo.cmake "--color=$(COLOR)"
+CMakeFiles/trpc_proto.dir/depend: /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.pb.cc
+CMakeFiles/trpc_proto.dir/depend: /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.pb.h
+CMakeFiles/trpc_proto.dir/depend: /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.trpc.pb.cc
+CMakeFiles/trpc_proto.dir/depend: /home/skylanwei/workspaces/ssz_project/protos/ssz_weixin_open_server.trpc.pb.h
+	cd /home/skylanwei/workspaces/ssz_project/protos/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/skylanwei/workspaces/ssz_project/protos /home/skylanwei/workspaces/ssz_project/protos /home/skylanwei/workspaces/ssz_project/protos/build /home/skylanwei/workspaces/ssz_project/protos/build /home/skylanwei/workspaces/ssz_project/protos/build/CMakeFiles/trpc_proto.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/trpc_proto.dir/depend
 
