@@ -54,6 +54,7 @@ struct TableStruct_ssz_5fweixin_5fopen_5fserver_2eproto {
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ssz_5fweixin_5fopen_5fserver_2eproto;
 ::PROTOBUF_NAMESPACE_ID::Metadata descriptor_table_ssz_5fweixin_5fopen_5fserver_2eproto_metadata_getter(int index);
+namespace trpc {
 namespace ssz {
 class GetAccessTokenReq;
 struct GetAccessTokenReqDefaultTypeInternal;
@@ -62,16 +63,18 @@ class GetAccessTokenRsp;
 struct GetAccessTokenRspDefaultTypeInternal;
 extern GetAccessTokenRspDefaultTypeInternal _GetAccessTokenRsp_default_instance_;
 }  // namespace ssz
+}  // namespace trpc
 PROTOBUF_NAMESPACE_OPEN
-template<> ::ssz::GetAccessTokenReq* Arena::CreateMaybeMessage<::ssz::GetAccessTokenReq>(Arena*);
-template<> ::ssz::GetAccessTokenRsp* Arena::CreateMaybeMessage<::ssz::GetAccessTokenRsp>(Arena*);
+template<> ::trpc::ssz::GetAccessTokenReq* Arena::CreateMaybeMessage<::trpc::ssz::GetAccessTokenReq>(Arena*);
+template<> ::trpc::ssz::GetAccessTokenRsp* Arena::CreateMaybeMessage<::trpc::ssz::GetAccessTokenRsp>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
+namespace trpc {
 namespace ssz {
 
 // ===================================================================
 
 class GetAccessTokenReq PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ssz.GetAccessTokenReq) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:trpc.ssz.GetAccessTokenReq) */ {
  public:
   inline GetAccessTokenReq() : GetAccessTokenReq(nullptr) {}
   virtual ~GetAccessTokenReq();
@@ -161,7 +164,7 @@ class GetAccessTokenReq PROTOBUF_FINAL :
   void InternalSwap(GetAccessTokenReq* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ssz.GetAccessTokenReq";
+    return "trpc.ssz.GetAccessTokenReq";
   }
   protected:
   explicit GetAccessTokenReq(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -245,7 +248,7 @@ class GetAccessTokenReq PROTOBUF_FINAL :
   void _internal_set_query_type(::PROTOBUF_NAMESPACE_ID::int32 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:ssz.GetAccessTokenReq)
+  // @@protoc_insertion_point(class_scope:trpc.ssz.GetAccessTokenReq)
  private:
   class _Internal;
 
@@ -262,7 +265,7 @@ class GetAccessTokenReq PROTOBUF_FINAL :
 // -------------------------------------------------------------------
 
 class GetAccessTokenRsp PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:ssz.GetAccessTokenRsp) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:trpc.ssz.GetAccessTokenRsp) */ {
  public:
   inline GetAccessTokenRsp() : GetAccessTokenRsp(nullptr) {}
   virtual ~GetAccessTokenRsp();
@@ -352,7 +355,7 @@ class GetAccessTokenRsp PROTOBUF_FINAL :
   void InternalSwap(GetAccessTokenRsp* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "ssz.GetAccessTokenRsp";
+    return "trpc.ssz.GetAccessTokenRsp";
   }
   protected:
   explicit GetAccessTokenRsp(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -426,7 +429,7 @@ class GetAccessTokenRsp PROTOBUF_FINAL :
   std::string* _internal_mutable_expire_time();
   public:
 
-  // @@protoc_insertion_point(class_scope:ssz.GetAccessTokenRsp)
+  // @@protoc_insertion_point(class_scope:trpc.ssz.GetAccessTokenRsp)
  private:
   class _Internal;
 
@@ -458,7 +461,7 @@ inline ::PROTOBUF_NAMESPACE_ID::int32 GetAccessTokenReq::_internal_query_type() 
   return query_type_;
 }
 inline ::PROTOBUF_NAMESPACE_ID::int32 GetAccessTokenReq::query_type() const {
-  // @@protoc_insertion_point(field_get:ssz.GetAccessTokenReq.query_type)
+  // @@protoc_insertion_point(field_get:trpc.ssz.GetAccessTokenReq.query_type)
   return _internal_query_type();
 }
 inline void GetAccessTokenReq::_internal_set_query_type(::PROTOBUF_NAMESPACE_ID::int32 value) {
@@ -467,7 +470,7 @@ inline void GetAccessTokenReq::_internal_set_query_type(::PROTOBUF_NAMESPACE_ID:
 }
 inline void GetAccessTokenReq::set_query_type(::PROTOBUF_NAMESPACE_ID::int32 value) {
   _internal_set_query_type(value);
-  // @@protoc_insertion_point(field_set:ssz.GetAccessTokenReq.query_type)
+  // @@protoc_insertion_point(field_set:trpc.ssz.GetAccessTokenReq.query_type)
 }
 
 // string code = 2;
@@ -475,15 +478,15 @@ inline void GetAccessTokenReq::clear_code() {
   code_.ClearToEmpty();
 }
 inline const std::string& GetAccessTokenReq::code() const {
-  // @@protoc_insertion_point(field_get:ssz.GetAccessTokenReq.code)
+  // @@protoc_insertion_point(field_get:trpc.ssz.GetAccessTokenReq.code)
   return _internal_code();
 }
 inline void GetAccessTokenReq::set_code(const std::string& value) {
   _internal_set_code(value);
-  // @@protoc_insertion_point(field_set:ssz.GetAccessTokenReq.code)
+  // @@protoc_insertion_point(field_set:trpc.ssz.GetAccessTokenReq.code)
 }
 inline std::string* GetAccessTokenReq::mutable_code() {
-  // @@protoc_insertion_point(field_mutable:ssz.GetAccessTokenReq.code)
+  // @@protoc_insertion_point(field_mutable:trpc.ssz.GetAccessTokenReq.code)
   return _internal_mutable_code();
 }
 inline const std::string& GetAccessTokenReq::_internal_code() const {
@@ -497,27 +500,27 @@ inline void GetAccessTokenReq::set_code(std::string&& value) {
   
   code_.Set(
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ssz.GetAccessTokenReq.code)
+  // @@protoc_insertion_point(field_set_rvalue:trpc.ssz.GetAccessTokenReq.code)
 }
 inline void GetAccessTokenReq::set_code(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   code_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:ssz.GetAccessTokenReq.code)
+  // @@protoc_insertion_point(field_set_char:trpc.ssz.GetAccessTokenReq.code)
 }
 inline void GetAccessTokenReq::set_code(const char* value,
     size_t size) {
   
   code_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ssz.GetAccessTokenReq.code)
+  // @@protoc_insertion_point(field_set_pointer:trpc.ssz.GetAccessTokenReq.code)
 }
 inline std::string* GetAccessTokenReq::_internal_mutable_code() {
   
   return code_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
 }
 inline std::string* GetAccessTokenReq::release_code() {
-  // @@protoc_insertion_point(field_release:ssz.GetAccessTokenReq.code)
+  // @@protoc_insertion_point(field_release:trpc.ssz.GetAccessTokenReq.code)
   return code_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void GetAccessTokenReq::set_allocated_code(std::string* code) {
@@ -528,7 +531,7 @@ inline void GetAccessTokenReq::set_allocated_code(std::string* code) {
   }
   code_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), code,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ssz.GetAccessTokenReq.code)
+  // @@protoc_insertion_point(field_set_allocated:trpc.ssz.GetAccessTokenReq.code)
 }
 
 // string appid = 3;
@@ -536,15 +539,15 @@ inline void GetAccessTokenReq::clear_appid() {
   appid_.ClearToEmpty();
 }
 inline const std::string& GetAccessTokenReq::appid() const {
-  // @@protoc_insertion_point(field_get:ssz.GetAccessTokenReq.appid)
+  // @@protoc_insertion_point(field_get:trpc.ssz.GetAccessTokenReq.appid)
   return _internal_appid();
 }
 inline void GetAccessTokenReq::set_appid(const std::string& value) {
   _internal_set_appid(value);
-  // @@protoc_insertion_point(field_set:ssz.GetAccessTokenReq.appid)
+  // @@protoc_insertion_point(field_set:trpc.ssz.GetAccessTokenReq.appid)
 }
 inline std::string* GetAccessTokenReq::mutable_appid() {
-  // @@protoc_insertion_point(field_mutable:ssz.GetAccessTokenReq.appid)
+  // @@protoc_insertion_point(field_mutable:trpc.ssz.GetAccessTokenReq.appid)
   return _internal_mutable_appid();
 }
 inline const std::string& GetAccessTokenReq::_internal_appid() const {
@@ -558,27 +561,27 @@ inline void GetAccessTokenReq::set_appid(std::string&& value) {
   
   appid_.Set(
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ssz.GetAccessTokenReq.appid)
+  // @@protoc_insertion_point(field_set_rvalue:trpc.ssz.GetAccessTokenReq.appid)
 }
 inline void GetAccessTokenReq::set_appid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   appid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:ssz.GetAccessTokenReq.appid)
+  // @@protoc_insertion_point(field_set_char:trpc.ssz.GetAccessTokenReq.appid)
 }
 inline void GetAccessTokenReq::set_appid(const char* value,
     size_t size) {
   
   appid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ssz.GetAccessTokenReq.appid)
+  // @@protoc_insertion_point(field_set_pointer:trpc.ssz.GetAccessTokenReq.appid)
 }
 inline std::string* GetAccessTokenReq::_internal_mutable_appid() {
   
   return appid_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
 }
 inline std::string* GetAccessTokenReq::release_appid() {
-  // @@protoc_insertion_point(field_release:ssz.GetAccessTokenReq.appid)
+  // @@protoc_insertion_point(field_release:trpc.ssz.GetAccessTokenReq.appid)
   return appid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void GetAccessTokenReq::set_allocated_appid(std::string* appid) {
@@ -589,7 +592,7 @@ inline void GetAccessTokenReq::set_allocated_appid(std::string* appid) {
   }
   appid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), appid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ssz.GetAccessTokenReq.appid)
+  // @@protoc_insertion_point(field_set_allocated:trpc.ssz.GetAccessTokenReq.appid)
 }
 
 // string uuid = 4;
@@ -597,15 +600,15 @@ inline void GetAccessTokenReq::clear_uuid() {
   uuid_.ClearToEmpty();
 }
 inline const std::string& GetAccessTokenReq::uuid() const {
-  // @@protoc_insertion_point(field_get:ssz.GetAccessTokenReq.uuid)
+  // @@protoc_insertion_point(field_get:trpc.ssz.GetAccessTokenReq.uuid)
   return _internal_uuid();
 }
 inline void GetAccessTokenReq::set_uuid(const std::string& value) {
   _internal_set_uuid(value);
-  // @@protoc_insertion_point(field_set:ssz.GetAccessTokenReq.uuid)
+  // @@protoc_insertion_point(field_set:trpc.ssz.GetAccessTokenReq.uuid)
 }
 inline std::string* GetAccessTokenReq::mutable_uuid() {
-  // @@protoc_insertion_point(field_mutable:ssz.GetAccessTokenReq.uuid)
+  // @@protoc_insertion_point(field_mutable:trpc.ssz.GetAccessTokenReq.uuid)
   return _internal_mutable_uuid();
 }
 inline const std::string& GetAccessTokenReq::_internal_uuid() const {
@@ -619,27 +622,27 @@ inline void GetAccessTokenReq::set_uuid(std::string&& value) {
   
   uuid_.Set(
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ssz.GetAccessTokenReq.uuid)
+  // @@protoc_insertion_point(field_set_rvalue:trpc.ssz.GetAccessTokenReq.uuid)
 }
 inline void GetAccessTokenReq::set_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   uuid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:ssz.GetAccessTokenReq.uuid)
+  // @@protoc_insertion_point(field_set_char:trpc.ssz.GetAccessTokenReq.uuid)
 }
 inline void GetAccessTokenReq::set_uuid(const char* value,
     size_t size) {
   
   uuid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ssz.GetAccessTokenReq.uuid)
+  // @@protoc_insertion_point(field_set_pointer:trpc.ssz.GetAccessTokenReq.uuid)
 }
 inline std::string* GetAccessTokenReq::_internal_mutable_uuid() {
   
   return uuid_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
 }
 inline std::string* GetAccessTokenReq::release_uuid() {
-  // @@protoc_insertion_point(field_release:ssz.GetAccessTokenReq.uuid)
+  // @@protoc_insertion_point(field_release:trpc.ssz.GetAccessTokenReq.uuid)
   return uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void GetAccessTokenReq::set_allocated_uuid(std::string* uuid) {
@@ -650,7 +653,7 @@ inline void GetAccessTokenReq::set_allocated_uuid(std::string* uuid) {
   }
   uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), uuid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ssz.GetAccessTokenReq.uuid)
+  // @@protoc_insertion_point(field_set_allocated:trpc.ssz.GetAccessTokenReq.uuid)
 }
 
 // -------------------------------------------------------------------
@@ -662,15 +665,15 @@ inline void GetAccessTokenRsp::clear_uuid() {
   uuid_.ClearToEmpty();
 }
 inline const std::string& GetAccessTokenRsp::uuid() const {
-  // @@protoc_insertion_point(field_get:ssz.GetAccessTokenRsp.uuid)
+  // @@protoc_insertion_point(field_get:trpc.ssz.GetAccessTokenRsp.uuid)
   return _internal_uuid();
 }
 inline void GetAccessTokenRsp::set_uuid(const std::string& value) {
   _internal_set_uuid(value);
-  // @@protoc_insertion_point(field_set:ssz.GetAccessTokenRsp.uuid)
+  // @@protoc_insertion_point(field_set:trpc.ssz.GetAccessTokenRsp.uuid)
 }
 inline std::string* GetAccessTokenRsp::mutable_uuid() {
-  // @@protoc_insertion_point(field_mutable:ssz.GetAccessTokenRsp.uuid)
+  // @@protoc_insertion_point(field_mutable:trpc.ssz.GetAccessTokenRsp.uuid)
   return _internal_mutable_uuid();
 }
 inline const std::string& GetAccessTokenRsp::_internal_uuid() const {
@@ -684,27 +687,27 @@ inline void GetAccessTokenRsp::set_uuid(std::string&& value) {
   
   uuid_.Set(
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ssz.GetAccessTokenRsp.uuid)
+  // @@protoc_insertion_point(field_set_rvalue:trpc.ssz.GetAccessTokenRsp.uuid)
 }
 inline void GetAccessTokenRsp::set_uuid(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   uuid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:ssz.GetAccessTokenRsp.uuid)
+  // @@protoc_insertion_point(field_set_char:trpc.ssz.GetAccessTokenRsp.uuid)
 }
 inline void GetAccessTokenRsp::set_uuid(const char* value,
     size_t size) {
   
   uuid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ssz.GetAccessTokenRsp.uuid)
+  // @@protoc_insertion_point(field_set_pointer:trpc.ssz.GetAccessTokenRsp.uuid)
 }
 inline std::string* GetAccessTokenRsp::_internal_mutable_uuid() {
   
   return uuid_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
 }
 inline std::string* GetAccessTokenRsp::release_uuid() {
-  // @@protoc_insertion_point(field_release:ssz.GetAccessTokenRsp.uuid)
+  // @@protoc_insertion_point(field_release:trpc.ssz.GetAccessTokenRsp.uuid)
   return uuid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void GetAccessTokenRsp::set_allocated_uuid(std::string* uuid) {
@@ -715,7 +718,7 @@ inline void GetAccessTokenRsp::set_allocated_uuid(std::string* uuid) {
   }
   uuid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), uuid,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ssz.GetAccessTokenRsp.uuid)
+  // @@protoc_insertion_point(field_set_allocated:trpc.ssz.GetAccessTokenRsp.uuid)
 }
 
 // string access_token = 2;
@@ -723,15 +726,15 @@ inline void GetAccessTokenRsp::clear_access_token() {
   access_token_.ClearToEmpty();
 }
 inline const std::string& GetAccessTokenRsp::access_token() const {
-  // @@protoc_insertion_point(field_get:ssz.GetAccessTokenRsp.access_token)
+  // @@protoc_insertion_point(field_get:trpc.ssz.GetAccessTokenRsp.access_token)
   return _internal_access_token();
 }
 inline void GetAccessTokenRsp::set_access_token(const std::string& value) {
   _internal_set_access_token(value);
-  // @@protoc_insertion_point(field_set:ssz.GetAccessTokenRsp.access_token)
+  // @@protoc_insertion_point(field_set:trpc.ssz.GetAccessTokenRsp.access_token)
 }
 inline std::string* GetAccessTokenRsp::mutable_access_token() {
-  // @@protoc_insertion_point(field_mutable:ssz.GetAccessTokenRsp.access_token)
+  // @@protoc_insertion_point(field_mutable:trpc.ssz.GetAccessTokenRsp.access_token)
   return _internal_mutable_access_token();
 }
 inline const std::string& GetAccessTokenRsp::_internal_access_token() const {
@@ -745,27 +748,27 @@ inline void GetAccessTokenRsp::set_access_token(std::string&& value) {
   
   access_token_.Set(
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ssz.GetAccessTokenRsp.access_token)
+  // @@protoc_insertion_point(field_set_rvalue:trpc.ssz.GetAccessTokenRsp.access_token)
 }
 inline void GetAccessTokenRsp::set_access_token(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   access_token_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:ssz.GetAccessTokenRsp.access_token)
+  // @@protoc_insertion_point(field_set_char:trpc.ssz.GetAccessTokenRsp.access_token)
 }
 inline void GetAccessTokenRsp::set_access_token(const char* value,
     size_t size) {
   
   access_token_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ssz.GetAccessTokenRsp.access_token)
+  // @@protoc_insertion_point(field_set_pointer:trpc.ssz.GetAccessTokenRsp.access_token)
 }
 inline std::string* GetAccessTokenRsp::_internal_mutable_access_token() {
   
   return access_token_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
 }
 inline std::string* GetAccessTokenRsp::release_access_token() {
-  // @@protoc_insertion_point(field_release:ssz.GetAccessTokenRsp.access_token)
+  // @@protoc_insertion_point(field_release:trpc.ssz.GetAccessTokenRsp.access_token)
   return access_token_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void GetAccessTokenRsp::set_allocated_access_token(std::string* access_token) {
@@ -776,7 +779,7 @@ inline void GetAccessTokenRsp::set_allocated_access_token(std::string* access_to
   }
   access_token_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), access_token,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ssz.GetAccessTokenRsp.access_token)
+  // @@protoc_insertion_point(field_set_allocated:trpc.ssz.GetAccessTokenRsp.access_token)
 }
 
 // string expire_time = 3;
@@ -784,15 +787,15 @@ inline void GetAccessTokenRsp::clear_expire_time() {
   expire_time_.ClearToEmpty();
 }
 inline const std::string& GetAccessTokenRsp::expire_time() const {
-  // @@protoc_insertion_point(field_get:ssz.GetAccessTokenRsp.expire_time)
+  // @@protoc_insertion_point(field_get:trpc.ssz.GetAccessTokenRsp.expire_time)
   return _internal_expire_time();
 }
 inline void GetAccessTokenRsp::set_expire_time(const std::string& value) {
   _internal_set_expire_time(value);
-  // @@protoc_insertion_point(field_set:ssz.GetAccessTokenRsp.expire_time)
+  // @@protoc_insertion_point(field_set:trpc.ssz.GetAccessTokenRsp.expire_time)
 }
 inline std::string* GetAccessTokenRsp::mutable_expire_time() {
-  // @@protoc_insertion_point(field_mutable:ssz.GetAccessTokenRsp.expire_time)
+  // @@protoc_insertion_point(field_mutable:trpc.ssz.GetAccessTokenRsp.expire_time)
   return _internal_mutable_expire_time();
 }
 inline const std::string& GetAccessTokenRsp::_internal_expire_time() const {
@@ -806,27 +809,27 @@ inline void GetAccessTokenRsp::set_expire_time(std::string&& value) {
   
   expire_time_.Set(
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:ssz.GetAccessTokenRsp.expire_time)
+  // @@protoc_insertion_point(field_set_rvalue:trpc.ssz.GetAccessTokenRsp.expire_time)
 }
 inline void GetAccessTokenRsp::set_expire_time(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   expire_time_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:ssz.GetAccessTokenRsp.expire_time)
+  // @@protoc_insertion_point(field_set_char:trpc.ssz.GetAccessTokenRsp.expire_time)
 }
 inline void GetAccessTokenRsp::set_expire_time(const char* value,
     size_t size) {
   
   expire_time_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:ssz.GetAccessTokenRsp.expire_time)
+  // @@protoc_insertion_point(field_set_pointer:trpc.ssz.GetAccessTokenRsp.expire_time)
 }
 inline std::string* GetAccessTokenRsp::_internal_mutable_expire_time() {
   
   return expire_time_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
 }
 inline std::string* GetAccessTokenRsp::release_expire_time() {
-  // @@protoc_insertion_point(field_release:ssz.GetAccessTokenRsp.expire_time)
+  // @@protoc_insertion_point(field_release:trpc.ssz.GetAccessTokenRsp.expire_time)
   return expire_time_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 inline void GetAccessTokenRsp::set_allocated_expire_time(std::string* expire_time) {
@@ -837,7 +840,7 @@ inline void GetAccessTokenRsp::set_allocated_expire_time(std::string* expire_tim
   }
   expire_time_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), expire_time,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:ssz.GetAccessTokenRsp.expire_time)
+  // @@protoc_insertion_point(field_set_allocated:trpc.ssz.GetAccessTokenRsp.expire_time)
 }
 
 #ifdef __GNUC__
@@ -849,6 +852,7 @@ inline void GetAccessTokenRsp::set_allocated_expire_time(std::string* expire_tim
 // @@protoc_insertion_point(namespace_scope)
 
 }  // namespace ssz
+}  // namespace trpc
 
 // @@protoc_insertion_point(global_scope)
 

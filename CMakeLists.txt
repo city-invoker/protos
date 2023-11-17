@@ -24,8 +24,8 @@ set(CMAKE_BUILD_TYPE DEBUG)
 set(TRPC_INSTALL_PATH /usr/local/trpc-cpp/trpc)
 
 ## 加载tRPC-Cpp头文件及库路径
+include(${TRPC_INSTALL_PATH}/cmake/config/trpc_config.cmake)
 include_directories("${TRPC_INSTALL_PATH}/include/")
-#link_directories(${LIBRARY_INSTALL_PATHS})
 
 ## 设置proto文件桩代码生成工具的路径 - 具体使用方式见相关章节
 include(${TRPC_INSTALL_PATH}/cmake/tools/trpc_utils.cmake)
@@ -36,7 +36,7 @@ set(TRPC_CPP_PLUGIN ${TRPC_INSTALL_PATH}/bin/trpc_cpp_plugin)
 # Generated sources
 # 设置proto文件列表，可一次设置多个
 set(PB_SRCS ${CMAKE_SOURCE_DIR}/ssz_weixin_open_server.proto
-            ${CMAKE_SOURCE_DIR}/trpc_template_server.proto)
+            ${CMAKE_SOURCE_DIR}/trpc_sample_server.proto)
 
 # COMPILE_PROTO: 根据proto文件生成相应的.pb.cc和.pb.h桩代码
 # - param 1: 该参数为传出参数，表示proto生成.pb.cc文件
@@ -54,9 +54,13 @@ COMPILE_PROTO(OUT_PB_SRCS "${PB_SRCS}" ${PB_PROTOC} ${CMAKE_SOURCE_DIR})
 TRPC_COMPILE_PROTO(OUT_TRPC_PB_SRCS "${PB_SRCS}" ${PB_PROTOC} ${TRPC_CPP_PLUGIN} ${CMAKE_SOURCE_DIR})
 
 set(LIBRARY_OUTPUT_PATH "${CMAKE_SOURCE_DIR}/lib")
+#set(LIBRARY trpc ${LIBS_BASIC})
 
-add_library(trpc_proto STATIC ${OUT_PB_SRCS} ${OUT_TRPC_PB_SRCS})
-
+set(TARGET trpc_proto)
+find_library(TRPC libtrpc.a "${TRPC_INSTALL_PATH}/lib/")
+add_library(${TARGET} STATIC ${OUT_PB_SRCS} ${OUT_TRPC_PB_SRCS})
+target_link_libraries(${TARGET} ${TRPC})
+#link_directories("${TRPC_INSTALL_PATH}/lib/")
 
 
 

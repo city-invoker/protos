@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package ssz;
+package trpc.ssz;
 
 service WeiXinOpenService{
   rpc GetAccessTokenHandler(GetAccessTokenReq) returns (GetAccessTokenRsp) {};

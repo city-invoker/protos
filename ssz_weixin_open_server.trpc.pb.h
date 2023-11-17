@@ -10,34 +10,36 @@
 #include "trpc/client/rpc_service_proxy.h"
 #include "trpc/server/rpc_service_impl.h"
 
+namespace trpc {
 namespace ssz {
 
 class WeiXinOpenService : public ::trpc::RpcServiceImpl {
  public:
   WeiXinOpenService();
 
-  virtual ::trpc::Status GetAccessTokenHandler(::trpc::ServerContextPtr context, const ::ssz::GetAccessTokenReq* request, ::ssz::GetAccessTokenRsp* response);
+  virtual ::trpc::Status GetAccessTokenHandler(::trpc::ServerContextPtr context, const ::trpc::ssz::GetAccessTokenReq* request, ::trpc::ssz::GetAccessTokenRsp* response);
 };
 
 class AsyncWeiXinOpenService : public ::trpc::AsyncRpcServiceImpl {
  public:
   AsyncWeiXinOpenService();
   
-  virtual ::trpc::Future<::ssz::GetAccessTokenRsp> GetAccessTokenHandler(const ::trpc::ServerContextPtr& context, const ::ssz::GetAccessTokenReq* request);
+  virtual ::trpc::Future<::trpc::ssz::GetAccessTokenRsp> GetAccessTokenHandler(const ::trpc::ServerContextPtr& context, const ::trpc::ssz::GetAccessTokenReq* request);
 };
 
 class WeiXinOpenServiceServiceProxy : public ::trpc::RpcServiceProxy {
  public:
-  virtual ::trpc::Status GetAccessTokenHandler(const ::trpc::ClientContextPtr& context, const ::ssz::GetAccessTokenReq& request, ::ssz::GetAccessTokenRsp* response);
-  virtual ::trpc::Future<::ssz::GetAccessTokenRsp> AsyncGetAccessTokenHandler(const ::trpc::ClientContextPtr& context, const ::ssz::GetAccessTokenReq& request);
+  virtual ::trpc::Status GetAccessTokenHandler(const ::trpc::ClientContextPtr& context, const ::trpc::ssz::GetAccessTokenReq& request, ::trpc::ssz::GetAccessTokenRsp* response);
+  virtual ::trpc::Future<::trpc::ssz::GetAccessTokenRsp> AsyncGetAccessTokenHandler(const ::trpc::ClientContextPtr& context, const ::trpc::ssz::GetAccessTokenReq& request);
   // oneway, only send
-  virtual ::trpc::Status GetAccessTokenHandler(const ::trpc::ClientContextPtr& context, const ::ssz::GetAccessTokenReq& request);
+  virtual ::trpc::Status GetAccessTokenHandler(const ::trpc::ClientContextPtr& context, const ::trpc::ssz::GetAccessTokenReq& request);
 };
 
 class AsyncWeiXinOpenServiceServiceProxy : public ::trpc::RpcServiceProxy {
  public:
-  ::trpc::Future<::ssz::GetAccessTokenRsp> GetAccessTokenHandler(const ::trpc::ClientContextPtr& context, const ::ssz::GetAccessTokenReq& request);
+  ::trpc::Future<::trpc::ssz::GetAccessTokenRsp> GetAccessTokenHandler(const ::trpc::ClientContextPtr& context, const ::trpc::ssz::GetAccessTokenReq& request);
   // TODO: one-way
 };
 
 } // end namespace ssz
+} // end namespace trpc

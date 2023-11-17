@@ -16,6 +16,7 @@
 #include <google/protobuf/port_def.inc>
 
 PROTOBUF_PRAGMA_INIT_SEG
+namespace trpc {
 namespace ssz {
 constexpr GetAccessTokenReq::GetAccessTokenReq(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
@@ -47,52 +48,53 @@ struct GetAccessTokenRspDefaultTypeInternal {
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GetAccessTokenRspDefaultTypeInternal _GetAccessTokenRsp_default_instance_;
 }  // namespace ssz
+}  // namespace trpc
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_ssz_5fweixin_5fopen_5fserver_2eproto[2];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_ssz_5fweixin_5fopen_5fserver_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_ssz_5fweixin_5fopen_5fserver_2eproto = nullptr;
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_ssz_5fweixin_5fopen_5fserver_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenReq, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::trpc::ssz::GetAccessTokenReq, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenReq, query_type_),
-  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenReq, code_),
-  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenReq, appid_),
-  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenReq, uuid_),
+  PROTOBUF_FIELD_OFFSET(::trpc::ssz::GetAccessTokenReq, query_type_),
+  PROTOBUF_FIELD_OFFSET(::trpc::ssz::GetAccessTokenReq, code_),
+  PROTOBUF_FIELD_OFFSET(::trpc::ssz::GetAccessTokenReq, appid_),
+  PROTOBUF_FIELD_OFFSET(::trpc::ssz::GetAccessTokenReq, uuid_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenRsp, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::trpc::ssz::GetAccessTokenRsp, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenRsp, uuid_),
-  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenRsp, access_token_),
-  PROTOBUF_FIELD_OFFSET(::ssz::GetAccessTokenRsp, expire_time_),
+  PROTOBUF_FIELD_OFFSET(::trpc::ssz::GetAccessTokenRsp, uuid_),
+  PROTOBUF_FIELD_OFFSET(::trpc::ssz::GetAccessTokenRsp, access_token_),
+  PROTOBUF_FIELD_OFFSET(::trpc::ssz::GetAccessTokenRsp, expire_time_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::ssz::GetAccessTokenReq)},
-  { 9, -1, sizeof(::ssz::GetAccessTokenRsp)},
+  { 0, -1, sizeof(::trpc::ssz::GetAccessTokenReq)},
+  { 9, -1, sizeof(::trpc::ssz::GetAccessTokenRsp)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ssz::_GetAccessTokenReq_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::ssz::_GetAccessTokenRsp_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::trpc::ssz::_GetAccessTokenReq_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::trpc::ssz::_GetAccessTokenRsp_default_instance_),
 };
 
 const char descriptor_table_protodef_ssz_5fweixin_5fopen_5fserver_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\034ssz_weixin_open_server.proto\022\003ssz\"R\n\021G"
-  "etAccessTokenReq\022\022\n\nquery_type\030\001 \001(\005\022\014\n\004"
-  "code\030\002 \001(\t\022\r\n\005appid\030\003 \001(\t\022\014\n\004uuid\030\004 \001(\t\""
-  "L\n\021GetAccessTokenRsp\022\014\n\004uuid\030\001 \001(\t\022\024\n\014ac"
-  "cess_token\030\002 \001(\t\022\023\n\013expire_time\030\003 \001(\t2^\n"
-  "\021WeiXinOpenService\022I\n\025GetAccessTokenHand"
-  "ler\022\026.ssz.GetAccessTokenReq\032\026.ssz.GetAcc"
-  "essTokenRsp\"\000b\006proto3"
+  "\n\034ssz_weixin_open_server.proto\022\010trpc.ssz"
+  "\"R\n\021GetAccessTokenReq\022\022\n\nquery_type\030\001 \001("
+  "\005\022\014\n\004code\030\002 \001(\t\022\r\n\005appid\030\003 \001(\t\022\014\n\004uuid\030\004"
+  " \001(\t\"L\n\021GetAccessTokenRsp\022\014\n\004uuid\030\001 \001(\t\022"
+  "\024\n\014access_token\030\002 \001(\t\022\023\n\013expire_time\030\003 \001"
+  "(\t2h\n\021WeiXinOpenService\022S\n\025GetAccessToke"
+  "nHandler\022\033.trpc.ssz.GetAccessTokenReq\032\033."
+  "trpc.ssz.GetAccessTokenRsp\"\000b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_ssz_5fweixin_5fopen_5fserver_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_ssz_5fweixin_5fopen_5fserver_2eproto = {
-  false, false, 301, descriptor_table_protodef_ssz_5fweixin_5fopen_5fserver_2eproto, "ssz_weixin_open_server.proto", 
+  false, false, 316, descriptor_table_protodef_ssz_5fweixin_5fopen_5fserver_2eproto, "ssz_weixin_open_server.proto", 
   &descriptor_table_ssz_5fweixin_5fopen_5fserver_2eproto_once, nullptr, 0, 2,
   schemas, file_default_instances, TableStruct_ssz_5fweixin_5fopen_5fserver_2eproto::offsets,
   file_level_metadata_ssz_5fweixin_5fopen_5fserver_2eproto, file_level_enum_descriptors_ssz_5fweixin_5fopen_5fserver_2eproto, file_level_service_descriptors_ssz_5fweixin_5fopen_5fserver_2eproto,
@@ -105,6 +107,7 @@ descriptor_table_ssz_5fweixin_5fopen_5fserver_2eproto_metadata_getter(int index)
 
 // Force running AddDescriptors() at dynamic initialization time.
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_ssz_5fweixin_5fopen_5fserver_2eproto(&descriptor_table_ssz_5fweixin_5fopen_5fserver_2eproto);
+namespace trpc {
 namespace ssz {
 
 // ===================================================================
@@ -117,7 +120,7 @@ GetAccessTokenReq::GetAccessTokenReq(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ssz.GetAccessTokenReq)
+  // @@protoc_insertion_point(arena_constructor:trpc.ssz.GetAccessTokenReq)
 }
 GetAccessTokenReq::GetAccessTokenReq(const GetAccessTokenReq& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -138,7 +141,7 @@ GetAccessTokenReq::GetAccessTokenReq(const GetAccessTokenReq& from)
       GetArena());
   }
   query_type_ = from.query_type_;
-  // @@protoc_insertion_point(copy_constructor:ssz.GetAccessTokenReq)
+  // @@protoc_insertion_point(copy_constructor:trpc.ssz.GetAccessTokenReq)
 }
 
 void GetAccessTokenReq::SharedCtor() {
@@ -149,7 +152,7 @@ query_type_ = 0;
 }
 
 GetAccessTokenReq::~GetAccessTokenReq() {
-  // @@protoc_insertion_point(destructor:ssz.GetAccessTokenReq)
+  // @@protoc_insertion_point(destructor:trpc.ssz.GetAccessTokenReq)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -172,7 +175,7 @@ void GetAccessTokenReq::SetCachedSize(int size) const {
 }
 
 void GetAccessTokenReq::Clear() {
-// @@protoc_insertion_point(message_clear_start:ssz.GetAccessTokenReq)
+// @@protoc_insertion_point(message_clear_start:trpc.ssz.GetAccessTokenReq)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -203,7 +206,7 @@ const char* GetAccessTokenReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_code();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ssz.GetAccessTokenReq.code"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.ssz.GetAccessTokenReq.code"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -212,7 +215,7 @@ const char* GetAccessTokenReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_appid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ssz.GetAccessTokenReq.appid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.ssz.GetAccessTokenReq.appid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -221,7 +224,7 @@ const char* GetAccessTokenReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           auto str = _internal_mutable_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ssz.GetAccessTokenReq.uuid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.ssz.GetAccessTokenReq.uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -249,7 +252,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* GetAccessTokenReq::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ssz.GetAccessTokenReq)
+  // @@protoc_insertion_point(serialize_to_array_start:trpc.ssz.GetAccessTokenReq)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -264,7 +267,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_code().data(), static_cast<int>(this->_internal_code().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ssz.GetAccessTokenReq.code");
+      "trpc.ssz.GetAccessTokenReq.code");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_code(), target);
   }
@@ -274,7 +277,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_appid().data(), static_cast<int>(this->_internal_appid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ssz.GetAccessTokenReq.appid");
+      "trpc.ssz.GetAccessTokenReq.appid");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_appid(), target);
   }
@@ -284,7 +287,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_uuid().data(), static_cast<int>(this->_internal_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ssz.GetAccessTokenReq.uuid");
+      "trpc.ssz.GetAccessTokenReq.uuid");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_uuid(), target);
   }
@@ -293,12 +296,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ssz.GetAccessTokenReq)
+  // @@protoc_insertion_point(serialize_to_array_end:trpc.ssz.GetAccessTokenReq)
   return target;
 }
 
 size_t GetAccessTokenReq::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ssz.GetAccessTokenReq)
+// @@protoc_insertion_point(message_byte_size_start:trpc.ssz.GetAccessTokenReq)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -343,22 +346,22 @@ size_t GetAccessTokenReq::ByteSizeLong() const {
 }
 
 void GetAccessTokenReq::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ssz.GetAccessTokenReq)
+// @@protoc_insertion_point(generalized_merge_from_start:trpc.ssz.GetAccessTokenReq)
   GOOGLE_DCHECK_NE(&from, this);
   const GetAccessTokenReq* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GetAccessTokenReq>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ssz.GetAccessTokenReq)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:trpc.ssz.GetAccessTokenReq)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ssz.GetAccessTokenReq)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:trpc.ssz.GetAccessTokenReq)
     MergeFrom(*source);
   }
 }
 
 void GetAccessTokenReq::MergeFrom(const GetAccessTokenReq& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ssz.GetAccessTokenReq)
+// @@protoc_insertion_point(class_specific_merge_from_start:trpc.ssz.GetAccessTokenReq)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -379,14 +382,14 @@ void GetAccessTokenReq::MergeFrom(const GetAccessTokenReq& from) {
 }
 
 void GetAccessTokenReq::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ssz.GetAccessTokenReq)
+// @@protoc_insertion_point(generalized_copy_from_start:trpc.ssz.GetAccessTokenReq)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void GetAccessTokenReq::CopyFrom(const GetAccessTokenReq& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ssz.GetAccessTokenReq)
+// @@protoc_insertion_point(class_specific_copy_from_start:trpc.ssz.GetAccessTokenReq)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -420,7 +423,7 @@ GetAccessTokenRsp::GetAccessTokenRsp(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:ssz.GetAccessTokenRsp)
+  // @@protoc_insertion_point(arena_constructor:trpc.ssz.GetAccessTokenRsp)
 }
 GetAccessTokenRsp::GetAccessTokenRsp(const GetAccessTokenRsp& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -440,7 +443,7 @@ GetAccessTokenRsp::GetAccessTokenRsp(const GetAccessTokenRsp& from)
     expire_time_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_expire_time(), 
       GetArena());
   }
-  // @@protoc_insertion_point(copy_constructor:ssz.GetAccessTokenRsp)
+  // @@protoc_insertion_point(copy_constructor:trpc.ssz.GetAccessTokenRsp)
 }
 
 void GetAccessTokenRsp::SharedCtor() {
@@ -450,7 +453,7 @@ expire_time_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyString
 }
 
 GetAccessTokenRsp::~GetAccessTokenRsp() {
-  // @@protoc_insertion_point(destructor:ssz.GetAccessTokenRsp)
+  // @@protoc_insertion_point(destructor:trpc.ssz.GetAccessTokenRsp)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -473,7 +476,7 @@ void GetAccessTokenRsp::SetCachedSize(int size) const {
 }
 
 void GetAccessTokenRsp::Clear() {
-// @@protoc_insertion_point(message_clear_start:ssz.GetAccessTokenRsp)
+// @@protoc_insertion_point(message_clear_start:trpc.ssz.GetAccessTokenRsp)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -496,7 +499,7 @@ const char* GetAccessTokenRsp::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ssz.GetAccessTokenRsp.uuid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.ssz.GetAccessTokenRsp.uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -505,7 +508,7 @@ const char* GetAccessTokenRsp::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_access_token();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ssz.GetAccessTokenRsp.access_token"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.ssz.GetAccessTokenRsp.access_token"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -514,7 +517,7 @@ const char* GetAccessTokenRsp::_InternalParse(const char* ptr, ::PROTOBUF_NAMESP
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_expire_time();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "ssz.GetAccessTokenRsp.expire_time"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.ssz.GetAccessTokenRsp.expire_time"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -542,7 +545,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* GetAccessTokenRsp::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:ssz.GetAccessTokenRsp)
+  // @@protoc_insertion_point(serialize_to_array_start:trpc.ssz.GetAccessTokenRsp)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -551,7 +554,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_uuid().data(), static_cast<int>(this->_internal_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ssz.GetAccessTokenRsp.uuid");
+      "trpc.ssz.GetAccessTokenRsp.uuid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_uuid(), target);
   }
@@ -561,7 +564,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_access_token().data(), static_cast<int>(this->_internal_access_token().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ssz.GetAccessTokenRsp.access_token");
+      "trpc.ssz.GetAccessTokenRsp.access_token");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_access_token(), target);
   }
@@ -571,7 +574,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_expire_time().data(), static_cast<int>(this->_internal_expire_time().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "ssz.GetAccessTokenRsp.expire_time");
+      "trpc.ssz.GetAccessTokenRsp.expire_time");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_expire_time(), target);
   }
@@ -580,12 +583,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:ssz.GetAccessTokenRsp)
+  // @@protoc_insertion_point(serialize_to_array_end:trpc.ssz.GetAccessTokenRsp)
   return target;
 }
 
 size_t GetAccessTokenRsp::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:ssz.GetAccessTokenRsp)
+// @@protoc_insertion_point(message_byte_size_start:trpc.ssz.GetAccessTokenRsp)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -623,22 +626,22 @@ size_t GetAccessTokenRsp::ByteSizeLong() const {
 }
 
 void GetAccessTokenRsp::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:ssz.GetAccessTokenRsp)
+// @@protoc_insertion_point(generalized_merge_from_start:trpc.ssz.GetAccessTokenRsp)
   GOOGLE_DCHECK_NE(&from, this);
   const GetAccessTokenRsp* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GetAccessTokenRsp>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:ssz.GetAccessTokenRsp)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:trpc.ssz.GetAccessTokenRsp)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:ssz.GetAccessTokenRsp)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:trpc.ssz.GetAccessTokenRsp)
     MergeFrom(*source);
   }
 }
 
 void GetAccessTokenRsp::MergeFrom(const GetAccessTokenRsp& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:ssz.GetAccessTokenRsp)
+// @@protoc_insertion_point(class_specific_merge_from_start:trpc.ssz.GetAccessTokenRsp)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -656,14 +659,14 @@ void GetAccessTokenRsp::MergeFrom(const GetAccessTokenRsp& from) {
 }
 
 void GetAccessTokenRsp::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:ssz.GetAccessTokenRsp)
+// @@protoc_insertion_point(generalized_copy_from_start:trpc.ssz.GetAccessTokenRsp)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void GetAccessTokenRsp::CopyFrom(const GetAccessTokenRsp& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:ssz.GetAccessTokenRsp)
+// @@protoc_insertion_point(class_specific_copy_from_start:trpc.ssz.GetAccessTokenRsp)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -688,12 +691,13 @@ void GetAccessTokenRsp::InternalSwap(GetAccessTokenRsp* other) {
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace ssz
+}  // namespace trpc
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::ssz::GetAccessTokenReq* Arena::CreateMaybeMessage< ::ssz::GetAccessTokenReq >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ssz::GetAccessTokenReq >(arena);
+template<> PROTOBUF_NOINLINE ::trpc::ssz::GetAccessTokenReq* Arena::CreateMaybeMessage< ::trpc::ssz::GetAccessTokenReq >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::trpc::ssz::GetAccessTokenReq >(arena);
 }
-template<> PROTOBUF_NOINLINE ::ssz::GetAccessTokenRsp* Arena::CreateMaybeMessage< ::ssz::GetAccessTokenRsp >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::ssz::GetAccessTokenRsp >(arena);
+template<> PROTOBUF_NOINLINE ::trpc::ssz::GetAccessTokenRsp* Arena::CreateMaybeMessage< ::trpc::ssz::GetAccessTokenRsp >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::trpc::ssz::GetAccessTokenRsp >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 
