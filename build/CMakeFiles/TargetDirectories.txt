@@ -1,3 +1,0 @@
-/home/skylanwei/workspaces/ggg_project/protos/build/CMakeFiles/grpc_proto.dir
-/home/skylanwei/workspaces/ggg_project/protos/build/CMakeFiles/edit_cache.dir
-/home/skylanwei/workspaces/ggg_project/protos/build/CMakeFiles/rebuild_cache.dir
