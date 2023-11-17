@@ -32,11 +32,8 @@ include(${TRPC_INSTALL_PATH}/cmake/tools/trpc_utils.cmake)
 set(PB_PROTOC ${TRPC_INSTALL_PATH}/bin/protoc)
 set(TRPC_CPP_PLUGIN ${TRPC_INSTALL_PATH}/bin/trpc_cpp_plugin)
 
-
 # Generated sources
-# 设置proto文件列表，可一次设置多个
-set(PB_SRCS ${CMAKE_SOURCE_DIR}/ssz_weixin_open_server.proto
-            ${CMAKE_SOURCE_DIR}/trpc_sample_server.proto)
+file(GLOB PB_SRCS LIST_DIRECTORIES TRUE  "*.proto")
 
 # COMPILE_PROTO: 根据proto文件生成相应的.pb.cc和.pb.h桩代码
 # - param 1: 该参数为传出参数，表示proto生成.pb.cc文件

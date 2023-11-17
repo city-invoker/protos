@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+
+package trpc.sample;
+
+service TrpcTemplateService{
+  rpc TrpcTemplateHandler(TrpcTemplateReq) returns (TrpcTemplateRsp) {};
+}
+
+message TrpcTemplateReq {
+  int32 query_type = 1;
+  string code = 2;
+  string appid = 3;
+  string msg = 4;
+}
+
+message TrpcTemplateRsp {
+  string uuid = 1;
+  string spid = 2;
+  string msg = 3;   
+}
+
+
