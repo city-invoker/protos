@@ -5,6 +5,7 @@ package trpc.sample;
 
 service TrpcTemplateService{
   rpc TrpcTemplateHandler(TrpcTemplateReq) returns (TrpcTemplateRsp) {};
+  rpc TrpcQueryUserHandler(TrpcQueryUserReq) returns (TrpcQueryUserRsp) {};
 }
 
 message TrpcTemplateReq {
@@ -20,4 +21,13 @@ message TrpcTemplateRsp {
   string msg = 3;   
 }
 
+message TrpcQueryUserReq {
+  string uid = 1;
+  string seesion_id = 2;
+}
 
+message TrpcQueryUserRsp {
+  string uid = 1;
+  string seesion_id = 2;
+  string msg = 3;   
+}

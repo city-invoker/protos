@@ -18,6 +18,7 @@ class TrpcTemplateService : public ::trpc::RpcServiceImpl {
   TrpcTemplateService();
 
   virtual ::trpc::Status TrpcTemplateHandler(::trpc::ServerContextPtr context, const ::trpc::sample::TrpcTemplateReq* request, ::trpc::sample::TrpcTemplateRsp* response);
+  virtual ::trpc::Status TrpcQueryUserHandler(::trpc::ServerContextPtr context, const ::trpc::sample::TrpcQueryUserReq* request, ::trpc::sample::TrpcQueryUserRsp* response);
 };
 
 class AsyncTrpcTemplateService : public ::trpc::AsyncRpcServiceImpl {
@@ -25,6 +26,7 @@ class AsyncTrpcTemplateService : public ::trpc::AsyncRpcServiceImpl {
   AsyncTrpcTemplateService();
   
   virtual ::trpc::Future<::trpc::sample::TrpcTemplateRsp> TrpcTemplateHandler(const ::trpc::ServerContextPtr& context, const ::trpc::sample::TrpcTemplateReq* request);
+  virtual ::trpc::Future<::trpc::sample::TrpcQueryUserRsp> TrpcQueryUserHandler(const ::trpc::ServerContextPtr& context, const ::trpc::sample::TrpcQueryUserReq* request);
 };
 
 class TrpcTemplateServiceServiceProxy : public ::trpc::RpcServiceProxy {
@@ -33,11 +35,17 @@ class TrpcTemplateServiceServiceProxy : public ::trpc::RpcServiceProxy {
   virtual ::trpc::Future<::trpc::sample::TrpcTemplateRsp> AsyncTrpcTemplateHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcTemplateReq& request);
   // oneway, only send
   virtual ::trpc::Status TrpcTemplateHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcTemplateReq& request);
+  virtual ::trpc::Status TrpcQueryUserHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcQueryUserReq& request, ::trpc::sample::TrpcQueryUserRsp* response);
+  virtual ::trpc::Future<::trpc::sample::TrpcQueryUserRsp> AsyncTrpcQueryUserHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcQueryUserReq& request);
+  // oneway, only send
+  virtual ::trpc::Status TrpcQueryUserHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcQueryUserReq& request);
 };
 
 class AsyncTrpcTemplateServiceServiceProxy : public ::trpc::RpcServiceProxy {
  public:
   ::trpc::Future<::trpc::sample::TrpcTemplateRsp> TrpcTemplateHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcTemplateReq& request);
+  // TODO: one-way
+  ::trpc::Future<::trpc::sample::TrpcQueryUserRsp> TrpcQueryUserHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcQueryUserReq& request);
   // TODO: one-way
 };
 

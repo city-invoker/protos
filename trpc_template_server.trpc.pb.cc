@@ -13,11 +13,15 @@ namespace sample {
 
 static const std::vector<std::vector<std::string_view>> TrpcTemplateService_method_names = {
   {"/trpc.sample.TrpcTemplateService/TrpcTemplateHandler"},
+  {"/trpc.sample.TrpcTemplateService/TrpcQueryUserHandler"},
 };
 
 TrpcTemplateService::TrpcTemplateService() {
   for (const std::string_view& method : TrpcTemplateService_method_names[0]) {
     AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::RpcMethodHandler<::trpc::sample::TrpcTemplateReq, ::trpc::sample::TrpcTemplateRsp>(std::bind(&TrpcTemplateService::TrpcTemplateHandler, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3))));
+  }
+  for (const std::string_view& method : TrpcTemplateService_method_names[1]) {
+    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::RpcMethodHandler<::trpc::sample::TrpcQueryUserReq, ::trpc::sample::TrpcQueryUserRsp>(std::bind(&TrpcTemplateService::TrpcQueryUserHandler, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3))));
   }
 }
 
@@ -28,9 +32,19 @@ TrpcTemplateService::TrpcTemplateService() {
   return ::trpc::Status(-1, "");
 }
 
+::trpc::Status TrpcTemplateService::TrpcQueryUserHandler(::trpc::ServerContextPtr context, const ::trpc::sample::TrpcQueryUserReq* request, ::trpc::sample::TrpcQueryUserRsp* response) {
+  (void)context;
+  (void)request;
+  (void)response;
+  return ::trpc::Status(-1, "");
+}
+
 AsyncTrpcTemplateService::AsyncTrpcTemplateService() : ::trpc::AsyncRpcServiceImpl() {
   for (const std::string_view& method : TrpcTemplateService_method_names[0]) {
     AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::AsyncRpcMethodHandler<::trpc::sample::TrpcTemplateReq, ::trpc::sample::TrpcTemplateRsp>(std::bind(&AsyncTrpcTemplateService::TrpcTemplateHandler, this, std::placeholders::_1, std::placeholders::_2))));
+  }
+  for (const std::string_view& method : TrpcTemplateService_method_names[1]) {
+    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::AsyncRpcMethodHandler<::trpc::sample::TrpcQueryUserReq, ::trpc::sample::TrpcQueryUserRsp>(std::bind(&AsyncTrpcTemplateService::TrpcQueryUserHandler, this, std::placeholders::_1, std::placeholders::_2))));
   }
 }
 
@@ -38,9 +52,18 @@ AsyncTrpcTemplateService::AsyncTrpcTemplateService() : ::trpc::AsyncRpcServiceIm
   return ::trpc::MakeExceptionFuture<::trpc::sample::TrpcTemplateRsp>(::trpc::CommonException("Unimplemented"));
 }
 
+::trpc::Future<::trpc::sample::TrpcQueryUserRsp> AsyncTrpcTemplateService::TrpcQueryUserHandler(const ::trpc::ServerContextPtr& context, const ::trpc::sample::TrpcQueryUserReq* request) {
+  return ::trpc::MakeExceptionFuture<::trpc::sample::TrpcQueryUserRsp>(::trpc::CommonException("Unimplemented"));
+}
+
 ::trpc::Status TrpcTemplateServiceServiceProxy::TrpcTemplateHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcTemplateReq& request, ::trpc::sample::TrpcTemplateRsp* response) {
   if (context->GetFuncName().empty()) context->SetFuncName(TrpcTemplateService_method_names[0][0].data());
   return UnaryInvoke<::trpc::sample::TrpcTemplateReq, ::trpc::sample::TrpcTemplateRsp>(context, request, response);
+}
+
+::trpc::Status TrpcTemplateServiceServiceProxy::TrpcQueryUserHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcQueryUserReq& request, ::trpc::sample::TrpcQueryUserRsp* response) {
+  if (context->GetFuncName().empty()) context->SetFuncName(TrpcTemplateService_method_names[1][0].data());
+  return UnaryInvoke<::trpc::sample::TrpcQueryUserReq, ::trpc::sample::TrpcQueryUserRsp>(context, request, response);
 }
 
 ::trpc::Future<::trpc::sample::TrpcTemplateRsp> TrpcTemplateServiceServiceProxy::AsyncTrpcTemplateHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcTemplateReq& request) {
@@ -48,14 +71,29 @@ AsyncTrpcTemplateService::AsyncTrpcTemplateService() : ::trpc::AsyncRpcServiceIm
   return AsyncUnaryInvoke<::trpc::sample::TrpcTemplateReq, ::trpc::sample::TrpcTemplateRsp>(context, request);
 }
 
+::trpc::Future<::trpc::sample::TrpcQueryUserRsp> TrpcTemplateServiceServiceProxy::AsyncTrpcQueryUserHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcQueryUserReq& request) {
+  if (context->GetFuncName().empty()) context->SetFuncName(TrpcTemplateService_method_names[1][0].data());
+  return AsyncUnaryInvoke<::trpc::sample::TrpcQueryUserReq, ::trpc::sample::TrpcQueryUserRsp>(context, request);
+}
+
 ::trpc::Status TrpcTemplateServiceServiceProxy::TrpcTemplateHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcTemplateReq& request) {
   if (context->GetFuncName().empty()) context->SetFuncName(TrpcTemplateService_method_names[0][0].data());
   return OnewayInvoke<::trpc::sample::TrpcTemplateReq>(context, request);
 }
 
+::trpc::Status TrpcTemplateServiceServiceProxy::TrpcQueryUserHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcQueryUserReq& request) {
+  if (context->GetFuncName().empty()) context->SetFuncName(TrpcTemplateService_method_names[1][0].data());
+  return OnewayInvoke<::trpc::sample::TrpcQueryUserReq>(context, request);
+}
+
 ::trpc::Future<::trpc::sample::TrpcTemplateRsp> AsyncTrpcTemplateServiceServiceProxy::TrpcTemplateHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcTemplateReq& request) {
   if (context->GetFuncName().empty()) context->SetFuncName(TrpcTemplateService_method_names[0][0].data());
   return AsyncUnaryInvoke<::trpc::sample::TrpcTemplateReq, ::trpc::sample::TrpcTemplateRsp>(context, request);
+}
+
+::trpc::Future<::trpc::sample::TrpcQueryUserRsp> AsyncTrpcTemplateServiceServiceProxy::TrpcQueryUserHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcQueryUserReq& request) {
+  if (context->GetFuncName().empty()) context->SetFuncName(TrpcTemplateService_method_names[1][0].data());
+  return AsyncUnaryInvoke<::trpc::sample::TrpcQueryUserReq, ::trpc::sample::TrpcQueryUserRsp>(context, request);
 }
 
 } // end namespace sample

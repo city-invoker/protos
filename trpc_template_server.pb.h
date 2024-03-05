@@ -46,7 +46,7 @@ struct TableStruct_trpc_5ftemplate_5fserver_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[2]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[4]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -56,6 +56,12 @@ extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table
 ::PROTOBUF_NAMESPACE_ID::Metadata descriptor_table_trpc_5ftemplate_5fserver_2eproto_metadata_getter(int index);
 namespace trpc {
 namespace sample {
+class TrpcQueryUserReq;
+struct TrpcQueryUserReqDefaultTypeInternal;
+extern TrpcQueryUserReqDefaultTypeInternal _TrpcQueryUserReq_default_instance_;
+class TrpcQueryUserRsp;
+struct TrpcQueryUserRspDefaultTypeInternal;
+extern TrpcQueryUserRspDefaultTypeInternal _TrpcQueryUserRsp_default_instance_;
 class TrpcTemplateReq;
 struct TrpcTemplateReqDefaultTypeInternal;
 extern TrpcTemplateReqDefaultTypeInternal _TrpcTemplateReq_default_instance_;
@@ -65,6 +71,8 @@ extern TrpcTemplateRspDefaultTypeInternal _TrpcTemplateRsp_default_instance_;
 }  // namespace sample
 }  // namespace trpc
 PROTOBUF_NAMESPACE_OPEN
+template<> ::trpc::sample::TrpcQueryUserReq* Arena::CreateMaybeMessage<::trpc::sample::TrpcQueryUserReq>(Arena*);
+template<> ::trpc::sample::TrpcQueryUserRsp* Arena::CreateMaybeMessage<::trpc::sample::TrpcQueryUserRsp>(Arena*);
 template<> ::trpc::sample::TrpcTemplateReq* Arena::CreateMaybeMessage<::trpc::sample::TrpcTemplateReq>(Arena*);
 template<> ::trpc::sample::TrpcTemplateRsp* Arena::CreateMaybeMessage<::trpc::sample::TrpcTemplateRsp>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
@@ -438,6 +446,348 @@ class TrpcTemplateRsp PROTOBUF_FINAL :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr uuid_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr spid_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr msg_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_trpc_5ftemplate_5fserver_2eproto;
+};
+// -------------------------------------------------------------------
+
+class TrpcQueryUserReq PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:trpc.sample.TrpcQueryUserReq) */ {
+ public:
+  inline TrpcQueryUserReq() : TrpcQueryUserReq(nullptr) {}
+  virtual ~TrpcQueryUserReq();
+  explicit constexpr TrpcQueryUserReq(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  TrpcQueryUserReq(const TrpcQueryUserReq& from);
+  TrpcQueryUserReq(TrpcQueryUserReq&& from) noexcept
+    : TrpcQueryUserReq() {
+    *this = ::std::move(from);
+  }
+
+  inline TrpcQueryUserReq& operator=(const TrpcQueryUserReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline TrpcQueryUserReq& operator=(TrpcQueryUserReq&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const TrpcQueryUserReq& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const TrpcQueryUserReq* internal_default_instance() {
+    return reinterpret_cast<const TrpcQueryUserReq*>(
+               &_TrpcQueryUserReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    2;
+
+  friend void swap(TrpcQueryUserReq& a, TrpcQueryUserReq& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(TrpcQueryUserReq* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(TrpcQueryUserReq* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline TrpcQueryUserReq* New() const final {
+    return CreateMaybeMessage<TrpcQueryUserReq>(nullptr);
+  }
+
+  TrpcQueryUserReq* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<TrpcQueryUserReq>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const TrpcQueryUserReq& from);
+  void MergeFrom(const TrpcQueryUserReq& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(TrpcQueryUserReq* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "trpc.sample.TrpcQueryUserReq";
+  }
+  protected:
+  explicit TrpcQueryUserReq(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    return ::descriptor_table_trpc_5ftemplate_5fserver_2eproto_metadata_getter(kIndexInFileMessages);
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kUidFieldNumber = 1,
+    kSeesionIdFieldNumber = 2,
+  };
+  // string uid = 1;
+  void clear_uid();
+  const std::string& uid() const;
+  void set_uid(const std::string& value);
+  void set_uid(std::string&& value);
+  void set_uid(const char* value);
+  void set_uid(const char* value, size_t size);
+  std::string* mutable_uid();
+  std::string* release_uid();
+  void set_allocated_uid(std::string* uid);
+  private:
+  const std::string& _internal_uid() const;
+  void _internal_set_uid(const std::string& value);
+  std::string* _internal_mutable_uid();
+  public:
+
+  // string seesion_id = 2;
+  void clear_seesion_id();
+  const std::string& seesion_id() const;
+  void set_seesion_id(const std::string& value);
+  void set_seesion_id(std::string&& value);
+  void set_seesion_id(const char* value);
+  void set_seesion_id(const char* value, size_t size);
+  std::string* mutable_seesion_id();
+  std::string* release_seesion_id();
+  void set_allocated_seesion_id(std::string* seesion_id);
+  private:
+  const std::string& _internal_seesion_id() const;
+  void _internal_set_seesion_id(const std::string& value);
+  std::string* _internal_mutable_seesion_id();
+  public:
+
+  // @@protoc_insertion_point(class_scope:trpc.sample.TrpcQueryUserReq)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr uid_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr seesion_id_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_trpc_5ftemplate_5fserver_2eproto;
+};
+// -------------------------------------------------------------------
+
+class TrpcQueryUserRsp PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:trpc.sample.TrpcQueryUserRsp) */ {
+ public:
+  inline TrpcQueryUserRsp() : TrpcQueryUserRsp(nullptr) {}
+  virtual ~TrpcQueryUserRsp();
+  explicit constexpr TrpcQueryUserRsp(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  TrpcQueryUserRsp(const TrpcQueryUserRsp& from);
+  TrpcQueryUserRsp(TrpcQueryUserRsp&& from) noexcept
+    : TrpcQueryUserRsp() {
+    *this = ::std::move(from);
+  }
+
+  inline TrpcQueryUserRsp& operator=(const TrpcQueryUserRsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline TrpcQueryUserRsp& operator=(TrpcQueryUserRsp&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const TrpcQueryUserRsp& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const TrpcQueryUserRsp* internal_default_instance() {
+    return reinterpret_cast<const TrpcQueryUserRsp*>(
+               &_TrpcQueryUserRsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    3;
+
+  friend void swap(TrpcQueryUserRsp& a, TrpcQueryUserRsp& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(TrpcQueryUserRsp* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(TrpcQueryUserRsp* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline TrpcQueryUserRsp* New() const final {
+    return CreateMaybeMessage<TrpcQueryUserRsp>(nullptr);
+  }
+
+  TrpcQueryUserRsp* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<TrpcQueryUserRsp>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const TrpcQueryUserRsp& from);
+  void MergeFrom(const TrpcQueryUserRsp& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(TrpcQueryUserRsp* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "trpc.sample.TrpcQueryUserRsp";
+  }
+  protected:
+  explicit TrpcQueryUserRsp(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    return ::descriptor_table_trpc_5ftemplate_5fserver_2eproto_metadata_getter(kIndexInFileMessages);
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kUidFieldNumber = 1,
+    kSeesionIdFieldNumber = 2,
+    kMsgFieldNumber = 3,
+  };
+  // string uid = 1;
+  void clear_uid();
+  const std::string& uid() const;
+  void set_uid(const std::string& value);
+  void set_uid(std::string&& value);
+  void set_uid(const char* value);
+  void set_uid(const char* value, size_t size);
+  std::string* mutable_uid();
+  std::string* release_uid();
+  void set_allocated_uid(std::string* uid);
+  private:
+  const std::string& _internal_uid() const;
+  void _internal_set_uid(const std::string& value);
+  std::string* _internal_mutable_uid();
+  public:
+
+  // string seesion_id = 2;
+  void clear_seesion_id();
+  const std::string& seesion_id() const;
+  void set_seesion_id(const std::string& value);
+  void set_seesion_id(std::string&& value);
+  void set_seesion_id(const char* value);
+  void set_seesion_id(const char* value, size_t size);
+  std::string* mutable_seesion_id();
+  std::string* release_seesion_id();
+  void set_allocated_seesion_id(std::string* seesion_id);
+  private:
+  const std::string& _internal_seesion_id() const;
+  void _internal_set_seesion_id(const std::string& value);
+  std::string* _internal_mutable_seesion_id();
+  public:
+
+  // string msg = 3;
+  void clear_msg();
+  const std::string& msg() const;
+  void set_msg(const std::string& value);
+  void set_msg(std::string&& value);
+  void set_msg(const char* value);
+  void set_msg(const char* value, size_t size);
+  std::string* mutable_msg();
+  std::string* release_msg();
+  void set_allocated_msg(std::string* msg);
+  private:
+  const std::string& _internal_msg() const;
+  void _internal_set_msg(const std::string& value);
+  std::string* _internal_mutable_msg();
+  public:
+
+  // @@protoc_insertion_point(class_scope:trpc.sample.TrpcQueryUserRsp)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr uid_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr seesion_id_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr msg_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_trpc_5ftemplate_5fserver_2eproto;
@@ -843,9 +1193,326 @@ inline void TrpcTemplateRsp::set_allocated_msg(std::string* msg) {
   // @@protoc_insertion_point(field_set_allocated:trpc.sample.TrpcTemplateRsp.msg)
 }
 
+// -------------------------------------------------------------------
+
+// TrpcQueryUserReq
+
+// string uid = 1;
+inline void TrpcQueryUserReq::clear_uid() {
+  uid_.ClearToEmpty();
+}
+inline const std::string& TrpcQueryUserReq::uid() const {
+  // @@protoc_insertion_point(field_get:trpc.sample.TrpcQueryUserReq.uid)
+  return _internal_uid();
+}
+inline void TrpcQueryUserReq::set_uid(const std::string& value) {
+  _internal_set_uid(value);
+  // @@protoc_insertion_point(field_set:trpc.sample.TrpcQueryUserReq.uid)
+}
+inline std::string* TrpcQueryUserReq::mutable_uid() {
+  // @@protoc_insertion_point(field_mutable:trpc.sample.TrpcQueryUserReq.uid)
+  return _internal_mutable_uid();
+}
+inline const std::string& TrpcQueryUserReq::_internal_uid() const {
+  return uid_.Get();
+}
+inline void TrpcQueryUserReq::_internal_set_uid(const std::string& value) {
+  
+  uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void TrpcQueryUserReq::set_uid(std::string&& value) {
+  
+  uid_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:trpc.sample.TrpcQueryUserReq.uid)
+}
+inline void TrpcQueryUserReq::set_uid(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:trpc.sample.TrpcQueryUserReq.uid)
+}
+inline void TrpcQueryUserReq::set_uid(const char* value,
+    size_t size) {
+  
+  uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:trpc.sample.TrpcQueryUserReq.uid)
+}
+inline std::string* TrpcQueryUserReq::_internal_mutable_uid() {
+  
+  return uid_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* TrpcQueryUserReq::release_uid() {
+  // @@protoc_insertion_point(field_release:trpc.sample.TrpcQueryUserReq.uid)
+  return uid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void TrpcQueryUserReq::set_allocated_uid(std::string* uid) {
+  if (uid != nullptr) {
+    
+  } else {
+    
+  }
+  uid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), uid,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:trpc.sample.TrpcQueryUserReq.uid)
+}
+
+// string seesion_id = 2;
+inline void TrpcQueryUserReq::clear_seesion_id() {
+  seesion_id_.ClearToEmpty();
+}
+inline const std::string& TrpcQueryUserReq::seesion_id() const {
+  // @@protoc_insertion_point(field_get:trpc.sample.TrpcQueryUserReq.seesion_id)
+  return _internal_seesion_id();
+}
+inline void TrpcQueryUserReq::set_seesion_id(const std::string& value) {
+  _internal_set_seesion_id(value);
+  // @@protoc_insertion_point(field_set:trpc.sample.TrpcQueryUserReq.seesion_id)
+}
+inline std::string* TrpcQueryUserReq::mutable_seesion_id() {
+  // @@protoc_insertion_point(field_mutable:trpc.sample.TrpcQueryUserReq.seesion_id)
+  return _internal_mutable_seesion_id();
+}
+inline const std::string& TrpcQueryUserReq::_internal_seesion_id() const {
+  return seesion_id_.Get();
+}
+inline void TrpcQueryUserReq::_internal_set_seesion_id(const std::string& value) {
+  
+  seesion_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void TrpcQueryUserReq::set_seesion_id(std::string&& value) {
+  
+  seesion_id_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:trpc.sample.TrpcQueryUserReq.seesion_id)
+}
+inline void TrpcQueryUserReq::set_seesion_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  seesion_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:trpc.sample.TrpcQueryUserReq.seesion_id)
+}
+inline void TrpcQueryUserReq::set_seesion_id(const char* value,
+    size_t size) {
+  
+  seesion_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:trpc.sample.TrpcQueryUserReq.seesion_id)
+}
+inline std::string* TrpcQueryUserReq::_internal_mutable_seesion_id() {
+  
+  return seesion_id_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* TrpcQueryUserReq::release_seesion_id() {
+  // @@protoc_insertion_point(field_release:trpc.sample.TrpcQueryUserReq.seesion_id)
+  return seesion_id_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void TrpcQueryUserReq::set_allocated_seesion_id(std::string* seesion_id) {
+  if (seesion_id != nullptr) {
+    
+  } else {
+    
+  }
+  seesion_id_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), seesion_id,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:trpc.sample.TrpcQueryUserReq.seesion_id)
+}
+
+// -------------------------------------------------------------------
+
+// TrpcQueryUserRsp
+
+// string uid = 1;
+inline void TrpcQueryUserRsp::clear_uid() {
+  uid_.ClearToEmpty();
+}
+inline const std::string& TrpcQueryUserRsp::uid() const {
+  // @@protoc_insertion_point(field_get:trpc.sample.TrpcQueryUserRsp.uid)
+  return _internal_uid();
+}
+inline void TrpcQueryUserRsp::set_uid(const std::string& value) {
+  _internal_set_uid(value);
+  // @@protoc_insertion_point(field_set:trpc.sample.TrpcQueryUserRsp.uid)
+}
+inline std::string* TrpcQueryUserRsp::mutable_uid() {
+  // @@protoc_insertion_point(field_mutable:trpc.sample.TrpcQueryUserRsp.uid)
+  return _internal_mutable_uid();
+}
+inline const std::string& TrpcQueryUserRsp::_internal_uid() const {
+  return uid_.Get();
+}
+inline void TrpcQueryUserRsp::_internal_set_uid(const std::string& value) {
+  
+  uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void TrpcQueryUserRsp::set_uid(std::string&& value) {
+  
+  uid_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:trpc.sample.TrpcQueryUserRsp.uid)
+}
+inline void TrpcQueryUserRsp::set_uid(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:trpc.sample.TrpcQueryUserRsp.uid)
+}
+inline void TrpcQueryUserRsp::set_uid(const char* value,
+    size_t size) {
+  
+  uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:trpc.sample.TrpcQueryUserRsp.uid)
+}
+inline std::string* TrpcQueryUserRsp::_internal_mutable_uid() {
+  
+  return uid_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* TrpcQueryUserRsp::release_uid() {
+  // @@protoc_insertion_point(field_release:trpc.sample.TrpcQueryUserRsp.uid)
+  return uid_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void TrpcQueryUserRsp::set_allocated_uid(std::string* uid) {
+  if (uid != nullptr) {
+    
+  } else {
+    
+  }
+  uid_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), uid,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:trpc.sample.TrpcQueryUserRsp.uid)
+}
+
+// string seesion_id = 2;
+inline void TrpcQueryUserRsp::clear_seesion_id() {
+  seesion_id_.ClearToEmpty();
+}
+inline const std::string& TrpcQueryUserRsp::seesion_id() const {
+  // @@protoc_insertion_point(field_get:trpc.sample.TrpcQueryUserRsp.seesion_id)
+  return _internal_seesion_id();
+}
+inline void TrpcQueryUserRsp::set_seesion_id(const std::string& value) {
+  _internal_set_seesion_id(value);
+  // @@protoc_insertion_point(field_set:trpc.sample.TrpcQueryUserRsp.seesion_id)
+}
+inline std::string* TrpcQueryUserRsp::mutable_seesion_id() {
+  // @@protoc_insertion_point(field_mutable:trpc.sample.TrpcQueryUserRsp.seesion_id)
+  return _internal_mutable_seesion_id();
+}
+inline const std::string& TrpcQueryUserRsp::_internal_seesion_id() const {
+  return seesion_id_.Get();
+}
+inline void TrpcQueryUserRsp::_internal_set_seesion_id(const std::string& value) {
+  
+  seesion_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void TrpcQueryUserRsp::set_seesion_id(std::string&& value) {
+  
+  seesion_id_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:trpc.sample.TrpcQueryUserRsp.seesion_id)
+}
+inline void TrpcQueryUserRsp::set_seesion_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  seesion_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:trpc.sample.TrpcQueryUserRsp.seesion_id)
+}
+inline void TrpcQueryUserRsp::set_seesion_id(const char* value,
+    size_t size) {
+  
+  seesion_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:trpc.sample.TrpcQueryUserRsp.seesion_id)
+}
+inline std::string* TrpcQueryUserRsp::_internal_mutable_seesion_id() {
+  
+  return seesion_id_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* TrpcQueryUserRsp::release_seesion_id() {
+  // @@protoc_insertion_point(field_release:trpc.sample.TrpcQueryUserRsp.seesion_id)
+  return seesion_id_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void TrpcQueryUserRsp::set_allocated_seesion_id(std::string* seesion_id) {
+  if (seesion_id != nullptr) {
+    
+  } else {
+    
+  }
+  seesion_id_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), seesion_id,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:trpc.sample.TrpcQueryUserRsp.seesion_id)
+}
+
+// string msg = 3;
+inline void TrpcQueryUserRsp::clear_msg() {
+  msg_.ClearToEmpty();
+}
+inline const std::string& TrpcQueryUserRsp::msg() const {
+  // @@protoc_insertion_point(field_get:trpc.sample.TrpcQueryUserRsp.msg)
+  return _internal_msg();
+}
+inline void TrpcQueryUserRsp::set_msg(const std::string& value) {
+  _internal_set_msg(value);
+  // @@protoc_insertion_point(field_set:trpc.sample.TrpcQueryUserRsp.msg)
+}
+inline std::string* TrpcQueryUserRsp::mutable_msg() {
+  // @@protoc_insertion_point(field_mutable:trpc.sample.TrpcQueryUserRsp.msg)
+  return _internal_mutable_msg();
+}
+inline const std::string& TrpcQueryUserRsp::_internal_msg() const {
+  return msg_.Get();
+}
+inline void TrpcQueryUserRsp::_internal_set_msg(const std::string& value) {
+  
+  msg_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void TrpcQueryUserRsp::set_msg(std::string&& value) {
+  
+  msg_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:trpc.sample.TrpcQueryUserRsp.msg)
+}
+inline void TrpcQueryUserRsp::set_msg(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  msg_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:trpc.sample.TrpcQueryUserRsp.msg)
+}
+inline void TrpcQueryUserRsp::set_msg(const char* value,
+    size_t size) {
+  
+  msg_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:trpc.sample.TrpcQueryUserRsp.msg)
+}
+inline std::string* TrpcQueryUserRsp::_internal_mutable_msg() {
+  
+  return msg_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* TrpcQueryUserRsp::release_msg() {
+  // @@protoc_insertion_point(field_release:trpc.sample.TrpcQueryUserRsp.msg)
+  return msg_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void TrpcQueryUserRsp::set_allocated_msg(std::string* msg) {
+  if (msg != nullptr) {
+    
+  } else {
+    
+  }
+  msg_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), msg,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:trpc.sample.TrpcQueryUserRsp.msg)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 
