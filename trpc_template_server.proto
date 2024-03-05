@@ -9,25 +9,25 @@ service TrpcTemplateService{
 }
 
 message TrpcTemplateReq {
-  int32 query_type = 1;
-  string code = 2;
-  string appid = 3;
-  string msg = 4;
+  optional int32 query_type = 1;
+  optional string code = 2;
+  optional string appid = 3;
+  optional string msg = 4;
 }
 
 message TrpcTemplateRsp {
-  string uuid = 1;
-  string spid = 2;
-  string msg = 3;   
+  optional string uuid = 1;
+  optional string spid = 2;
+  optional string msg = 3;   
 }
 
 message TrpcQueryUserReq {
-  string uid = 1;
-  string seesion_id = 2;
+  optional string uid = 1;
+  optional string seesion_id = 2;
 }
 
 message TrpcQueryUserRsp {
-  string uid = 1;
-  string seesion_id = 2;
-  string msg = 3;   
+  optional string uid = 1;
+  optional string seesion_id = 2;
+  optional string msg = 3;   
 }

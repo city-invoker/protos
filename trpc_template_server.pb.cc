@@ -81,7 +81,7 @@ static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_trpc_5ftemplate_5fserver_2eproto = nullptr;
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_trpc_5ftemplate_5fserver_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcTemplateReq, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcTemplateReq, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -90,7 +90,11 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_trpc_5ftemplate_5fserver_2epro
   PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcTemplateReq, code_),
   PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcTemplateReq, appid_),
   PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcTemplateReq, msg_),
-  ~0u,  // no _has_bits_
+  3,
+  0,
+  1,
+  2,
+  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcTemplateRsp, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcTemplateRsp, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -98,14 +102,19 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_trpc_5ftemplate_5fserver_2epro
   PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcTemplateRsp, uuid_),
   PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcTemplateRsp, spid_),
   PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcTemplateRsp, msg_),
-  ~0u,  // no _has_bits_
+  0,
+  1,
+  2,
+  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserReq, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserReq, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserReq, uid_),
   PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserReq, seesion_id_),
-  ~0u,  // no _has_bits_
+  0,
+  1,
+  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserRsp, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserRsp, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -113,12 +122,15 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_trpc_5ftemplate_5fserver_2epro
   PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserRsp, uid_),
   PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserRsp, seesion_id_),
   PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserRsp, msg_),
+  0,
+  1,
+  2,
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::trpc::sample::TrpcTemplateReq)},
-  { 9, -1, sizeof(::trpc::sample::TrpcTemplateRsp)},
-  { 17, -1, sizeof(::trpc::sample::TrpcQueryUserReq)},
-  { 24, -1, sizeof(::trpc::sample::TrpcQueryUserRsp)},
+  { 0, 9, sizeof(::trpc::sample::TrpcTemplateReq)},
+  { 13, 21, sizeof(::trpc::sample::TrpcTemplateRsp)},
+  { 24, 31, sizeof(::trpc::sample::TrpcQueryUserReq)},
+  { 33, 41, sizeof(::trpc::sample::TrpcQueryUserRsp)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -130,22 +142,27 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 
 const char descriptor_table_protodef_trpc_5ftemplate_5fserver_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\032trpc_template_server.proto\022\013trpc.sampl"
-  "e\"O\n\017TrpcTemplateReq\022\022\n\nquery_type\030\001 \001(\005"
-  "\022\014\n\004code\030\002 \001(\t\022\r\n\005appid\030\003 \001(\t\022\013\n\003msg\030\004 \001"
-  "(\t\":\n\017TrpcTemplateRsp\022\014\n\004uuid\030\001 \001(\t\022\014\n\004s"
-  "pid\030\002 \001(\t\022\013\n\003msg\030\003 \001(\t\"3\n\020TrpcQueryUserR"
-  "eq\022\013\n\003uid\030\001 \001(\t\022\022\n\nseesion_id\030\002 \001(\t\"@\n\020T"
-  "rpcQueryUserRsp\022\013\n\003uid\030\001 \001(\t\022\022\n\nseesion_"
-  "id\030\002 \001(\t\022\013\n\003msg\030\003 \001(\t2\302\001\n\023TrpcTemplateSe"
-  "rvice\022S\n\023TrpcTemplateHandler\022\034.trpc.samp"
-  "le.TrpcTemplateReq\032\034.trpc.sample.TrpcTem"
-  "plateRsp\"\000\022V\n\024TrpcQueryUserHandler\022\035.trp"
-  "c.sample.TrpcQueryUserReq\032\035.trpc.sample."
-  "TrpcQueryUserRsp\"\000b\006proto3"
+  "e\"\215\001\n\017TrpcTemplateReq\022\027\n\nquery_type\030\001 \001("
+  "\005H\000\210\001\001\022\021\n\004code\030\002 \001(\tH\001\210\001\001\022\022\n\005appid\030\003 \001(\t"
+  "H\002\210\001\001\022\020\n\003msg\030\004 \001(\tH\003\210\001\001B\r\n\013_query_typeB\007"
+  "\n\005_codeB\010\n\006_appidB\006\n\004_msg\"c\n\017TrpcTemplat"
+  "eRsp\022\021\n\004uuid\030\001 \001(\tH\000\210\001\001\022\021\n\004spid\030\002 \001(\tH\001\210"
+  "\001\001\022\020\n\003msg\030\003 \001(\tH\002\210\001\001B\007\n\005_uuidB\007\n\005_spidB\006"
+  "\n\004_msg\"T\n\020TrpcQueryUserReq\022\020\n\003uid\030\001 \001(\tH"
+  "\000\210\001\001\022\027\n\nseesion_id\030\002 \001(\tH\001\210\001\001B\006\n\004_uidB\r\n"
+  "\013_seesion_id\"n\n\020TrpcQueryUserRsp\022\020\n\003uid\030"
+  "\001 \001(\tH\000\210\001\001\022\027\n\nseesion_id\030\002 \001(\tH\001\210\001\001\022\020\n\003m"
+  "sg\030\003 \001(\tH\002\210\001\001B\006\n\004_uidB\r\n\013_seesion_idB\006\n\004"
+  "_msg2\302\001\n\023TrpcTemplateService\022S\n\023TrpcTemp"
+  "lateHandler\022\034.trpc.sample.TrpcTemplateRe"
+  "q\032\034.trpc.sample.TrpcTemplateRsp\"\000\022V\n\024Trp"
+  "cQueryUserHandler\022\035.trpc.sample.TrpcQuer"
+  "yUserReq\032\035.trpc.sample.TrpcQueryUserRsp\""
+  "\000b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_trpc_5ftemplate_5fserver_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_trpc_5ftemplate_5fserver_2eproto = {
-  false, false, 506, descriptor_table_protodef_trpc_5ftemplate_5fserver_2eproto, "trpc_template_server.proto", 
+  false, false, 689, descriptor_table_protodef_trpc_5ftemplate_5fserver_2eproto, "trpc_template_server.proto", 
   &descriptor_table_trpc_5ftemplate_5fserver_2eproto_once, nullptr, 0, 4,
   schemas, file_default_instances, TableStruct_trpc_5ftemplate_5fserver_2eproto::offsets,
   file_level_metadata_trpc_5ftemplate_5fserver_2eproto, file_level_enum_descriptors_trpc_5ftemplate_5fserver_2eproto, file_level_service_descriptors_trpc_5ftemplate_5fserver_2eproto,
@@ -165,6 +182,19 @@ namespace sample {
 
 class TrpcTemplateReq::_Internal {
  public:
+  using HasBits = decltype(std::declval<TrpcTemplateReq>()._has_bits_);
+  static void set_has_query_type(HasBits* has_bits) {
+    (*has_bits)[0] |= 8u;
+  }
+  static void set_has_code(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_appid(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_msg(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
 };
 
 TrpcTemplateReq::TrpcTemplateReq(::PROTOBUF_NAMESPACE_ID::Arena* arena)
@@ -174,20 +204,21 @@ TrpcTemplateReq::TrpcTemplateReq(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   // @@protoc_insertion_point(arena_constructor:trpc.sample.TrpcTemplateReq)
 }
 TrpcTemplateReq::TrpcTemplateReq(const TrpcTemplateReq& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   code_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_code().empty()) {
+  if (from._internal_has_code()) {
     code_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_code(), 
       GetArena());
   }
   appid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_appid().empty()) {
+  if (from._internal_has_appid()) {
     appid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_appid(), 
       GetArena());
   }
   msg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_msg().empty()) {
+  if (from._internal_has_msg()) {
     msg_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_msg(), 
       GetArena());
   }
@@ -231,15 +262,26 @@ void TrpcTemplateReq::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  code_.ClearToEmpty();
-  appid_.ClearToEmpty();
-  msg_.ClearToEmpty();
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      code_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      appid_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      msg_.ClearNonDefaultToEmpty();
+    }
+  }
   query_type_ = 0;
+  _has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* TrpcTemplateReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -248,6 +290,7 @@ const char* TrpcTemplateReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
       // int32 query_type = 1;
       case 1:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          _Internal::set_has_query_type(&has_bits);
           query_type_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
@@ -294,6 +337,7 @@ const char* TrpcTemplateReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
     }  // switch
   }  // while
 success:
+  _has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -308,13 +352,13 @@ failure:
   (void) cached_has_bits;
 
   // int32 query_type = 1;
-  if (this->query_type() != 0) {
+  if (_internal_has_query_type()) {
     target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_query_type(), target);
   }
 
   // string code = 2;
-  if (this->code().size() > 0) {
+  if (_internal_has_code()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_code().data(), static_cast<int>(this->_internal_code().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -324,7 +368,7 @@ failure:
   }
 
   // string appid = 3;
-  if (this->appid().size() > 0) {
+  if (_internal_has_appid()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_appid().data(), static_cast<int>(this->_internal_appid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -334,7 +378,7 @@ failure:
   }
 
   // string msg = 4;
-  if (this->msg().size() > 0) {
+  if (_internal_has_msg()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_msg().data(), static_cast<int>(this->_internal_msg().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -359,34 +403,37 @@ size_t TrpcTemplateReq::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string code = 2;
-  if (this->code().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_code());
-  }
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    // string code = 2;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_code());
+    }
 
-  // string appid = 3;
-  if (this->appid().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_appid());
-  }
+    // string appid = 3;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_appid());
+    }
 
-  // string msg = 4;
-  if (this->msg().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_msg());
-  }
+    // string msg = 4;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_msg());
+    }
 
-  // int32 query_type = 1;
-  if (this->query_type() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_query_type());
-  }
+    // int32 query_type = 1;
+    if (cached_has_bits & 0x00000008u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+          this->_internal_query_type());
+    }
 
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
         _internal_metadata_, total_size, &_cached_size_);
@@ -418,17 +465,21 @@ void TrpcTemplateReq::MergeFrom(const TrpcTemplateReq& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.code().size() > 0) {
-    _internal_set_code(from._internal_code());
-  }
-  if (from.appid().size() > 0) {
-    _internal_set_appid(from._internal_appid());
-  }
-  if (from.msg().size() > 0) {
-    _internal_set_msg(from._internal_msg());
-  }
-  if (from.query_type() != 0) {
-    _internal_set_query_type(from._internal_query_type());
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 0x0000000fu) {
+    if (cached_has_bits & 0x00000001u) {
+      _internal_set_code(from._internal_code());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _internal_set_appid(from._internal_appid());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _internal_set_msg(from._internal_msg());
+    }
+    if (cached_has_bits & 0x00000008u) {
+      query_type_ = from.query_type_;
+    }
+    _has_bits_[0] |= cached_has_bits;
   }
 }
 
@@ -453,6 +504,7 @@ bool TrpcTemplateReq::IsInitialized() const {
 void TrpcTemplateReq::InternalSwap(TrpcTemplateReq* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
   code_.Swap(&other->code_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   appid_.Swap(&other->appid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   msg_.Swap(&other->msg_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
@@ -468,6 +520,16 @@ void TrpcTemplateReq::InternalSwap(TrpcTemplateReq* other) {
 
 class TrpcTemplateRsp::_Internal {
  public:
+  using HasBits = decltype(std::declval<TrpcTemplateRsp>()._has_bits_);
+  static void set_has_uuid(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_spid(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_msg(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
 };
 
 TrpcTemplateRsp::TrpcTemplateRsp(::PROTOBUF_NAMESPACE_ID::Arena* arena)
@@ -477,20 +539,21 @@ TrpcTemplateRsp::TrpcTemplateRsp(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   // @@protoc_insertion_point(arena_constructor:trpc.sample.TrpcTemplateRsp)
 }
 TrpcTemplateRsp::TrpcTemplateRsp(const TrpcTemplateRsp& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   uuid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_uuid().empty()) {
+  if (from._internal_has_uuid()) {
     uuid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_uuid(), 
       GetArena());
   }
   spid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_spid().empty()) {
+  if (from._internal_has_spid()) {
     spid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_spid(), 
       GetArena());
   }
   msg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_msg().empty()) {
+  if (from._internal_has_msg()) {
     msg_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_msg(), 
       GetArena());
   }
@@ -532,14 +595,25 @@ void TrpcTemplateRsp::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  uuid_.ClearToEmpty();
-  spid_.ClearToEmpty();
-  msg_.ClearToEmpty();
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      uuid_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      spid_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      msg_.ClearNonDefaultToEmpty();
+    }
+  }
+  _has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* TrpcTemplateRsp::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -587,6 +661,7 @@ const char* TrpcTemplateRsp::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
     }  // switch
   }  // while
 success:
+  _has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -601,7 +676,7 @@ failure:
   (void) cached_has_bits;
 
   // string uuid = 1;
-  if (this->uuid().size() > 0) {
+  if (_internal_has_uuid()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_uuid().data(), static_cast<int>(this->_internal_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -611,7 +686,7 @@ failure:
   }
 
   // string spid = 2;
-  if (this->spid().size() > 0) {
+  if (_internal_has_spid()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_spid().data(), static_cast<int>(this->_internal_spid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -621,7 +696,7 @@ failure:
   }
 
   // string msg = 3;
-  if (this->msg().size() > 0) {
+  if (_internal_has_msg()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_msg().data(), static_cast<int>(this->_internal_msg().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -646,27 +721,30 @@ size_t TrpcTemplateRsp::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string uuid = 1;
-  if (this->uuid().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_uuid());
-  }
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // string uuid = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_uuid());
+    }
 
-  // string spid = 2;
-  if (this->spid().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_spid());
-  }
+    // string spid = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_spid());
+    }
 
-  // string msg = 3;
-  if (this->msg().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_msg());
-  }
+    // string msg = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_msg());
+    }
 
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
         _internal_metadata_, total_size, &_cached_size_);
@@ -698,14 +776,17 @@ void TrpcTemplateRsp::MergeFrom(const TrpcTemplateRsp& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.uuid().size() > 0) {
-    _internal_set_uuid(from._internal_uuid());
-  }
-  if (from.spid().size() > 0) {
-    _internal_set_spid(from._internal_spid());
-  }
-  if (from.msg().size() > 0) {
-    _internal_set_msg(from._internal_msg());
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _internal_set_uuid(from._internal_uuid());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _internal_set_spid(from._internal_spid());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _internal_set_msg(from._internal_msg());
+    }
   }
 }
 
@@ -730,6 +811,7 @@ bool TrpcTemplateRsp::IsInitialized() const {
 void TrpcTemplateRsp::InternalSwap(TrpcTemplateRsp* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
   uuid_.Swap(&other->uuid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   spid_.Swap(&other->spid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   msg_.Swap(&other->msg_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
@@ -744,6 +826,13 @@ void TrpcTemplateRsp::InternalSwap(TrpcTemplateRsp* other) {
 
 class TrpcQueryUserReq::_Internal {
  public:
+  using HasBits = decltype(std::declval<TrpcQueryUserReq>()._has_bits_);
+  static void set_has_uid(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_seesion_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
 };
 
 TrpcQueryUserReq::TrpcQueryUserReq(::PROTOBUF_NAMESPACE_ID::Arena* arena)
@@ -753,15 +842,16 @@ TrpcQueryUserReq::TrpcQueryUserReq(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   // @@protoc_insertion_point(arena_constructor:trpc.sample.TrpcQueryUserReq)
 }
 TrpcQueryUserReq::TrpcQueryUserReq(const TrpcQueryUserReq& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_uid().empty()) {
+  if (from._internal_has_uid()) {
     uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_uid(), 
       GetArena());
   }
   seesion_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_seesion_id().empty()) {
+  if (from._internal_has_seesion_id()) {
     seesion_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_seesion_id(), 
       GetArena());
   }
@@ -801,13 +891,22 @@ void TrpcQueryUserReq::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  uid_.ClearToEmpty();
-  seesion_id_.ClearToEmpty();
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      uid_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      seesion_id_.ClearNonDefaultToEmpty();
+    }
+  }
+  _has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* TrpcQueryUserReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -846,6 +945,7 @@ const char* TrpcQueryUserReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
     }  // switch
   }  // while
 success:
+  _has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -860,7 +960,7 @@ failure:
   (void) cached_has_bits;
 
   // string uid = 1;
-  if (this->uid().size() > 0) {
+  if (_internal_has_uid()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_uid().data(), static_cast<int>(this->_internal_uid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -870,7 +970,7 @@ failure:
   }
 
   // string seesion_id = 2;
-  if (this->seesion_id().size() > 0) {
+  if (_internal_has_seesion_id()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_seesion_id().data(), static_cast<int>(this->_internal_seesion_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -895,20 +995,23 @@ size_t TrpcQueryUserReq::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string uid = 1;
-  if (this->uid().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_uid());
-  }
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    // string uid = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_uid());
+    }
 
-  // string seesion_id = 2;
-  if (this->seesion_id().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_seesion_id());
-  }
+    // string seesion_id = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_seesion_id());
+    }
 
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
         _internal_metadata_, total_size, &_cached_size_);
@@ -940,11 +1043,14 @@ void TrpcQueryUserReq::MergeFrom(const TrpcQueryUserReq& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.uid().size() > 0) {
-    _internal_set_uid(from._internal_uid());
-  }
-  if (from.seesion_id().size() > 0) {
-    _internal_set_seesion_id(from._internal_seesion_id());
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 0x00000003u) {
+    if (cached_has_bits & 0x00000001u) {
+      _internal_set_uid(from._internal_uid());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _internal_set_seesion_id(from._internal_seesion_id());
+    }
   }
 }
 
@@ -969,6 +1075,7 @@ bool TrpcQueryUserReq::IsInitialized() const {
 void TrpcQueryUserReq::InternalSwap(TrpcQueryUserReq* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
   uid_.Swap(&other->uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   seesion_id_.Swap(&other->seesion_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
@@ -982,6 +1089,16 @@ void TrpcQueryUserReq::InternalSwap(TrpcQueryUserReq* other) {
 
 class TrpcQueryUserRsp::_Internal {
  public:
+  using HasBits = decltype(std::declval<TrpcQueryUserRsp>()._has_bits_);
+  static void set_has_uid(HasBits* has_bits) {
+    (*has_bits)[0] |= 1u;
+  }
+  static void set_has_seesion_id(HasBits* has_bits) {
+    (*has_bits)[0] |= 2u;
+  }
+  static void set_has_msg(HasBits* has_bits) {
+    (*has_bits)[0] |= 4u;
+  }
 };
 
 TrpcQueryUserRsp::TrpcQueryUserRsp(::PROTOBUF_NAMESPACE_ID::Arena* arena)
@@ -991,20 +1108,21 @@ TrpcQueryUserRsp::TrpcQueryUserRsp(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   // @@protoc_insertion_point(arena_constructor:trpc.sample.TrpcQueryUserRsp)
 }
 TrpcQueryUserRsp::TrpcQueryUserRsp(const TrpcQueryUserRsp& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      _has_bits_(from._has_bits_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_uid().empty()) {
+  if (from._internal_has_uid()) {
     uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_uid(), 
       GetArena());
   }
   seesion_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_seesion_id().empty()) {
+  if (from._internal_has_seesion_id()) {
     seesion_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_seesion_id(), 
       GetArena());
   }
   msg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_msg().empty()) {
+  if (from._internal_has_msg()) {
     msg_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_msg(), 
       GetArena());
   }
@@ -1046,14 +1164,25 @@ void TrpcQueryUserRsp::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  uid_.ClearToEmpty();
-  seesion_id_.ClearToEmpty();
-  msg_.ClearToEmpty();
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      uid_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000002u) {
+      seesion_id_.ClearNonDefaultToEmpty();
+    }
+    if (cached_has_bits & 0x00000004u) {
+      msg_.ClearNonDefaultToEmpty();
+    }
+  }
+  _has_bits_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* TrpcQueryUserRsp::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  _Internal::HasBits has_bits{};
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -1101,6 +1230,7 @@ const char* TrpcQueryUserRsp::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
     }  // switch
   }  // while
 success:
+  _has_bits_.Or(has_bits);
   return ptr;
 failure:
   ptr = nullptr;
@@ -1115,7 +1245,7 @@ failure:
   (void) cached_has_bits;
 
   // string uid = 1;
-  if (this->uid().size() > 0) {
+  if (_internal_has_uid()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_uid().data(), static_cast<int>(this->_internal_uid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1125,7 +1255,7 @@ failure:
   }
 
   // string seesion_id = 2;
-  if (this->seesion_id().size() > 0) {
+  if (_internal_has_seesion_id()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_seesion_id().data(), static_cast<int>(this->_internal_seesion_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1135,7 +1265,7 @@ failure:
   }
 
   // string msg = 3;
-  if (this->msg().size() > 0) {
+  if (_internal_has_msg()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_msg().data(), static_cast<int>(this->_internal_msg().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1160,27 +1290,30 @@ size_t TrpcQueryUserRsp::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // string uid = 1;
-  if (this->uid().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_uid());
-  }
+  cached_has_bits = _has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    // string uid = 1;
+    if (cached_has_bits & 0x00000001u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_uid());
+    }
 
-  // string seesion_id = 2;
-  if (this->seesion_id().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_seesion_id());
-  }
+    // string seesion_id = 2;
+    if (cached_has_bits & 0x00000002u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_seesion_id());
+    }
 
-  // string msg = 3;
-  if (this->msg().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_msg());
-  }
+    // string msg = 3;
+    if (cached_has_bits & 0x00000004u) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+          this->_internal_msg());
+    }
 
+  }
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
         _internal_metadata_, total_size, &_cached_size_);
@@ -1212,14 +1345,17 @@ void TrpcQueryUserRsp::MergeFrom(const TrpcQueryUserRsp& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.uid().size() > 0) {
-    _internal_set_uid(from._internal_uid());
-  }
-  if (from.seesion_id().size() > 0) {
-    _internal_set_seesion_id(from._internal_seesion_id());
-  }
-  if (from.msg().size() > 0) {
-    _internal_set_msg(from._internal_msg());
+  cached_has_bits = from._has_bits_[0];
+  if (cached_has_bits & 0x00000007u) {
+    if (cached_has_bits & 0x00000001u) {
+      _internal_set_uid(from._internal_uid());
+    }
+    if (cached_has_bits & 0x00000002u) {
+      _internal_set_seesion_id(from._internal_seesion_id());
+    }
+    if (cached_has_bits & 0x00000004u) {
+      _internal_set_msg(from._internal_msg());
+    }
   }
 }
 
@@ -1244,6 +1380,7 @@ bool TrpcQueryUserRsp::IsInitialized() const {
 void TrpcQueryUserRsp::InternalSwap(TrpcQueryUserRsp* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  swap(_has_bits_[0], other->_has_bits_[0]);
   uid_.Swap(&other->uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   seesion_id_.Swap(&other->seesion_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   msg_.Swap(&other->msg_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
