@@ -23,11 +23,11 @@ message TrpcTemplateRsp {
 
 message TrpcQueryUserReq {
   optional string uid = 1;
-  optional string seesion_id = 2;
+  optional string session_id = 2;
 }
 
 message TrpcQueryUserRsp {
   optional string uid = 1;
-  optional string seesion_id = 2;
+  optional string session_id = 2;
   optional string msg = 3;   
 }

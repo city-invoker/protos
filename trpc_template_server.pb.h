@@ -596,7 +596,7 @@ class TrpcQueryUserReq PROTOBUF_FINAL :
 
   enum : int {
     kUidFieldNumber = 1,
-    kSeesionIdFieldNumber = 2,
+    kSessionIdFieldNumber = 2,
   };
   // string uid = 1;
   bool has_uid() const;
@@ -618,24 +618,24 @@ class TrpcQueryUserReq PROTOBUF_FINAL :
   std::string* _internal_mutable_uid();
   public:
 
-  // string seesion_id = 2;
-  bool has_seesion_id() const;
+  // string session_id = 2;
+  bool has_session_id() const;
   private:
-  bool _internal_has_seesion_id() const;
+  bool _internal_has_session_id() const;
   public:
-  void clear_seesion_id();
-  const std::string& seesion_id() const;
-  void set_seesion_id(const std::string& value);
-  void set_seesion_id(std::string&& value);
-  void set_seesion_id(const char* value);
-  void set_seesion_id(const char* value, size_t size);
-  std::string* mutable_seesion_id();
-  std::string* release_seesion_id();
-  void set_allocated_seesion_id(std::string* seesion_id);
+  void clear_session_id();
+  const std::string& session_id() const;
+  void set_session_id(const std::string& value);
+  void set_session_id(std::string&& value);
+  void set_session_id(const char* value);
+  void set_session_id(const char* value, size_t size);
+  std::string* mutable_session_id();
+  std::string* release_session_id();
+  void set_allocated_session_id(std::string* session_id);
   private:
-  const std::string& _internal_seesion_id() const;
-  void _internal_set_seesion_id(const std::string& value);
-  std::string* _internal_mutable_seesion_id();
+  const std::string& _internal_session_id() const;
+  void _internal_set_session_id(const std::string& value);
+  std::string* _internal_mutable_session_id();
   public:
 
   // @@protoc_insertion_point(class_scope:trpc.sample.TrpcQueryUserReq)
@@ -648,7 +648,7 @@ class TrpcQueryUserReq PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr uid_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr seesion_id_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr session_id_;
   friend struct ::TableStruct_trpc_5ftemplate_5fserver_2eproto;
 };
 // -------------------------------------------------------------------
@@ -767,7 +767,7 @@ class TrpcQueryUserRsp PROTOBUF_FINAL :
 
   enum : int {
     kUidFieldNumber = 1,
-    kSeesionIdFieldNumber = 2,
+    kSessionIdFieldNumber = 2,
     kMsgFieldNumber = 3,
   };
   // string uid = 1;
@@ -790,24 +790,24 @@ class TrpcQueryUserRsp PROTOBUF_FINAL :
   std::string* _internal_mutable_uid();
   public:
 
-  // string seesion_id = 2;
-  bool has_seesion_id() const;
+  // string session_id = 2;
+  bool has_session_id() const;
   private:
-  bool _internal_has_seesion_id() const;
+  bool _internal_has_session_id() const;
   public:
-  void clear_seesion_id();
-  const std::string& seesion_id() const;
-  void set_seesion_id(const std::string& value);
-  void set_seesion_id(std::string&& value);
-  void set_seesion_id(const char* value);
-  void set_seesion_id(const char* value, size_t size);
-  std::string* mutable_seesion_id();
-  std::string* release_seesion_id();
-  void set_allocated_seesion_id(std::string* seesion_id);
+  void clear_session_id();
+  const std::string& session_id() const;
+  void set_session_id(const std::string& value);
+  void set_session_id(std::string&& value);
+  void set_session_id(const char* value);
+  void set_session_id(const char* value, size_t size);
+  std::string* mutable_session_id();
+  std::string* release_session_id();
+  void set_allocated_session_id(std::string* session_id);
   private:
-  const std::string& _internal_seesion_id() const;
-  void _internal_set_seesion_id(const std::string& value);
-  std::string* _internal_mutable_seesion_id();
+  const std::string& _internal_session_id() const;
+  void _internal_set_session_id(const std::string& value);
+  std::string* _internal_mutable_session_id();
   public:
 
   // string msg = 3;
@@ -840,7 +840,7 @@ class TrpcQueryUserRsp PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::HasBits<1> _has_bits_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr uid_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr seesion_id_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr session_id_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr msg_;
   friend struct ::TableStruct_trpc_5ftemplate_5fserver_2eproto;
 };
@@ -1402,77 +1402,77 @@ inline void TrpcQueryUserReq::set_allocated_uid(std::string* uid) {
   // @@protoc_insertion_point(field_set_allocated:trpc.sample.TrpcQueryUserReq.uid)
 }
 
-// string seesion_id = 2;
-inline bool TrpcQueryUserReq::_internal_has_seesion_id() const {
+// string session_id = 2;
+inline bool TrpcQueryUserReq::_internal_has_session_id() const {
   bool value = (_has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool TrpcQueryUserReq::has_seesion_id() const {
-  return _internal_has_seesion_id();
+inline bool TrpcQueryUserReq::has_session_id() const {
+  return _internal_has_session_id();
 }
-inline void TrpcQueryUserReq::clear_seesion_id() {
-  seesion_id_.ClearToEmpty();
+inline void TrpcQueryUserReq::clear_session_id() {
+  session_id_.ClearToEmpty();
   _has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& TrpcQueryUserReq::seesion_id() const {
-  // @@protoc_insertion_point(field_get:trpc.sample.TrpcQueryUserReq.seesion_id)
-  return _internal_seesion_id();
+inline const std::string& TrpcQueryUserReq::session_id() const {
+  // @@protoc_insertion_point(field_get:trpc.sample.TrpcQueryUserReq.session_id)
+  return _internal_session_id();
 }
-inline void TrpcQueryUserReq::set_seesion_id(const std::string& value) {
-  _internal_set_seesion_id(value);
-  // @@protoc_insertion_point(field_set:trpc.sample.TrpcQueryUserReq.seesion_id)
+inline void TrpcQueryUserReq::set_session_id(const std::string& value) {
+  _internal_set_session_id(value);
+  // @@protoc_insertion_point(field_set:trpc.sample.TrpcQueryUserReq.session_id)
 }
-inline std::string* TrpcQueryUserReq::mutable_seesion_id() {
-  // @@protoc_insertion_point(field_mutable:trpc.sample.TrpcQueryUserReq.seesion_id)
-  return _internal_mutable_seesion_id();
+inline std::string* TrpcQueryUserReq::mutable_session_id() {
+  // @@protoc_insertion_point(field_mutable:trpc.sample.TrpcQueryUserReq.session_id)
+  return _internal_mutable_session_id();
 }
-inline const std::string& TrpcQueryUserReq::_internal_seesion_id() const {
-  return seesion_id_.Get();
+inline const std::string& TrpcQueryUserReq::_internal_session_id() const {
+  return session_id_.Get();
 }
-inline void TrpcQueryUserReq::_internal_set_seesion_id(const std::string& value) {
+inline void TrpcQueryUserReq::_internal_set_session_id(const std::string& value) {
   _has_bits_[0] |= 0x00000002u;
-  seesion_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+  session_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
 }
-inline void TrpcQueryUserReq::set_seesion_id(std::string&& value) {
+inline void TrpcQueryUserReq::set_session_id(std::string&& value) {
   _has_bits_[0] |= 0x00000002u;
-  seesion_id_.Set(
+  session_id_.Set(
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:trpc.sample.TrpcQueryUserReq.seesion_id)
+  // @@protoc_insertion_point(field_set_rvalue:trpc.sample.TrpcQueryUserReq.session_id)
 }
-inline void TrpcQueryUserReq::set_seesion_id(const char* value) {
+inline void TrpcQueryUserReq::set_session_id(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   _has_bits_[0] |= 0x00000002u;
-  seesion_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:trpc.sample.TrpcQueryUserReq.seesion_id)
+  session_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:trpc.sample.TrpcQueryUserReq.session_id)
 }
-inline void TrpcQueryUserReq::set_seesion_id(const char* value,
+inline void TrpcQueryUserReq::set_session_id(const char* value,
     size_t size) {
   _has_bits_[0] |= 0x00000002u;
-  seesion_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+  session_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:trpc.sample.TrpcQueryUserReq.seesion_id)
+  // @@protoc_insertion_point(field_set_pointer:trpc.sample.TrpcQueryUserReq.session_id)
 }
-inline std::string* TrpcQueryUserReq::_internal_mutable_seesion_id() {
+inline std::string* TrpcQueryUserReq::_internal_mutable_session_id() {
   _has_bits_[0] |= 0x00000002u;
-  return seesion_id_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+  return session_id_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
 }
-inline std::string* TrpcQueryUserReq::release_seesion_id() {
-  // @@protoc_insertion_point(field_release:trpc.sample.TrpcQueryUserReq.seesion_id)
-  if (!_internal_has_seesion_id()) {
+inline std::string* TrpcQueryUserReq::release_session_id() {
+  // @@protoc_insertion_point(field_release:trpc.sample.TrpcQueryUserReq.session_id)
+  if (!_internal_has_session_id()) {
     return nullptr;
   }
   _has_bits_[0] &= ~0x00000002u;
-  return seesion_id_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  return session_id_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void TrpcQueryUserReq::set_allocated_seesion_id(std::string* seesion_id) {
-  if (seesion_id != nullptr) {
+inline void TrpcQueryUserReq::set_allocated_session_id(std::string* session_id) {
+  if (session_id != nullptr) {
     _has_bits_[0] |= 0x00000002u;
   } else {
     _has_bits_[0] &= ~0x00000002u;
   }
-  seesion_id_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), seesion_id,
+  session_id_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), session_id,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:trpc.sample.TrpcQueryUserReq.seesion_id)
+  // @@protoc_insertion_point(field_set_allocated:trpc.sample.TrpcQueryUserReq.session_id)
 }
 
 // -------------------------------------------------------------------
@@ -1552,77 +1552,77 @@ inline void TrpcQueryUserRsp::set_allocated_uid(std::string* uid) {
   // @@protoc_insertion_point(field_set_allocated:trpc.sample.TrpcQueryUserRsp.uid)
 }
 
-// string seesion_id = 2;
-inline bool TrpcQueryUserRsp::_internal_has_seesion_id() const {
+// string session_id = 2;
+inline bool TrpcQueryUserRsp::_internal_has_session_id() const {
   bool value = (_has_bits_[0] & 0x00000002u) != 0;
   return value;
 }
-inline bool TrpcQueryUserRsp::has_seesion_id() const {
-  return _internal_has_seesion_id();
+inline bool TrpcQueryUserRsp::has_session_id() const {
+  return _internal_has_session_id();
 }
-inline void TrpcQueryUserRsp::clear_seesion_id() {
-  seesion_id_.ClearToEmpty();
+inline void TrpcQueryUserRsp::clear_session_id() {
+  session_id_.ClearToEmpty();
   _has_bits_[0] &= ~0x00000002u;
 }
-inline const std::string& TrpcQueryUserRsp::seesion_id() const {
-  // @@protoc_insertion_point(field_get:trpc.sample.TrpcQueryUserRsp.seesion_id)
-  return _internal_seesion_id();
+inline const std::string& TrpcQueryUserRsp::session_id() const {
+  // @@protoc_insertion_point(field_get:trpc.sample.TrpcQueryUserRsp.session_id)
+  return _internal_session_id();
 }
-inline void TrpcQueryUserRsp::set_seesion_id(const std::string& value) {
-  _internal_set_seesion_id(value);
-  // @@protoc_insertion_point(field_set:trpc.sample.TrpcQueryUserRsp.seesion_id)
+inline void TrpcQueryUserRsp::set_session_id(const std::string& value) {
+  _internal_set_session_id(value);
+  // @@protoc_insertion_point(field_set:trpc.sample.TrpcQueryUserRsp.session_id)
 }
-inline std::string* TrpcQueryUserRsp::mutable_seesion_id() {
-  // @@protoc_insertion_point(field_mutable:trpc.sample.TrpcQueryUserRsp.seesion_id)
-  return _internal_mutable_seesion_id();
+inline std::string* TrpcQueryUserRsp::mutable_session_id() {
+  // @@protoc_insertion_point(field_mutable:trpc.sample.TrpcQueryUserRsp.session_id)
+  return _internal_mutable_session_id();
 }
-inline const std::string& TrpcQueryUserRsp::_internal_seesion_id() const {
-  return seesion_id_.Get();
+inline const std::string& TrpcQueryUserRsp::_internal_session_id() const {
+  return session_id_.Get();
 }
-inline void TrpcQueryUserRsp::_internal_set_seesion_id(const std::string& value) {
+inline void TrpcQueryUserRsp::_internal_set_session_id(const std::string& value) {
   _has_bits_[0] |= 0x00000002u;
-  seesion_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+  session_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
 }
-inline void TrpcQueryUserRsp::set_seesion_id(std::string&& value) {
+inline void TrpcQueryUserRsp::set_session_id(std::string&& value) {
   _has_bits_[0] |= 0x00000002u;
-  seesion_id_.Set(
+  session_id_.Set(
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:trpc.sample.TrpcQueryUserRsp.seesion_id)
+  // @@protoc_insertion_point(field_set_rvalue:trpc.sample.TrpcQueryUserRsp.session_id)
 }
-inline void TrpcQueryUserRsp::set_seesion_id(const char* value) {
+inline void TrpcQueryUserRsp::set_session_id(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   _has_bits_[0] |= 0x00000002u;
-  seesion_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:trpc.sample.TrpcQueryUserRsp.seesion_id)
+  session_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:trpc.sample.TrpcQueryUserRsp.session_id)
 }
-inline void TrpcQueryUserRsp::set_seesion_id(const char* value,
+inline void TrpcQueryUserRsp::set_session_id(const char* value,
     size_t size) {
   _has_bits_[0] |= 0x00000002u;
-  seesion_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+  session_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:trpc.sample.TrpcQueryUserRsp.seesion_id)
+  // @@protoc_insertion_point(field_set_pointer:trpc.sample.TrpcQueryUserRsp.session_id)
 }
-inline std::string* TrpcQueryUserRsp::_internal_mutable_seesion_id() {
+inline std::string* TrpcQueryUserRsp::_internal_mutable_session_id() {
   _has_bits_[0] |= 0x00000002u;
-  return seesion_id_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+  return session_id_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
 }
-inline std::string* TrpcQueryUserRsp::release_seesion_id() {
-  // @@protoc_insertion_point(field_release:trpc.sample.TrpcQueryUserRsp.seesion_id)
-  if (!_internal_has_seesion_id()) {
+inline std::string* TrpcQueryUserRsp::release_session_id() {
+  // @@protoc_insertion_point(field_release:trpc.sample.TrpcQueryUserRsp.session_id)
+  if (!_internal_has_session_id()) {
     return nullptr;
   }
   _has_bits_[0] &= ~0x00000002u;
-  return seesion_id_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  return session_id_.ReleaseNonDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void TrpcQueryUserRsp::set_allocated_seesion_id(std::string* seesion_id) {
-  if (seesion_id != nullptr) {
+inline void TrpcQueryUserRsp::set_allocated_session_id(std::string* session_id) {
+  if (session_id != nullptr) {
     _has_bits_[0] |= 0x00000002u;
   } else {
     _has_bits_[0] &= ~0x00000002u;
   }
-  seesion_id_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), seesion_id,
+  session_id_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), session_id,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:trpc.sample.TrpcQueryUserRsp.seesion_id)
+  // @@protoc_insertion_point(field_set_allocated:trpc.sample.TrpcQueryUserRsp.session_id)
 }
 
 // string msg = 3;

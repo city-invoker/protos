@@ -50,7 +50,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT TrpcTemplateRspDefaultTypeInter
 constexpr TrpcQueryUserReq::TrpcQueryUserReq(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : uid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , seesion_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+  , session_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
 struct TrpcQueryUserReqDefaultTypeInternal {
   constexpr TrpcQueryUserReqDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -63,7 +63,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT TrpcQueryUserReqDefaultTypeInte
 constexpr TrpcQueryUserRsp::TrpcQueryUserRsp(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : uid_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , seesion_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , session_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , msg_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
 struct TrpcQueryUserRspDefaultTypeInternal {
   constexpr TrpcQueryUserRspDefaultTypeInternal()
@@ -111,7 +111,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_trpc_5ftemplate_5fserver_2epro
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserReq, uid_),
-  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserReq, seesion_id_),
+  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserReq, session_id_),
   0,
   1,
   PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserRsp, _has_bits_),
@@ -120,7 +120,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_trpc_5ftemplate_5fserver_2epro
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserRsp, uid_),
-  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserRsp, seesion_id_),
+  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserRsp, session_id_),
   PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserRsp, msg_),
   0,
   1,
@@ -149,10 +149,10 @@ const char descriptor_table_protodef_trpc_5ftemplate_5fserver_2eproto[] PROTOBUF
   "eRsp\022\021\n\004uuid\030\001 \001(\tH\000\210\001\001\022\021\n\004spid\030\002 \001(\tH\001\210"
   "\001\001\022\020\n\003msg\030\003 \001(\tH\002\210\001\001B\007\n\005_uuidB\007\n\005_spidB\006"
   "\n\004_msg\"T\n\020TrpcQueryUserReq\022\020\n\003uid\030\001 \001(\tH"
-  "\000\210\001\001\022\027\n\nseesion_id\030\002 \001(\tH\001\210\001\001B\006\n\004_uidB\r\n"
-  "\013_seesion_id\"n\n\020TrpcQueryUserRsp\022\020\n\003uid\030"
-  "\001 \001(\tH\000\210\001\001\022\027\n\nseesion_id\030\002 \001(\tH\001\210\001\001\022\020\n\003m"
-  "sg\030\003 \001(\tH\002\210\001\001B\006\n\004_uidB\r\n\013_seesion_idB\006\n\004"
+  "\000\210\001\001\022\027\n\nsession_id\030\002 \001(\tH\001\210\001\001B\006\n\004_uidB\r\n"
+  "\013_session_id\"n\n\020TrpcQueryUserRsp\022\020\n\003uid\030"
+  "\001 \001(\tH\000\210\001\001\022\027\n\nsession_id\030\002 \001(\tH\001\210\001\001\022\020\n\003m"
+  "sg\030\003 \001(\tH\002\210\001\001B\006\n\004_uidB\r\n\013_session_idB\006\n\004"
   "_msg2\302\001\n\023TrpcTemplateService\022S\n\023TrpcTemp"
   "lateHandler\022\034.trpc.sample.TrpcTemplateRe"
   "q\032\034.trpc.sample.TrpcTemplateRsp\"\000\022V\n\024Trp"
@@ -830,7 +830,7 @@ class TrpcQueryUserReq::_Internal {
   static void set_has_uid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_seesion_id(HasBits* has_bits) {
+  static void set_has_session_id(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
 };
@@ -850,9 +850,9 @@ TrpcQueryUserReq::TrpcQueryUserReq(const TrpcQueryUserReq& from)
     uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_uid(), 
       GetArena());
   }
-  seesion_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from._internal_has_seesion_id()) {
-    seesion_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_seesion_id(), 
+  session_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (from._internal_has_session_id()) {
+    session_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_session_id(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:trpc.sample.TrpcQueryUserReq)
@@ -860,7 +860,7 @@ TrpcQueryUserReq::TrpcQueryUserReq(const TrpcQueryUserReq& from)
 
 void TrpcQueryUserReq::SharedCtor() {
 uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-seesion_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+session_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 TrpcQueryUserReq::~TrpcQueryUserReq() {
@@ -872,7 +872,7 @@ TrpcQueryUserReq::~TrpcQueryUserReq() {
 void TrpcQueryUserReq::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   uid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  seesion_id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  session_id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void TrpcQueryUserReq::ArenaDtor(void* object) {
@@ -897,7 +897,7 @@ void TrpcQueryUserReq::Clear() {
       uid_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      seesion_id_.ClearNonDefaultToEmpty();
+      session_id_.ClearNonDefaultToEmpty();
     }
   }
   _has_bits_.Clear();
@@ -921,12 +921,12 @@ const char* TrpcQueryUserReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string seesion_id = 2;
+      // string session_id = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          auto str = _internal_mutable_seesion_id();
+          auto str = _internal_mutable_session_id();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.sample.TrpcQueryUserReq.seesion_id"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.sample.TrpcQueryUserReq.session_id"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -969,14 +969,14 @@ failure:
         1, this->_internal_uid(), target);
   }
 
-  // string seesion_id = 2;
-  if (_internal_has_seesion_id()) {
+  // string session_id = 2;
+  if (_internal_has_session_id()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_seesion_id().data(), static_cast<int>(this->_internal_seesion_id().length()),
+      this->_internal_session_id().data(), static_cast<int>(this->_internal_session_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "trpc.sample.TrpcQueryUserReq.seesion_id");
+      "trpc.sample.TrpcQueryUserReq.session_id");
     target = stream->WriteStringMaybeAliased(
-        2, this->_internal_seesion_id(), target);
+        2, this->_internal_session_id(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1004,11 +1004,11 @@ size_t TrpcQueryUserReq::ByteSizeLong() const {
           this->_internal_uid());
     }
 
-    // string seesion_id = 2;
+    // string session_id = 2;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->_internal_seesion_id());
+          this->_internal_session_id());
     }
 
   }
@@ -1049,7 +1049,7 @@ void TrpcQueryUserReq::MergeFrom(const TrpcQueryUserReq& from) {
       _internal_set_uid(from._internal_uid());
     }
     if (cached_has_bits & 0x00000002u) {
-      _internal_set_seesion_id(from._internal_seesion_id());
+      _internal_set_session_id(from._internal_session_id());
     }
   }
 }
@@ -1077,7 +1077,7 @@ void TrpcQueryUserReq::InternalSwap(TrpcQueryUserReq* other) {
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   uid_.Swap(&other->uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  seesion_id_.Swap(&other->seesion_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  session_id_.Swap(&other->session_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata TrpcQueryUserReq::GetMetadata() const {
@@ -1093,7 +1093,7 @@ class TrpcQueryUserRsp::_Internal {
   static void set_has_uid(HasBits* has_bits) {
     (*has_bits)[0] |= 1u;
   }
-  static void set_has_seesion_id(HasBits* has_bits) {
+  static void set_has_session_id(HasBits* has_bits) {
     (*has_bits)[0] |= 2u;
   }
   static void set_has_msg(HasBits* has_bits) {
@@ -1116,9 +1116,9 @@ TrpcQueryUserRsp::TrpcQueryUserRsp(const TrpcQueryUserRsp& from)
     uid_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_uid(), 
       GetArena());
   }
-  seesion_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (from._internal_has_seesion_id()) {
-    seesion_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_seesion_id(), 
+  session_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (from._internal_has_session_id()) {
+    session_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_session_id(), 
       GetArena());
   }
   msg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -1131,7 +1131,7 @@ TrpcQueryUserRsp::TrpcQueryUserRsp(const TrpcQueryUserRsp& from)
 
 void TrpcQueryUserRsp::SharedCtor() {
 uid_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-seesion_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+session_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 msg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -1144,7 +1144,7 @@ TrpcQueryUserRsp::~TrpcQueryUserRsp() {
 void TrpcQueryUserRsp::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   uid_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  seesion_id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  session_id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   msg_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
@@ -1170,7 +1170,7 @@ void TrpcQueryUserRsp::Clear() {
       uid_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000002u) {
-      seesion_id_.ClearNonDefaultToEmpty();
+      session_id_.ClearNonDefaultToEmpty();
     }
     if (cached_has_bits & 0x00000004u) {
       msg_.ClearNonDefaultToEmpty();
@@ -1197,12 +1197,12 @@ const char* TrpcQueryUserRsp::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string seesion_id = 2;
+      // string session_id = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          auto str = _internal_mutable_seesion_id();
+          auto str = _internal_mutable_session_id();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.sample.TrpcQueryUserRsp.seesion_id"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.sample.TrpcQueryUserRsp.session_id"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1254,14 +1254,14 @@ failure:
         1, this->_internal_uid(), target);
   }
 
-  // string seesion_id = 2;
-  if (_internal_has_seesion_id()) {
+  // string session_id = 2;
+  if (_internal_has_session_id()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_seesion_id().data(), static_cast<int>(this->_internal_seesion_id().length()),
+      this->_internal_session_id().data(), static_cast<int>(this->_internal_session_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "trpc.sample.TrpcQueryUserRsp.seesion_id");
+      "trpc.sample.TrpcQueryUserRsp.session_id");
     target = stream->WriteStringMaybeAliased(
-        2, this->_internal_seesion_id(), target);
+        2, this->_internal_session_id(), target);
   }
 
   // string msg = 3;
@@ -1299,11 +1299,11 @@ size_t TrpcQueryUserRsp::ByteSizeLong() const {
           this->_internal_uid());
     }
 
-    // string seesion_id = 2;
+    // string session_id = 2;
     if (cached_has_bits & 0x00000002u) {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-          this->_internal_seesion_id());
+          this->_internal_session_id());
     }
 
     // string msg = 3;
@@ -1351,7 +1351,7 @@ void TrpcQueryUserRsp::MergeFrom(const TrpcQueryUserRsp& from) {
       _internal_set_uid(from._internal_uid());
     }
     if (cached_has_bits & 0x00000002u) {
-      _internal_set_seesion_id(from._internal_seesion_id());
+      _internal_set_session_id(from._internal_session_id());
     }
     if (cached_has_bits & 0x00000004u) {
       _internal_set_msg(from._internal_msg());
@@ -1382,7 +1382,7 @@ void TrpcQueryUserRsp::InternalSwap(TrpcQueryUserRsp* other) {
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   swap(_has_bits_[0], other->_has_bits_[0]);
   uid_.Swap(&other->uid_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  seesion_id_.Swap(&other->seesion_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  session_id_.Swap(&other->session_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   msg_.Swap(&other->msg_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 
