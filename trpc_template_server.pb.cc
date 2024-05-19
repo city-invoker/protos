@@ -17,7 +17,7 @@
 
 PROTOBUF_PRAGMA_INIT_SEG
 namespace trpc {
-namespace sample {
+namespace app {
 constexpr TrpcTemplateReq::TrpcTemplateReq(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : code_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
@@ -74,95 +74,94 @@ struct TrpcQueryUserRspDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT TrpcQueryUserRspDefaultTypeInternal _TrpcQueryUserRsp_default_instance_;
-}  // namespace sample
+}  // namespace app
 }  // namespace trpc
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_trpc_5ftemplate_5fserver_2eproto[4];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_trpc_5ftemplate_5fserver_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_trpc_5ftemplate_5fserver_2eproto = nullptr;
 
 const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_trpc_5ftemplate_5fserver_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcTemplateReq, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcTemplateReq, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::TrpcTemplateReq, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::TrpcTemplateReq, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcTemplateReq, query_type_),
-  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcTemplateReq, code_),
-  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcTemplateReq, appid_),
-  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcTemplateReq, msg_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::TrpcTemplateReq, query_type_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::TrpcTemplateReq, code_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::TrpcTemplateReq, appid_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::TrpcTemplateReq, msg_),
   3,
   0,
   1,
   2,
-  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcTemplateRsp, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcTemplateRsp, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::TrpcTemplateRsp, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::TrpcTemplateRsp, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcTemplateRsp, uuid_),
-  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcTemplateRsp, spid_),
-  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcTemplateRsp, msg_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::TrpcTemplateRsp, uuid_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::TrpcTemplateRsp, spid_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::TrpcTemplateRsp, msg_),
   0,
   1,
   2,
-  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserReq, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserReq, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::TrpcQueryUserReq, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::TrpcQueryUserReq, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserReq, uid_),
-  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserReq, session_id_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::TrpcQueryUserReq, uid_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::TrpcQueryUserReq, session_id_),
   0,
   1,
-  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserRsp, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserRsp, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::TrpcQueryUserRsp, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::TrpcQueryUserRsp, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserRsp, uid_),
-  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserRsp, session_id_),
-  PROTOBUF_FIELD_OFFSET(::trpc::sample::TrpcQueryUserRsp, msg_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::TrpcQueryUserRsp, uid_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::TrpcQueryUserRsp, session_id_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::TrpcQueryUserRsp, msg_),
   0,
   1,
   2,
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 9, sizeof(::trpc::sample::TrpcTemplateReq)},
-  { 13, 21, sizeof(::trpc::sample::TrpcTemplateRsp)},
-  { 24, 31, sizeof(::trpc::sample::TrpcQueryUserReq)},
-  { 33, 41, sizeof(::trpc::sample::TrpcQueryUserRsp)},
+  { 0, 9, sizeof(::trpc::app::TrpcTemplateReq)},
+  { 13, 21, sizeof(::trpc::app::TrpcTemplateRsp)},
+  { 24, 31, sizeof(::trpc::app::TrpcQueryUserReq)},
+  { 33, 41, sizeof(::trpc::app::TrpcQueryUserRsp)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::trpc::sample::_TrpcTemplateReq_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::trpc::sample::_TrpcTemplateRsp_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::trpc::sample::_TrpcQueryUserReq_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::trpc::sample::_TrpcQueryUserRsp_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::trpc::app::_TrpcTemplateReq_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::trpc::app::_TrpcTemplateRsp_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::trpc::app::_TrpcQueryUserReq_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::trpc::app::_TrpcQueryUserRsp_default_instance_),
 };
 
 const char descriptor_table_protodef_trpc_5ftemplate_5fserver_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\032trpc_template_server.proto\022\013trpc.sampl"
-  "e\"\215\001\n\017TrpcTemplateReq\022\027\n\nquery_type\030\001 \001("
-  "\005H\000\210\001\001\022\021\n\004code\030\002 \001(\tH\001\210\001\001\022\022\n\005appid\030\003 \001(\t"
-  "H\002\210\001\001\022\020\n\003msg\030\004 \001(\tH\003\210\001\001B\r\n\013_query_typeB\007"
-  "\n\005_codeB\010\n\006_appidB\006\n\004_msg\"c\n\017TrpcTemplat"
-  "eRsp\022\021\n\004uuid\030\001 \001(\tH\000\210\001\001\022\021\n\004spid\030\002 \001(\tH\001\210"
-  "\001\001\022\020\n\003msg\030\003 \001(\tH\002\210\001\001B\007\n\005_uuidB\007\n\005_spidB\006"
-  "\n\004_msg\"T\n\020TrpcQueryUserReq\022\020\n\003uid\030\001 \001(\tH"
-  "\000\210\001\001\022\027\n\nsession_id\030\002 \001(\tH\001\210\001\001B\006\n\004_uidB\r\n"
-  "\013_session_id\"n\n\020TrpcQueryUserRsp\022\020\n\003uid\030"
-  "\001 \001(\tH\000\210\001\001\022\027\n\nsession_id\030\002 \001(\tH\001\210\001\001\022\020\n\003m"
-  "sg\030\003 \001(\tH\002\210\001\001B\006\n\004_uidB\r\n\013_session_idB\006\n\004"
-  "_msg2\302\001\n\023TrpcTemplateService\022S\n\023TrpcTemp"
-  "lateHandler\022\034.trpc.sample.TrpcTemplateRe"
-  "q\032\034.trpc.sample.TrpcTemplateRsp\"\000\022V\n\024Trp"
-  "cQueryUserHandler\022\035.trpc.sample.TrpcQuer"
-  "yUserReq\032\035.trpc.sample.TrpcQueryUserRsp\""
-  "\000b\006proto3"
+  "\n\032trpc_template_server.proto\022\010trpc.app\"\215"
+  "\001\n\017TrpcTemplateReq\022\027\n\nquery_type\030\001 \001(\005H\000"
+  "\210\001\001\022\021\n\004code\030\002 \001(\tH\001\210\001\001\022\022\n\005appid\030\003 \001(\tH\002\210"
+  "\001\001\022\020\n\003msg\030\004 \001(\tH\003\210\001\001B\r\n\013_query_typeB\007\n\005_"
+  "codeB\010\n\006_appidB\006\n\004_msg\"c\n\017TrpcTemplateRs"
+  "p\022\021\n\004uuid\030\001 \001(\tH\000\210\001\001\022\021\n\004spid\030\002 \001(\tH\001\210\001\001\022"
+  "\020\n\003msg\030\003 \001(\tH\002\210\001\001B\007\n\005_uuidB\007\n\005_spidB\006\n\004_"
+  "msg\"T\n\020TrpcQueryUserReq\022\020\n\003uid\030\001 \001(\tH\000\210\001"
+  "\001\022\027\n\nsession_id\030\002 \001(\tH\001\210\001\001B\006\n\004_uidB\r\n\013_s"
+  "ession_id\"n\n\020TrpcQueryUserRsp\022\020\n\003uid\030\001 \001"
+  "(\tH\000\210\001\001\022\027\n\nsession_id\030\002 \001(\tH\001\210\001\001\022\020\n\003msg\030"
+  "\003 \001(\tH\002\210\001\001B\006\n\004_uidB\r\n\013_session_idB\006\n\004_ms"
+  "g2\266\001\n\023TrpcTemplateService\022M\n\023TrpcTemplat"
+  "eHandler\022\031.trpc.app.TrpcTemplateReq\032\031.tr"
+  "pc.app.TrpcTemplateRsp\"\000\022P\n\024TrpcQueryUse"
+  "rHandler\022\032.trpc.app.TrpcQueryUserReq\032\032.t"
+  "rpc.app.TrpcQueryUserRsp\"\000b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_trpc_5ftemplate_5fserver_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_trpc_5ftemplate_5fserver_2eproto = {
-  false, false, 689, descriptor_table_protodef_trpc_5ftemplate_5fserver_2eproto, "trpc_template_server.proto", 
+  false, false, 674, descriptor_table_protodef_trpc_5ftemplate_5fserver_2eproto, "trpc_template_server.proto", 
   &descriptor_table_trpc_5ftemplate_5fserver_2eproto_once, nullptr, 0, 4,
   schemas, file_default_instances, TableStruct_trpc_5ftemplate_5fserver_2eproto::offsets,
   file_level_metadata_trpc_5ftemplate_5fserver_2eproto, file_level_enum_descriptors_trpc_5ftemplate_5fserver_2eproto, file_level_service_descriptors_trpc_5ftemplate_5fserver_2eproto,
@@ -176,7 +175,7 @@ descriptor_table_trpc_5ftemplate_5fserver_2eproto_metadata_getter(int index) {
 // Force running AddDescriptors() at dynamic initialization time.
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_trpc_5ftemplate_5fserver_2eproto(&descriptor_table_trpc_5ftemplate_5fserver_2eproto);
 namespace trpc {
-namespace sample {
+namespace app {
 
 // ===================================================================
 
@@ -201,7 +200,7 @@ TrpcTemplateReq::TrpcTemplateReq(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:trpc.sample.TrpcTemplateReq)
+  // @@protoc_insertion_point(arena_constructor:trpc.app.TrpcTemplateReq)
 }
 TrpcTemplateReq::TrpcTemplateReq(const TrpcTemplateReq& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -223,7 +222,7 @@ TrpcTemplateReq::TrpcTemplateReq(const TrpcTemplateReq& from)
       GetArena());
   }
   query_type_ = from.query_type_;
-  // @@protoc_insertion_point(copy_constructor:trpc.sample.TrpcTemplateReq)
+  // @@protoc_insertion_point(copy_constructor:trpc.app.TrpcTemplateReq)
 }
 
 void TrpcTemplateReq::SharedCtor() {
@@ -234,7 +233,7 @@ query_type_ = 0;
 }
 
 TrpcTemplateReq::~TrpcTemplateReq() {
-  // @@protoc_insertion_point(destructor:trpc.sample.TrpcTemplateReq)
+  // @@protoc_insertion_point(destructor:trpc.app.TrpcTemplateReq)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -257,7 +256,7 @@ void TrpcTemplateReq::SetCachedSize(int size) const {
 }
 
 void TrpcTemplateReq::Clear() {
-// @@protoc_insertion_point(message_clear_start:trpc.sample.TrpcTemplateReq)
+// @@protoc_insertion_point(message_clear_start:trpc.app.TrpcTemplateReq)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -300,7 +299,7 @@ const char* TrpcTemplateReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_code();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.sample.TrpcTemplateReq.code"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.TrpcTemplateReq.code"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -309,7 +308,7 @@ const char* TrpcTemplateReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_appid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.sample.TrpcTemplateReq.appid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.TrpcTemplateReq.appid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -318,7 +317,7 @@ const char* TrpcTemplateReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           auto str = _internal_mutable_msg();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.sample.TrpcTemplateReq.msg"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.TrpcTemplateReq.msg"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -347,7 +346,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* TrpcTemplateReq::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:trpc.sample.TrpcTemplateReq)
+  // @@protoc_insertion_point(serialize_to_array_start:trpc.app.TrpcTemplateReq)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -362,7 +361,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_code().data(), static_cast<int>(this->_internal_code().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "trpc.sample.TrpcTemplateReq.code");
+      "trpc.app.TrpcTemplateReq.code");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_code(), target);
   }
@@ -372,7 +371,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_appid().data(), static_cast<int>(this->_internal_appid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "trpc.sample.TrpcTemplateReq.appid");
+      "trpc.app.TrpcTemplateReq.appid");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_appid(), target);
   }
@@ -382,7 +381,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_msg().data(), static_cast<int>(this->_internal_msg().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "trpc.sample.TrpcTemplateReq.msg");
+      "trpc.app.TrpcTemplateReq.msg");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_msg(), target);
   }
@@ -391,12 +390,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:trpc.sample.TrpcTemplateReq)
+  // @@protoc_insertion_point(serialize_to_array_end:trpc.app.TrpcTemplateReq)
   return target;
 }
 
 size_t TrpcTemplateReq::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:trpc.sample.TrpcTemplateReq)
+// @@protoc_insertion_point(message_byte_size_start:trpc.app.TrpcTemplateReq)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -444,22 +443,22 @@ size_t TrpcTemplateReq::ByteSizeLong() const {
 }
 
 void TrpcTemplateReq::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:trpc.sample.TrpcTemplateReq)
+// @@protoc_insertion_point(generalized_merge_from_start:trpc.app.TrpcTemplateReq)
   GOOGLE_DCHECK_NE(&from, this);
   const TrpcTemplateReq* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<TrpcTemplateReq>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:trpc.sample.TrpcTemplateReq)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:trpc.app.TrpcTemplateReq)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:trpc.sample.TrpcTemplateReq)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:trpc.app.TrpcTemplateReq)
     MergeFrom(*source);
   }
 }
 
 void TrpcTemplateReq::MergeFrom(const TrpcTemplateReq& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:trpc.sample.TrpcTemplateReq)
+// @@protoc_insertion_point(class_specific_merge_from_start:trpc.app.TrpcTemplateReq)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -484,14 +483,14 @@ void TrpcTemplateReq::MergeFrom(const TrpcTemplateReq& from) {
 }
 
 void TrpcTemplateReq::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:trpc.sample.TrpcTemplateReq)
+// @@protoc_insertion_point(generalized_copy_from_start:trpc.app.TrpcTemplateReq)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void TrpcTemplateReq::CopyFrom(const TrpcTemplateReq& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:trpc.sample.TrpcTemplateReq)
+// @@protoc_insertion_point(class_specific_copy_from_start:trpc.app.TrpcTemplateReq)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -536,7 +535,7 @@ TrpcTemplateRsp::TrpcTemplateRsp(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:trpc.sample.TrpcTemplateRsp)
+  // @@protoc_insertion_point(arena_constructor:trpc.app.TrpcTemplateRsp)
 }
 TrpcTemplateRsp::TrpcTemplateRsp(const TrpcTemplateRsp& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -557,7 +556,7 @@ TrpcTemplateRsp::TrpcTemplateRsp(const TrpcTemplateRsp& from)
     msg_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_msg(), 
       GetArena());
   }
-  // @@protoc_insertion_point(copy_constructor:trpc.sample.TrpcTemplateRsp)
+  // @@protoc_insertion_point(copy_constructor:trpc.app.TrpcTemplateRsp)
 }
 
 void TrpcTemplateRsp::SharedCtor() {
@@ -567,7 +566,7 @@ msg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyI
 }
 
 TrpcTemplateRsp::~TrpcTemplateRsp() {
-  // @@protoc_insertion_point(destructor:trpc.sample.TrpcTemplateRsp)
+  // @@protoc_insertion_point(destructor:trpc.app.TrpcTemplateRsp)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -590,7 +589,7 @@ void TrpcTemplateRsp::SetCachedSize(int size) const {
 }
 
 void TrpcTemplateRsp::Clear() {
-// @@protoc_insertion_point(message_clear_start:trpc.sample.TrpcTemplateRsp)
+// @@protoc_insertion_point(message_clear_start:trpc.app.TrpcTemplateRsp)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -624,7 +623,7 @@ const char* TrpcTemplateRsp::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_uuid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.sample.TrpcTemplateRsp.uuid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.TrpcTemplateRsp.uuid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -633,7 +632,7 @@ const char* TrpcTemplateRsp::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_spid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.sample.TrpcTemplateRsp.spid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.TrpcTemplateRsp.spid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -642,7 +641,7 @@ const char* TrpcTemplateRsp::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPAC
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_msg();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.sample.TrpcTemplateRsp.msg"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.TrpcTemplateRsp.msg"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -671,7 +670,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* TrpcTemplateRsp::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:trpc.sample.TrpcTemplateRsp)
+  // @@protoc_insertion_point(serialize_to_array_start:trpc.app.TrpcTemplateRsp)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -680,7 +679,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_uuid().data(), static_cast<int>(this->_internal_uuid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "trpc.sample.TrpcTemplateRsp.uuid");
+      "trpc.app.TrpcTemplateRsp.uuid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_uuid(), target);
   }
@@ -690,7 +689,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_spid().data(), static_cast<int>(this->_internal_spid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "trpc.sample.TrpcTemplateRsp.spid");
+      "trpc.app.TrpcTemplateRsp.spid");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_spid(), target);
   }
@@ -700,7 +699,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_msg().data(), static_cast<int>(this->_internal_msg().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "trpc.sample.TrpcTemplateRsp.msg");
+      "trpc.app.TrpcTemplateRsp.msg");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_msg(), target);
   }
@@ -709,12 +708,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:trpc.sample.TrpcTemplateRsp)
+  // @@protoc_insertion_point(serialize_to_array_end:trpc.app.TrpcTemplateRsp)
   return target;
 }
 
 size_t TrpcTemplateRsp::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:trpc.sample.TrpcTemplateRsp)
+// @@protoc_insertion_point(message_byte_size_start:trpc.app.TrpcTemplateRsp)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -755,22 +754,22 @@ size_t TrpcTemplateRsp::ByteSizeLong() const {
 }
 
 void TrpcTemplateRsp::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:trpc.sample.TrpcTemplateRsp)
+// @@protoc_insertion_point(generalized_merge_from_start:trpc.app.TrpcTemplateRsp)
   GOOGLE_DCHECK_NE(&from, this);
   const TrpcTemplateRsp* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<TrpcTemplateRsp>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:trpc.sample.TrpcTemplateRsp)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:trpc.app.TrpcTemplateRsp)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:trpc.sample.TrpcTemplateRsp)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:trpc.app.TrpcTemplateRsp)
     MergeFrom(*source);
   }
 }
 
 void TrpcTemplateRsp::MergeFrom(const TrpcTemplateRsp& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:trpc.sample.TrpcTemplateRsp)
+// @@protoc_insertion_point(class_specific_merge_from_start:trpc.app.TrpcTemplateRsp)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -791,14 +790,14 @@ void TrpcTemplateRsp::MergeFrom(const TrpcTemplateRsp& from) {
 }
 
 void TrpcTemplateRsp::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:trpc.sample.TrpcTemplateRsp)
+// @@protoc_insertion_point(generalized_copy_from_start:trpc.app.TrpcTemplateRsp)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void TrpcTemplateRsp::CopyFrom(const TrpcTemplateRsp& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:trpc.sample.TrpcTemplateRsp)
+// @@protoc_insertion_point(class_specific_copy_from_start:trpc.app.TrpcTemplateRsp)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -839,7 +838,7 @@ TrpcQueryUserReq::TrpcQueryUserReq(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:trpc.sample.TrpcQueryUserReq)
+  // @@protoc_insertion_point(arena_constructor:trpc.app.TrpcQueryUserReq)
 }
 TrpcQueryUserReq::TrpcQueryUserReq(const TrpcQueryUserReq& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -855,7 +854,7 @@ TrpcQueryUserReq::TrpcQueryUserReq(const TrpcQueryUserReq& from)
     session_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_session_id(), 
       GetArena());
   }
-  // @@protoc_insertion_point(copy_constructor:trpc.sample.TrpcQueryUserReq)
+  // @@protoc_insertion_point(copy_constructor:trpc.app.TrpcQueryUserReq)
 }
 
 void TrpcQueryUserReq::SharedCtor() {
@@ -864,7 +863,7 @@ session_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringA
 }
 
 TrpcQueryUserReq::~TrpcQueryUserReq() {
-  // @@protoc_insertion_point(destructor:trpc.sample.TrpcQueryUserReq)
+  // @@protoc_insertion_point(destructor:trpc.app.TrpcQueryUserReq)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -886,7 +885,7 @@ void TrpcQueryUserReq::SetCachedSize(int size) const {
 }
 
 void TrpcQueryUserReq::Clear() {
-// @@protoc_insertion_point(message_clear_start:trpc.sample.TrpcQueryUserReq)
+// @@protoc_insertion_point(message_clear_start:trpc.app.TrpcQueryUserReq)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -917,7 +916,7 @@ const char* TrpcQueryUserReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_uid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.sample.TrpcQueryUserReq.uid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.TrpcQueryUserReq.uid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -926,7 +925,7 @@ const char* TrpcQueryUserReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_session_id();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.sample.TrpcQueryUserReq.session_id"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.TrpcQueryUserReq.session_id"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -955,7 +954,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* TrpcQueryUserReq::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:trpc.sample.TrpcQueryUserReq)
+  // @@protoc_insertion_point(serialize_to_array_start:trpc.app.TrpcQueryUserReq)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -964,7 +963,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_uid().data(), static_cast<int>(this->_internal_uid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "trpc.sample.TrpcQueryUserReq.uid");
+      "trpc.app.TrpcQueryUserReq.uid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_uid(), target);
   }
@@ -974,7 +973,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_session_id().data(), static_cast<int>(this->_internal_session_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "trpc.sample.TrpcQueryUserReq.session_id");
+      "trpc.app.TrpcQueryUserReq.session_id");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_session_id(), target);
   }
@@ -983,12 +982,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:trpc.sample.TrpcQueryUserReq)
+  // @@protoc_insertion_point(serialize_to_array_end:trpc.app.TrpcQueryUserReq)
   return target;
 }
 
 size_t TrpcQueryUserReq::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:trpc.sample.TrpcQueryUserReq)
+// @@protoc_insertion_point(message_byte_size_start:trpc.app.TrpcQueryUserReq)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -1022,22 +1021,22 @@ size_t TrpcQueryUserReq::ByteSizeLong() const {
 }
 
 void TrpcQueryUserReq::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:trpc.sample.TrpcQueryUserReq)
+// @@protoc_insertion_point(generalized_merge_from_start:trpc.app.TrpcQueryUserReq)
   GOOGLE_DCHECK_NE(&from, this);
   const TrpcQueryUserReq* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<TrpcQueryUserReq>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:trpc.sample.TrpcQueryUserReq)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:trpc.app.TrpcQueryUserReq)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:trpc.sample.TrpcQueryUserReq)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:trpc.app.TrpcQueryUserReq)
     MergeFrom(*source);
   }
 }
 
 void TrpcQueryUserReq::MergeFrom(const TrpcQueryUserReq& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:trpc.sample.TrpcQueryUserReq)
+// @@protoc_insertion_point(class_specific_merge_from_start:trpc.app.TrpcQueryUserReq)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -1055,14 +1054,14 @@ void TrpcQueryUserReq::MergeFrom(const TrpcQueryUserReq& from) {
 }
 
 void TrpcQueryUserReq::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:trpc.sample.TrpcQueryUserReq)
+// @@protoc_insertion_point(generalized_copy_from_start:trpc.app.TrpcQueryUserReq)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void TrpcQueryUserReq::CopyFrom(const TrpcQueryUserReq& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:trpc.sample.TrpcQueryUserReq)
+// @@protoc_insertion_point(class_specific_copy_from_start:trpc.app.TrpcQueryUserReq)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1105,7 +1104,7 @@ TrpcQueryUserRsp::TrpcQueryUserRsp(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:trpc.sample.TrpcQueryUserRsp)
+  // @@protoc_insertion_point(arena_constructor:trpc.app.TrpcQueryUserRsp)
 }
 TrpcQueryUserRsp::TrpcQueryUserRsp(const TrpcQueryUserRsp& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
@@ -1126,7 +1125,7 @@ TrpcQueryUserRsp::TrpcQueryUserRsp(const TrpcQueryUserRsp& from)
     msg_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_msg(), 
       GetArena());
   }
-  // @@protoc_insertion_point(copy_constructor:trpc.sample.TrpcQueryUserRsp)
+  // @@protoc_insertion_point(copy_constructor:trpc.app.TrpcQueryUserRsp)
 }
 
 void TrpcQueryUserRsp::SharedCtor() {
@@ -1136,7 +1135,7 @@ msg_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyI
 }
 
 TrpcQueryUserRsp::~TrpcQueryUserRsp() {
-  // @@protoc_insertion_point(destructor:trpc.sample.TrpcQueryUserRsp)
+  // @@protoc_insertion_point(destructor:trpc.app.TrpcQueryUserRsp)
   SharedDtor();
   _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -1159,7 +1158,7 @@ void TrpcQueryUserRsp::SetCachedSize(int size) const {
 }
 
 void TrpcQueryUserRsp::Clear() {
-// @@protoc_insertion_point(message_clear_start:trpc.sample.TrpcQueryUserRsp)
+// @@protoc_insertion_point(message_clear_start:trpc.app.TrpcQueryUserRsp)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1193,7 +1192,7 @@ const char* TrpcQueryUserRsp::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
           auto str = _internal_mutable_uid();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.sample.TrpcQueryUserRsp.uid"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.TrpcQueryUserRsp.uid"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1202,7 +1201,7 @@ const char* TrpcQueryUserRsp::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
           auto str = _internal_mutable_session_id();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.sample.TrpcQueryUserRsp.session_id"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.TrpcQueryUserRsp.session_id"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1211,7 +1210,7 @@ const char* TrpcQueryUserRsp::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPA
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_msg();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.sample.TrpcQueryUserRsp.msg"));
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.TrpcQueryUserRsp.msg"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1240,7 +1239,7 @@ failure:
 
 ::PROTOBUF_NAMESPACE_ID::uint8* TrpcQueryUserRsp::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:trpc.sample.TrpcQueryUserRsp)
+  // @@protoc_insertion_point(serialize_to_array_start:trpc.app.TrpcQueryUserRsp)
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1249,7 +1248,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_uid().data(), static_cast<int>(this->_internal_uid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "trpc.sample.TrpcQueryUserRsp.uid");
+      "trpc.app.TrpcQueryUserRsp.uid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_uid(), target);
   }
@@ -1259,7 +1258,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_session_id().data(), static_cast<int>(this->_internal_session_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "trpc.sample.TrpcQueryUserRsp.session_id");
+      "trpc.app.TrpcQueryUserRsp.session_id");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_session_id(), target);
   }
@@ -1269,7 +1268,7 @@ failure:
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_msg().data(), static_cast<int>(this->_internal_msg().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "trpc.sample.TrpcQueryUserRsp.msg");
+      "trpc.app.TrpcQueryUserRsp.msg");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_msg(), target);
   }
@@ -1278,12 +1277,12 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:trpc.sample.TrpcQueryUserRsp)
+  // @@protoc_insertion_point(serialize_to_array_end:trpc.app.TrpcQueryUserRsp)
   return target;
 }
 
 size_t TrpcQueryUserRsp::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:trpc.sample.TrpcQueryUserRsp)
+// @@protoc_insertion_point(message_byte_size_start:trpc.app.TrpcQueryUserRsp)
   size_t total_size = 0;
 
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -1324,22 +1323,22 @@ size_t TrpcQueryUserRsp::ByteSizeLong() const {
 }
 
 void TrpcQueryUserRsp::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:trpc.sample.TrpcQueryUserRsp)
+// @@protoc_insertion_point(generalized_merge_from_start:trpc.app.TrpcQueryUserRsp)
   GOOGLE_DCHECK_NE(&from, this);
   const TrpcQueryUserRsp* source =
       ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<TrpcQueryUserRsp>(
           &from);
   if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:trpc.sample.TrpcQueryUserRsp)
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:trpc.app.TrpcQueryUserRsp)
     ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:trpc.sample.TrpcQueryUserRsp)
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:trpc.app.TrpcQueryUserRsp)
     MergeFrom(*source);
   }
 }
 
 void TrpcQueryUserRsp::MergeFrom(const TrpcQueryUserRsp& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:trpc.sample.TrpcQueryUserRsp)
+// @@protoc_insertion_point(class_specific_merge_from_start:trpc.app.TrpcQueryUserRsp)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
@@ -1360,14 +1359,14 @@ void TrpcQueryUserRsp::MergeFrom(const TrpcQueryUserRsp& from) {
 }
 
 void TrpcQueryUserRsp::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:trpc.sample.TrpcQueryUserRsp)
+// @@protoc_insertion_point(generalized_copy_from_start:trpc.app.TrpcQueryUserRsp)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
 }
 
 void TrpcQueryUserRsp::CopyFrom(const TrpcQueryUserRsp& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:trpc.sample.TrpcQueryUserRsp)
+// @@protoc_insertion_point(class_specific_copy_from_start:trpc.app.TrpcQueryUserRsp)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1392,20 +1391,20 @@ void TrpcQueryUserRsp::InternalSwap(TrpcQueryUserRsp* other) {
 
 
 // @@protoc_insertion_point(namespace_scope)
-}  // namespace sample
+}  // namespace app
 }  // namespace trpc
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::trpc::sample::TrpcTemplateReq* Arena::CreateMaybeMessage< ::trpc::sample::TrpcTemplateReq >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::trpc::sample::TrpcTemplateReq >(arena);
+template<> PROTOBUF_NOINLINE ::trpc::app::TrpcTemplateReq* Arena::CreateMaybeMessage< ::trpc::app::TrpcTemplateReq >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::trpc::app::TrpcTemplateReq >(arena);
 }
-template<> PROTOBUF_NOINLINE ::trpc::sample::TrpcTemplateRsp* Arena::CreateMaybeMessage< ::trpc::sample::TrpcTemplateRsp >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::trpc::sample::TrpcTemplateRsp >(arena);
+template<> PROTOBUF_NOINLINE ::trpc::app::TrpcTemplateRsp* Arena::CreateMaybeMessage< ::trpc::app::TrpcTemplateRsp >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::trpc::app::TrpcTemplateRsp >(arena);
 }
-template<> PROTOBUF_NOINLINE ::trpc::sample::TrpcQueryUserReq* Arena::CreateMaybeMessage< ::trpc::sample::TrpcQueryUserReq >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::trpc::sample::TrpcQueryUserReq >(arena);
+template<> PROTOBUF_NOINLINE ::trpc::app::TrpcQueryUserReq* Arena::CreateMaybeMessage< ::trpc::app::TrpcQueryUserReq >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::trpc::app::TrpcQueryUserReq >(arena);
 }
-template<> PROTOBUF_NOINLINE ::trpc::sample::TrpcQueryUserRsp* Arena::CreateMaybeMessage< ::trpc::sample::TrpcQueryUserRsp >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::trpc::sample::TrpcQueryUserRsp >(arena);
+template<> PROTOBUF_NOINLINE ::trpc::app::TrpcQueryUserRsp* Arena::CreateMaybeMessage< ::trpc::app::TrpcQueryUserRsp >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::trpc::app::TrpcQueryUserRsp >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

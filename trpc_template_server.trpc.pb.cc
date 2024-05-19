@@ -9,30 +9,30 @@
 #include "trpc/server/rpc_method_handler.h"
 
 namespace trpc {
-namespace sample {
+namespace app {
 
 static const std::vector<std::vector<std::string_view>> TrpcTemplateService_method_names = {
-  {"/trpc.sample.TrpcTemplateService/TrpcTemplateHandler"},
-  {"/trpc.sample.TrpcTemplateService/TrpcQueryUserHandler"},
+  {"/trpc.app.TrpcTemplateService/TrpcTemplateHandler"},
+  {"/trpc.app.TrpcTemplateService/TrpcQueryUserHandler"},
 };
 
 TrpcTemplateService::TrpcTemplateService() {
   for (const std::string_view& method : TrpcTemplateService_method_names[0]) {
-    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::RpcMethodHandler<::trpc::sample::TrpcTemplateReq, ::trpc::sample::TrpcTemplateRsp>(std::bind(&TrpcTemplateService::TrpcTemplateHandler, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3))));
+    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::RpcMethodHandler<::trpc::app::TrpcTemplateReq, ::trpc::app::TrpcTemplateRsp>(std::bind(&TrpcTemplateService::TrpcTemplateHandler, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3))));
   }
   for (const std::string_view& method : TrpcTemplateService_method_names[1]) {
-    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::RpcMethodHandler<::trpc::sample::TrpcQueryUserReq, ::trpc::sample::TrpcQueryUserRsp>(std::bind(&TrpcTemplateService::TrpcQueryUserHandler, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3))));
+    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::RpcMethodHandler<::trpc::app::TrpcQueryUserReq, ::trpc::app::TrpcQueryUserRsp>(std::bind(&TrpcTemplateService::TrpcQueryUserHandler, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3))));
   }
 }
 
-::trpc::Status TrpcTemplateService::TrpcTemplateHandler(::trpc::ServerContextPtr context, const ::trpc::sample::TrpcTemplateReq* request, ::trpc::sample::TrpcTemplateRsp* response) {
+::trpc::Status TrpcTemplateService::TrpcTemplateHandler(::trpc::ServerContextPtr context, const ::trpc::app::TrpcTemplateReq* request, ::trpc::app::TrpcTemplateRsp* response) {
   (void)context;
   (void)request;
   (void)response;
   return ::trpc::Status(-1, "");
 }
 
-::trpc::Status TrpcTemplateService::TrpcQueryUserHandler(::trpc::ServerContextPtr context, const ::trpc::sample::TrpcQueryUserReq* request, ::trpc::sample::TrpcQueryUserRsp* response) {
+::trpc::Status TrpcTemplateService::TrpcQueryUserHandler(::trpc::ServerContextPtr context, const ::trpc::app::TrpcQueryUserReq* request, ::trpc::app::TrpcQueryUserRsp* response) {
   (void)context;
   (void)request;
   (void)response;
@@ -41,60 +41,60 @@ TrpcTemplateService::TrpcTemplateService() {
 
 AsyncTrpcTemplateService::AsyncTrpcTemplateService() : ::trpc::AsyncRpcServiceImpl() {
   for (const std::string_view& method : TrpcTemplateService_method_names[0]) {
-    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::AsyncRpcMethodHandler<::trpc::sample::TrpcTemplateReq, ::trpc::sample::TrpcTemplateRsp>(std::bind(&AsyncTrpcTemplateService::TrpcTemplateHandler, this, std::placeholders::_1, std::placeholders::_2))));
+    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::AsyncRpcMethodHandler<::trpc::app::TrpcTemplateReq, ::trpc::app::TrpcTemplateRsp>(std::bind(&AsyncTrpcTemplateService::TrpcTemplateHandler, this, std::placeholders::_1, std::placeholders::_2))));
   }
   for (const std::string_view& method : TrpcTemplateService_method_names[1]) {
-    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::AsyncRpcMethodHandler<::trpc::sample::TrpcQueryUserReq, ::trpc::sample::TrpcQueryUserRsp>(std::bind(&AsyncTrpcTemplateService::TrpcQueryUserHandler, this, std::placeholders::_1, std::placeholders::_2))));
+    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::AsyncRpcMethodHandler<::trpc::app::TrpcQueryUserReq, ::trpc::app::TrpcQueryUserRsp>(std::bind(&AsyncTrpcTemplateService::TrpcQueryUserHandler, this, std::placeholders::_1, std::placeholders::_2))));
   }
 }
 
-::trpc::Future<::trpc::sample::TrpcTemplateRsp> AsyncTrpcTemplateService::TrpcTemplateHandler(const ::trpc::ServerContextPtr& context, const ::trpc::sample::TrpcTemplateReq* request) {
-  return ::trpc::MakeExceptionFuture<::trpc::sample::TrpcTemplateRsp>(::trpc::CommonException("Unimplemented"));
+::trpc::Future<::trpc::app::TrpcTemplateRsp> AsyncTrpcTemplateService::TrpcTemplateHandler(const ::trpc::ServerContextPtr& context, const ::trpc::app::TrpcTemplateReq* request) {
+  return ::trpc::MakeExceptionFuture<::trpc::app::TrpcTemplateRsp>(::trpc::CommonException("Unimplemented"));
 }
 
-::trpc::Future<::trpc::sample::TrpcQueryUserRsp> AsyncTrpcTemplateService::TrpcQueryUserHandler(const ::trpc::ServerContextPtr& context, const ::trpc::sample::TrpcQueryUserReq* request) {
-  return ::trpc::MakeExceptionFuture<::trpc::sample::TrpcQueryUserRsp>(::trpc::CommonException("Unimplemented"));
+::trpc::Future<::trpc::app::TrpcQueryUserRsp> AsyncTrpcTemplateService::TrpcQueryUserHandler(const ::trpc::ServerContextPtr& context, const ::trpc::app::TrpcQueryUserReq* request) {
+  return ::trpc::MakeExceptionFuture<::trpc::app::TrpcQueryUserRsp>(::trpc::CommonException("Unimplemented"));
 }
 
-::trpc::Status TrpcTemplateServiceServiceProxy::TrpcTemplateHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcTemplateReq& request, ::trpc::sample::TrpcTemplateRsp* response) {
+::trpc::Status TrpcTemplateServiceServiceProxy::TrpcTemplateHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::TrpcTemplateReq& request, ::trpc::app::TrpcTemplateRsp* response) {
   if (context->GetFuncName().empty()) context->SetFuncName(TrpcTemplateService_method_names[0][0].data());
-  return UnaryInvoke<::trpc::sample::TrpcTemplateReq, ::trpc::sample::TrpcTemplateRsp>(context, request, response);
+  return UnaryInvoke<::trpc::app::TrpcTemplateReq, ::trpc::app::TrpcTemplateRsp>(context, request, response);
 }
 
-::trpc::Status TrpcTemplateServiceServiceProxy::TrpcQueryUserHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcQueryUserReq& request, ::trpc::sample::TrpcQueryUserRsp* response) {
+::trpc::Status TrpcTemplateServiceServiceProxy::TrpcQueryUserHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::TrpcQueryUserReq& request, ::trpc::app::TrpcQueryUserRsp* response) {
   if (context->GetFuncName().empty()) context->SetFuncName(TrpcTemplateService_method_names[1][0].data());
-  return UnaryInvoke<::trpc::sample::TrpcQueryUserReq, ::trpc::sample::TrpcQueryUserRsp>(context, request, response);
+  return UnaryInvoke<::trpc::app::TrpcQueryUserReq, ::trpc::app::TrpcQueryUserRsp>(context, request, response);
 }
 
-::trpc::Future<::trpc::sample::TrpcTemplateRsp> TrpcTemplateServiceServiceProxy::AsyncTrpcTemplateHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcTemplateReq& request) {
+::trpc::Future<::trpc::app::TrpcTemplateRsp> TrpcTemplateServiceServiceProxy::AsyncTrpcTemplateHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::TrpcTemplateReq& request) {
   if (context->GetFuncName().empty()) context->SetFuncName(TrpcTemplateService_method_names[0][0].data());
-  return AsyncUnaryInvoke<::trpc::sample::TrpcTemplateReq, ::trpc::sample::TrpcTemplateRsp>(context, request);
+  return AsyncUnaryInvoke<::trpc::app::TrpcTemplateReq, ::trpc::app::TrpcTemplateRsp>(context, request);
 }
 
-::trpc::Future<::trpc::sample::TrpcQueryUserRsp> TrpcTemplateServiceServiceProxy::AsyncTrpcQueryUserHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcQueryUserReq& request) {
+::trpc::Future<::trpc::app::TrpcQueryUserRsp> TrpcTemplateServiceServiceProxy::AsyncTrpcQueryUserHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::TrpcQueryUserReq& request) {
   if (context->GetFuncName().empty()) context->SetFuncName(TrpcTemplateService_method_names[1][0].data());
-  return AsyncUnaryInvoke<::trpc::sample::TrpcQueryUserReq, ::trpc::sample::TrpcQueryUserRsp>(context, request);
+  return AsyncUnaryInvoke<::trpc::app::TrpcQueryUserReq, ::trpc::app::TrpcQueryUserRsp>(context, request);
 }
 
-::trpc::Status TrpcTemplateServiceServiceProxy::TrpcTemplateHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcTemplateReq& request) {
+::trpc::Status TrpcTemplateServiceServiceProxy::TrpcTemplateHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::TrpcTemplateReq& request) {
   if (context->GetFuncName().empty()) context->SetFuncName(TrpcTemplateService_method_names[0][0].data());
-  return OnewayInvoke<::trpc::sample::TrpcTemplateReq>(context, request);
+  return OnewayInvoke<::trpc::app::TrpcTemplateReq>(context, request);
 }
 
-::trpc::Status TrpcTemplateServiceServiceProxy::TrpcQueryUserHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcQueryUserReq& request) {
+::trpc::Status TrpcTemplateServiceServiceProxy::TrpcQueryUserHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::TrpcQueryUserReq& request) {
   if (context->GetFuncName().empty()) context->SetFuncName(TrpcTemplateService_method_names[1][0].data());
-  return OnewayInvoke<::trpc::sample::TrpcQueryUserReq>(context, request);
+  return OnewayInvoke<::trpc::app::TrpcQueryUserReq>(context, request);
 }
 
-::trpc::Future<::trpc::sample::TrpcTemplateRsp> AsyncTrpcTemplateServiceServiceProxy::TrpcTemplateHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcTemplateReq& request) {
+::trpc::Future<::trpc::app::TrpcTemplateRsp> AsyncTrpcTemplateServiceServiceProxy::TrpcTemplateHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::TrpcTemplateReq& request) {
   if (context->GetFuncName().empty()) context->SetFuncName(TrpcTemplateService_method_names[0][0].data());
-  return AsyncUnaryInvoke<::trpc::sample::TrpcTemplateReq, ::trpc::sample::TrpcTemplateRsp>(context, request);
+  return AsyncUnaryInvoke<::trpc::app::TrpcTemplateReq, ::trpc::app::TrpcTemplateRsp>(context, request);
 }
 
-::trpc::Future<::trpc::sample::TrpcQueryUserRsp> AsyncTrpcTemplateServiceServiceProxy::TrpcQueryUserHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcQueryUserReq& request) {
+::trpc::Future<::trpc::app::TrpcQueryUserRsp> AsyncTrpcTemplateServiceServiceProxy::TrpcQueryUserHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::TrpcQueryUserReq& request) {
   if (context->GetFuncName().empty()) context->SetFuncName(TrpcTemplateService_method_names[1][0].data());
-  return AsyncUnaryInvoke<::trpc::sample::TrpcQueryUserReq, ::trpc::sample::TrpcQueryUserRsp>(context, request);
+  return AsyncUnaryInvoke<::trpc::app::TrpcQueryUserReq, ::trpc::app::TrpcQueryUserRsp>(context, request);
 }
 
-} // end namespace sample
+} // end namespace app
 } // end namespace trpc

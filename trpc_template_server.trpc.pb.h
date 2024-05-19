@@ -11,43 +11,43 @@
 #include "trpc/server/rpc_service_impl.h"
 
 namespace trpc {
-namespace sample {
+namespace app {
 
 class TrpcTemplateService : public ::trpc::RpcServiceImpl {
  public:
   TrpcTemplateService();
 
-  virtual ::trpc::Status TrpcTemplateHandler(::trpc::ServerContextPtr context, const ::trpc::sample::TrpcTemplateReq* request, ::trpc::sample::TrpcTemplateRsp* response);
-  virtual ::trpc::Status TrpcQueryUserHandler(::trpc::ServerContextPtr context, const ::trpc::sample::TrpcQueryUserReq* request, ::trpc::sample::TrpcQueryUserRsp* response);
+  virtual ::trpc::Status TrpcTemplateHandler(::trpc::ServerContextPtr context, const ::trpc::app::TrpcTemplateReq* request, ::trpc::app::TrpcTemplateRsp* response);
+  virtual ::trpc::Status TrpcQueryUserHandler(::trpc::ServerContextPtr context, const ::trpc::app::TrpcQueryUserReq* request, ::trpc::app::TrpcQueryUserRsp* response);
 };
 
 class AsyncTrpcTemplateService : public ::trpc::AsyncRpcServiceImpl {
  public:
   AsyncTrpcTemplateService();
   
-  virtual ::trpc::Future<::trpc::sample::TrpcTemplateRsp> TrpcTemplateHandler(const ::trpc::ServerContextPtr& context, const ::trpc::sample::TrpcTemplateReq* request);
-  virtual ::trpc::Future<::trpc::sample::TrpcQueryUserRsp> TrpcQueryUserHandler(const ::trpc::ServerContextPtr& context, const ::trpc::sample::TrpcQueryUserReq* request);
+  virtual ::trpc::Future<::trpc::app::TrpcTemplateRsp> TrpcTemplateHandler(const ::trpc::ServerContextPtr& context, const ::trpc::app::TrpcTemplateReq* request);
+  virtual ::trpc::Future<::trpc::app::TrpcQueryUserRsp> TrpcQueryUserHandler(const ::trpc::ServerContextPtr& context, const ::trpc::app::TrpcQueryUserReq* request);
 };
 
 class TrpcTemplateServiceServiceProxy : public ::trpc::RpcServiceProxy {
  public:
-  virtual ::trpc::Status TrpcTemplateHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcTemplateReq& request, ::trpc::sample::TrpcTemplateRsp* response);
-  virtual ::trpc::Future<::trpc::sample::TrpcTemplateRsp> AsyncTrpcTemplateHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcTemplateReq& request);
+  virtual ::trpc::Status TrpcTemplateHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::TrpcTemplateReq& request, ::trpc::app::TrpcTemplateRsp* response);
+  virtual ::trpc::Future<::trpc::app::TrpcTemplateRsp> AsyncTrpcTemplateHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::TrpcTemplateReq& request);
   // oneway, only send
-  virtual ::trpc::Status TrpcTemplateHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcTemplateReq& request);
-  virtual ::trpc::Status TrpcQueryUserHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcQueryUserReq& request, ::trpc::sample::TrpcQueryUserRsp* response);
-  virtual ::trpc::Future<::trpc::sample::TrpcQueryUserRsp> AsyncTrpcQueryUserHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcQueryUserReq& request);
+  virtual ::trpc::Status TrpcTemplateHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::TrpcTemplateReq& request);
+  virtual ::trpc::Status TrpcQueryUserHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::TrpcQueryUserReq& request, ::trpc::app::TrpcQueryUserRsp* response);
+  virtual ::trpc::Future<::trpc::app::TrpcQueryUserRsp> AsyncTrpcQueryUserHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::TrpcQueryUserReq& request);
   // oneway, only send
-  virtual ::trpc::Status TrpcQueryUserHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcQueryUserReq& request);
+  virtual ::trpc::Status TrpcQueryUserHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::TrpcQueryUserReq& request);
 };
 
 class AsyncTrpcTemplateServiceServiceProxy : public ::trpc::RpcServiceProxy {
  public:
-  ::trpc::Future<::trpc::sample::TrpcTemplateRsp> TrpcTemplateHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcTemplateReq& request);
+  ::trpc::Future<::trpc::app::TrpcTemplateRsp> TrpcTemplateHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::TrpcTemplateReq& request);
   // TODO: one-way
-  ::trpc::Future<::trpc::sample::TrpcQueryUserRsp> TrpcQueryUserHandler(const ::trpc::ClientContextPtr& context, const ::trpc::sample::TrpcQueryUserReq& request);
+  ::trpc::Future<::trpc::app::TrpcQueryUserRsp> TrpcQueryUserHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::TrpcQueryUserReq& request);
   // TODO: one-way
 };
 
-} // end namespace sample
+} // end namespace app
 } // end namespace trpc
