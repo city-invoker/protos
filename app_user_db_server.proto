@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+
+package trpc.app;
+
+service AppUserDbService{
+  rpc AppQueryUserInfoHandler(AppQueryUserInfoReq) returns (AppQueryUserInfoRsp) {};
+
+}
+
+message AppQueryUserInfoReq {
+  string appid = 1;
+  string uid = 2;
+  string phone_num = 3;
+}
+
+message AppQueryUserInfoRsp  {
+  string appid = 1;
+  string phone_num = 2;
+  string uid = 3;   
+}
+
+
