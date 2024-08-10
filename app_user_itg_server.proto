@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package trpc.app;
+
+service AppUserItgService{
+  rpc AppUserRegister(AppUserRegisterReq) returns (AppUserRegisterRsp) {};
+  rpc AppUserQueryInfo(AppUserQueryInfoReq) returns (AppUserQueryInfoRsp) {};
+}
+
+message AppUserInfo {
+  string appid = 1;
+  string phone = 2;
+  string user_name = 3;
+  string register_time = 4;
+  optional string password = 5;
+  optional string icon_url = 6;
+
+}
+
+message AppUserRegisterReq {
+  AppUserInfo user_info = 1;
+  string public_key = 2;
+}
+
+message AppUserRegisterRsp {
+  string appid = 1;
+  string uid = 2;   
+}
+
+message AppUserQueryInfoReq {
+  uint32 condition_type = 1;
+  oneof condition_value {
+    string uid = 2;
+    string phone = 3;
+  } 
+}
+
+message AppUserQueryInfoRsp {
+  AppUserInfo user_info = 1;
+}
+
+
