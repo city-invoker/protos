@@ -3,8 +3,8 @@ syntax = "proto3";
 package trpc.app;
 
 service AppUserItgService{
-  rpc AppUserRegister(AppUserRegisterReq) returns (AppUserRegisterRsp) {};
-  rpc AppUserQueryInfo(AppUserQueryInfoReq) returns (AppUserQueryInfoRsp) {};
+  rpc AppUserRegisterHandler(AppUserRegisterReq) returns (AppUserRegisterRsp) {};
+  rpc AppUserQueryInfoHandler(AppUserQueryInfoReq) returns (AppUserQueryInfoRsp) {};
 }
 
 message AppUserInfo {

@@ -12,27 +12,27 @@ namespace trpc {
 namespace app {
 
 static const std::vector<std::vector<std::string_view>> AppUserItgService_method_names = {
-  {"/trpc.app.AppUserItgService/AppUserRegister"},
-  {"/trpc.app.AppUserItgService/AppUserQueryInfo"},
+  {"/trpc.app.AppUserItgService/AppUserRegisterHandler"},
+  {"/trpc.app.AppUserItgService/AppUserQueryInfoHandler"},
 };
 
 AppUserItgService::AppUserItgService() {
   for (const std::string_view& method : AppUserItgService_method_names[0]) {
-    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::RpcMethodHandler<::trpc::app::AppUserRegisterReq, ::trpc::app::AppUserRegisterRsp>(std::bind(&AppUserItgService::AppUserRegister, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3))));
+    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::RpcMethodHandler<::trpc::app::AppUserRegisterReq, ::trpc::app::AppUserRegisterRsp>(std::bind(&AppUserItgService::AppUserRegisterHandler, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3))));
   }
   for (const std::string_view& method : AppUserItgService_method_names[1]) {
-    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::RpcMethodHandler<::trpc::app::AppUserQueryInfoReq, ::trpc::app::AppUserQueryInfoRsp>(std::bind(&AppUserItgService::AppUserQueryInfo, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3))));
+    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::RpcMethodHandler<::trpc::app::AppUserQueryInfoReq, ::trpc::app::AppUserQueryInfoRsp>(std::bind(&AppUserItgService::AppUserQueryInfoHandler, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3))));
   }
 }
 
-::trpc::Status AppUserItgService::AppUserRegister(::trpc::ServerContextPtr context, const ::trpc::app::AppUserRegisterReq* request, ::trpc::app::AppUserRegisterRsp* response) {
+::trpc::Status AppUserItgService::AppUserRegisterHandler(::trpc::ServerContextPtr context, const ::trpc::app::AppUserRegisterReq* request, ::trpc::app::AppUserRegisterRsp* response) {
   (void)context;
   (void)request;
   (void)response;
   return ::trpc::Status(-1, "");
 }
 
-::trpc::Status AppUserItgService::AppUserQueryInfo(::trpc::ServerContextPtr context, const ::trpc::app::AppUserQueryInfoReq* request, ::trpc::app::AppUserQueryInfoRsp* response) {
+::trpc::Status AppUserItgService::AppUserQueryInfoHandler(::trpc::ServerContextPtr context, const ::trpc::app::AppUserQueryInfoReq* request, ::trpc::app::AppUserQueryInfoRsp* response) {
   (void)context;
   (void)request;
   (void)response;
@@ -41,57 +41,57 @@ AppUserItgService::AppUserItgService() {
 
 AsyncAppUserItgService::AsyncAppUserItgService() : ::trpc::AsyncRpcServiceImpl() {
   for (const std::string_view& method : AppUserItgService_method_names[0]) {
-    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::AsyncRpcMethodHandler<::trpc::app::AppUserRegisterReq, ::trpc::app::AppUserRegisterRsp>(std::bind(&AsyncAppUserItgService::AppUserRegister, this, std::placeholders::_1, std::placeholders::_2))));
+    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::AsyncRpcMethodHandler<::trpc::app::AppUserRegisterReq, ::trpc::app::AppUserRegisterRsp>(std::bind(&AsyncAppUserItgService::AppUserRegisterHandler, this, std::placeholders::_1, std::placeholders::_2))));
   }
   for (const std::string_view& method : AppUserItgService_method_names[1]) {
-    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::AsyncRpcMethodHandler<::trpc::app::AppUserQueryInfoReq, ::trpc::app::AppUserQueryInfoRsp>(std::bind(&AsyncAppUserItgService::AppUserQueryInfo, this, std::placeholders::_1, std::placeholders::_2))));
+    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::AsyncRpcMethodHandler<::trpc::app::AppUserQueryInfoReq, ::trpc::app::AppUserQueryInfoRsp>(std::bind(&AsyncAppUserItgService::AppUserQueryInfoHandler, this, std::placeholders::_1, std::placeholders::_2))));
   }
 }
 
-::trpc::Future<::trpc::app::AppUserRegisterRsp> AsyncAppUserItgService::AppUserRegister(const ::trpc::ServerContextPtr& context, const ::trpc::app::AppUserRegisterReq* request) {
+::trpc::Future<::trpc::app::AppUserRegisterRsp> AsyncAppUserItgService::AppUserRegisterHandler(const ::trpc::ServerContextPtr& context, const ::trpc::app::AppUserRegisterReq* request) {
   return ::trpc::MakeExceptionFuture<::trpc::app::AppUserRegisterRsp>(::trpc::CommonException("Unimplemented"));
 }
 
-::trpc::Future<::trpc::app::AppUserQueryInfoRsp> AsyncAppUserItgService::AppUserQueryInfo(const ::trpc::ServerContextPtr& context, const ::trpc::app::AppUserQueryInfoReq* request) {
+::trpc::Future<::trpc::app::AppUserQueryInfoRsp> AsyncAppUserItgService::AppUserQueryInfoHandler(const ::trpc::ServerContextPtr& context, const ::trpc::app::AppUserQueryInfoReq* request) {
   return ::trpc::MakeExceptionFuture<::trpc::app::AppUserQueryInfoRsp>(::trpc::CommonException("Unimplemented"));
 }
 
-::trpc::Status AppUserItgServiceServiceProxy::AppUserRegister(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserRegisterReq& request, ::trpc::app::AppUserRegisterRsp* response) {
+::trpc::Status AppUserItgServiceServiceProxy::AppUserRegisterHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserRegisterReq& request, ::trpc::app::AppUserRegisterRsp* response) {
   if (context->GetFuncName().empty()) context->SetFuncName(AppUserItgService_method_names[0][0].data());
   return UnaryInvoke<::trpc::app::AppUserRegisterReq, ::trpc::app::AppUserRegisterRsp>(context, request, response);
 }
 
-::trpc::Status AppUserItgServiceServiceProxy::AppUserQueryInfo(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserQueryInfoReq& request, ::trpc::app::AppUserQueryInfoRsp* response) {
+::trpc::Status AppUserItgServiceServiceProxy::AppUserQueryInfoHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserQueryInfoReq& request, ::trpc::app::AppUserQueryInfoRsp* response) {
   if (context->GetFuncName().empty()) context->SetFuncName(AppUserItgService_method_names[1][0].data());
   return UnaryInvoke<::trpc::app::AppUserQueryInfoReq, ::trpc::app::AppUserQueryInfoRsp>(context, request, response);
 }
 
-::trpc::Future<::trpc::app::AppUserRegisterRsp> AppUserItgServiceServiceProxy::AsyncAppUserRegister(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserRegisterReq& request) {
+::trpc::Future<::trpc::app::AppUserRegisterRsp> AppUserItgServiceServiceProxy::AsyncAppUserRegisterHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserRegisterReq& request) {
   if (context->GetFuncName().empty()) context->SetFuncName(AppUserItgService_method_names[0][0].data());
   return AsyncUnaryInvoke<::trpc::app::AppUserRegisterReq, ::trpc::app::AppUserRegisterRsp>(context, request);
 }
 
-::trpc::Future<::trpc::app::AppUserQueryInfoRsp> AppUserItgServiceServiceProxy::AsyncAppUserQueryInfo(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserQueryInfoReq& request) {
+::trpc::Future<::trpc::app::AppUserQueryInfoRsp> AppUserItgServiceServiceProxy::AsyncAppUserQueryInfoHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserQueryInfoReq& request) {
   if (context->GetFuncName().empty()) context->SetFuncName(AppUserItgService_method_names[1][0].data());
   return AsyncUnaryInvoke<::trpc::app::AppUserQueryInfoReq, ::trpc::app::AppUserQueryInfoRsp>(context, request);
 }
 
-::trpc::Status AppUserItgServiceServiceProxy::AppUserRegister(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserRegisterReq& request) {
+::trpc::Status AppUserItgServiceServiceProxy::AppUserRegisterHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserRegisterReq& request) {
   if (context->GetFuncName().empty()) context->SetFuncName(AppUserItgService_method_names[0][0].data());
   return OnewayInvoke<::trpc::app::AppUserRegisterReq>(context, request);
 }
 
-::trpc::Status AppUserItgServiceServiceProxy::AppUserQueryInfo(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserQueryInfoReq& request) {
+::trpc::Status AppUserItgServiceServiceProxy::AppUserQueryInfoHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserQueryInfoReq& request) {
   if (context->GetFuncName().empty()) context->SetFuncName(AppUserItgService_method_names[1][0].data());
   return OnewayInvoke<::trpc::app::AppUserQueryInfoReq>(context, request);
 }
 
-::trpc::Future<::trpc::app::AppUserRegisterRsp> AsyncAppUserItgServiceServiceProxy::AppUserRegister(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserRegisterReq& request) {
+::trpc::Future<::trpc::app::AppUserRegisterRsp> AsyncAppUserItgServiceServiceProxy::AppUserRegisterHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserRegisterReq& request) {
   if (context->GetFuncName().empty()) context->SetFuncName(AppUserItgService_method_names[0][0].data());
   return AsyncUnaryInvoke<::trpc::app::AppUserRegisterReq, ::trpc::app::AppUserRegisterRsp>(context, request);
 }
 
-::trpc::Future<::trpc::app::AppUserQueryInfoRsp> AsyncAppUserItgServiceServiceProxy::AppUserQueryInfo(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserQueryInfoReq& request) {
+::trpc::Future<::trpc::app::AppUserQueryInfoRsp> AsyncAppUserItgServiceServiceProxy::AppUserQueryInfoHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserQueryInfoReq& request) {
   if (context->GetFuncName().empty()) context->SetFuncName(AppUserItgService_method_names[1][0].data());
   return AsyncUnaryInvoke<::trpc::app::AppUserQueryInfoReq, ::trpc::app::AppUserQueryInfoRsp>(context, request);
 }

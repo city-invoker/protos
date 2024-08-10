@@ -17,35 +17,35 @@ class AppUserItgService : public ::trpc::RpcServiceImpl {
  public:
   AppUserItgService();
 
-  virtual ::trpc::Status AppUserRegister(::trpc::ServerContextPtr context, const ::trpc::app::AppUserRegisterReq* request, ::trpc::app::AppUserRegisterRsp* response);
-  virtual ::trpc::Status AppUserQueryInfo(::trpc::ServerContextPtr context, const ::trpc::app::AppUserQueryInfoReq* request, ::trpc::app::AppUserQueryInfoRsp* response);
+  virtual ::trpc::Status AppUserRegisterHandler(::trpc::ServerContextPtr context, const ::trpc::app::AppUserRegisterReq* request, ::trpc::app::AppUserRegisterRsp* response);
+  virtual ::trpc::Status AppUserQueryInfoHandler(::trpc::ServerContextPtr context, const ::trpc::app::AppUserQueryInfoReq* request, ::trpc::app::AppUserQueryInfoRsp* response);
 };
 
 class AsyncAppUserItgService : public ::trpc::AsyncRpcServiceImpl {
  public:
   AsyncAppUserItgService();
   
-  virtual ::trpc::Future<::trpc::app::AppUserRegisterRsp> AppUserRegister(const ::trpc::ServerContextPtr& context, const ::trpc::app::AppUserRegisterReq* request);
-  virtual ::trpc::Future<::trpc::app::AppUserQueryInfoRsp> AppUserQueryInfo(const ::trpc::ServerContextPtr& context, const ::trpc::app::AppUserQueryInfoReq* request);
+  virtual ::trpc::Future<::trpc::app::AppUserRegisterRsp> AppUserRegisterHandler(const ::trpc::ServerContextPtr& context, const ::trpc::app::AppUserRegisterReq* request);
+  virtual ::trpc::Future<::trpc::app::AppUserQueryInfoRsp> AppUserQueryInfoHandler(const ::trpc::ServerContextPtr& context, const ::trpc::app::AppUserQueryInfoReq* request);
 };
 
 class AppUserItgServiceServiceProxy : public ::trpc::RpcServiceProxy {
  public:
-  virtual ::trpc::Status AppUserRegister(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserRegisterReq& request, ::trpc::app::AppUserRegisterRsp* response);
-  virtual ::trpc::Future<::trpc::app::AppUserRegisterRsp> AsyncAppUserRegister(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserRegisterReq& request);
+  virtual ::trpc::Status AppUserRegisterHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserRegisterReq& request, ::trpc::app::AppUserRegisterRsp* response);
+  virtual ::trpc::Future<::trpc::app::AppUserRegisterRsp> AsyncAppUserRegisterHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserRegisterReq& request);
   // oneway, only send
-  virtual ::trpc::Status AppUserRegister(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserRegisterReq& request);
-  virtual ::trpc::Status AppUserQueryInfo(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserQueryInfoReq& request, ::trpc::app::AppUserQueryInfoRsp* response);
-  virtual ::trpc::Future<::trpc::app::AppUserQueryInfoRsp> AsyncAppUserQueryInfo(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserQueryInfoReq& request);
+  virtual ::trpc::Status AppUserRegisterHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserRegisterReq& request);
+  virtual ::trpc::Status AppUserQueryInfoHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserQueryInfoReq& request, ::trpc::app::AppUserQueryInfoRsp* response);
+  virtual ::trpc::Future<::trpc::app::AppUserQueryInfoRsp> AsyncAppUserQueryInfoHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserQueryInfoReq& request);
   // oneway, only send
-  virtual ::trpc::Status AppUserQueryInfo(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserQueryInfoReq& request);
+  virtual ::trpc::Status AppUserQueryInfoHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserQueryInfoReq& request);
 };
 
 class AsyncAppUserItgServiceServiceProxy : public ::trpc::RpcServiceProxy {
  public:
-  ::trpc::Future<::trpc::app::AppUserRegisterRsp> AppUserRegister(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserRegisterReq& request);
+  ::trpc::Future<::trpc::app::AppUserRegisterRsp> AppUserRegisterHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserRegisterReq& request);
   // TODO: one-way
-  ::trpc::Future<::trpc::app::AppUserQueryInfoRsp> AppUserQueryInfo(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserQueryInfoReq& request);
+  ::trpc::Future<::trpc::app::AppUserQueryInfoRsp> AppUserQueryInfoHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppUserQueryInfoReq& request);
   // TODO: one-way
 };
 

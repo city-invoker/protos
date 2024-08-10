@@ -169,16 +169,16 @@ const char descriptor_table_protodef_app_5fuser_5fitg_5fserver_2eproto[] PROTOBU
   "ndition_type\030\001 \001(\r\022\r\n\003uid\030\002 \001(\tH\000\022\017\n\005pho"
   "ne\030\003 \001(\tH\000B\021\n\017condition_value\"\?\n\023AppUser"
   "QueryInfoRsp\022(\n\tuser_info\030\001 \001(\0132\025.trpc.a"
-  "pp.AppUserInfo2\270\001\n\021AppUserItgService\022O\n\017"
-  "AppUserRegister\022\034.trpc.app.AppUserRegist"
-  "erReq\032\034.trpc.app.AppUserRegisterRsp\"\000\022R\n"
-  "\020AppUserQueryInfo\022\035.trpc.app.AppUserQuer"
-  "yInfoReq\032\035.trpc.app.AppUserQueryInfoRsp\""
-  "\000b\006proto3"
+  "pp.AppUserInfo2\306\001\n\021AppUserItgService\022V\n\026"
+  "AppUserRegisterHandler\022\034.trpc.app.AppUse"
+  "rRegisterReq\032\034.trpc.app.AppUserRegisterR"
+  "sp\"\000\022Y\n\027AppUserQueryInfoHandler\022\035.trpc.a"
+  "pp.AppUserQueryInfoReq\032\035.trpc.app.AppUse"
+  "rQueryInfoRsp\"\000b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_app_5fuser_5fitg_5fserver_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_app_5fuser_5fitg_5fserver_2eproto = {
-  false, false, 689, descriptor_table_protodef_app_5fuser_5fitg_5fserver_2eproto, "app_user_itg_server.proto", 
+  false, false, 703, descriptor_table_protodef_app_5fuser_5fitg_5fserver_2eproto, "app_user_itg_server.proto", 
   &descriptor_table_app_5fuser_5fitg_5fserver_2eproto_once, nullptr, 0, 5,
   schemas, file_default_instances, TableStruct_app_5fuser_5fitg_5fserver_2eproto::offsets,
   file_level_metadata_app_5fuser_5fitg_5fserver_2eproto, file_level_enum_descriptors_app_5fuser_5fitg_5fserver_2eproto, file_level_service_descriptors_app_5fuser_5fitg_5fserver_2eproto,
