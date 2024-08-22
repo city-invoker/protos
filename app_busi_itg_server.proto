@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package trpc.app;
+
+service AppBusiItgService{
+  rpc AppBusiBirthdateConvertHandler(AppBusiBirthdateConvertReq) returns (AppBusiBirthdateConvertRsp) {};
+}
+
+
+message AppBusiBirthdateConvertReq {
+  string birthdate = 1;
+}
+
+message AppBusiBirthdateConvertRsp {
+  string birthdate = 1;
+  string gz_year = 2;
+  string gz_month = 3;
+  string gz_day = 4;
+  string gz_hour = 5;
+}
+
+
