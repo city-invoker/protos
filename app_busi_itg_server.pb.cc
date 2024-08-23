@@ -32,11 +32,10 @@ struct AppBusiBirthdateConvertReqDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT AppBusiBirthdateConvertReqDefaultTypeInternal _AppBusiBirthdateConvertReq_default_instance_;
 constexpr AppBusiBirthdateConvertRsp::AppBusiBirthdateConvertRsp(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : birthdate_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , gz_year_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , gz_month_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , gz_day_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , gz_hour_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+  : gz_idxs_()
+  , _gz_idxs_cached_byte_size_()
+  , gz_names_()
+  , birthdate_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
 struct AppBusiBirthdateConvertRspDefaultTypeInternal {
   constexpr AppBusiBirthdateConvertRspDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -65,10 +64,8 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_app_5fbusi_5fitg_5fserver_2epr
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBirthdateConvertRsp, birthdate_),
-  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBirthdateConvertRsp, gz_year_),
-  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBirthdateConvertRsp, gz_month_),
-  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBirthdateConvertRsp, gz_day_),
-  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBirthdateConvertRsp, gz_hour_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBirthdateConvertRsp, gz_idxs_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBirthdateConvertRsp, gz_names_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::trpc::app::AppBusiBirthdateConvertReq)},
@@ -83,17 +80,16 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 const char descriptor_table_protodef_app_5fbusi_5fitg_5fserver_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\031app_busi_itg_server.proto\022\010trpc.app\"/\n"
   "\032AppBusiBirthdateConvertReq\022\021\n\tbirthdate"
-  "\030\001 \001(\t\"s\n\032AppBusiBirthdateConvertRsp\022\021\n\t"
-  "birthdate\030\001 \001(\t\022\017\n\007gz_year\030\002 \001(\t\022\020\n\010gz_m"
-  "onth\030\003 \001(\t\022\016\n\006gz_day\030\004 \001(\t\022\017\n\007gz_hour\030\005 "
-  "\001(\t2\203\001\n\021AppBusiItgService\022n\n\036AppBusiBirt"
-  "hdateConvertHandler\022$.trpc.app.AppBusiBi"
-  "rthdateConvertReq\032$.trpc.app.AppBusiBirt"
-  "hdateConvertRsp\"\000b\006proto3"
+  "\030\001 \001(\t\"R\n\032AppBusiBirthdateConvertRsp\022\021\n\t"
+  "birthdate\030\001 \001(\t\022\017\n\007gz_idxs\030\002 \003(\r\022\020\n\010gz_n"
+  "ames\030\003 \003(\t2\203\001\n\021AppBusiItgService\022n\n\036AppB"
+  "usiBirthdateConvertHandler\022$.trpc.app.Ap"
+  "pBusiBirthdateConvertReq\032$.trpc.app.AppB"
+  "usiBirthdateConvertRsp\"\000b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_app_5fbusi_5fitg_5fserver_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_app_5fbusi_5fitg_5fserver_2eproto = {
-  false, false, 345, descriptor_table_protodef_app_5fbusi_5fitg_5fserver_2eproto, "app_busi_itg_server.proto", 
+  false, false, 312, descriptor_table_protodef_app_5fbusi_5fitg_5fserver_2eproto, "app_busi_itg_server.proto", 
   &descriptor_table_app_5fbusi_5fitg_5fserver_2eproto_once, nullptr, 0, 2,
   schemas, file_default_instances, TableStruct_app_5fbusi_5fitg_5fserver_2eproto::offsets,
   file_level_metadata_app_5fbusi_5fitg_5fserver_2eproto, file_level_enum_descriptors_app_5fbusi_5fitg_5fserver_2eproto, file_level_service_descriptors_app_5fbusi_5fitg_5fserver_2eproto,
@@ -316,37 +312,21 @@ class AppBusiBirthdateConvertRsp::_Internal {
 };
 
 AppBusiBirthdateConvertRsp::AppBusiBirthdateConvertRsp(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+  gz_idxs_(arena),
+  gz_names_(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:trpc.app.AppBusiBirthdateConvertRsp)
 }
 AppBusiBirthdateConvertRsp::AppBusiBirthdateConvertRsp(const AppBusiBirthdateConvertRsp& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      gz_idxs_(from.gz_idxs_),
+      gz_names_(from.gz_names_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   birthdate_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_birthdate().empty()) {
     birthdate_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_birthdate(), 
-      GetArena());
-  }
-  gz_year_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_gz_year().empty()) {
-    gz_year_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_gz_year(), 
-      GetArena());
-  }
-  gz_month_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_gz_month().empty()) {
-    gz_month_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_gz_month(), 
-      GetArena());
-  }
-  gz_day_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_gz_day().empty()) {
-    gz_day_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_gz_day(), 
-      GetArena());
-  }
-  gz_hour_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_gz_hour().empty()) {
-    gz_hour_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_gz_hour(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:trpc.app.AppBusiBirthdateConvertRsp)
@@ -354,10 +334,6 @@ AppBusiBirthdateConvertRsp::AppBusiBirthdateConvertRsp(const AppBusiBirthdateCon
 
 void AppBusiBirthdateConvertRsp::SharedCtor() {
 birthdate_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-gz_year_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-gz_month_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-gz_day_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-gz_hour_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 AppBusiBirthdateConvertRsp::~AppBusiBirthdateConvertRsp() {
@@ -369,10 +345,6 @@ AppBusiBirthdateConvertRsp::~AppBusiBirthdateConvertRsp() {
 void AppBusiBirthdateConvertRsp::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   birthdate_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  gz_year_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  gz_month_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  gz_day_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  gz_hour_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void AppBusiBirthdateConvertRsp::ArenaDtor(void* object) {
@@ -391,11 +363,9 @@ void AppBusiBirthdateConvertRsp::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  gz_idxs_.Clear();
+  gz_names_.Clear();
   birthdate_.ClearToEmpty();
-  gz_year_.ClearToEmpty();
-  gz_month_.ClearToEmpty();
-  gz_day_.ClearToEmpty();
-  gz_hour_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -415,40 +385,28 @@ const char* AppBusiBirthdateConvertRsp::_InternalParse(const char* ptr, ::PROTOB
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string gz_year = 2;
+      // repeated uint32 gz_idxs = 2;
       case 2:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          auto str = _internal_mutable_gz_year();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.AppBusiBirthdateConvertRsp.gz_year"));
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_gz_idxs(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16) {
+          _internal_add_gz_idxs(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string gz_month = 3;
+      // repeated string gz_names = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
-          auto str = _internal_mutable_gz_month();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.AppBusiBirthdateConvertRsp.gz_month"));
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // string gz_day = 4;
-      case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
-          auto str = _internal_mutable_gz_day();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.AppBusiBirthdateConvertRsp.gz_day"));
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // string gz_hour = 5;
-      case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
-          auto str = _internal_mutable_gz_hour();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.AppBusiBirthdateConvertRsp.gz_hour"));
-          CHK_(ptr);
+          ptr -= 1;
+          do {
+            ptr += 1;
+            auto str = _internal_add_gz_names();
+            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.AppBusiBirthdateConvertRsp.gz_names"));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -489,44 +447,23 @@ failure:
         1, this->_internal_birthdate(), target);
   }
 
-  // string gz_year = 2;
-  if (this->gz_year().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_gz_year().data(), static_cast<int>(this->_internal_gz_year().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "trpc.app.AppBusiBirthdateConvertRsp.gz_year");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_gz_year(), target);
+  // repeated uint32 gz_idxs = 2;
+  {
+    int byte_size = _gz_idxs_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteUInt32Packed(
+          2, _internal_gz_idxs(), byte_size, target);
+    }
   }
 
-  // string gz_month = 3;
-  if (this->gz_month().size() > 0) {
+  // repeated string gz_names = 3;
+  for (int i = 0, n = this->_internal_gz_names_size(); i < n; i++) {
+    const auto& s = this->_internal_gz_names(i);
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_gz_month().data(), static_cast<int>(this->_internal_gz_month().length()),
+      s.data(), static_cast<int>(s.length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "trpc.app.AppBusiBirthdateConvertRsp.gz_month");
-    target = stream->WriteStringMaybeAliased(
-        3, this->_internal_gz_month(), target);
-  }
-
-  // string gz_day = 4;
-  if (this->gz_day().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_gz_day().data(), static_cast<int>(this->_internal_gz_day().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "trpc.app.AppBusiBirthdateConvertRsp.gz_day");
-    target = stream->WriteStringMaybeAliased(
-        4, this->_internal_gz_day(), target);
-  }
-
-  // string gz_hour = 5;
-  if (this->gz_hour().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_gz_hour().data(), static_cast<int>(this->_internal_gz_hour().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "trpc.app.AppBusiBirthdateConvertRsp.gz_hour");
-    target = stream->WriteStringMaybeAliased(
-        5, this->_internal_gz_hour(), target);
+      "trpc.app.AppBusiBirthdateConvertRsp.gz_names");
+    target = stream->WriteString(3, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -545,39 +482,34 @@ size_t AppBusiBirthdateConvertRsp::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  // repeated uint32 gz_idxs = 2;
+  {
+    size_t data_size = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      UInt32Size(this->gz_idxs_);
+    if (data_size > 0) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+            static_cast<::PROTOBUF_NAMESPACE_ID::int32>(data_size));
+    }
+    int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(data_size);
+    _gz_idxs_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
+    total_size += data_size;
+  }
+
+  // repeated string gz_names = 3;
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(gz_names_.size());
+  for (int i = 0, n = gz_names_.size(); i < n; i++) {
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      gz_names_.Get(i));
+  }
+
   // string birthdate = 1;
   if (this->birthdate().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_birthdate());
-  }
-
-  // string gz_year = 2;
-  if (this->gz_year().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_gz_year());
-  }
-
-  // string gz_month = 3;
-  if (this->gz_month().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_gz_month());
-  }
-
-  // string gz_day = 4;
-  if (this->gz_day().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_gz_day());
-  }
-
-  // string gz_hour = 5;
-  if (this->gz_hour().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_gz_hour());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -611,20 +543,10 @@ void AppBusiBirthdateConvertRsp::MergeFrom(const AppBusiBirthdateConvertRsp& fro
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
+  gz_idxs_.MergeFrom(from.gz_idxs_);
+  gz_names_.MergeFrom(from.gz_names_);
   if (from.birthdate().size() > 0) {
     _internal_set_birthdate(from._internal_birthdate());
-  }
-  if (from.gz_year().size() > 0) {
-    _internal_set_gz_year(from._internal_gz_year());
-  }
-  if (from.gz_month().size() > 0) {
-    _internal_set_gz_month(from._internal_gz_month());
-  }
-  if (from.gz_day().size() > 0) {
-    _internal_set_gz_day(from._internal_gz_day());
-  }
-  if (from.gz_hour().size() > 0) {
-    _internal_set_gz_hour(from._internal_gz_hour());
   }
 }
 
@@ -649,11 +571,9 @@ bool AppBusiBirthdateConvertRsp::IsInitialized() const {
 void AppBusiBirthdateConvertRsp::InternalSwap(AppBusiBirthdateConvertRsp* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  gz_idxs_.InternalSwap(&other->gz_idxs_);
+  gz_names_.InternalSwap(&other->gz_names_);
   birthdate_.Swap(&other->birthdate_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  gz_year_.Swap(&other->gz_year_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  gz_month_.Swap(&other->gz_month_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  gz_day_.Swap(&other->gz_day_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  gz_hour_.Swap(&other->gz_hour_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata AppBusiBirthdateConvertRsp::GetMetadata() const {

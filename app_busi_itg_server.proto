@@ -13,10 +13,8 @@ message AppBusiBirthdateConvertReq {
 
 message AppBusiBirthdateConvertRsp {
   string birthdate = 1;
-  string gz_year = 2;
-  string gz_month = 3;
-  string gz_day = 4;
-  string gz_hour = 5;
+  repeated uint32 gz_idxs = 2;
+  repeated string gz_names = 3;
 }
 
 
