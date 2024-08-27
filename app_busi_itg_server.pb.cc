@@ -35,7 +35,9 @@ constexpr AppBusiBirthdateConvertRsp::AppBusiBirthdateConvertRsp(
   : gz_idxs_()
   , _gz_idxs_cached_byte_size_()
   , gz_names_()
-  , birthdate_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+  , birthdate_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , st_name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , st_idx_(0u){}
 struct AppBusiBirthdateConvertRspDefaultTypeInternal {
   constexpr AppBusiBirthdateConvertRspDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -45,9 +47,38 @@ struct AppBusiBirthdateConvertRspDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT AppBusiBirthdateConvertRspDefaultTypeInternal _AppBusiBirthdateConvertRsp_default_instance_;
+constexpr AppBusiAuguryReq::AppBusiAuguryReq(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : birthdate_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct AppBusiAuguryReqDefaultTypeInternal {
+  constexpr AppBusiAuguryReqDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~AppBusiAuguryReqDefaultTypeInternal() {}
+  union {
+    AppBusiAuguryReq _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT AppBusiAuguryReqDefaultTypeInternal _AppBusiAuguryReq_default_instance_;
+constexpr AppBusiAuguryRsp::AppBusiAuguryRsp(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : km_z_idxs_()
+  , _km_z_idxs_cached_byte_size_()
+  , km_z_names_()
+  , mg_name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , mg_x_name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , mg_idx_(0u){}
+struct AppBusiAuguryRspDefaultTypeInternal {
+  constexpr AppBusiAuguryRspDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~AppBusiAuguryRspDefaultTypeInternal() {}
+  union {
+    AppBusiAuguryRsp _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT AppBusiAuguryRspDefaultTypeInternal _AppBusiAuguryRsp_default_instance_;
 }  // namespace app
 }  // namespace trpc
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_app_5fbusi_5fitg_5fserver_2eproto[2];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_app_5fbusi_5fitg_5fserver_2eproto[4];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_app_5fbusi_5fitg_5fserver_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_app_5fbusi_5fitg_5fserver_2eproto = nullptr;
 
@@ -64,33 +95,62 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_app_5fbusi_5fitg_5fserver_2epr
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBirthdateConvertRsp, birthdate_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBirthdateConvertRsp, st_idx_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBirthdateConvertRsp, st_name_),
   PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBirthdateConvertRsp, gz_idxs_),
   PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBirthdateConvertRsp, gz_names_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiAuguryReq, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiAuguryReq, birthdate_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiAuguryRsp, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiAuguryRsp, km_z_idxs_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiAuguryRsp, km_z_names_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiAuguryRsp, mg_idx_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiAuguryRsp, mg_name_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiAuguryRsp, mg_x_name_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::trpc::app::AppBusiBirthdateConvertReq)},
   { 6, -1, sizeof(::trpc::app::AppBusiBirthdateConvertRsp)},
+  { 16, -1, sizeof(::trpc::app::AppBusiAuguryReq)},
+  { 22, -1, sizeof(::trpc::app::AppBusiAuguryRsp)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::trpc::app::_AppBusiBirthdateConvertReq_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::trpc::app::_AppBusiBirthdateConvertRsp_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::trpc::app::_AppBusiAuguryReq_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::trpc::app::_AppBusiAuguryRsp_default_instance_),
 };
 
 const char descriptor_table_protodef_app_5fbusi_5fitg_5fserver_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\031app_busi_itg_server.proto\022\010trpc.app\"/\n"
   "\032AppBusiBirthdateConvertReq\022\021\n\tbirthdate"
-  "\030\001 \001(\t\"R\n\032AppBusiBirthdateConvertRsp\022\021\n\t"
-  "birthdate\030\001 \001(\t\022\017\n\007gz_idxs\030\002 \003(\r\022\020\n\010gz_n"
-  "ames\030\003 \003(\t2\203\001\n\021AppBusiItgService\022n\n\036AppB"
-  "usiBirthdateConvertHandler\022$.trpc.app.Ap"
-  "pBusiBirthdateConvertReq\032$.trpc.app.AppB"
-  "usiBirthdateConvertRsp\"\000b\006proto3"
+  "\030\001 \001(\t\"s\n\032AppBusiBirthdateConvertRsp\022\021\n\t"
+  "birthdate\030\001 \001(\t\022\016\n\006st_idx\030\002 \001(\r\022\017\n\007st_na"
+  "me\030\003 \001(\t\022\017\n\007gz_idxs\030\004 \003(\r\022\020\n\010gz_names\030\005 "
+  "\003(\t\"%\n\020AppBusiAuguryReq\022\021\n\tbirthdate\030\001 \001"
+  "(\t\"m\n\020AppBusiAuguryRsp\022\021\n\tkm_z_idxs\030\001 \003("
+  "\r\022\022\n\nkm_z_names\030\002 \003(\t\022\016\n\006mg_idx\030\003 \001(\r\022\017\n"
+  "\007mg_name\030\004 \001(\t\022\021\n\tmg_x_name\030\005 \001(\t2\325\001\n\021Ap"
+  "pBusiItgService\022n\n\036AppBusiBirthdateConve"
+  "rtHandler\022$.trpc.app.AppBusiBirthdateCon"
+  "vertReq\032$.trpc.app.AppBusiBirthdateConve"
+  "rtRsp\"\000\022P\n\024AppBusiAuguryHandler\022\032.trpc.a"
+  "pp.AppBusiAuguryReq\032\032.trpc.app.AppBusiAu"
+  "guryRsp\"\000b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_app_5fbusi_5fitg_5fserver_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_app_5fbusi_5fitg_5fserver_2eproto = {
-  false, false, 312, descriptor_table_protodef_app_5fbusi_5fitg_5fserver_2eproto, "app_busi_itg_server.proto", 
-  &descriptor_table_app_5fbusi_5fitg_5fserver_2eproto_once, nullptr, 0, 2,
+  false, false, 577, descriptor_table_protodef_app_5fbusi_5fitg_5fserver_2eproto, "app_busi_itg_server.proto", 
+  &descriptor_table_app_5fbusi_5fitg_5fserver_2eproto_once, nullptr, 0, 4,
   schemas, file_default_instances, TableStruct_app_5fbusi_5fitg_5fserver_2eproto::offsets,
   file_level_metadata_app_5fbusi_5fitg_5fserver_2eproto, file_level_enum_descriptors_app_5fbusi_5fitg_5fserver_2eproto, file_level_service_descriptors_app_5fbusi_5fitg_5fserver_2eproto,
 };
@@ -329,11 +389,19 @@ AppBusiBirthdateConvertRsp::AppBusiBirthdateConvertRsp(const AppBusiBirthdateCon
     birthdate_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_birthdate(), 
       GetArena());
   }
+  st_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_st_name().empty()) {
+    st_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_st_name(), 
+      GetArena());
+  }
+  st_idx_ = from.st_idx_;
   // @@protoc_insertion_point(copy_constructor:trpc.app.AppBusiBirthdateConvertRsp)
 }
 
 void AppBusiBirthdateConvertRsp::SharedCtor() {
 birthdate_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+st_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+st_idx_ = 0u;
 }
 
 AppBusiBirthdateConvertRsp::~AppBusiBirthdateConvertRsp() {
@@ -345,6 +413,7 @@ AppBusiBirthdateConvertRsp::~AppBusiBirthdateConvertRsp() {
 void AppBusiBirthdateConvertRsp::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   birthdate_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  st_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void AppBusiBirthdateConvertRsp::ArenaDtor(void* object) {
@@ -366,6 +435,8 @@ void AppBusiBirthdateConvertRsp::Clear() {
   gz_idxs_.Clear();
   gz_names_.Clear();
   birthdate_.ClearToEmpty();
+  st_name_.ClearToEmpty();
+  st_idx_ = 0u;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -385,19 +456,35 @@ const char* AppBusiBirthdateConvertRsp::_InternalParse(const char* ptr, ::PROTOB
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // repeated uint32 gz_idxs = 2;
+      // uint32 st_idx = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          st_idx_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string st_name = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          auto str = _internal_mutable_st_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.AppBusiBirthdateConvertRsp.st_name"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // repeated uint32 gz_idxs = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_gz_idxs(), ptr, ctx);
           CHK_(ptr);
-        } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16) {
+        } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32) {
           _internal_add_gz_idxs(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // repeated string gz_names = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+      // repeated string gz_names = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -406,7 +493,7 @@ const char* AppBusiBirthdateConvertRsp::_InternalParse(const char* ptr, ::PROTOB
             CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.AppBusiBirthdateConvertRsp.gz_names"));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -447,23 +534,39 @@ failure:
         1, this->_internal_birthdate(), target);
   }
 
-  // repeated uint32 gz_idxs = 2;
+  // uint32 st_idx = 2;
+  if (this->st_idx() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->_internal_st_idx(), target);
+  }
+
+  // string st_name = 3;
+  if (this->st_name().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_st_name().data(), static_cast<int>(this->_internal_st_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "trpc.app.AppBusiBirthdateConvertRsp.st_name");
+    target = stream->WriteStringMaybeAliased(
+        3, this->_internal_st_name(), target);
+  }
+
+  // repeated uint32 gz_idxs = 4;
   {
     int byte_size = _gz_idxs_cached_byte_size_.load(std::memory_order_relaxed);
     if (byte_size > 0) {
       target = stream->WriteUInt32Packed(
-          2, _internal_gz_idxs(), byte_size, target);
+          4, _internal_gz_idxs(), byte_size, target);
     }
   }
 
-  // repeated string gz_names = 3;
+  // repeated string gz_names = 5;
   for (int i = 0, n = this->_internal_gz_names_size(); i < n; i++) {
     const auto& s = this->_internal_gz_names(i);
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       s.data(), static_cast<int>(s.length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "trpc.app.AppBusiBirthdateConvertRsp.gz_names");
-    target = stream->WriteString(3, s, target);
+    target = stream->WriteString(5, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -482,7 +585,7 @@ size_t AppBusiBirthdateConvertRsp::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated uint32 gz_idxs = 2;
+  // repeated uint32 gz_idxs = 4;
   {
     size_t data_size = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       UInt32Size(this->gz_idxs_);
@@ -497,7 +600,7 @@ size_t AppBusiBirthdateConvertRsp::ByteSizeLong() const {
     total_size += data_size;
   }
 
-  // repeated string gz_names = 3;
+  // repeated string gz_names = 5;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(gz_names_.size());
   for (int i = 0, n = gz_names_.size(); i < n; i++) {
@@ -510,6 +613,20 @@ size_t AppBusiBirthdateConvertRsp::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_birthdate());
+  }
+
+  // string st_name = 3;
+  if (this->st_name().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_st_name());
+  }
+
+  // uint32 st_idx = 2;
+  if (this->st_idx() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->_internal_st_idx());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -548,6 +665,12 @@ void AppBusiBirthdateConvertRsp::MergeFrom(const AppBusiBirthdateConvertRsp& fro
   if (from.birthdate().size() > 0) {
     _internal_set_birthdate(from._internal_birthdate());
   }
+  if (from.st_name().size() > 0) {
+    _internal_set_st_name(from._internal_st_name());
+  }
+  if (from.st_idx() != 0) {
+    _internal_set_st_idx(from._internal_st_idx());
+  }
 }
 
 void AppBusiBirthdateConvertRsp::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -574,9 +697,552 @@ void AppBusiBirthdateConvertRsp::InternalSwap(AppBusiBirthdateConvertRsp* other)
   gz_idxs_.InternalSwap(&other->gz_idxs_);
   gz_names_.InternalSwap(&other->gz_names_);
   birthdate_.Swap(&other->birthdate_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  st_name_.Swap(&other->st_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  swap(st_idx_, other->st_idx_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata AppBusiBirthdateConvertRsp::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class AppBusiAuguryReq::_Internal {
+ public:
+};
+
+AppBusiAuguryReq::AppBusiAuguryReq(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:trpc.app.AppBusiAuguryReq)
+}
+AppBusiAuguryReq::AppBusiAuguryReq(const AppBusiAuguryReq& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  birthdate_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_birthdate().empty()) {
+    birthdate_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_birthdate(), 
+      GetArena());
+  }
+  // @@protoc_insertion_point(copy_constructor:trpc.app.AppBusiAuguryReq)
+}
+
+void AppBusiAuguryReq::SharedCtor() {
+birthdate_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+AppBusiAuguryReq::~AppBusiAuguryReq() {
+  // @@protoc_insertion_point(destructor:trpc.app.AppBusiAuguryReq)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void AppBusiAuguryReq::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  birthdate_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void AppBusiAuguryReq::ArenaDtor(void* object) {
+  AppBusiAuguryReq* _this = reinterpret_cast< AppBusiAuguryReq* >(object);
+  (void)_this;
+}
+void AppBusiAuguryReq::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void AppBusiAuguryReq::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void AppBusiAuguryReq::Clear() {
+// @@protoc_insertion_point(message_clear_start:trpc.app.AppBusiAuguryReq)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  birthdate_.ClearToEmpty();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* AppBusiAuguryReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // string birthdate = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_birthdate();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.AppBusiAuguryReq.birthdate"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* AppBusiAuguryReq::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:trpc.app.AppBusiAuguryReq)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string birthdate = 1;
+  if (this->birthdate().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_birthdate().data(), static_cast<int>(this->_internal_birthdate().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "trpc.app.AppBusiAuguryReq.birthdate");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_birthdate(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:trpc.app.AppBusiAuguryReq)
+  return target;
+}
+
+size_t AppBusiAuguryReq::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:trpc.app.AppBusiAuguryReq)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string birthdate = 1;
+  if (this->birthdate().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_birthdate());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void AppBusiAuguryReq::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:trpc.app.AppBusiAuguryReq)
+  GOOGLE_DCHECK_NE(&from, this);
+  const AppBusiAuguryReq* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AppBusiAuguryReq>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:trpc.app.AppBusiAuguryReq)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:trpc.app.AppBusiAuguryReq)
+    MergeFrom(*source);
+  }
+}
+
+void AppBusiAuguryReq::MergeFrom(const AppBusiAuguryReq& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:trpc.app.AppBusiAuguryReq)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.birthdate().size() > 0) {
+    _internal_set_birthdate(from._internal_birthdate());
+  }
+}
+
+void AppBusiAuguryReq::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:trpc.app.AppBusiAuguryReq)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void AppBusiAuguryReq::CopyFrom(const AppBusiAuguryReq& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:trpc.app.AppBusiAuguryReq)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool AppBusiAuguryReq::IsInitialized() const {
+  return true;
+}
+
+void AppBusiAuguryReq::InternalSwap(AppBusiAuguryReq* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  birthdate_.Swap(&other->birthdate_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata AppBusiAuguryReq::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class AppBusiAuguryRsp::_Internal {
+ public:
+};
+
+AppBusiAuguryRsp::AppBusiAuguryRsp(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+  km_z_idxs_(arena),
+  km_z_names_(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:trpc.app.AppBusiAuguryRsp)
+}
+AppBusiAuguryRsp::AppBusiAuguryRsp(const AppBusiAuguryRsp& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      km_z_idxs_(from.km_z_idxs_),
+      km_z_names_(from.km_z_names_) {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  mg_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_mg_name().empty()) {
+    mg_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_mg_name(), 
+      GetArena());
+  }
+  mg_x_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_mg_x_name().empty()) {
+    mg_x_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_mg_x_name(), 
+      GetArena());
+  }
+  mg_idx_ = from.mg_idx_;
+  // @@protoc_insertion_point(copy_constructor:trpc.app.AppBusiAuguryRsp)
+}
+
+void AppBusiAuguryRsp::SharedCtor() {
+mg_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+mg_x_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+mg_idx_ = 0u;
+}
+
+AppBusiAuguryRsp::~AppBusiAuguryRsp() {
+  // @@protoc_insertion_point(destructor:trpc.app.AppBusiAuguryRsp)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void AppBusiAuguryRsp::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  mg_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  mg_x_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void AppBusiAuguryRsp::ArenaDtor(void* object) {
+  AppBusiAuguryRsp* _this = reinterpret_cast< AppBusiAuguryRsp* >(object);
+  (void)_this;
+}
+void AppBusiAuguryRsp::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void AppBusiAuguryRsp::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void AppBusiAuguryRsp::Clear() {
+// @@protoc_insertion_point(message_clear_start:trpc.app.AppBusiAuguryRsp)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  km_z_idxs_.Clear();
+  km_z_names_.Clear();
+  mg_name_.ClearToEmpty();
+  mg_x_name_.ClearToEmpty();
+  mg_idx_ = 0u;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* AppBusiAuguryRsp::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // repeated uint32 km_z_idxs = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_km_z_idxs(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8) {
+          _internal_add_km_z_idxs(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // repeated string km_z_names = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            auto str = _internal_add_km_z_names();
+            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.AppBusiAuguryRsp.km_z_names"));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<18>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // uint32 mg_idx = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          mg_idx_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string mg_name = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          auto str = _internal_mutable_mg_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.AppBusiAuguryRsp.mg_name"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string mg_x_name = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          auto str = _internal_mutable_mg_x_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.AppBusiAuguryRsp.mg_x_name"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* AppBusiAuguryRsp::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:trpc.app.AppBusiAuguryRsp)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated uint32 km_z_idxs = 1;
+  {
+    int byte_size = _km_z_idxs_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteUInt32Packed(
+          1, _internal_km_z_idxs(), byte_size, target);
+    }
+  }
+
+  // repeated string km_z_names = 2;
+  for (int i = 0, n = this->_internal_km_z_names_size(); i < n; i++) {
+    const auto& s = this->_internal_km_z_names(i);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      s.data(), static_cast<int>(s.length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "trpc.app.AppBusiAuguryRsp.km_z_names");
+    target = stream->WriteString(2, s, target);
+  }
+
+  // uint32 mg_idx = 3;
+  if (this->mg_idx() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(3, this->_internal_mg_idx(), target);
+  }
+
+  // string mg_name = 4;
+  if (this->mg_name().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_mg_name().data(), static_cast<int>(this->_internal_mg_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "trpc.app.AppBusiAuguryRsp.mg_name");
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_mg_name(), target);
+  }
+
+  // string mg_x_name = 5;
+  if (this->mg_x_name().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_mg_x_name().data(), static_cast<int>(this->_internal_mg_x_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "trpc.app.AppBusiAuguryRsp.mg_x_name");
+    target = stream->WriteStringMaybeAliased(
+        5, this->_internal_mg_x_name(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:trpc.app.AppBusiAuguryRsp)
+  return target;
+}
+
+size_t AppBusiAuguryRsp::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:trpc.app.AppBusiAuguryRsp)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated uint32 km_z_idxs = 1;
+  {
+    size_t data_size = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      UInt32Size(this->km_z_idxs_);
+    if (data_size > 0) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+            static_cast<::PROTOBUF_NAMESPACE_ID::int32>(data_size));
+    }
+    int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(data_size);
+    _km_z_idxs_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
+    total_size += data_size;
+  }
+
+  // repeated string km_z_names = 2;
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(km_z_names_.size());
+  for (int i = 0, n = km_z_names_.size(); i < n; i++) {
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      km_z_names_.Get(i));
+  }
+
+  // string mg_name = 4;
+  if (this->mg_name().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_mg_name());
+  }
+
+  // string mg_x_name = 5;
+  if (this->mg_x_name().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_mg_x_name());
+  }
+
+  // uint32 mg_idx = 3;
+  if (this->mg_idx() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->_internal_mg_idx());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void AppBusiAuguryRsp::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:trpc.app.AppBusiAuguryRsp)
+  GOOGLE_DCHECK_NE(&from, this);
+  const AppBusiAuguryRsp* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AppBusiAuguryRsp>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:trpc.app.AppBusiAuguryRsp)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:trpc.app.AppBusiAuguryRsp)
+    MergeFrom(*source);
+  }
+}
+
+void AppBusiAuguryRsp::MergeFrom(const AppBusiAuguryRsp& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:trpc.app.AppBusiAuguryRsp)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  km_z_idxs_.MergeFrom(from.km_z_idxs_);
+  km_z_names_.MergeFrom(from.km_z_names_);
+  if (from.mg_name().size() > 0) {
+    _internal_set_mg_name(from._internal_mg_name());
+  }
+  if (from.mg_x_name().size() > 0) {
+    _internal_set_mg_x_name(from._internal_mg_x_name());
+  }
+  if (from.mg_idx() != 0) {
+    _internal_set_mg_idx(from._internal_mg_idx());
+  }
+}
+
+void AppBusiAuguryRsp::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:trpc.app.AppBusiAuguryRsp)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void AppBusiAuguryRsp::CopyFrom(const AppBusiAuguryRsp& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:trpc.app.AppBusiAuguryRsp)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool AppBusiAuguryRsp::IsInitialized() const {
+  return true;
+}
+
+void AppBusiAuguryRsp::InternalSwap(AppBusiAuguryRsp* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  km_z_idxs_.InternalSwap(&other->km_z_idxs_);
+  km_z_names_.InternalSwap(&other->km_z_names_);
+  mg_name_.Swap(&other->mg_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  mg_x_name_.Swap(&other->mg_x_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  swap(mg_idx_, other->mg_idx_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata AppBusiAuguryRsp::GetMetadata() const {
   return GetMetadataStatic();
 }
 
@@ -590,6 +1256,12 @@ template<> PROTOBUF_NOINLINE ::trpc::app::AppBusiBirthdateConvertReq* Arena::Cre
 }
 template<> PROTOBUF_NOINLINE ::trpc::app::AppBusiBirthdateConvertRsp* Arena::CreateMaybeMessage< ::trpc::app::AppBusiBirthdateConvertRsp >(Arena* arena) {
   return Arena::CreateMessageInternal< ::trpc::app::AppBusiBirthdateConvertRsp >(arena);
+}
+template<> PROTOBUF_NOINLINE ::trpc::app::AppBusiAuguryReq* Arena::CreateMaybeMessage< ::trpc::app::AppBusiAuguryReq >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::trpc::app::AppBusiAuguryReq >(arena);
+}
+template<> PROTOBUF_NOINLINE ::trpc::app::AppBusiAuguryRsp* Arena::CreateMaybeMessage< ::trpc::app::AppBusiAuguryRsp >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::trpc::app::AppBusiAuguryRsp >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

@@ -46,7 +46,7 @@ struct TableStruct_app_5fbusi_5fitg_5fserver_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[2]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[4]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -56,6 +56,12 @@ extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table
 ::PROTOBUF_NAMESPACE_ID::Metadata descriptor_table_app_5fbusi_5fitg_5fserver_2eproto_metadata_getter(int index);
 namespace trpc {
 namespace app {
+class AppBusiAuguryReq;
+struct AppBusiAuguryReqDefaultTypeInternal;
+extern AppBusiAuguryReqDefaultTypeInternal _AppBusiAuguryReq_default_instance_;
+class AppBusiAuguryRsp;
+struct AppBusiAuguryRspDefaultTypeInternal;
+extern AppBusiAuguryRspDefaultTypeInternal _AppBusiAuguryRsp_default_instance_;
 class AppBusiBirthdateConvertReq;
 struct AppBusiBirthdateConvertReqDefaultTypeInternal;
 extern AppBusiBirthdateConvertReqDefaultTypeInternal _AppBusiBirthdateConvertReq_default_instance_;
@@ -65,6 +71,8 @@ extern AppBusiBirthdateConvertRspDefaultTypeInternal _AppBusiBirthdateConvertRsp
 }  // namespace app
 }  // namespace trpc
 PROTOBUF_NAMESPACE_OPEN
+template<> ::trpc::app::AppBusiAuguryReq* Arena::CreateMaybeMessage<::trpc::app::AppBusiAuguryReq>(Arena*);
+template<> ::trpc::app::AppBusiAuguryRsp* Arena::CreateMaybeMessage<::trpc::app::AppBusiAuguryRsp>(Arena*);
 template<> ::trpc::app::AppBusiBirthdateConvertReq* Arena::CreateMaybeMessage<::trpc::app::AppBusiBirthdateConvertReq>(Arena*);
 template<> ::trpc::app::AppBusiBirthdateConvertRsp* Arena::CreateMaybeMessage<::trpc::app::AppBusiBirthdateConvertRsp>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
@@ -330,11 +338,13 @@ class AppBusiBirthdateConvertRsp PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kGzIdxsFieldNumber = 2,
-    kGzNamesFieldNumber = 3,
+    kGzIdxsFieldNumber = 4,
+    kGzNamesFieldNumber = 5,
     kBirthdateFieldNumber = 1,
+    kStNameFieldNumber = 3,
+    kStIdxFieldNumber = 2,
   };
-  // repeated uint32 gz_idxs = 2;
+  // repeated uint32 gz_idxs = 4;
   int gz_idxs_size() const;
   private:
   int _internal_gz_idxs_size() const;
@@ -356,7 +366,7 @@ class AppBusiBirthdateConvertRsp PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >*
       mutable_gz_idxs();
 
-  // repeated string gz_names = 3;
+  // repeated string gz_names = 5;
   int gz_names_size() const;
   private:
   int _internal_gz_names_size() const;
@@ -396,6 +406,31 @@ class AppBusiBirthdateConvertRsp PROTOBUF_FINAL :
   std::string* _internal_mutable_birthdate();
   public:
 
+  // string st_name = 3;
+  void clear_st_name();
+  const std::string& st_name() const;
+  void set_st_name(const std::string& value);
+  void set_st_name(std::string&& value);
+  void set_st_name(const char* value);
+  void set_st_name(const char* value, size_t size);
+  std::string* mutable_st_name();
+  std::string* release_st_name();
+  void set_allocated_st_name(std::string* st_name);
+  private:
+  const std::string& _internal_st_name() const;
+  void _internal_set_st_name(const std::string& value);
+  std::string* _internal_mutable_st_name();
+  public:
+
+  // uint32 st_idx = 2;
+  void clear_st_idx();
+  ::PROTOBUF_NAMESPACE_ID::uint32 st_idx() const;
+  void set_st_idx(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_st_idx() const;
+  void _internal_set_st_idx(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
   // @@protoc_insertion_point(class_scope:trpc.app.AppBusiBirthdateConvertRsp)
  private:
   class _Internal;
@@ -407,6 +442,376 @@ class AppBusiBirthdateConvertRsp PROTOBUF_FINAL :
   mutable std::atomic<int> _gz_idxs_cached_byte_size_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> gz_names_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr birthdate_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr st_name_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 st_idx_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_app_5fbusi_5fitg_5fserver_2eproto;
+};
+// -------------------------------------------------------------------
+
+class AppBusiAuguryReq PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:trpc.app.AppBusiAuguryReq) */ {
+ public:
+  inline AppBusiAuguryReq() : AppBusiAuguryReq(nullptr) {}
+  virtual ~AppBusiAuguryReq();
+  explicit constexpr AppBusiAuguryReq(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  AppBusiAuguryReq(const AppBusiAuguryReq& from);
+  AppBusiAuguryReq(AppBusiAuguryReq&& from) noexcept
+    : AppBusiAuguryReq() {
+    *this = ::std::move(from);
+  }
+
+  inline AppBusiAuguryReq& operator=(const AppBusiAuguryReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AppBusiAuguryReq& operator=(AppBusiAuguryReq&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const AppBusiAuguryReq& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const AppBusiAuguryReq* internal_default_instance() {
+    return reinterpret_cast<const AppBusiAuguryReq*>(
+               &_AppBusiAuguryReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    2;
+
+  friend void swap(AppBusiAuguryReq& a, AppBusiAuguryReq& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AppBusiAuguryReq* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(AppBusiAuguryReq* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AppBusiAuguryReq* New() const final {
+    return CreateMaybeMessage<AppBusiAuguryReq>(nullptr);
+  }
+
+  AppBusiAuguryReq* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppBusiAuguryReq>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const AppBusiAuguryReq& from);
+  void MergeFrom(const AppBusiAuguryReq& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AppBusiAuguryReq* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "trpc.app.AppBusiAuguryReq";
+  }
+  protected:
+  explicit AppBusiAuguryReq(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    return ::descriptor_table_app_5fbusi_5fitg_5fserver_2eproto_metadata_getter(kIndexInFileMessages);
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kBirthdateFieldNumber = 1,
+  };
+  // string birthdate = 1;
+  void clear_birthdate();
+  const std::string& birthdate() const;
+  void set_birthdate(const std::string& value);
+  void set_birthdate(std::string&& value);
+  void set_birthdate(const char* value);
+  void set_birthdate(const char* value, size_t size);
+  std::string* mutable_birthdate();
+  std::string* release_birthdate();
+  void set_allocated_birthdate(std::string* birthdate);
+  private:
+  const std::string& _internal_birthdate() const;
+  void _internal_set_birthdate(const std::string& value);
+  std::string* _internal_mutable_birthdate();
+  public:
+
+  // @@protoc_insertion_point(class_scope:trpc.app.AppBusiAuguryReq)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr birthdate_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_app_5fbusi_5fitg_5fserver_2eproto;
+};
+// -------------------------------------------------------------------
+
+class AppBusiAuguryRsp PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:trpc.app.AppBusiAuguryRsp) */ {
+ public:
+  inline AppBusiAuguryRsp() : AppBusiAuguryRsp(nullptr) {}
+  virtual ~AppBusiAuguryRsp();
+  explicit constexpr AppBusiAuguryRsp(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  AppBusiAuguryRsp(const AppBusiAuguryRsp& from);
+  AppBusiAuguryRsp(AppBusiAuguryRsp&& from) noexcept
+    : AppBusiAuguryRsp() {
+    *this = ::std::move(from);
+  }
+
+  inline AppBusiAuguryRsp& operator=(const AppBusiAuguryRsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AppBusiAuguryRsp& operator=(AppBusiAuguryRsp&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const AppBusiAuguryRsp& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const AppBusiAuguryRsp* internal_default_instance() {
+    return reinterpret_cast<const AppBusiAuguryRsp*>(
+               &_AppBusiAuguryRsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    3;
+
+  friend void swap(AppBusiAuguryRsp& a, AppBusiAuguryRsp& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AppBusiAuguryRsp* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(AppBusiAuguryRsp* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AppBusiAuguryRsp* New() const final {
+    return CreateMaybeMessage<AppBusiAuguryRsp>(nullptr);
+  }
+
+  AppBusiAuguryRsp* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppBusiAuguryRsp>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const AppBusiAuguryRsp& from);
+  void MergeFrom(const AppBusiAuguryRsp& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AppBusiAuguryRsp* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "trpc.app.AppBusiAuguryRsp";
+  }
+  protected:
+  explicit AppBusiAuguryRsp(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    return ::descriptor_table_app_5fbusi_5fitg_5fserver_2eproto_metadata_getter(kIndexInFileMessages);
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kKmZIdxsFieldNumber = 1,
+    kKmZNamesFieldNumber = 2,
+    kMgNameFieldNumber = 4,
+    kMgXNameFieldNumber = 5,
+    kMgIdxFieldNumber = 3,
+  };
+  // repeated uint32 km_z_idxs = 1;
+  int km_z_idxs_size() const;
+  private:
+  int _internal_km_z_idxs_size() const;
+  public:
+  void clear_km_z_idxs();
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_km_z_idxs(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >&
+      _internal_km_z_idxs() const;
+  void _internal_add_km_z_idxs(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >*
+      _internal_mutable_km_z_idxs();
+  public:
+  ::PROTOBUF_NAMESPACE_ID::uint32 km_z_idxs(int index) const;
+  void set_km_z_idxs(int index, ::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void add_km_z_idxs(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >&
+      km_z_idxs() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >*
+      mutable_km_z_idxs();
+
+  // repeated string km_z_names = 2;
+  int km_z_names_size() const;
+  private:
+  int _internal_km_z_names_size() const;
+  public:
+  void clear_km_z_names();
+  const std::string& km_z_names(int index) const;
+  std::string* mutable_km_z_names(int index);
+  void set_km_z_names(int index, const std::string& value);
+  void set_km_z_names(int index, std::string&& value);
+  void set_km_z_names(int index, const char* value);
+  void set_km_z_names(int index, const char* value, size_t size);
+  std::string* add_km_z_names();
+  void add_km_z_names(const std::string& value);
+  void add_km_z_names(std::string&& value);
+  void add_km_z_names(const char* value);
+  void add_km_z_names(const char* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& km_z_names() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_km_z_names();
+  private:
+  const std::string& _internal_km_z_names(int index) const;
+  std::string* _internal_add_km_z_names();
+  public:
+
+  // string mg_name = 4;
+  void clear_mg_name();
+  const std::string& mg_name() const;
+  void set_mg_name(const std::string& value);
+  void set_mg_name(std::string&& value);
+  void set_mg_name(const char* value);
+  void set_mg_name(const char* value, size_t size);
+  std::string* mutable_mg_name();
+  std::string* release_mg_name();
+  void set_allocated_mg_name(std::string* mg_name);
+  private:
+  const std::string& _internal_mg_name() const;
+  void _internal_set_mg_name(const std::string& value);
+  std::string* _internal_mutable_mg_name();
+  public:
+
+  // string mg_x_name = 5;
+  void clear_mg_x_name();
+  const std::string& mg_x_name() const;
+  void set_mg_x_name(const std::string& value);
+  void set_mg_x_name(std::string&& value);
+  void set_mg_x_name(const char* value);
+  void set_mg_x_name(const char* value, size_t size);
+  std::string* mutable_mg_x_name();
+  std::string* release_mg_x_name();
+  void set_allocated_mg_x_name(std::string* mg_x_name);
+  private:
+  const std::string& _internal_mg_x_name() const;
+  void _internal_set_mg_x_name(const std::string& value);
+  std::string* _internal_mutable_mg_x_name();
+  public:
+
+  // uint32 mg_idx = 3;
+  void clear_mg_idx();
+  ::PROTOBUF_NAMESPACE_ID::uint32 mg_idx() const;
+  void set_mg_idx(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_mg_idx() const;
+  void _internal_set_mg_idx(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:trpc.app.AppBusiAuguryRsp)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 > km_z_idxs_;
+  mutable std::atomic<int> _km_z_idxs_cached_byte_size_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> km_z_names_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mg_name_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mg_x_name_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 mg_idx_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_app_5fbusi_5fitg_5fserver_2eproto;
 };
@@ -547,7 +952,88 @@ inline void AppBusiBirthdateConvertRsp::set_allocated_birthdate(std::string* bir
   // @@protoc_insertion_point(field_set_allocated:trpc.app.AppBusiBirthdateConvertRsp.birthdate)
 }
 
-// repeated uint32 gz_idxs = 2;
+// uint32 st_idx = 2;
+inline void AppBusiBirthdateConvertRsp::clear_st_idx() {
+  st_idx_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppBusiBirthdateConvertRsp::_internal_st_idx() const {
+  return st_idx_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppBusiBirthdateConvertRsp::st_idx() const {
+  // @@protoc_insertion_point(field_get:trpc.app.AppBusiBirthdateConvertRsp.st_idx)
+  return _internal_st_idx();
+}
+inline void AppBusiBirthdateConvertRsp::_internal_set_st_idx(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  st_idx_ = value;
+}
+inline void AppBusiBirthdateConvertRsp::set_st_idx(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_st_idx(value);
+  // @@protoc_insertion_point(field_set:trpc.app.AppBusiBirthdateConvertRsp.st_idx)
+}
+
+// string st_name = 3;
+inline void AppBusiBirthdateConvertRsp::clear_st_name() {
+  st_name_.ClearToEmpty();
+}
+inline const std::string& AppBusiBirthdateConvertRsp::st_name() const {
+  // @@protoc_insertion_point(field_get:trpc.app.AppBusiBirthdateConvertRsp.st_name)
+  return _internal_st_name();
+}
+inline void AppBusiBirthdateConvertRsp::set_st_name(const std::string& value) {
+  _internal_set_st_name(value);
+  // @@protoc_insertion_point(field_set:trpc.app.AppBusiBirthdateConvertRsp.st_name)
+}
+inline std::string* AppBusiBirthdateConvertRsp::mutable_st_name() {
+  // @@protoc_insertion_point(field_mutable:trpc.app.AppBusiBirthdateConvertRsp.st_name)
+  return _internal_mutable_st_name();
+}
+inline const std::string& AppBusiBirthdateConvertRsp::_internal_st_name() const {
+  return st_name_.Get();
+}
+inline void AppBusiBirthdateConvertRsp::_internal_set_st_name(const std::string& value) {
+  
+  st_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void AppBusiBirthdateConvertRsp::set_st_name(std::string&& value) {
+  
+  st_name_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:trpc.app.AppBusiBirthdateConvertRsp.st_name)
+}
+inline void AppBusiBirthdateConvertRsp::set_st_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  st_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:trpc.app.AppBusiBirthdateConvertRsp.st_name)
+}
+inline void AppBusiBirthdateConvertRsp::set_st_name(const char* value,
+    size_t size) {
+  
+  st_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:trpc.app.AppBusiBirthdateConvertRsp.st_name)
+}
+inline std::string* AppBusiBirthdateConvertRsp::_internal_mutable_st_name() {
+  
+  return st_name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* AppBusiBirthdateConvertRsp::release_st_name() {
+  // @@protoc_insertion_point(field_release:trpc.app.AppBusiBirthdateConvertRsp.st_name)
+  return st_name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void AppBusiBirthdateConvertRsp::set_allocated_st_name(std::string* st_name) {
+  if (st_name != nullptr) {
+    
+  } else {
+    
+  }
+  st_name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), st_name,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:trpc.app.AppBusiBirthdateConvertRsp.st_name)
+}
+
+// repeated uint32 gz_idxs = 4;
 inline int AppBusiBirthdateConvertRsp::_internal_gz_idxs_size() const {
   return gz_idxs_.size();
 }
@@ -594,7 +1080,7 @@ AppBusiBirthdateConvertRsp::mutable_gz_idxs() {
   return _internal_mutable_gz_idxs();
 }
 
-// repeated string gz_names = 3;
+// repeated string gz_names = 5;
 inline int AppBusiBirthdateConvertRsp::_internal_gz_names_size() const {
   return gz_names_.size();
 }
@@ -668,9 +1154,345 @@ AppBusiBirthdateConvertRsp::mutable_gz_names() {
   return &gz_names_;
 }
 
+// -------------------------------------------------------------------
+
+// AppBusiAuguryReq
+
+// string birthdate = 1;
+inline void AppBusiAuguryReq::clear_birthdate() {
+  birthdate_.ClearToEmpty();
+}
+inline const std::string& AppBusiAuguryReq::birthdate() const {
+  // @@protoc_insertion_point(field_get:trpc.app.AppBusiAuguryReq.birthdate)
+  return _internal_birthdate();
+}
+inline void AppBusiAuguryReq::set_birthdate(const std::string& value) {
+  _internal_set_birthdate(value);
+  // @@protoc_insertion_point(field_set:trpc.app.AppBusiAuguryReq.birthdate)
+}
+inline std::string* AppBusiAuguryReq::mutable_birthdate() {
+  // @@protoc_insertion_point(field_mutable:trpc.app.AppBusiAuguryReq.birthdate)
+  return _internal_mutable_birthdate();
+}
+inline const std::string& AppBusiAuguryReq::_internal_birthdate() const {
+  return birthdate_.Get();
+}
+inline void AppBusiAuguryReq::_internal_set_birthdate(const std::string& value) {
+  
+  birthdate_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void AppBusiAuguryReq::set_birthdate(std::string&& value) {
+  
+  birthdate_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:trpc.app.AppBusiAuguryReq.birthdate)
+}
+inline void AppBusiAuguryReq::set_birthdate(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  birthdate_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:trpc.app.AppBusiAuguryReq.birthdate)
+}
+inline void AppBusiAuguryReq::set_birthdate(const char* value,
+    size_t size) {
+  
+  birthdate_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:trpc.app.AppBusiAuguryReq.birthdate)
+}
+inline std::string* AppBusiAuguryReq::_internal_mutable_birthdate() {
+  
+  return birthdate_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* AppBusiAuguryReq::release_birthdate() {
+  // @@protoc_insertion_point(field_release:trpc.app.AppBusiAuguryReq.birthdate)
+  return birthdate_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void AppBusiAuguryReq::set_allocated_birthdate(std::string* birthdate) {
+  if (birthdate != nullptr) {
+    
+  } else {
+    
+  }
+  birthdate_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), birthdate,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:trpc.app.AppBusiAuguryReq.birthdate)
+}
+
+// -------------------------------------------------------------------
+
+// AppBusiAuguryRsp
+
+// repeated uint32 km_z_idxs = 1;
+inline int AppBusiAuguryRsp::_internal_km_z_idxs_size() const {
+  return km_z_idxs_.size();
+}
+inline int AppBusiAuguryRsp::km_z_idxs_size() const {
+  return _internal_km_z_idxs_size();
+}
+inline void AppBusiAuguryRsp::clear_km_z_idxs() {
+  km_z_idxs_.Clear();
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppBusiAuguryRsp::_internal_km_z_idxs(int index) const {
+  return km_z_idxs_.Get(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppBusiAuguryRsp::km_z_idxs(int index) const {
+  // @@protoc_insertion_point(field_get:trpc.app.AppBusiAuguryRsp.km_z_idxs)
+  return _internal_km_z_idxs(index);
+}
+inline void AppBusiAuguryRsp::set_km_z_idxs(int index, ::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  km_z_idxs_.Set(index, value);
+  // @@protoc_insertion_point(field_set:trpc.app.AppBusiAuguryRsp.km_z_idxs)
+}
+inline void AppBusiAuguryRsp::_internal_add_km_z_idxs(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  km_z_idxs_.Add(value);
+}
+inline void AppBusiAuguryRsp::add_km_z_idxs(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_add_km_z_idxs(value);
+  // @@protoc_insertion_point(field_add:trpc.app.AppBusiAuguryRsp.km_z_idxs)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >&
+AppBusiAuguryRsp::_internal_km_z_idxs() const {
+  return km_z_idxs_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >&
+AppBusiAuguryRsp::km_z_idxs() const {
+  // @@protoc_insertion_point(field_list:trpc.app.AppBusiAuguryRsp.km_z_idxs)
+  return _internal_km_z_idxs();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >*
+AppBusiAuguryRsp::_internal_mutable_km_z_idxs() {
+  return &km_z_idxs_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >*
+AppBusiAuguryRsp::mutable_km_z_idxs() {
+  // @@protoc_insertion_point(field_mutable_list:trpc.app.AppBusiAuguryRsp.km_z_idxs)
+  return _internal_mutable_km_z_idxs();
+}
+
+// repeated string km_z_names = 2;
+inline int AppBusiAuguryRsp::_internal_km_z_names_size() const {
+  return km_z_names_.size();
+}
+inline int AppBusiAuguryRsp::km_z_names_size() const {
+  return _internal_km_z_names_size();
+}
+inline void AppBusiAuguryRsp::clear_km_z_names() {
+  km_z_names_.Clear();
+}
+inline std::string* AppBusiAuguryRsp::add_km_z_names() {
+  // @@protoc_insertion_point(field_add_mutable:trpc.app.AppBusiAuguryRsp.km_z_names)
+  return _internal_add_km_z_names();
+}
+inline const std::string& AppBusiAuguryRsp::_internal_km_z_names(int index) const {
+  return km_z_names_.Get(index);
+}
+inline const std::string& AppBusiAuguryRsp::km_z_names(int index) const {
+  // @@protoc_insertion_point(field_get:trpc.app.AppBusiAuguryRsp.km_z_names)
+  return _internal_km_z_names(index);
+}
+inline std::string* AppBusiAuguryRsp::mutable_km_z_names(int index) {
+  // @@protoc_insertion_point(field_mutable:trpc.app.AppBusiAuguryRsp.km_z_names)
+  return km_z_names_.Mutable(index);
+}
+inline void AppBusiAuguryRsp::set_km_z_names(int index, const std::string& value) {
+  // @@protoc_insertion_point(field_set:trpc.app.AppBusiAuguryRsp.km_z_names)
+  km_z_names_.Mutable(index)->assign(value);
+}
+inline void AppBusiAuguryRsp::set_km_z_names(int index, std::string&& value) {
+  // @@protoc_insertion_point(field_set:trpc.app.AppBusiAuguryRsp.km_z_names)
+  km_z_names_.Mutable(index)->assign(std::move(value));
+}
+inline void AppBusiAuguryRsp::set_km_z_names(int index, const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  km_z_names_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:trpc.app.AppBusiAuguryRsp.km_z_names)
+}
+inline void AppBusiAuguryRsp::set_km_z_names(int index, const char* value, size_t size) {
+  km_z_names_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:trpc.app.AppBusiAuguryRsp.km_z_names)
+}
+inline std::string* AppBusiAuguryRsp::_internal_add_km_z_names() {
+  return km_z_names_.Add();
+}
+inline void AppBusiAuguryRsp::add_km_z_names(const std::string& value) {
+  km_z_names_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:trpc.app.AppBusiAuguryRsp.km_z_names)
+}
+inline void AppBusiAuguryRsp::add_km_z_names(std::string&& value) {
+  km_z_names_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:trpc.app.AppBusiAuguryRsp.km_z_names)
+}
+inline void AppBusiAuguryRsp::add_km_z_names(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  km_z_names_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:trpc.app.AppBusiAuguryRsp.km_z_names)
+}
+inline void AppBusiAuguryRsp::add_km_z_names(const char* value, size_t size) {
+  km_z_names_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:trpc.app.AppBusiAuguryRsp.km_z_names)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+AppBusiAuguryRsp::km_z_names() const {
+  // @@protoc_insertion_point(field_list:trpc.app.AppBusiAuguryRsp.km_z_names)
+  return km_z_names_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+AppBusiAuguryRsp::mutable_km_z_names() {
+  // @@protoc_insertion_point(field_mutable_list:trpc.app.AppBusiAuguryRsp.km_z_names)
+  return &km_z_names_;
+}
+
+// uint32 mg_idx = 3;
+inline void AppBusiAuguryRsp::clear_mg_idx() {
+  mg_idx_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppBusiAuguryRsp::_internal_mg_idx() const {
+  return mg_idx_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppBusiAuguryRsp::mg_idx() const {
+  // @@protoc_insertion_point(field_get:trpc.app.AppBusiAuguryRsp.mg_idx)
+  return _internal_mg_idx();
+}
+inline void AppBusiAuguryRsp::_internal_set_mg_idx(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  mg_idx_ = value;
+}
+inline void AppBusiAuguryRsp::set_mg_idx(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_mg_idx(value);
+  // @@protoc_insertion_point(field_set:trpc.app.AppBusiAuguryRsp.mg_idx)
+}
+
+// string mg_name = 4;
+inline void AppBusiAuguryRsp::clear_mg_name() {
+  mg_name_.ClearToEmpty();
+}
+inline const std::string& AppBusiAuguryRsp::mg_name() const {
+  // @@protoc_insertion_point(field_get:trpc.app.AppBusiAuguryRsp.mg_name)
+  return _internal_mg_name();
+}
+inline void AppBusiAuguryRsp::set_mg_name(const std::string& value) {
+  _internal_set_mg_name(value);
+  // @@protoc_insertion_point(field_set:trpc.app.AppBusiAuguryRsp.mg_name)
+}
+inline std::string* AppBusiAuguryRsp::mutable_mg_name() {
+  // @@protoc_insertion_point(field_mutable:trpc.app.AppBusiAuguryRsp.mg_name)
+  return _internal_mutable_mg_name();
+}
+inline const std::string& AppBusiAuguryRsp::_internal_mg_name() const {
+  return mg_name_.Get();
+}
+inline void AppBusiAuguryRsp::_internal_set_mg_name(const std::string& value) {
+  
+  mg_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void AppBusiAuguryRsp::set_mg_name(std::string&& value) {
+  
+  mg_name_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:trpc.app.AppBusiAuguryRsp.mg_name)
+}
+inline void AppBusiAuguryRsp::set_mg_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  mg_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:trpc.app.AppBusiAuguryRsp.mg_name)
+}
+inline void AppBusiAuguryRsp::set_mg_name(const char* value,
+    size_t size) {
+  
+  mg_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:trpc.app.AppBusiAuguryRsp.mg_name)
+}
+inline std::string* AppBusiAuguryRsp::_internal_mutable_mg_name() {
+  
+  return mg_name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* AppBusiAuguryRsp::release_mg_name() {
+  // @@protoc_insertion_point(field_release:trpc.app.AppBusiAuguryRsp.mg_name)
+  return mg_name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void AppBusiAuguryRsp::set_allocated_mg_name(std::string* mg_name) {
+  if (mg_name != nullptr) {
+    
+  } else {
+    
+  }
+  mg_name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), mg_name,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:trpc.app.AppBusiAuguryRsp.mg_name)
+}
+
+// string mg_x_name = 5;
+inline void AppBusiAuguryRsp::clear_mg_x_name() {
+  mg_x_name_.ClearToEmpty();
+}
+inline const std::string& AppBusiAuguryRsp::mg_x_name() const {
+  // @@protoc_insertion_point(field_get:trpc.app.AppBusiAuguryRsp.mg_x_name)
+  return _internal_mg_x_name();
+}
+inline void AppBusiAuguryRsp::set_mg_x_name(const std::string& value) {
+  _internal_set_mg_x_name(value);
+  // @@protoc_insertion_point(field_set:trpc.app.AppBusiAuguryRsp.mg_x_name)
+}
+inline std::string* AppBusiAuguryRsp::mutable_mg_x_name() {
+  // @@protoc_insertion_point(field_mutable:trpc.app.AppBusiAuguryRsp.mg_x_name)
+  return _internal_mutable_mg_x_name();
+}
+inline const std::string& AppBusiAuguryRsp::_internal_mg_x_name() const {
+  return mg_x_name_.Get();
+}
+inline void AppBusiAuguryRsp::_internal_set_mg_x_name(const std::string& value) {
+  
+  mg_x_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void AppBusiAuguryRsp::set_mg_x_name(std::string&& value) {
+  
+  mg_x_name_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:trpc.app.AppBusiAuguryRsp.mg_x_name)
+}
+inline void AppBusiAuguryRsp::set_mg_x_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  mg_x_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:trpc.app.AppBusiAuguryRsp.mg_x_name)
+}
+inline void AppBusiAuguryRsp::set_mg_x_name(const char* value,
+    size_t size) {
+  
+  mg_x_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:trpc.app.AppBusiAuguryRsp.mg_x_name)
+}
+inline std::string* AppBusiAuguryRsp::_internal_mutable_mg_x_name() {
+  
+  return mg_x_name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* AppBusiAuguryRsp::release_mg_x_name() {
+  // @@protoc_insertion_point(field_release:trpc.app.AppBusiAuguryRsp.mg_x_name)
+  return mg_x_name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void AppBusiAuguryRsp::set_allocated_mg_x_name(std::string* mg_x_name) {
+  if (mg_x_name != nullptr) {
+    
+  } else {
+    
+  }
+  mg_x_name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), mg_x_name,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:trpc.app.AppBusiAuguryRsp.mg_x_name)
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 

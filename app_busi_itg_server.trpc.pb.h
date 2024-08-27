@@ -18,6 +18,7 @@ class AppBusiItgService : public ::trpc::RpcServiceImpl {
   AppBusiItgService();
 
   virtual ::trpc::Status AppBusiBirthdateConvertHandler(::trpc::ServerContextPtr context, const ::trpc::app::AppBusiBirthdateConvertReq* request, ::trpc::app::AppBusiBirthdateConvertRsp* response);
+  virtual ::trpc::Status AppBusiAuguryHandler(::trpc::ServerContextPtr context, const ::trpc::app::AppBusiAuguryReq* request, ::trpc::app::AppBusiAuguryRsp* response);
 };
 
 class AsyncAppBusiItgService : public ::trpc::AsyncRpcServiceImpl {
@@ -25,6 +26,7 @@ class AsyncAppBusiItgService : public ::trpc::AsyncRpcServiceImpl {
   AsyncAppBusiItgService();
   
   virtual ::trpc::Future<::trpc::app::AppBusiBirthdateConvertRsp> AppBusiBirthdateConvertHandler(const ::trpc::ServerContextPtr& context, const ::trpc::app::AppBusiBirthdateConvertReq* request);
+  virtual ::trpc::Future<::trpc::app::AppBusiAuguryRsp> AppBusiAuguryHandler(const ::trpc::ServerContextPtr& context, const ::trpc::app::AppBusiAuguryReq* request);
 };
 
 class AppBusiItgServiceServiceProxy : public ::trpc::RpcServiceProxy {
@@ -33,11 +35,17 @@ class AppBusiItgServiceServiceProxy : public ::trpc::RpcServiceProxy {
   virtual ::trpc::Future<::trpc::app::AppBusiBirthdateConvertRsp> AsyncAppBusiBirthdateConvertHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBirthdateConvertReq& request);
   // oneway, only send
   virtual ::trpc::Status AppBusiBirthdateConvertHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBirthdateConvertReq& request);
+  virtual ::trpc::Status AppBusiAuguryHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiAuguryReq& request, ::trpc::app::AppBusiAuguryRsp* response);
+  virtual ::trpc::Future<::trpc::app::AppBusiAuguryRsp> AsyncAppBusiAuguryHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiAuguryReq& request);
+  // oneway, only send
+  virtual ::trpc::Status AppBusiAuguryHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiAuguryReq& request);
 };
 
 class AsyncAppBusiItgServiceServiceProxy : public ::trpc::RpcServiceProxy {
  public:
   ::trpc::Future<::trpc::app::AppBusiBirthdateConvertRsp> AppBusiBirthdateConvertHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBirthdateConvertReq& request);
+  // TODO: one-way
+  ::trpc::Future<::trpc::app::AppBusiAuguryRsp> AppBusiAuguryHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiAuguryReq& request);
   // TODO: one-way
 };
 
