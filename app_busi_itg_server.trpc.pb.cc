@@ -21,7 +21,7 @@ AppBusiItgService::AppBusiItgService() {
     AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::RpcMethodHandler<::trpc::app::AppBusiBirthdateConvertReq, ::trpc::app::AppBusiBirthdateConvertRsp>(std::bind(&AppBusiItgService::AppBusiBirthdateConvertHandler, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3))));
   }
   for (const std::string_view& method : AppBusiItgService_method_names[1]) {
-    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::RpcMethodHandler<::trpc::app::AppBusiAuguryReq, ::trpc::app::AppBusiAuguryRsp>(std::bind(&AppBusiItgService::AppBusiAuguryHandler, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3))));
+    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::RpcMethodHandler<::trpc::app::AppBusiBaseAuguryReq, ::trpc::app::AppBusiBaseAuguryRsp>(std::bind(&AppBusiItgService::AppBusiAuguryHandler, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3))));
   }
 }
 
@@ -32,7 +32,7 @@ AppBusiItgService::AppBusiItgService() {
   return ::trpc::Status(-1, "");
 }
 
-::trpc::Status AppBusiItgService::AppBusiAuguryHandler(::trpc::ServerContextPtr context, const ::trpc::app::AppBusiAuguryReq* request, ::trpc::app::AppBusiAuguryRsp* response) {
+::trpc::Status AppBusiItgService::AppBusiAuguryHandler(::trpc::ServerContextPtr context, const ::trpc::app::AppBusiBaseAuguryReq* request, ::trpc::app::AppBusiBaseAuguryRsp* response) {
   (void)context;
   (void)request;
   (void)response;
@@ -44,7 +44,7 @@ AsyncAppBusiItgService::AsyncAppBusiItgService() : ::trpc::AsyncRpcServiceImpl()
     AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::AsyncRpcMethodHandler<::trpc::app::AppBusiBirthdateConvertReq, ::trpc::app::AppBusiBirthdateConvertRsp>(std::bind(&AsyncAppBusiItgService::AppBusiBirthdateConvertHandler, this, std::placeholders::_1, std::placeholders::_2))));
   }
   for (const std::string_view& method : AppBusiItgService_method_names[1]) {
-    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::AsyncRpcMethodHandler<::trpc::app::AppBusiAuguryReq, ::trpc::app::AppBusiAuguryRsp>(std::bind(&AsyncAppBusiItgService::AppBusiAuguryHandler, this, std::placeholders::_1, std::placeholders::_2))));
+    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::AsyncRpcMethodHandler<::trpc::app::AppBusiBaseAuguryReq, ::trpc::app::AppBusiBaseAuguryRsp>(std::bind(&AsyncAppBusiItgService::AppBusiAuguryHandler, this, std::placeholders::_1, std::placeholders::_2))));
   }
 }
 
@@ -52,8 +52,8 @@ AsyncAppBusiItgService::AsyncAppBusiItgService() : ::trpc::AsyncRpcServiceImpl()
   return ::trpc::MakeExceptionFuture<::trpc::app::AppBusiBirthdateConvertRsp>(::trpc::CommonException("Unimplemented"));
 }
 
-::trpc::Future<::trpc::app::AppBusiAuguryRsp> AsyncAppBusiItgService::AppBusiAuguryHandler(const ::trpc::ServerContextPtr& context, const ::trpc::app::AppBusiAuguryReq* request) {
-  return ::trpc::MakeExceptionFuture<::trpc::app::AppBusiAuguryRsp>(::trpc::CommonException("Unimplemented"));
+::trpc::Future<::trpc::app::AppBusiBaseAuguryRsp> AsyncAppBusiItgService::AppBusiAuguryHandler(const ::trpc::ServerContextPtr& context, const ::trpc::app::AppBusiBaseAuguryReq* request) {
+  return ::trpc::MakeExceptionFuture<::trpc::app::AppBusiBaseAuguryRsp>(::trpc::CommonException("Unimplemented"));
 }
 
 ::trpc::Status AppBusiItgServiceServiceProxy::AppBusiBirthdateConvertHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBirthdateConvertReq& request, ::trpc::app::AppBusiBirthdateConvertRsp* response) {
@@ -61,9 +61,9 @@ AsyncAppBusiItgService::AsyncAppBusiItgService() : ::trpc::AsyncRpcServiceImpl()
   return UnaryInvoke<::trpc::app::AppBusiBirthdateConvertReq, ::trpc::app::AppBusiBirthdateConvertRsp>(context, request, response);
 }
 
-::trpc::Status AppBusiItgServiceServiceProxy::AppBusiAuguryHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiAuguryReq& request, ::trpc::app::AppBusiAuguryRsp* response) {
+::trpc::Status AppBusiItgServiceServiceProxy::AppBusiAuguryHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBaseAuguryReq& request, ::trpc::app::AppBusiBaseAuguryRsp* response) {
   if (context->GetFuncName().empty()) context->SetFuncName(AppBusiItgService_method_names[1][0].data());
-  return UnaryInvoke<::trpc::app::AppBusiAuguryReq, ::trpc::app::AppBusiAuguryRsp>(context, request, response);
+  return UnaryInvoke<::trpc::app::AppBusiBaseAuguryReq, ::trpc::app::AppBusiBaseAuguryRsp>(context, request, response);
 }
 
 ::trpc::Future<::trpc::app::AppBusiBirthdateConvertRsp> AppBusiItgServiceServiceProxy::AsyncAppBusiBirthdateConvertHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBirthdateConvertReq& request) {
@@ -71,9 +71,9 @@ AsyncAppBusiItgService::AsyncAppBusiItgService() : ::trpc::AsyncRpcServiceImpl()
   return AsyncUnaryInvoke<::trpc::app::AppBusiBirthdateConvertReq, ::trpc::app::AppBusiBirthdateConvertRsp>(context, request);
 }
 
-::trpc::Future<::trpc::app::AppBusiAuguryRsp> AppBusiItgServiceServiceProxy::AsyncAppBusiAuguryHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiAuguryReq& request) {
+::trpc::Future<::trpc::app::AppBusiBaseAuguryRsp> AppBusiItgServiceServiceProxy::AsyncAppBusiAuguryHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBaseAuguryReq& request) {
   if (context->GetFuncName().empty()) context->SetFuncName(AppBusiItgService_method_names[1][0].data());
-  return AsyncUnaryInvoke<::trpc::app::AppBusiAuguryReq, ::trpc::app::AppBusiAuguryRsp>(context, request);
+  return AsyncUnaryInvoke<::trpc::app::AppBusiBaseAuguryReq, ::trpc::app::AppBusiBaseAuguryRsp>(context, request);
 }
 
 ::trpc::Status AppBusiItgServiceServiceProxy::AppBusiBirthdateConvertHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBirthdateConvertReq& request) {
@@ -81,9 +81,9 @@ AsyncAppBusiItgService::AsyncAppBusiItgService() : ::trpc::AsyncRpcServiceImpl()
   return OnewayInvoke<::trpc::app::AppBusiBirthdateConvertReq>(context, request);
 }
 
-::trpc::Status AppBusiItgServiceServiceProxy::AppBusiAuguryHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiAuguryReq& request) {
+::trpc::Status AppBusiItgServiceServiceProxy::AppBusiAuguryHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBaseAuguryReq& request) {
   if (context->GetFuncName().empty()) context->SetFuncName(AppBusiItgService_method_names[1][0].data());
-  return OnewayInvoke<::trpc::app::AppBusiAuguryReq>(context, request);
+  return OnewayInvoke<::trpc::app::AppBusiBaseAuguryReq>(context, request);
 }
 
 ::trpc::Future<::trpc::app::AppBusiBirthdateConvertRsp> AsyncAppBusiItgServiceServiceProxy::AppBusiBirthdateConvertHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBirthdateConvertReq& request) {
@@ -91,9 +91,9 @@ AsyncAppBusiItgService::AsyncAppBusiItgService() : ::trpc::AsyncRpcServiceImpl()
   return AsyncUnaryInvoke<::trpc::app::AppBusiBirthdateConvertReq, ::trpc::app::AppBusiBirthdateConvertRsp>(context, request);
 }
 
-::trpc::Future<::trpc::app::AppBusiAuguryRsp> AsyncAppBusiItgServiceServiceProxy::AppBusiAuguryHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiAuguryReq& request) {
+::trpc::Future<::trpc::app::AppBusiBaseAuguryRsp> AsyncAppBusiItgServiceServiceProxy::AppBusiAuguryHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBaseAuguryReq& request) {
   if (context->GetFuncName().empty()) context->SetFuncName(AppBusiItgService_method_names[1][0].data());
-  return AsyncUnaryInvoke<::trpc::app::AppBusiAuguryReq, ::trpc::app::AppBusiAuguryRsp>(context, request);
+  return AsyncUnaryInvoke<::trpc::app::AppBusiBaseAuguryReq, ::trpc::app::AppBusiBaseAuguryRsp>(context, request);
 }
 
 } // end namespace app

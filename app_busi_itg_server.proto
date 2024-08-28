@@ -4,7 +4,7 @@ package trpc.app;
 
 service AppBusiItgService {
   rpc AppBusiBirthdateConvertHandler(AppBusiBirthdateConvertReq) returns (AppBusiBirthdateConvertRsp) {};
-  rpc AppBusiAuguryHandler(AppBusiAuguryReq) returns (AppBusiAuguryRsp) {};
+  rpc AppBusiAuguryHandler(AppBusiBaseAuguryReq) returns (AppBusiBaseAuguryRsp) {};
 }
 
 
@@ -20,11 +20,11 @@ message AppBusiBirthdateConvertRsp {
   repeated string gz_names = 5;
 }
 
-message AppBusiAuguryReq {
+message AppBusiBaseAuguryReq {
   string birthdate = 1;
 }
 
-message AppBusiAuguryRsp {
+message AppBusiBaseAuguryRsp {
   repeated uint32 km_z_idxs = 1;
   repeated string km_z_names = 2;
   uint32 mg_idx = 3;
