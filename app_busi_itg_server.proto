@@ -4,7 +4,7 @@ package trpc.app;
 
 service AppBusiItgService {
   rpc AppBusiBirthdateConvertHandler(AppBusiBirthdateConvertReq) returns (AppBusiBirthdateConvertRsp) {};
-  rpc AppBusiAuguryHandler(AppBusiBaseAuguryReq) returns (AppBusiBaseAuguryRsp) {};
+  rpc AppBusiBaseAuguryHandler(AppBusiBaseAuguryReq) returns (AppBusiBaseAuguryRsp) {};
 }
 
 

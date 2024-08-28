@@ -140,16 +140,16 @@ const char descriptor_table_protodef_app_5fbusi_5fitg_5fserver_2eproto[] PROTOBU
   "\030\001 \001(\t\"q\n\024AppBusiBaseAuguryRsp\022\021\n\tkm_z_i"
   "dxs\030\001 \003(\r\022\022\n\nkm_z_names\030\002 \003(\t\022\016\n\006mg_idx\030"
   "\003 \001(\r\022\017\n\007mg_name\030\004 \001(\t\022\021\n\tmg_x_name\030\005 \001("
-  "\t2\335\001\n\021AppBusiItgService\022n\n\036AppBusiBirthd"
+  "\t2\341\001\n\021AppBusiItgService\022n\n\036AppBusiBirthd"
   "ateConvertHandler\022$.trpc.app.AppBusiBirt"
   "hdateConvertReq\032$.trpc.app.AppBusiBirthd"
-  "ateConvertRsp\"\000\022X\n\024AppBusiAuguryHandler\022"
-  "\036.trpc.app.AppBusiBaseAuguryReq\032\036.trpc.a"
-  "pp.AppBusiBaseAuguryRsp\"\000b\006proto3"
+  "ateConvertRsp\"\000\022\\\n\030AppBusiBaseAuguryHand"
+  "ler\022\036.trpc.app.AppBusiBaseAuguryReq\032\036.tr"
+  "pc.app.AppBusiBaseAuguryRsp\"\000b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_app_5fbusi_5fitg_5fserver_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_app_5fbusi_5fitg_5fserver_2eproto = {
-  false, false, 593, descriptor_table_protodef_app_5fbusi_5fitg_5fserver_2eproto, "app_busi_itg_server.proto", 
+  false, false, 597, descriptor_table_protodef_app_5fbusi_5fitg_5fserver_2eproto, "app_busi_itg_server.proto", 
   &descriptor_table_app_5fbusi_5fitg_5fserver_2eproto_once, nullptr, 0, 4,
   schemas, file_default_instances, TableStruct_app_5fbusi_5fitg_5fserver_2eproto::offsets,
   file_level_metadata_app_5fbusi_5fitg_5fserver_2eproto, file_level_enum_descriptors_app_5fbusi_5fitg_5fserver_2eproto, file_level_service_descriptors_app_5fbusi_5fitg_5fserver_2eproto,
