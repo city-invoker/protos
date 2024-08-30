@@ -10,6 +10,8 @@ service AppBusiItgService {
 
 message AppBusiBirthdateConvertReq {
   string birthdate = 1;
+  string sex = 2;
+  uint32 marriage = 3;
 }
 
 message AppBusiBirthdateConvertRsp {
@@ -22,14 +24,28 @@ message AppBusiBirthdateConvertRsp {
 
 message AppBusiBaseAuguryReq {
   string birthdate = 1;
+  string sex = 2;
+  uint32 is_marriage = 3;
+}
+
+message SixGod {
+  uint32 idx = 1;
+  string g_name = 2;
+  repeated string z_names = 3;
 }
 
 message AppBusiBaseAuguryRsp {
-  repeated uint32 km_z_idxs = 1;
-  repeated string km_z_names = 2;
-  uint32 mg_idx = 3;
-  string mg_name = 4;
-  string mg_x_name = 5;
+  string birthdate = 1;
+  uint32 st_idx = 2;
+  string st_name = 3;
+  uint32 mg_idx = 4;
+  string mg_name = 5;
+  string mg_x_name = 6;
+  repeated uint32 gz_idxs = 7;
+  repeated string gz_names = 8;
+  repeated uint32 km_z_idxs = 9;
+  repeated string km_z_names = 10;
+  repeated SixGod six_gods = 11;
 }
 
 
