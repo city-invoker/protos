@@ -768,11 +768,35 @@ class SixGod PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
-    kZNamesFieldNumber = 3,
-    kGNameFieldNumber = 2,
+    kZIdxsFieldNumber = 4,
+    kZNamesFieldNumber = 5,
+    kGNameFieldNumber = 3,
     kIdxFieldNumber = 1,
+    kGIdxFieldNumber = 2,
   };
-  // repeated string z_names = 3;
+  // repeated uint32 z_idxs = 4;
+  int z_idxs_size() const;
+  private:
+  int _internal_z_idxs_size() const;
+  public:
+  void clear_z_idxs();
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_z_idxs(int index) const;
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >&
+      _internal_z_idxs() const;
+  void _internal_add_z_idxs(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >*
+      _internal_mutable_z_idxs();
+  public:
+  ::PROTOBUF_NAMESPACE_ID::uint32 z_idxs(int index) const;
+  void set_z_idxs(int index, ::PROTOBUF_NAMESPACE_ID::uint32 value);
+  void add_z_idxs(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >&
+      z_idxs() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >*
+      mutable_z_idxs();
+
+  // repeated string z_names = 5;
   int z_names_size() const;
   private:
   int _internal_z_names_size() const;
@@ -796,7 +820,7 @@ class SixGod PROTOBUF_FINAL :
   std::string* _internal_add_z_names();
   public:
 
-  // string g_name = 2;
+  // string g_name = 3;
   void clear_g_name();
   const std::string& g_name() const;
   void set_g_name(const std::string& value);
@@ -821,6 +845,15 @@ class SixGod PROTOBUF_FINAL :
   void _internal_set_idx(::PROTOBUF_NAMESPACE_ID::uint32 value);
   public:
 
+  // uint32 g_idx = 2;
+  void clear_g_idx();
+  ::PROTOBUF_NAMESPACE_ID::uint32 g_idx() const;
+  void set_g_idx(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_g_idx() const;
+  void _internal_set_g_idx(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
   // @@protoc_insertion_point(class_scope:trpc.app.SixGod)
  private:
   class _Internal;
@@ -828,9 +861,12 @@ class SixGod PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 > z_idxs_;
+  mutable std::atomic<int> _z_idxs_cached_byte_size_;
   ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> z_names_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr g_name_;
   ::PROTOBUF_NAMESPACE_ID::uint32 idx_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 g_idx_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_app_5fbusi_5fitg_5fserver_2eproto;
 };
@@ -1766,7 +1802,27 @@ inline void SixGod::set_idx(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   // @@protoc_insertion_point(field_set:trpc.app.SixGod.idx)
 }
 
-// string g_name = 2;
+// uint32 g_idx = 2;
+inline void SixGod::clear_g_idx() {
+  g_idx_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 SixGod::_internal_g_idx() const {
+  return g_idx_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 SixGod::g_idx() const {
+  // @@protoc_insertion_point(field_get:trpc.app.SixGod.g_idx)
+  return _internal_g_idx();
+}
+inline void SixGod::_internal_set_g_idx(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  g_idx_ = value;
+}
+inline void SixGod::set_g_idx(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_g_idx(value);
+  // @@protoc_insertion_point(field_set:trpc.app.SixGod.g_idx)
+}
+
+// string g_name = 3;
 inline void SixGod::clear_g_name() {
   g_name_.ClearToEmpty();
 }
@@ -1827,7 +1883,54 @@ inline void SixGod::set_allocated_g_name(std::string* g_name) {
   // @@protoc_insertion_point(field_set_allocated:trpc.app.SixGod.g_name)
 }
 
-// repeated string z_names = 3;
+// repeated uint32 z_idxs = 4;
+inline int SixGod::_internal_z_idxs_size() const {
+  return z_idxs_.size();
+}
+inline int SixGod::z_idxs_size() const {
+  return _internal_z_idxs_size();
+}
+inline void SixGod::clear_z_idxs() {
+  z_idxs_.Clear();
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 SixGod::_internal_z_idxs(int index) const {
+  return z_idxs_.Get(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 SixGod::z_idxs(int index) const {
+  // @@protoc_insertion_point(field_get:trpc.app.SixGod.z_idxs)
+  return _internal_z_idxs(index);
+}
+inline void SixGod::set_z_idxs(int index, ::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  z_idxs_.Set(index, value);
+  // @@protoc_insertion_point(field_set:trpc.app.SixGod.z_idxs)
+}
+inline void SixGod::_internal_add_z_idxs(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  z_idxs_.Add(value);
+}
+inline void SixGod::add_z_idxs(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_add_z_idxs(value);
+  // @@protoc_insertion_point(field_add:trpc.app.SixGod.z_idxs)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >&
+SixGod::_internal_z_idxs() const {
+  return z_idxs_;
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >&
+SixGod::z_idxs() const {
+  // @@protoc_insertion_point(field_list:trpc.app.SixGod.z_idxs)
+  return _internal_z_idxs();
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >*
+SixGod::_internal_mutable_z_idxs() {
+  return &z_idxs_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedField< ::PROTOBUF_NAMESPACE_ID::uint32 >*
+SixGod::mutable_z_idxs() {
+  // @@protoc_insertion_point(field_mutable_list:trpc.app.SixGod.z_idxs)
+  return _internal_mutable_z_idxs();
+}
+
+// repeated string z_names = 5;
 inline int SixGod::_internal_z_names_size() const {
   return z_names_.size();
 }

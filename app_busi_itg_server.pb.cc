@@ -65,9 +65,12 @@ struct AppBusiBaseAuguryReqDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT AppBusiBaseAuguryReqDefaultTypeInternal _AppBusiBaseAuguryReq_default_instance_;
 constexpr SixGod::SixGod(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : z_names_()
+  : z_idxs_()
+  , _z_idxs_cached_byte_size_()
+  , z_names_()
   , g_name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , idx_(0u){}
+  , idx_(0u)
+  , g_idx_(0u){}
 struct SixGodDefaultTypeInternal {
   constexpr SixGodDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -140,7 +143,9 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_app_5fbusi_5fitg_5fserver_2epr
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::trpc::app::SixGod, idx_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::SixGod, g_idx_),
   PROTOBUF_FIELD_OFFSET(::trpc::app::SixGod, g_name_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::SixGod, z_idxs_),
   PROTOBUF_FIELD_OFFSET(::trpc::app::SixGod, z_names_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBaseAuguryRsp, _internal_metadata_),
@@ -164,7 +169,7 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 8, -1, sizeof(::trpc::app::AppBusiBirthdateConvertRsp)},
   { 18, -1, sizeof(::trpc::app::AppBusiBaseAuguryReq)},
   { 26, -1, sizeof(::trpc::app::SixGod)},
-  { 34, -1, sizeof(::trpc::app::AppBusiBaseAuguryRsp)},
+  { 36, -1, sizeof(::trpc::app::AppBusiBaseAuguryRsp)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -183,25 +188,25 @@ const char descriptor_table_protodef_app_5fbusi_5fitg_5fserver_2eproto[] PROTOBU
   "\030\001 \001(\t\022\016\n\006st_idx\030\002 \001(\r\022\017\n\007st_name\030\003 \001(\t\022"
   "\017\n\007gz_idxs\030\004 \003(\r\022\020\n\010gz_names\030\005 \003(\t\"K\n\024Ap"
   "pBusiBaseAuguryReq\022\021\n\tbirthdate\030\001 \001(\t\022\013\n"
-  "\003sex\030\002 \001(\t\022\023\n\013is_marriage\030\003 \001(\r\"6\n\006SixGo"
-  "d\022\013\n\003idx\030\001 \001(\r\022\016\n\006g_name\030\002 \001(\t\022\017\n\007z_name"
-  "s\030\003 \003(\t\"\354\001\n\024AppBusiBaseAuguryRsp\022\021\n\tbirt"
-  "hdate\030\001 \001(\t\022\016\n\006st_idx\030\002 \001(\r\022\017\n\007st_name\030\003"
-  " \001(\t\022\016\n\006mg_idx\030\004 \001(\r\022\017\n\007mg_name\030\005 \001(\t\022\021\n"
-  "\tmg_x_name\030\006 \001(\t\022\017\n\007gz_idxs\030\007 \003(\r\022\020\n\010gz_"
-  "names\030\010 \003(\t\022\021\n\tkm_z_idxs\030\t \003(\r\022\022\n\nkm_z_n"
-  "ames\030\n \003(\t\022\"\n\010six_gods\030\013 \003(\0132\020.trpc.app."
-  "SixGod2\341\001\n\021AppBusiItgService\022n\n\036AppBusiB"
-  "irthdateConvertHandler\022$.trpc.app.AppBus"
-  "iBirthdateConvertReq\032$.trpc.app.AppBusiB"
-  "irthdateConvertRsp\"\000\022\\\n\030AppBusiBaseAugur"
-  "yHandler\022\036.trpc.app.AppBusiBaseAuguryReq"
-  "\032\036.trpc.app.AppBusiBaseAuguryRsp\"\000b\006prot"
-  "o3"
+  "\003sex\030\002 \001(\t\022\023\n\013is_marriage\030\003 \001(\r\"U\n\006SixGo"
+  "d\022\013\n\003idx\030\001 \001(\r\022\r\n\005g_idx\030\002 \001(\r\022\016\n\006g_name\030"
+  "\003 \001(\t\022\016\n\006z_idxs\030\004 \003(\r\022\017\n\007z_names\030\005 \003(\t\"\354"
+  "\001\n\024AppBusiBaseAuguryRsp\022\021\n\tbirthdate\030\001 \001"
+  "(\t\022\016\n\006st_idx\030\002 \001(\r\022\017\n\007st_name\030\003 \001(\t\022\016\n\006m"
+  "g_idx\030\004 \001(\r\022\017\n\007mg_name\030\005 \001(\t\022\021\n\tmg_x_nam"
+  "e\030\006 \001(\t\022\017\n\007gz_idxs\030\007 \003(\r\022\020\n\010gz_names\030\010 \003"
+  "(\t\022\021\n\tkm_z_idxs\030\t \003(\r\022\022\n\nkm_z_names\030\n \003("
+  "\t\022\"\n\010six_gods\030\013 \003(\0132\020.trpc.app.SixGod2\341\001"
+  "\n\021AppBusiItgService\022n\n\036AppBusiBirthdateC"
+  "onvertHandler\022$.trpc.app.AppBusiBirthdat"
+  "eConvertReq\032$.trpc.app.AppBusiBirthdateC"
+  "onvertRsp\"\000\022\\\n\030AppBusiBaseAuguryHandler\022"
+  "\036.trpc.app.AppBusiBaseAuguryReq\032\036.trpc.a"
+  "pp.AppBusiBaseAuguryRsp\"\000b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_app_5fbusi_5fitg_5fserver_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_app_5fbusi_5fitg_5fserver_2eproto = {
-  false, false, 842, descriptor_table_protodef_app_5fbusi_5fitg_5fserver_2eproto, "app_busi_itg_server.proto", 
+  false, false, 873, descriptor_table_protodef_app_5fbusi_5fitg_5fserver_2eproto, "app_busi_itg_server.proto", 
   &descriptor_table_app_5fbusi_5fitg_5fserver_2eproto_once, nullptr, 0, 5,
   schemas, file_default_instances, TableStruct_app_5fbusi_5fitg_5fserver_2eproto::offsets,
   file_level_metadata_app_5fbusi_5fitg_5fserver_2eproto, file_level_enum_descriptors_app_5fbusi_5fitg_5fserver_2eproto, file_level_service_descriptors_app_5fbusi_5fitg_5fserver_2eproto,
@@ -1096,6 +1101,7 @@ class SixGod::_Internal {
 
 SixGod::SixGod(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+  z_idxs_(arena),
   z_names_(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
@@ -1103,6 +1109,7 @@ SixGod::SixGod(::PROTOBUF_NAMESPACE_ID::Arena* arena)
 }
 SixGod::SixGod(const SixGod& from)
   : ::PROTOBUF_NAMESPACE_ID::Message(),
+      z_idxs_(from.z_idxs_),
       z_names_(from.z_names_) {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   g_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
@@ -1110,13 +1117,18 @@ SixGod::SixGod(const SixGod& from)
     g_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_g_name(), 
       GetArena());
   }
-  idx_ = from.idx_;
+  ::memcpy(&idx_, &from.idx_,
+    static_cast<size_t>(reinterpret_cast<char*>(&g_idx_) -
+    reinterpret_cast<char*>(&idx_)) + sizeof(g_idx_));
   // @@protoc_insertion_point(copy_constructor:trpc.app.SixGod)
 }
 
 void SixGod::SharedCtor() {
 g_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-idx_ = 0u;
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&idx_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&g_idx_) -
+    reinterpret_cast<char*>(&idx_)) + sizeof(g_idx_));
 }
 
 SixGod::~SixGod() {
@@ -1146,9 +1158,12 @@ void SixGod::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  z_idxs_.Clear();
   z_names_.Clear();
   g_name_.ClearToEmpty();
-  idx_ = 0u;
+  ::memset(&idx_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&g_idx_) -
+      reinterpret_cast<char*>(&idx_)) + sizeof(g_idx_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -1166,18 +1181,35 @@ const char* SixGod::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::int
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string g_name = 2;
+      // uint32 g_idx = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          g_idx_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string g_name = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           auto str = _internal_mutable_g_name();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.SixGod.g_name"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // repeated string z_names = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+      // repeated uint32 z_idxs = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::PackedUInt32Parser(_internal_mutable_z_idxs(), ptr, ctx);
+          CHK_(ptr);
+        } else if (static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32) {
+          _internal_add_z_idxs(::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // repeated string z_names = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -1186,7 +1218,7 @@ const char* SixGod::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::int
             CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.SixGod.z_names"));
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<26>(ptr));
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -1223,24 +1255,39 @@ failure:
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->_internal_idx(), target);
   }
 
-  // string g_name = 2;
+  // uint32 g_idx = 2;
+  if (this->g_idx() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->_internal_g_idx(), target);
+  }
+
+  // string g_name = 3;
   if (this->g_name().size() > 0) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_g_name().data(), static_cast<int>(this->_internal_g_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "trpc.app.SixGod.g_name");
     target = stream->WriteStringMaybeAliased(
-        2, this->_internal_g_name(), target);
+        3, this->_internal_g_name(), target);
   }
 
-  // repeated string z_names = 3;
+  // repeated uint32 z_idxs = 4;
+  {
+    int byte_size = _z_idxs_cached_byte_size_.load(std::memory_order_relaxed);
+    if (byte_size > 0) {
+      target = stream->WriteUInt32Packed(
+          4, _internal_z_idxs(), byte_size, target);
+    }
+  }
+
+  // repeated string z_names = 5;
   for (int i = 0, n = this->_internal_z_names_size(); i < n; i++) {
     const auto& s = this->_internal_z_names(i);
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       s.data(), static_cast<int>(s.length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "trpc.app.SixGod.z_names");
-    target = stream->WriteString(3, s, target);
+    target = stream->WriteString(5, s, target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1259,7 +1306,22 @@ size_t SixGod::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // repeated string z_names = 3;
+  // repeated uint32 z_idxs = 4;
+  {
+    size_t data_size = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      UInt32Size(this->z_idxs_);
+    if (data_size > 0) {
+      total_size += 1 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
+            static_cast<::PROTOBUF_NAMESPACE_ID::int32>(data_size));
+    }
+    int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(data_size);
+    _z_idxs_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
+    total_size += data_size;
+  }
+
+  // repeated string z_names = 5;
   total_size += 1 *
       ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(z_names_.size());
   for (int i = 0, n = z_names_.size(); i < n; i++) {
@@ -1267,7 +1329,7 @@ size_t SixGod::ByteSizeLong() const {
       z_names_.Get(i));
   }
 
-  // string g_name = 2;
+  // string g_name = 3;
   if (this->g_name().size() > 0) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
@@ -1279,6 +1341,13 @@ size_t SixGod::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
         this->_internal_idx());
+  }
+
+  // uint32 g_idx = 2;
+  if (this->g_idx() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->_internal_g_idx());
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -1312,12 +1381,16 @@ void SixGod::MergeFrom(const SixGod& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
+  z_idxs_.MergeFrom(from.z_idxs_);
   z_names_.MergeFrom(from.z_names_);
   if (from.g_name().size() > 0) {
     _internal_set_g_name(from._internal_g_name());
   }
   if (from.idx() != 0) {
     _internal_set_idx(from._internal_idx());
+  }
+  if (from.g_idx() != 0) {
+    _internal_set_g_idx(from._internal_g_idx());
   }
 }
 
@@ -1342,9 +1415,15 @@ bool SixGod::IsInitialized() const {
 void SixGod::InternalSwap(SixGod* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  z_idxs_.InternalSwap(&other->z_idxs_);
   z_names_.InternalSwap(&other->z_names_);
   g_name_.Swap(&other->g_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(idx_, other->idx_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(SixGod, g_idx_)
+      + sizeof(SixGod::g_idx_)
+      - PROTOBUF_FIELD_OFFSET(SixGod, idx_)>(
+          reinterpret_cast<char*>(&idx_),
+          reinterpret_cast<char*>(&other->idx_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SixGod::GetMetadata() const {

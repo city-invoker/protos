@@ -30,8 +30,10 @@ message AppBusiBaseAuguryReq {
 
 message SixGod {
   uint32 idx = 1;
-  string g_name = 2;
-  repeated string z_names = 3;
+  uint32 g_idx = 2;
+  string g_name = 3;
+  repeated uint32 z_idxs = 4;
+  repeated string z_names = 5;
 }
 
 message AppBusiBaseAuguryRsp {
