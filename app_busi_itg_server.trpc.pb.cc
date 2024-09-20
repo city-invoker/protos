@@ -14,6 +14,7 @@ namespace app {
 static const std::vector<std::vector<std::string_view>> AppBusiItgService_method_names = {
   {"/trpc.app.AppBusiItgService/AppBusiBirthdateConvertHandler"},
   {"/trpc.app.AppBusiItgService/AppBusiBaseAuguryHandler"},
+  {"/trpc.app.AppBusiItgService/AppBusiBaseStarCompassHandler"},
 };
 
 AppBusiItgService::AppBusiItgService() {
@@ -22,6 +23,9 @@ AppBusiItgService::AppBusiItgService() {
   }
   for (const std::string_view& method : AppBusiItgService_method_names[1]) {
     AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::RpcMethodHandler<::trpc::app::AppBusiBaseAuguryReq, ::trpc::app::AppBusiBaseAuguryRsp>(std::bind(&AppBusiItgService::AppBusiBaseAuguryHandler, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3))));
+  }
+  for (const std::string_view& method : AppBusiItgService_method_names[2]) {
+    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::RpcMethodHandler<::trpc::app::AppBusiBaseStarCompassReq, ::trpc::app::AppBusiBaseStarCompassRsp>(std::bind(&AppBusiItgService::AppBusiBaseStarCompassHandler, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3))));
   }
 }
 
@@ -39,12 +43,22 @@ AppBusiItgService::AppBusiItgService() {
   return ::trpc::Status(-1, "");
 }
 
+::trpc::Status AppBusiItgService::AppBusiBaseStarCompassHandler(::trpc::ServerContextPtr context, const ::trpc::app::AppBusiBaseStarCompassReq* request, ::trpc::app::AppBusiBaseStarCompassRsp* response) {
+  (void)context;
+  (void)request;
+  (void)response;
+  return ::trpc::Status(-1, "");
+}
+
 AsyncAppBusiItgService::AsyncAppBusiItgService() : ::trpc::AsyncRpcServiceImpl() {
   for (const std::string_view& method : AppBusiItgService_method_names[0]) {
     AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::AsyncRpcMethodHandler<::trpc::app::AppBusiBirthdateConvertReq, ::trpc::app::AppBusiBirthdateConvertRsp>(std::bind(&AsyncAppBusiItgService::AppBusiBirthdateConvertHandler, this, std::placeholders::_1, std::placeholders::_2))));
   }
   for (const std::string_view& method : AppBusiItgService_method_names[1]) {
     AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::AsyncRpcMethodHandler<::trpc::app::AppBusiBaseAuguryReq, ::trpc::app::AppBusiBaseAuguryRsp>(std::bind(&AsyncAppBusiItgService::AppBusiBaseAuguryHandler, this, std::placeholders::_1, std::placeholders::_2))));
+  }
+  for (const std::string_view& method : AppBusiItgService_method_names[2]) {
+    AddRpcServiceMethod(new ::trpc::RpcServiceMethod(method.data(), ::trpc::MethodType::UNARY, new ::trpc::AsyncRpcMethodHandler<::trpc::app::AppBusiBaseStarCompassReq, ::trpc::app::AppBusiBaseStarCompassRsp>(std::bind(&AsyncAppBusiItgService::AppBusiBaseStarCompassHandler, this, std::placeholders::_1, std::placeholders::_2))));
   }
 }
 
@@ -54,6 +68,10 @@ AsyncAppBusiItgService::AsyncAppBusiItgService() : ::trpc::AsyncRpcServiceImpl()
 
 ::trpc::Future<::trpc::app::AppBusiBaseAuguryRsp> AsyncAppBusiItgService::AppBusiBaseAuguryHandler(const ::trpc::ServerContextPtr& context, const ::trpc::app::AppBusiBaseAuguryReq* request) {
   return ::trpc::MakeExceptionFuture<::trpc::app::AppBusiBaseAuguryRsp>(::trpc::CommonException("Unimplemented"));
+}
+
+::trpc::Future<::trpc::app::AppBusiBaseStarCompassRsp> AsyncAppBusiItgService::AppBusiBaseStarCompassHandler(const ::trpc::ServerContextPtr& context, const ::trpc::app::AppBusiBaseStarCompassReq* request) {
+  return ::trpc::MakeExceptionFuture<::trpc::app::AppBusiBaseStarCompassRsp>(::trpc::CommonException("Unimplemented"));
 }
 
 ::trpc::Status AppBusiItgServiceServiceProxy::AppBusiBirthdateConvertHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBirthdateConvertReq& request, ::trpc::app::AppBusiBirthdateConvertRsp* response) {
@@ -66,6 +84,11 @@ AsyncAppBusiItgService::AsyncAppBusiItgService() : ::trpc::AsyncRpcServiceImpl()
   return UnaryInvoke<::trpc::app::AppBusiBaseAuguryReq, ::trpc::app::AppBusiBaseAuguryRsp>(context, request, response);
 }
 
+::trpc::Status AppBusiItgServiceServiceProxy::AppBusiBaseStarCompassHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBaseStarCompassReq& request, ::trpc::app::AppBusiBaseStarCompassRsp* response) {
+  if (context->GetFuncName().empty()) context->SetFuncName(AppBusiItgService_method_names[2][0].data());
+  return UnaryInvoke<::trpc::app::AppBusiBaseStarCompassReq, ::trpc::app::AppBusiBaseStarCompassRsp>(context, request, response);
+}
+
 ::trpc::Future<::trpc::app::AppBusiBirthdateConvertRsp> AppBusiItgServiceServiceProxy::AsyncAppBusiBirthdateConvertHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBirthdateConvertReq& request) {
   if (context->GetFuncName().empty()) context->SetFuncName(AppBusiItgService_method_names[0][0].data());
   return AsyncUnaryInvoke<::trpc::app::AppBusiBirthdateConvertReq, ::trpc::app::AppBusiBirthdateConvertRsp>(context, request);
@@ -74,6 +97,11 @@ AsyncAppBusiItgService::AsyncAppBusiItgService() : ::trpc::AsyncRpcServiceImpl()
 ::trpc::Future<::trpc::app::AppBusiBaseAuguryRsp> AppBusiItgServiceServiceProxy::AsyncAppBusiBaseAuguryHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBaseAuguryReq& request) {
   if (context->GetFuncName().empty()) context->SetFuncName(AppBusiItgService_method_names[1][0].data());
   return AsyncUnaryInvoke<::trpc::app::AppBusiBaseAuguryReq, ::trpc::app::AppBusiBaseAuguryRsp>(context, request);
+}
+
+::trpc::Future<::trpc::app::AppBusiBaseStarCompassRsp> AppBusiItgServiceServiceProxy::AsyncAppBusiBaseStarCompassHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBaseStarCompassReq& request) {
+  if (context->GetFuncName().empty()) context->SetFuncName(AppBusiItgService_method_names[2][0].data());
+  return AsyncUnaryInvoke<::trpc::app::AppBusiBaseStarCompassReq, ::trpc::app::AppBusiBaseStarCompassRsp>(context, request);
 }
 
 ::trpc::Status AppBusiItgServiceServiceProxy::AppBusiBirthdateConvertHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBirthdateConvertReq& request) {
@@ -86,6 +114,11 @@ AsyncAppBusiItgService::AsyncAppBusiItgService() : ::trpc::AsyncRpcServiceImpl()
   return OnewayInvoke<::trpc::app::AppBusiBaseAuguryReq>(context, request);
 }
 
+::trpc::Status AppBusiItgServiceServiceProxy::AppBusiBaseStarCompassHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBaseStarCompassReq& request) {
+  if (context->GetFuncName().empty()) context->SetFuncName(AppBusiItgService_method_names[2][0].data());
+  return OnewayInvoke<::trpc::app::AppBusiBaseStarCompassReq>(context, request);
+}
+
 ::trpc::Future<::trpc::app::AppBusiBirthdateConvertRsp> AsyncAppBusiItgServiceServiceProxy::AppBusiBirthdateConvertHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBirthdateConvertReq& request) {
   if (context->GetFuncName().empty()) context->SetFuncName(AppBusiItgService_method_names[0][0].data());
   return AsyncUnaryInvoke<::trpc::app::AppBusiBirthdateConvertReq, ::trpc::app::AppBusiBirthdateConvertRsp>(context, request);
@@ -94,6 +127,11 @@ AsyncAppBusiItgService::AsyncAppBusiItgService() : ::trpc::AsyncRpcServiceImpl()
 ::trpc::Future<::trpc::app::AppBusiBaseAuguryRsp> AsyncAppBusiItgServiceServiceProxy::AppBusiBaseAuguryHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBaseAuguryReq& request) {
   if (context->GetFuncName().empty()) context->SetFuncName(AppBusiItgService_method_names[1][0].data());
   return AsyncUnaryInvoke<::trpc::app::AppBusiBaseAuguryReq, ::trpc::app::AppBusiBaseAuguryRsp>(context, request);
+}
+
+::trpc::Future<::trpc::app::AppBusiBaseStarCompassRsp> AsyncAppBusiItgServiceServiceProxy::AppBusiBaseStarCompassHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBaseStarCompassReq& request) {
+  if (context->GetFuncName().empty()) context->SetFuncName(AppBusiItgService_method_names[2][0].data());
+  return AsyncUnaryInvoke<::trpc::app::AppBusiBaseStarCompassReq, ::trpc::app::AppBusiBaseStarCompassRsp>(context, request);
 }
 
 } // end namespace app

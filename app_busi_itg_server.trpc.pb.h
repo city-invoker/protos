@@ -19,6 +19,7 @@ class AppBusiItgService : public ::trpc::RpcServiceImpl {
 
   virtual ::trpc::Status AppBusiBirthdateConvertHandler(::trpc::ServerContextPtr context, const ::trpc::app::AppBusiBirthdateConvertReq* request, ::trpc::app::AppBusiBirthdateConvertRsp* response);
   virtual ::trpc::Status AppBusiBaseAuguryHandler(::trpc::ServerContextPtr context, const ::trpc::app::AppBusiBaseAuguryReq* request, ::trpc::app::AppBusiBaseAuguryRsp* response);
+  virtual ::trpc::Status AppBusiBaseStarCompassHandler(::trpc::ServerContextPtr context, const ::trpc::app::AppBusiBaseStarCompassReq* request, ::trpc::app::AppBusiBaseStarCompassRsp* response);
 };
 
 class AsyncAppBusiItgService : public ::trpc::AsyncRpcServiceImpl {
@@ -27,6 +28,7 @@ class AsyncAppBusiItgService : public ::trpc::AsyncRpcServiceImpl {
   
   virtual ::trpc::Future<::trpc::app::AppBusiBirthdateConvertRsp> AppBusiBirthdateConvertHandler(const ::trpc::ServerContextPtr& context, const ::trpc::app::AppBusiBirthdateConvertReq* request);
   virtual ::trpc::Future<::trpc::app::AppBusiBaseAuguryRsp> AppBusiBaseAuguryHandler(const ::trpc::ServerContextPtr& context, const ::trpc::app::AppBusiBaseAuguryReq* request);
+  virtual ::trpc::Future<::trpc::app::AppBusiBaseStarCompassRsp> AppBusiBaseStarCompassHandler(const ::trpc::ServerContextPtr& context, const ::trpc::app::AppBusiBaseStarCompassReq* request);
 };
 
 class AppBusiItgServiceServiceProxy : public ::trpc::RpcServiceProxy {
@@ -39,6 +41,10 @@ class AppBusiItgServiceServiceProxy : public ::trpc::RpcServiceProxy {
   virtual ::trpc::Future<::trpc::app::AppBusiBaseAuguryRsp> AsyncAppBusiBaseAuguryHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBaseAuguryReq& request);
   // oneway, only send
   virtual ::trpc::Status AppBusiBaseAuguryHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBaseAuguryReq& request);
+  virtual ::trpc::Status AppBusiBaseStarCompassHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBaseStarCompassReq& request, ::trpc::app::AppBusiBaseStarCompassRsp* response);
+  virtual ::trpc::Future<::trpc::app::AppBusiBaseStarCompassRsp> AsyncAppBusiBaseStarCompassHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBaseStarCompassReq& request);
+  // oneway, only send
+  virtual ::trpc::Status AppBusiBaseStarCompassHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBaseStarCompassReq& request);
 };
 
 class AsyncAppBusiItgServiceServiceProxy : public ::trpc::RpcServiceProxy {
@@ -46,6 +52,8 @@ class AsyncAppBusiItgServiceServiceProxy : public ::trpc::RpcServiceProxy {
   ::trpc::Future<::trpc::app::AppBusiBirthdateConvertRsp> AppBusiBirthdateConvertHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBirthdateConvertReq& request);
   // TODO: one-way
   ::trpc::Future<::trpc::app::AppBusiBaseAuguryRsp> AppBusiBaseAuguryHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBaseAuguryReq& request);
+  // TODO: one-way
+  ::trpc::Future<::trpc::app::AppBusiBaseStarCompassRsp> AppBusiBaseStarCompassHandler(const ::trpc::ClientContextPtr& context, const ::trpc::app::AppBusiBaseStarCompassReq& request);
   // TODO: one-way
 };
 

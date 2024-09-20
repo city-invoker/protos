@@ -104,9 +104,64 @@ struct AppBusiBaseAuguryRspDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT AppBusiBaseAuguryRspDefaultTypeInternal _AppBusiBaseAuguryRsp_default_instance_;
+constexpr StarCompass::StarCompass(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , flag_(0u){}
+struct StarCompassDefaultTypeInternal {
+  constexpr StarCompassDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~StarCompassDefaultTypeInternal() {}
+  union {
+    StarCompass _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT StarCompassDefaultTypeInternal _StarCompass_default_instance_;
+constexpr StarCompassAssemble::StarCompassAssemble(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : sc_list_(){}
+struct StarCompassAssembleDefaultTypeInternal {
+  constexpr StarCompassAssembleDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~StarCompassAssembleDefaultTypeInternal() {}
+  union {
+    StarCompassAssemble _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT StarCompassAssembleDefaultTypeInternal _StarCompassAssemble_default_instance_;
+constexpr AppBusiBaseStarCompassReq::AppBusiBaseStarCompassReq(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : birthdate_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , sex_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , is_marriage_(0u){}
+struct AppBusiBaseStarCompassReqDefaultTypeInternal {
+  constexpr AppBusiBaseStarCompassReqDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~AppBusiBaseStarCompassReqDefaultTypeInternal() {}
+  union {
+    AppBusiBaseStarCompassReq _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT AppBusiBaseStarCompassReqDefaultTypeInternal _AppBusiBaseStarCompassReq_default_instance_;
+constexpr AppBusiBaseStarCompassRsp::AppBusiBaseStarCompassRsp(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : z_names_()
+  , base_sc_front_()
+  , base_sc_rear_()
+  , user_main_z_idx_(0u)
+  , cur_year_shift_step_(0u){}
+struct AppBusiBaseStarCompassRspDefaultTypeInternal {
+  constexpr AppBusiBaseStarCompassRspDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~AppBusiBaseStarCompassRspDefaultTypeInternal() {}
+  union {
+    AppBusiBaseStarCompassRsp _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT AppBusiBaseStarCompassRspDefaultTypeInternal _AppBusiBaseStarCompassRsp_default_instance_;
 }  // namespace app
 }  // namespace trpc
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_app_5fbusi_5fitg_5fserver_2eproto[5];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_app_5fbusi_5fitg_5fserver_2eproto[9];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_app_5fbusi_5fitg_5fserver_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_app_5fbusi_5fitg_5fserver_2eproto = nullptr;
 
@@ -163,6 +218,37 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_app_5fbusi_5fitg_5fserver_2epr
   PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBaseAuguryRsp, km_z_idxs_),
   PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBaseAuguryRsp, km_z_names_),
   PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBaseAuguryRsp, six_gods_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::trpc::app::StarCompass, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::trpc::app::StarCompass, flag_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::StarCompass, name_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::trpc::app::StarCompassAssemble, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::trpc::app::StarCompassAssemble, sc_list_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBaseStarCompassReq, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBaseStarCompassReq, birthdate_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBaseStarCompassReq, sex_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBaseStarCompassReq, is_marriage_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBaseStarCompassRsp, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBaseStarCompassRsp, user_main_z_idx_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBaseStarCompassRsp, cur_year_shift_step_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBaseStarCompassRsp, z_names_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBaseStarCompassRsp, base_sc_front_),
+  PROTOBUF_FIELD_OFFSET(::trpc::app::AppBusiBaseStarCompassRsp, base_sc_rear_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::trpc::app::AppBusiBirthdateConvertReq)},
@@ -170,6 +256,10 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 18, -1, sizeof(::trpc::app::AppBusiBaseAuguryReq)},
   { 26, -1, sizeof(::trpc::app::SixGod)},
   { 36, -1, sizeof(::trpc::app::AppBusiBaseAuguryRsp)},
+  { 52, -1, sizeof(::trpc::app::StarCompass)},
+  { 59, -1, sizeof(::trpc::app::StarCompassAssemble)},
+  { 65, -1, sizeof(::trpc::app::AppBusiBaseStarCompassReq)},
+  { 73, -1, sizeof(::trpc::app::AppBusiBaseStarCompassRsp)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -178,6 +268,10 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::trpc::app::_AppBusiBaseAuguryReq_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::trpc::app::_SixGod_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::trpc::app::_AppBusiBaseAuguryRsp_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::trpc::app::_StarCompass_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::trpc::app::_StarCompassAssemble_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::trpc::app::_AppBusiBaseStarCompassReq_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::trpc::app::_AppBusiBaseStarCompassRsp_default_instance_),
 };
 
 const char descriptor_table_protodef_app_5fbusi_5fitg_5fserver_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -196,18 +290,31 @@ const char descriptor_table_protodef_app_5fbusi_5fitg_5fserver_2eproto[] PROTOBU
   "g_idx\030\004 \001(\r\022\017\n\007mg_name\030\005 \001(\t\022\021\n\tmg_x_nam"
   "e\030\006 \001(\t\022\017\n\007gz_idxs\030\007 \003(\r\022\020\n\010gz_names\030\010 \003"
   "(\t\022\021\n\tkm_z_idxs\030\t \003(\r\022\022\n\nkm_z_names\030\n \003("
-  "\t\022\"\n\010six_gods\030\013 \003(\0132\020.trpc.app.SixGod2\341\001"
-  "\n\021AppBusiItgService\022n\n\036AppBusiBirthdateC"
-  "onvertHandler\022$.trpc.app.AppBusiBirthdat"
-  "eConvertReq\032$.trpc.app.AppBusiBirthdateC"
-  "onvertRsp\"\000\022\\\n\030AppBusiBaseAuguryHandler\022"
-  "\036.trpc.app.AppBusiBaseAuguryReq\032\036.trpc.a"
-  "pp.AppBusiBaseAuguryRsp\"\000b\006proto3"
+  "\t\022\"\n\010six_gods\030\013 \003(\0132\020.trpc.app.SixGod\")\n"
+  "\013StarCompass\022\014\n\004flag\030\001 \001(\r\022\014\n\004name\030\002 \001(\t"
+  "\"=\n\023StarCompassAssemble\022&\n\007sc_list\030\001 \003(\013"
+  "2\025.trpc.app.StarCompass\"P\n\031AppBusiBaseSt"
+  "arCompassReq\022\021\n\tbirthdate\030\001 \001(\t\022\013\n\003sex\030\002"
+  " \001(\t\022\023\n\013is_marriage\030\003 \001(\r\"\315\001\n\031AppBusiBas"
+  "eStarCompassRsp\022\027\n\017user_main_z_idx\030\001 \001(\r"
+  "\022\033\n\023cur_year_shift_step\030\003 \001(\r\022\017\n\007z_names"
+  "\030\004 \003(\t\0224\n\rbase_sc_front\030\005 \003(\0132\035.trpc.app"
+  ".StarCompassAssemble\0223\n\014base_sc_rear\030\006 \003"
+  "(\0132\035.trpc.app.StarCompassAssemble2\316\002\n\021Ap"
+  "pBusiItgService\022n\n\036AppBusiBirthdateConve"
+  "rtHandler\022$.trpc.app.AppBusiBirthdateCon"
+  "vertReq\032$.trpc.app.AppBusiBirthdateConve"
+  "rtRsp\"\000\022\\\n\030AppBusiBaseAuguryHandler\022\036.tr"
+  "pc.app.AppBusiBaseAuguryReq\032\036.trpc.app.A"
+  "ppBusiBaseAuguryRsp\"\000\022k\n\035AppBusiBaseStar"
+  "CompassHandler\022#.trpc.app.AppBusiBaseSta"
+  "rCompassReq\032#.trpc.app.AppBusiBaseStarCo"
+  "mpassRsp\"\000b\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_app_5fbusi_5fitg_5fserver_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_app_5fbusi_5fitg_5fserver_2eproto = {
-  false, false, 873, descriptor_table_protodef_app_5fbusi_5fitg_5fserver_2eproto, "app_busi_itg_server.proto", 
-  &descriptor_table_app_5fbusi_5fitg_5fserver_2eproto_once, nullptr, 0, 5,
+  false, false, 1378, descriptor_table_protodef_app_5fbusi_5fitg_5fserver_2eproto, "app_busi_itg_server.proto", 
+  &descriptor_table_app_5fbusi_5fitg_5fserver_2eproto_once, nullptr, 0, 9,
   schemas, file_default_instances, TableStruct_app_5fbusi_5fitg_5fserver_2eproto::offsets,
   file_level_metadata_app_5fbusi_5fitg_5fserver_2eproto, file_level_enum_descriptors_app_5fbusi_5fitg_5fserver_2eproto, file_level_service_descriptors_app_5fbusi_5fitg_5fserver_2eproto,
 };
@@ -1991,6 +2098,1017 @@ void AppBusiBaseAuguryRsp::InternalSwap(AppBusiBaseAuguryRsp* other) {
 }
 
 
+// ===================================================================
+
+class StarCompass::_Internal {
+ public:
+};
+
+StarCompass::StarCompass(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:trpc.app.StarCompass)
+}
+StarCompass::StarCompass(const StarCompass& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_name().empty()) {
+    name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_name(), 
+      GetArena());
+  }
+  flag_ = from.flag_;
+  // @@protoc_insertion_point(copy_constructor:trpc.app.StarCompass)
+}
+
+void StarCompass::SharedCtor() {
+name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+flag_ = 0u;
+}
+
+StarCompass::~StarCompass() {
+  // @@protoc_insertion_point(destructor:trpc.app.StarCompass)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void StarCompass::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void StarCompass::ArenaDtor(void* object) {
+  StarCompass* _this = reinterpret_cast< StarCompass* >(object);
+  (void)_this;
+}
+void StarCompass::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void StarCompass::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void StarCompass::Clear() {
+// @@protoc_insertion_point(message_clear_start:trpc.app.StarCompass)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  name_.ClearToEmpty();
+  flag_ = 0u;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* StarCompass::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // uint32 flag = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          flag_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string name = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          auto str = _internal_mutable_name();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.StarCompass.name"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* StarCompass::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:trpc.app.StarCompass)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // uint32 flag = 1;
+  if (this->flag() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->_internal_flag(), target);
+  }
+
+  // string name = 2;
+  if (this->name().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_name().data(), static_cast<int>(this->_internal_name().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "trpc.app.StarCompass.name");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_name(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:trpc.app.StarCompass)
+  return target;
+}
+
+size_t StarCompass::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:trpc.app.StarCompass)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string name = 2;
+  if (this->name().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_name());
+  }
+
+  // uint32 flag = 1;
+  if (this->flag() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->_internal_flag());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void StarCompass::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:trpc.app.StarCompass)
+  GOOGLE_DCHECK_NE(&from, this);
+  const StarCompass* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<StarCompass>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:trpc.app.StarCompass)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:trpc.app.StarCompass)
+    MergeFrom(*source);
+  }
+}
+
+void StarCompass::MergeFrom(const StarCompass& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:trpc.app.StarCompass)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.name().size() > 0) {
+    _internal_set_name(from._internal_name());
+  }
+  if (from.flag() != 0) {
+    _internal_set_flag(from._internal_flag());
+  }
+}
+
+void StarCompass::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:trpc.app.StarCompass)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void StarCompass::CopyFrom(const StarCompass& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:trpc.app.StarCompass)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool StarCompass::IsInitialized() const {
+  return true;
+}
+
+void StarCompass::InternalSwap(StarCompass* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  name_.Swap(&other->name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  swap(flag_, other->flag_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata StarCompass::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class StarCompassAssemble::_Internal {
+ public:
+};
+
+StarCompassAssemble::StarCompassAssemble(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+  sc_list_(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:trpc.app.StarCompassAssemble)
+}
+StarCompassAssemble::StarCompassAssemble(const StarCompassAssemble& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      sc_list_(from.sc_list_) {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  // @@protoc_insertion_point(copy_constructor:trpc.app.StarCompassAssemble)
+}
+
+void StarCompassAssemble::SharedCtor() {
+}
+
+StarCompassAssemble::~StarCompassAssemble() {
+  // @@protoc_insertion_point(destructor:trpc.app.StarCompassAssemble)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void StarCompassAssemble::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+}
+
+void StarCompassAssemble::ArenaDtor(void* object) {
+  StarCompassAssemble* _this = reinterpret_cast< StarCompassAssemble* >(object);
+  (void)_this;
+}
+void StarCompassAssemble::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void StarCompassAssemble::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void StarCompassAssemble::Clear() {
+// @@protoc_insertion_point(message_clear_start:trpc.app.StarCompassAssemble)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  sc_list_.Clear();
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* StarCompassAssemble::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // repeated .trpc.app.StarCompass sc_list = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_sc_list(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* StarCompassAssemble::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:trpc.app.StarCompassAssemble)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated .trpc.app.StarCompass sc_list = 1;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_sc_list_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(1, this->_internal_sc_list(i), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:trpc.app.StarCompassAssemble)
+  return target;
+}
+
+size_t StarCompassAssemble::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:trpc.app.StarCompassAssemble)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .trpc.app.StarCompass sc_list = 1;
+  total_size += 1UL * this->_internal_sc_list_size();
+  for (const auto& msg : this->sc_list_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void StarCompassAssemble::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:trpc.app.StarCompassAssemble)
+  GOOGLE_DCHECK_NE(&from, this);
+  const StarCompassAssemble* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<StarCompassAssemble>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:trpc.app.StarCompassAssemble)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:trpc.app.StarCompassAssemble)
+    MergeFrom(*source);
+  }
+}
+
+void StarCompassAssemble::MergeFrom(const StarCompassAssemble& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:trpc.app.StarCompassAssemble)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  sc_list_.MergeFrom(from.sc_list_);
+}
+
+void StarCompassAssemble::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:trpc.app.StarCompassAssemble)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void StarCompassAssemble::CopyFrom(const StarCompassAssemble& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:trpc.app.StarCompassAssemble)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool StarCompassAssemble::IsInitialized() const {
+  return true;
+}
+
+void StarCompassAssemble::InternalSwap(StarCompassAssemble* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  sc_list_.InternalSwap(&other->sc_list_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata StarCompassAssemble::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class AppBusiBaseStarCompassReq::_Internal {
+ public:
+};
+
+AppBusiBaseStarCompassReq::AppBusiBaseStarCompassReq(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:trpc.app.AppBusiBaseStarCompassReq)
+}
+AppBusiBaseStarCompassReq::AppBusiBaseStarCompassReq(const AppBusiBaseStarCompassReq& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  birthdate_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_birthdate().empty()) {
+    birthdate_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_birthdate(), 
+      GetArena());
+  }
+  sex_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_sex().empty()) {
+    sex_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_sex(), 
+      GetArena());
+  }
+  is_marriage_ = from.is_marriage_;
+  // @@protoc_insertion_point(copy_constructor:trpc.app.AppBusiBaseStarCompassReq)
+}
+
+void AppBusiBaseStarCompassReq::SharedCtor() {
+birthdate_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+sex_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+is_marriage_ = 0u;
+}
+
+AppBusiBaseStarCompassReq::~AppBusiBaseStarCompassReq() {
+  // @@protoc_insertion_point(destructor:trpc.app.AppBusiBaseStarCompassReq)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void AppBusiBaseStarCompassReq::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  birthdate_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  sex_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+}
+
+void AppBusiBaseStarCompassReq::ArenaDtor(void* object) {
+  AppBusiBaseStarCompassReq* _this = reinterpret_cast< AppBusiBaseStarCompassReq* >(object);
+  (void)_this;
+}
+void AppBusiBaseStarCompassReq::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void AppBusiBaseStarCompassReq::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void AppBusiBaseStarCompassReq::Clear() {
+// @@protoc_insertion_point(message_clear_start:trpc.app.AppBusiBaseStarCompassReq)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  birthdate_.ClearToEmpty();
+  sex_.ClearToEmpty();
+  is_marriage_ = 0u;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* AppBusiBaseStarCompassReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // string birthdate = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_birthdate();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.AppBusiBaseStarCompassReq.birthdate"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string sex = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          auto str = _internal_mutable_sex();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.AppBusiBaseStarCompassReq.sex"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // uint32 is_marriage = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          is_marriage_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* AppBusiBaseStarCompassReq::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:trpc.app.AppBusiBaseStarCompassReq)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string birthdate = 1;
+  if (this->birthdate().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_birthdate().data(), static_cast<int>(this->_internal_birthdate().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "trpc.app.AppBusiBaseStarCompassReq.birthdate");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_birthdate(), target);
+  }
+
+  // string sex = 2;
+  if (this->sex().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_sex().data(), static_cast<int>(this->_internal_sex().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "trpc.app.AppBusiBaseStarCompassReq.sex");
+    target = stream->WriteStringMaybeAliased(
+        2, this->_internal_sex(), target);
+  }
+
+  // uint32 is_marriage = 3;
+  if (this->is_marriage() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(3, this->_internal_is_marriage(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:trpc.app.AppBusiBaseStarCompassReq)
+  return target;
+}
+
+size_t AppBusiBaseStarCompassReq::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:trpc.app.AppBusiBaseStarCompassReq)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string birthdate = 1;
+  if (this->birthdate().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_birthdate());
+  }
+
+  // string sex = 2;
+  if (this->sex().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_sex());
+  }
+
+  // uint32 is_marriage = 3;
+  if (this->is_marriage() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->_internal_is_marriage());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void AppBusiBaseStarCompassReq::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:trpc.app.AppBusiBaseStarCompassReq)
+  GOOGLE_DCHECK_NE(&from, this);
+  const AppBusiBaseStarCompassReq* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AppBusiBaseStarCompassReq>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:trpc.app.AppBusiBaseStarCompassReq)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:trpc.app.AppBusiBaseStarCompassReq)
+    MergeFrom(*source);
+  }
+}
+
+void AppBusiBaseStarCompassReq::MergeFrom(const AppBusiBaseStarCompassReq& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:trpc.app.AppBusiBaseStarCompassReq)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.birthdate().size() > 0) {
+    _internal_set_birthdate(from._internal_birthdate());
+  }
+  if (from.sex().size() > 0) {
+    _internal_set_sex(from._internal_sex());
+  }
+  if (from.is_marriage() != 0) {
+    _internal_set_is_marriage(from._internal_is_marriage());
+  }
+}
+
+void AppBusiBaseStarCompassReq::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:trpc.app.AppBusiBaseStarCompassReq)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void AppBusiBaseStarCompassReq::CopyFrom(const AppBusiBaseStarCompassReq& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:trpc.app.AppBusiBaseStarCompassReq)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool AppBusiBaseStarCompassReq::IsInitialized() const {
+  return true;
+}
+
+void AppBusiBaseStarCompassReq::InternalSwap(AppBusiBaseStarCompassReq* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  birthdate_.Swap(&other->birthdate_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  sex_.Swap(&other->sex_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  swap(is_marriage_, other->is_marriage_);
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata AppBusiBaseStarCompassReq::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class AppBusiBaseStarCompassRsp::_Internal {
+ public:
+};
+
+AppBusiBaseStarCompassRsp::AppBusiBaseStarCompassRsp(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+  z_names_(arena),
+  base_sc_front_(arena),
+  base_sc_rear_(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:trpc.app.AppBusiBaseStarCompassRsp)
+}
+AppBusiBaseStarCompassRsp::AppBusiBaseStarCompassRsp(const AppBusiBaseStarCompassRsp& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      z_names_(from.z_names_),
+      base_sc_front_(from.base_sc_front_),
+      base_sc_rear_(from.base_sc_rear_) {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::memcpy(&user_main_z_idx_, &from.user_main_z_idx_,
+    static_cast<size_t>(reinterpret_cast<char*>(&cur_year_shift_step_) -
+    reinterpret_cast<char*>(&user_main_z_idx_)) + sizeof(cur_year_shift_step_));
+  // @@protoc_insertion_point(copy_constructor:trpc.app.AppBusiBaseStarCompassRsp)
+}
+
+void AppBusiBaseStarCompassRsp::SharedCtor() {
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&user_main_z_idx_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&cur_year_shift_step_) -
+    reinterpret_cast<char*>(&user_main_z_idx_)) + sizeof(cur_year_shift_step_));
+}
+
+AppBusiBaseStarCompassRsp::~AppBusiBaseStarCompassRsp() {
+  // @@protoc_insertion_point(destructor:trpc.app.AppBusiBaseStarCompassRsp)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void AppBusiBaseStarCompassRsp::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+}
+
+void AppBusiBaseStarCompassRsp::ArenaDtor(void* object) {
+  AppBusiBaseStarCompassRsp* _this = reinterpret_cast< AppBusiBaseStarCompassRsp* >(object);
+  (void)_this;
+}
+void AppBusiBaseStarCompassRsp::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void AppBusiBaseStarCompassRsp::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+
+void AppBusiBaseStarCompassRsp::Clear() {
+// @@protoc_insertion_point(message_clear_start:trpc.app.AppBusiBaseStarCompassRsp)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  z_names_.Clear();
+  base_sc_front_.Clear();
+  base_sc_rear_.Clear();
+  ::memset(&user_main_z_idx_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&cur_year_shift_step_) -
+      reinterpret_cast<char*>(&user_main_z_idx_)) + sizeof(cur_year_shift_step_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* AppBusiBaseStarCompassRsp::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // uint32 user_main_z_idx = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
+          user_main_z_idx_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // uint32 cur_year_shift_step = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
+          cur_year_shift_step_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // repeated string z_names = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            auto str = _internal_add_z_names();
+            ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+            CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.AppBusiBaseStarCompassRsp.z_names"));
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<34>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // repeated .trpc.app.StarCompassAssemble base_sc_front = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_base_sc_front(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<42>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // repeated .trpc.app.StarCompassAssemble base_sc_rear = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_base_sc_rear(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<50>(ptr));
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* AppBusiBaseStarCompassRsp::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:trpc.app.AppBusiBaseStarCompassRsp)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // uint32 user_main_z_idx = 1;
+  if (this->user_main_z_idx() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(1, this->_internal_user_main_z_idx(), target);
+  }
+
+  // uint32 cur_year_shift_step = 3;
+  if (this->cur_year_shift_step() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(3, this->_internal_cur_year_shift_step(), target);
+  }
+
+  // repeated string z_names = 4;
+  for (int i = 0, n = this->_internal_z_names_size(); i < n; i++) {
+    const auto& s = this->_internal_z_names(i);
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      s.data(), static_cast<int>(s.length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "trpc.app.AppBusiBaseStarCompassRsp.z_names");
+    target = stream->WriteString(4, s, target);
+  }
+
+  // repeated .trpc.app.StarCompassAssemble base_sc_front = 5;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_base_sc_front_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(5, this->_internal_base_sc_front(i), target, stream);
+  }
+
+  // repeated .trpc.app.StarCompassAssemble base_sc_rear = 6;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_base_sc_rear_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(6, this->_internal_base_sc_rear(i), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:trpc.app.AppBusiBaseStarCompassRsp)
+  return target;
+}
+
+size_t AppBusiBaseStarCompassRsp::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:trpc.app.AppBusiBaseStarCompassRsp)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated string z_names = 4;
+  total_size += 1 *
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(z_names_.size());
+  for (int i = 0, n = z_names_.size(); i < n; i++) {
+    total_size += ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      z_names_.Get(i));
+  }
+
+  // repeated .trpc.app.StarCompassAssemble base_sc_front = 5;
+  total_size += 1UL * this->_internal_base_sc_front_size();
+  for (const auto& msg : this->base_sc_front_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // repeated .trpc.app.StarCompassAssemble base_sc_rear = 6;
+  total_size += 1UL * this->_internal_base_sc_rear_size();
+  for (const auto& msg : this->base_sc_rear_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // uint32 user_main_z_idx = 1;
+  if (this->user_main_z_idx() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->_internal_user_main_z_idx());
+  }
+
+  // uint32 cur_year_shift_step = 3;
+  if (this->cur_year_shift_step() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
+        this->_internal_cur_year_shift_step());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void AppBusiBaseStarCompassRsp::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:trpc.app.AppBusiBaseStarCompassRsp)
+  GOOGLE_DCHECK_NE(&from, this);
+  const AppBusiBaseStarCompassRsp* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<AppBusiBaseStarCompassRsp>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:trpc.app.AppBusiBaseStarCompassRsp)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:trpc.app.AppBusiBaseStarCompassRsp)
+    MergeFrom(*source);
+  }
+}
+
+void AppBusiBaseStarCompassRsp::MergeFrom(const AppBusiBaseStarCompassRsp& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:trpc.app.AppBusiBaseStarCompassRsp)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  z_names_.MergeFrom(from.z_names_);
+  base_sc_front_.MergeFrom(from.base_sc_front_);
+  base_sc_rear_.MergeFrom(from.base_sc_rear_);
+  if (from.user_main_z_idx() != 0) {
+    _internal_set_user_main_z_idx(from._internal_user_main_z_idx());
+  }
+  if (from.cur_year_shift_step() != 0) {
+    _internal_set_cur_year_shift_step(from._internal_cur_year_shift_step());
+  }
+}
+
+void AppBusiBaseStarCompassRsp::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:trpc.app.AppBusiBaseStarCompassRsp)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void AppBusiBaseStarCompassRsp::CopyFrom(const AppBusiBaseStarCompassRsp& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:trpc.app.AppBusiBaseStarCompassRsp)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool AppBusiBaseStarCompassRsp::IsInitialized() const {
+  return true;
+}
+
+void AppBusiBaseStarCompassRsp::InternalSwap(AppBusiBaseStarCompassRsp* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  z_names_.InternalSwap(&other->z_names_);
+  base_sc_front_.InternalSwap(&other->base_sc_front_);
+  base_sc_rear_.InternalSwap(&other->base_sc_rear_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(AppBusiBaseStarCompassRsp, cur_year_shift_step_)
+      + sizeof(AppBusiBaseStarCompassRsp::cur_year_shift_step_)
+      - PROTOBUF_FIELD_OFFSET(AppBusiBaseStarCompassRsp, user_main_z_idx_)>(
+          reinterpret_cast<char*>(&user_main_z_idx_),
+          reinterpret_cast<char*>(&other->user_main_z_idx_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata AppBusiBaseStarCompassRsp::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace app
 }  // namespace trpc
@@ -2009,6 +3127,18 @@ template<> PROTOBUF_NOINLINE ::trpc::app::SixGod* Arena::CreateMaybeMessage< ::t
 }
 template<> PROTOBUF_NOINLINE ::trpc::app::AppBusiBaseAuguryRsp* Arena::CreateMaybeMessage< ::trpc::app::AppBusiBaseAuguryRsp >(Arena* arena) {
   return Arena::CreateMessageInternal< ::trpc::app::AppBusiBaseAuguryRsp >(arena);
+}
+template<> PROTOBUF_NOINLINE ::trpc::app::StarCompass* Arena::CreateMaybeMessage< ::trpc::app::StarCompass >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::trpc::app::StarCompass >(arena);
+}
+template<> PROTOBUF_NOINLINE ::trpc::app::StarCompassAssemble* Arena::CreateMaybeMessage< ::trpc::app::StarCompassAssemble >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::trpc::app::StarCompassAssemble >(arena);
+}
+template<> PROTOBUF_NOINLINE ::trpc::app::AppBusiBaseStarCompassReq* Arena::CreateMaybeMessage< ::trpc::app::AppBusiBaseStarCompassReq >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::trpc::app::AppBusiBaseStarCompassReq >(arena);
+}
+template<> PROTOBUF_NOINLINE ::trpc::app::AppBusiBaseStarCompassRsp* Arena::CreateMaybeMessage< ::trpc::app::AppBusiBaseStarCompassRsp >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::trpc::app::AppBusiBaseStarCompassRsp >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

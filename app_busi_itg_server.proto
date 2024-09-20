@@ -5,6 +5,7 @@ package trpc.app;
 service AppBusiItgService {
   rpc AppBusiBirthdateConvertHandler(AppBusiBirthdateConvertReq) returns (AppBusiBirthdateConvertRsp) {};
   rpc AppBusiBaseAuguryHandler(AppBusiBaseAuguryReq) returns (AppBusiBaseAuguryRsp) {};
+  rpc AppBusiBaseStarCompassHandler(AppBusiBaseStarCompassReq) returns (AppBusiBaseStarCompassRsp) {};
 }
 
 
@@ -49,5 +50,34 @@ message AppBusiBaseAuguryRsp {
   repeated string km_z_names = 10;
   repeated SixGod six_gods = 11;
 }
+
+message StarCompass {
+  uint32 flag = 1;
+  string name = 2;
+}
+
+message StarCompassAssemble {
+  repeated StarCompass sc_list = 1;
+}
+
+message AppBusiBaseStarCompassReq {
+  string birthdate = 1;
+  string sex = 2;
+  uint32 is_marriage = 3;
+}
+
+message AppBusiBaseStarCompassRsp {
+  uint32 user_main_z_idx = 1;
+  uint32 cur_year_shift_step = 3;
+  repeated string z_names = 4;
+  repeated StarCompassAssemble base_sc_front = 5;
+  repeated StarCompassAssemble base_sc_rear = 6;
+}
+
+
+
+
+
+
 
 

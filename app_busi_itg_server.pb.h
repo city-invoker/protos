@@ -46,7 +46,7 @@ struct TableStruct_app_5fbusi_5fitg_5fserver_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[5]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[9]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -62,6 +62,12 @@ extern AppBusiBaseAuguryReqDefaultTypeInternal _AppBusiBaseAuguryReq_default_ins
 class AppBusiBaseAuguryRsp;
 struct AppBusiBaseAuguryRspDefaultTypeInternal;
 extern AppBusiBaseAuguryRspDefaultTypeInternal _AppBusiBaseAuguryRsp_default_instance_;
+class AppBusiBaseStarCompassReq;
+struct AppBusiBaseStarCompassReqDefaultTypeInternal;
+extern AppBusiBaseStarCompassReqDefaultTypeInternal _AppBusiBaseStarCompassReq_default_instance_;
+class AppBusiBaseStarCompassRsp;
+struct AppBusiBaseStarCompassRspDefaultTypeInternal;
+extern AppBusiBaseStarCompassRspDefaultTypeInternal _AppBusiBaseStarCompassRsp_default_instance_;
 class AppBusiBirthdateConvertReq;
 struct AppBusiBirthdateConvertReqDefaultTypeInternal;
 extern AppBusiBirthdateConvertReqDefaultTypeInternal _AppBusiBirthdateConvertReq_default_instance_;
@@ -71,14 +77,24 @@ extern AppBusiBirthdateConvertRspDefaultTypeInternal _AppBusiBirthdateConvertRsp
 class SixGod;
 struct SixGodDefaultTypeInternal;
 extern SixGodDefaultTypeInternal _SixGod_default_instance_;
+class StarCompass;
+struct StarCompassDefaultTypeInternal;
+extern StarCompassDefaultTypeInternal _StarCompass_default_instance_;
+class StarCompassAssemble;
+struct StarCompassAssembleDefaultTypeInternal;
+extern StarCompassAssembleDefaultTypeInternal _StarCompassAssemble_default_instance_;
 }  // namespace app
 }  // namespace trpc
 PROTOBUF_NAMESPACE_OPEN
 template<> ::trpc::app::AppBusiBaseAuguryReq* Arena::CreateMaybeMessage<::trpc::app::AppBusiBaseAuguryReq>(Arena*);
 template<> ::trpc::app::AppBusiBaseAuguryRsp* Arena::CreateMaybeMessage<::trpc::app::AppBusiBaseAuguryRsp>(Arena*);
+template<> ::trpc::app::AppBusiBaseStarCompassReq* Arena::CreateMaybeMessage<::trpc::app::AppBusiBaseStarCompassReq>(Arena*);
+template<> ::trpc::app::AppBusiBaseStarCompassRsp* Arena::CreateMaybeMessage<::trpc::app::AppBusiBaseStarCompassRsp>(Arena*);
 template<> ::trpc::app::AppBusiBirthdateConvertReq* Arena::CreateMaybeMessage<::trpc::app::AppBusiBirthdateConvertReq>(Arena*);
 template<> ::trpc::app::AppBusiBirthdateConvertRsp* Arena::CreateMaybeMessage<::trpc::app::AppBusiBirthdateConvertRsp>(Arena*);
 template<> ::trpc::app::SixGod* Arena::CreateMaybeMessage<::trpc::app::SixGod>(Arena*);
+template<> ::trpc::app::StarCompass* Arena::CreateMaybeMessage<::trpc::app::StarCompass>(Arena*);
+template<> ::trpc::app::StarCompassAssemble* Arena::CreateMaybeMessage<::trpc::app::StarCompassAssemble>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace trpc {
 namespace app {
@@ -1209,6 +1225,694 @@ class AppBusiBaseAuguryRsp PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr mg_x_name_;
   ::PROTOBUF_NAMESPACE_ID::uint32 st_idx_;
   ::PROTOBUF_NAMESPACE_ID::uint32 mg_idx_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_app_5fbusi_5fitg_5fserver_2eproto;
+};
+// -------------------------------------------------------------------
+
+class StarCompass PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:trpc.app.StarCompass) */ {
+ public:
+  inline StarCompass() : StarCompass(nullptr) {}
+  virtual ~StarCompass();
+  explicit constexpr StarCompass(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  StarCompass(const StarCompass& from);
+  StarCompass(StarCompass&& from) noexcept
+    : StarCompass() {
+    *this = ::std::move(from);
+  }
+
+  inline StarCompass& operator=(const StarCompass& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline StarCompass& operator=(StarCompass&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const StarCompass& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const StarCompass* internal_default_instance() {
+    return reinterpret_cast<const StarCompass*>(
+               &_StarCompass_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    5;
+
+  friend void swap(StarCompass& a, StarCompass& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(StarCompass* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(StarCompass* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline StarCompass* New() const final {
+    return CreateMaybeMessage<StarCompass>(nullptr);
+  }
+
+  StarCompass* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<StarCompass>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const StarCompass& from);
+  void MergeFrom(const StarCompass& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(StarCompass* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "trpc.app.StarCompass";
+  }
+  protected:
+  explicit StarCompass(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    return ::descriptor_table_app_5fbusi_5fitg_5fserver_2eproto_metadata_getter(kIndexInFileMessages);
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kNameFieldNumber = 2,
+    kFlagFieldNumber = 1,
+  };
+  // string name = 2;
+  void clear_name();
+  const std::string& name() const;
+  void set_name(const std::string& value);
+  void set_name(std::string&& value);
+  void set_name(const char* value);
+  void set_name(const char* value, size_t size);
+  std::string* mutable_name();
+  std::string* release_name();
+  void set_allocated_name(std::string* name);
+  private:
+  const std::string& _internal_name() const;
+  void _internal_set_name(const std::string& value);
+  std::string* _internal_mutable_name();
+  public:
+
+  // uint32 flag = 1;
+  void clear_flag();
+  ::PROTOBUF_NAMESPACE_ID::uint32 flag() const;
+  void set_flag(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_flag() const;
+  void _internal_set_flag(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:trpc.app.StarCompass)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr name_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 flag_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_app_5fbusi_5fitg_5fserver_2eproto;
+};
+// -------------------------------------------------------------------
+
+class StarCompassAssemble PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:trpc.app.StarCompassAssemble) */ {
+ public:
+  inline StarCompassAssemble() : StarCompassAssemble(nullptr) {}
+  virtual ~StarCompassAssemble();
+  explicit constexpr StarCompassAssemble(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  StarCompassAssemble(const StarCompassAssemble& from);
+  StarCompassAssemble(StarCompassAssemble&& from) noexcept
+    : StarCompassAssemble() {
+    *this = ::std::move(from);
+  }
+
+  inline StarCompassAssemble& operator=(const StarCompassAssemble& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline StarCompassAssemble& operator=(StarCompassAssemble&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const StarCompassAssemble& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const StarCompassAssemble* internal_default_instance() {
+    return reinterpret_cast<const StarCompassAssemble*>(
+               &_StarCompassAssemble_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    6;
+
+  friend void swap(StarCompassAssemble& a, StarCompassAssemble& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(StarCompassAssemble* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(StarCompassAssemble* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline StarCompassAssemble* New() const final {
+    return CreateMaybeMessage<StarCompassAssemble>(nullptr);
+  }
+
+  StarCompassAssemble* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<StarCompassAssemble>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const StarCompassAssemble& from);
+  void MergeFrom(const StarCompassAssemble& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(StarCompassAssemble* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "trpc.app.StarCompassAssemble";
+  }
+  protected:
+  explicit StarCompassAssemble(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    return ::descriptor_table_app_5fbusi_5fitg_5fserver_2eproto_metadata_getter(kIndexInFileMessages);
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kScListFieldNumber = 1,
+  };
+  // repeated .trpc.app.StarCompass sc_list = 1;
+  int sc_list_size() const;
+  private:
+  int _internal_sc_list_size() const;
+  public:
+  void clear_sc_list();
+  ::trpc::app::StarCompass* mutable_sc_list(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::trpc::app::StarCompass >*
+      mutable_sc_list();
+  private:
+  const ::trpc::app::StarCompass& _internal_sc_list(int index) const;
+  ::trpc::app::StarCompass* _internal_add_sc_list();
+  public:
+  const ::trpc::app::StarCompass& sc_list(int index) const;
+  ::trpc::app::StarCompass* add_sc_list();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::trpc::app::StarCompass >&
+      sc_list() const;
+
+  // @@protoc_insertion_point(class_scope:trpc.app.StarCompassAssemble)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::trpc::app::StarCompass > sc_list_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_app_5fbusi_5fitg_5fserver_2eproto;
+};
+// -------------------------------------------------------------------
+
+class AppBusiBaseStarCompassReq PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:trpc.app.AppBusiBaseStarCompassReq) */ {
+ public:
+  inline AppBusiBaseStarCompassReq() : AppBusiBaseStarCompassReq(nullptr) {}
+  virtual ~AppBusiBaseStarCompassReq();
+  explicit constexpr AppBusiBaseStarCompassReq(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  AppBusiBaseStarCompassReq(const AppBusiBaseStarCompassReq& from);
+  AppBusiBaseStarCompassReq(AppBusiBaseStarCompassReq&& from) noexcept
+    : AppBusiBaseStarCompassReq() {
+    *this = ::std::move(from);
+  }
+
+  inline AppBusiBaseStarCompassReq& operator=(const AppBusiBaseStarCompassReq& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AppBusiBaseStarCompassReq& operator=(AppBusiBaseStarCompassReq&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const AppBusiBaseStarCompassReq& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const AppBusiBaseStarCompassReq* internal_default_instance() {
+    return reinterpret_cast<const AppBusiBaseStarCompassReq*>(
+               &_AppBusiBaseStarCompassReq_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    7;
+
+  friend void swap(AppBusiBaseStarCompassReq& a, AppBusiBaseStarCompassReq& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AppBusiBaseStarCompassReq* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(AppBusiBaseStarCompassReq* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AppBusiBaseStarCompassReq* New() const final {
+    return CreateMaybeMessage<AppBusiBaseStarCompassReq>(nullptr);
+  }
+
+  AppBusiBaseStarCompassReq* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppBusiBaseStarCompassReq>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const AppBusiBaseStarCompassReq& from);
+  void MergeFrom(const AppBusiBaseStarCompassReq& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AppBusiBaseStarCompassReq* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "trpc.app.AppBusiBaseStarCompassReq";
+  }
+  protected:
+  explicit AppBusiBaseStarCompassReq(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    return ::descriptor_table_app_5fbusi_5fitg_5fserver_2eproto_metadata_getter(kIndexInFileMessages);
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kBirthdateFieldNumber = 1,
+    kSexFieldNumber = 2,
+    kIsMarriageFieldNumber = 3,
+  };
+  // string birthdate = 1;
+  void clear_birthdate();
+  const std::string& birthdate() const;
+  void set_birthdate(const std::string& value);
+  void set_birthdate(std::string&& value);
+  void set_birthdate(const char* value);
+  void set_birthdate(const char* value, size_t size);
+  std::string* mutable_birthdate();
+  std::string* release_birthdate();
+  void set_allocated_birthdate(std::string* birthdate);
+  private:
+  const std::string& _internal_birthdate() const;
+  void _internal_set_birthdate(const std::string& value);
+  std::string* _internal_mutable_birthdate();
+  public:
+
+  // string sex = 2;
+  void clear_sex();
+  const std::string& sex() const;
+  void set_sex(const std::string& value);
+  void set_sex(std::string&& value);
+  void set_sex(const char* value);
+  void set_sex(const char* value, size_t size);
+  std::string* mutable_sex();
+  std::string* release_sex();
+  void set_allocated_sex(std::string* sex);
+  private:
+  const std::string& _internal_sex() const;
+  void _internal_set_sex(const std::string& value);
+  std::string* _internal_mutable_sex();
+  public:
+
+  // uint32 is_marriage = 3;
+  void clear_is_marriage();
+  ::PROTOBUF_NAMESPACE_ID::uint32 is_marriage() const;
+  void set_is_marriage(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_is_marriage() const;
+  void _internal_set_is_marriage(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:trpc.app.AppBusiBaseStarCompassReq)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr birthdate_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr sex_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 is_marriage_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_app_5fbusi_5fitg_5fserver_2eproto;
+};
+// -------------------------------------------------------------------
+
+class AppBusiBaseStarCompassRsp PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:trpc.app.AppBusiBaseStarCompassRsp) */ {
+ public:
+  inline AppBusiBaseStarCompassRsp() : AppBusiBaseStarCompassRsp(nullptr) {}
+  virtual ~AppBusiBaseStarCompassRsp();
+  explicit constexpr AppBusiBaseStarCompassRsp(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+
+  AppBusiBaseStarCompassRsp(const AppBusiBaseStarCompassRsp& from);
+  AppBusiBaseStarCompassRsp(AppBusiBaseStarCompassRsp&& from) noexcept
+    : AppBusiBaseStarCompassRsp() {
+    *this = ::std::move(from);
+  }
+
+  inline AppBusiBaseStarCompassRsp& operator=(const AppBusiBaseStarCompassRsp& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline AppBusiBaseStarCompassRsp& operator=(AppBusiBaseStarCompassRsp&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const AppBusiBaseStarCompassRsp& default_instance() {
+    return *internal_default_instance();
+  }
+  static inline const AppBusiBaseStarCompassRsp* internal_default_instance() {
+    return reinterpret_cast<const AppBusiBaseStarCompassRsp*>(
+               &_AppBusiBaseStarCompassRsp_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    8;
+
+  friend void swap(AppBusiBaseStarCompassRsp& a, AppBusiBaseStarCompassRsp& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(AppBusiBaseStarCompassRsp* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(AppBusiBaseStarCompassRsp* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline AppBusiBaseStarCompassRsp* New() const final {
+    return CreateMaybeMessage<AppBusiBaseStarCompassRsp>(nullptr);
+  }
+
+  AppBusiBaseStarCompassRsp* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<AppBusiBaseStarCompassRsp>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const AppBusiBaseStarCompassRsp& from);
+  void MergeFrom(const AppBusiBaseStarCompassRsp& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(AppBusiBaseStarCompassRsp* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "trpc.app.AppBusiBaseStarCompassRsp";
+  }
+  protected:
+  explicit AppBusiBaseStarCompassRsp(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    return ::descriptor_table_app_5fbusi_5fitg_5fserver_2eproto_metadata_getter(kIndexInFileMessages);
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kZNamesFieldNumber = 4,
+    kBaseScFrontFieldNumber = 5,
+    kBaseScRearFieldNumber = 6,
+    kUserMainZIdxFieldNumber = 1,
+    kCurYearShiftStepFieldNumber = 3,
+  };
+  // repeated string z_names = 4;
+  int z_names_size() const;
+  private:
+  int _internal_z_names_size() const;
+  public:
+  void clear_z_names();
+  const std::string& z_names(int index) const;
+  std::string* mutable_z_names(int index);
+  void set_z_names(int index, const std::string& value);
+  void set_z_names(int index, std::string&& value);
+  void set_z_names(int index, const char* value);
+  void set_z_names(int index, const char* value, size_t size);
+  std::string* add_z_names();
+  void add_z_names(const std::string& value);
+  void add_z_names(std::string&& value);
+  void add_z_names(const char* value);
+  void add_z_names(const char* value, size_t size);
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>& z_names() const;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>* mutable_z_names();
+  private:
+  const std::string& _internal_z_names(int index) const;
+  std::string* _internal_add_z_names();
+  public:
+
+  // repeated .trpc.app.StarCompassAssemble base_sc_front = 5;
+  int base_sc_front_size() const;
+  private:
+  int _internal_base_sc_front_size() const;
+  public:
+  void clear_base_sc_front();
+  ::trpc::app::StarCompassAssemble* mutable_base_sc_front(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::trpc::app::StarCompassAssemble >*
+      mutable_base_sc_front();
+  private:
+  const ::trpc::app::StarCompassAssemble& _internal_base_sc_front(int index) const;
+  ::trpc::app::StarCompassAssemble* _internal_add_base_sc_front();
+  public:
+  const ::trpc::app::StarCompassAssemble& base_sc_front(int index) const;
+  ::trpc::app::StarCompassAssemble* add_base_sc_front();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::trpc::app::StarCompassAssemble >&
+      base_sc_front() const;
+
+  // repeated .trpc.app.StarCompassAssemble base_sc_rear = 6;
+  int base_sc_rear_size() const;
+  private:
+  int _internal_base_sc_rear_size() const;
+  public:
+  void clear_base_sc_rear();
+  ::trpc::app::StarCompassAssemble* mutable_base_sc_rear(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::trpc::app::StarCompassAssemble >*
+      mutable_base_sc_rear();
+  private:
+  const ::trpc::app::StarCompassAssemble& _internal_base_sc_rear(int index) const;
+  ::trpc::app::StarCompassAssemble* _internal_add_base_sc_rear();
+  public:
+  const ::trpc::app::StarCompassAssemble& base_sc_rear(int index) const;
+  ::trpc::app::StarCompassAssemble* add_base_sc_rear();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::trpc::app::StarCompassAssemble >&
+      base_sc_rear() const;
+
+  // uint32 user_main_z_idx = 1;
+  void clear_user_main_z_idx();
+  ::PROTOBUF_NAMESPACE_ID::uint32 user_main_z_idx() const;
+  void set_user_main_z_idx(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_user_main_z_idx() const;
+  void _internal_set_user_main_z_idx(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // uint32 cur_year_shift_step = 3;
+  void clear_cur_year_shift_step();
+  ::PROTOBUF_NAMESPACE_ID::uint32 cur_year_shift_step() const;
+  void set_cur_year_shift_step(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  private:
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_cur_year_shift_step() const;
+  void _internal_set_cur_year_shift_step(::PROTOBUF_NAMESPACE_ID::uint32 value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:trpc.app.AppBusiBaseStarCompassRsp)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string> z_names_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::trpc::app::StarCompassAssemble > base_sc_front_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::trpc::app::StarCompassAssemble > base_sc_rear_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 user_main_z_idx_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cur_year_shift_step_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_app_5fbusi_5fitg_5fserver_2eproto;
 };
@@ -2573,9 +3277,487 @@ AppBusiBaseAuguryRsp::six_gods() const {
   return six_gods_;
 }
 
+// -------------------------------------------------------------------
+
+// StarCompass
+
+// uint32 flag = 1;
+inline void StarCompass::clear_flag() {
+  flag_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 StarCompass::_internal_flag() const {
+  return flag_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 StarCompass::flag() const {
+  // @@protoc_insertion_point(field_get:trpc.app.StarCompass.flag)
+  return _internal_flag();
+}
+inline void StarCompass::_internal_set_flag(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  flag_ = value;
+}
+inline void StarCompass::set_flag(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_flag(value);
+  // @@protoc_insertion_point(field_set:trpc.app.StarCompass.flag)
+}
+
+// string name = 2;
+inline void StarCompass::clear_name() {
+  name_.ClearToEmpty();
+}
+inline const std::string& StarCompass::name() const {
+  // @@protoc_insertion_point(field_get:trpc.app.StarCompass.name)
+  return _internal_name();
+}
+inline void StarCompass::set_name(const std::string& value) {
+  _internal_set_name(value);
+  // @@protoc_insertion_point(field_set:trpc.app.StarCompass.name)
+}
+inline std::string* StarCompass::mutable_name() {
+  // @@protoc_insertion_point(field_mutable:trpc.app.StarCompass.name)
+  return _internal_mutable_name();
+}
+inline const std::string& StarCompass::_internal_name() const {
+  return name_.Get();
+}
+inline void StarCompass::_internal_set_name(const std::string& value) {
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void StarCompass::set_name(std::string&& value) {
+  
+  name_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:trpc.app.StarCompass.name)
+}
+inline void StarCompass::set_name(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:trpc.app.StarCompass.name)
+}
+inline void StarCompass::set_name(const char* value,
+    size_t size) {
+  
+  name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:trpc.app.StarCompass.name)
+}
+inline std::string* StarCompass::_internal_mutable_name() {
+  
+  return name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* StarCompass::release_name() {
+  // @@protoc_insertion_point(field_release:trpc.app.StarCompass.name)
+  return name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void StarCompass::set_allocated_name(std::string* name) {
+  if (name != nullptr) {
+    
+  } else {
+    
+  }
+  name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), name,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:trpc.app.StarCompass.name)
+}
+
+// -------------------------------------------------------------------
+
+// StarCompassAssemble
+
+// repeated .trpc.app.StarCompass sc_list = 1;
+inline int StarCompassAssemble::_internal_sc_list_size() const {
+  return sc_list_.size();
+}
+inline int StarCompassAssemble::sc_list_size() const {
+  return _internal_sc_list_size();
+}
+inline void StarCompassAssemble::clear_sc_list() {
+  sc_list_.Clear();
+}
+inline ::trpc::app::StarCompass* StarCompassAssemble::mutable_sc_list(int index) {
+  // @@protoc_insertion_point(field_mutable:trpc.app.StarCompassAssemble.sc_list)
+  return sc_list_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::trpc::app::StarCompass >*
+StarCompassAssemble::mutable_sc_list() {
+  // @@protoc_insertion_point(field_mutable_list:trpc.app.StarCompassAssemble.sc_list)
+  return &sc_list_;
+}
+inline const ::trpc::app::StarCompass& StarCompassAssemble::_internal_sc_list(int index) const {
+  return sc_list_.Get(index);
+}
+inline const ::trpc::app::StarCompass& StarCompassAssemble::sc_list(int index) const {
+  // @@protoc_insertion_point(field_get:trpc.app.StarCompassAssemble.sc_list)
+  return _internal_sc_list(index);
+}
+inline ::trpc::app::StarCompass* StarCompassAssemble::_internal_add_sc_list() {
+  return sc_list_.Add();
+}
+inline ::trpc::app::StarCompass* StarCompassAssemble::add_sc_list() {
+  // @@protoc_insertion_point(field_add:trpc.app.StarCompassAssemble.sc_list)
+  return _internal_add_sc_list();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::trpc::app::StarCompass >&
+StarCompassAssemble::sc_list() const {
+  // @@protoc_insertion_point(field_list:trpc.app.StarCompassAssemble.sc_list)
+  return sc_list_;
+}
+
+// -------------------------------------------------------------------
+
+// AppBusiBaseStarCompassReq
+
+// string birthdate = 1;
+inline void AppBusiBaseStarCompassReq::clear_birthdate() {
+  birthdate_.ClearToEmpty();
+}
+inline const std::string& AppBusiBaseStarCompassReq::birthdate() const {
+  // @@protoc_insertion_point(field_get:trpc.app.AppBusiBaseStarCompassReq.birthdate)
+  return _internal_birthdate();
+}
+inline void AppBusiBaseStarCompassReq::set_birthdate(const std::string& value) {
+  _internal_set_birthdate(value);
+  // @@protoc_insertion_point(field_set:trpc.app.AppBusiBaseStarCompassReq.birthdate)
+}
+inline std::string* AppBusiBaseStarCompassReq::mutable_birthdate() {
+  // @@protoc_insertion_point(field_mutable:trpc.app.AppBusiBaseStarCompassReq.birthdate)
+  return _internal_mutable_birthdate();
+}
+inline const std::string& AppBusiBaseStarCompassReq::_internal_birthdate() const {
+  return birthdate_.Get();
+}
+inline void AppBusiBaseStarCompassReq::_internal_set_birthdate(const std::string& value) {
+  
+  birthdate_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void AppBusiBaseStarCompassReq::set_birthdate(std::string&& value) {
+  
+  birthdate_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:trpc.app.AppBusiBaseStarCompassReq.birthdate)
+}
+inline void AppBusiBaseStarCompassReq::set_birthdate(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  birthdate_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:trpc.app.AppBusiBaseStarCompassReq.birthdate)
+}
+inline void AppBusiBaseStarCompassReq::set_birthdate(const char* value,
+    size_t size) {
+  
+  birthdate_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:trpc.app.AppBusiBaseStarCompassReq.birthdate)
+}
+inline std::string* AppBusiBaseStarCompassReq::_internal_mutable_birthdate() {
+  
+  return birthdate_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* AppBusiBaseStarCompassReq::release_birthdate() {
+  // @@protoc_insertion_point(field_release:trpc.app.AppBusiBaseStarCompassReq.birthdate)
+  return birthdate_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void AppBusiBaseStarCompassReq::set_allocated_birthdate(std::string* birthdate) {
+  if (birthdate != nullptr) {
+    
+  } else {
+    
+  }
+  birthdate_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), birthdate,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:trpc.app.AppBusiBaseStarCompassReq.birthdate)
+}
+
+// string sex = 2;
+inline void AppBusiBaseStarCompassReq::clear_sex() {
+  sex_.ClearToEmpty();
+}
+inline const std::string& AppBusiBaseStarCompassReq::sex() const {
+  // @@protoc_insertion_point(field_get:trpc.app.AppBusiBaseStarCompassReq.sex)
+  return _internal_sex();
+}
+inline void AppBusiBaseStarCompassReq::set_sex(const std::string& value) {
+  _internal_set_sex(value);
+  // @@protoc_insertion_point(field_set:trpc.app.AppBusiBaseStarCompassReq.sex)
+}
+inline std::string* AppBusiBaseStarCompassReq::mutable_sex() {
+  // @@protoc_insertion_point(field_mutable:trpc.app.AppBusiBaseStarCompassReq.sex)
+  return _internal_mutable_sex();
+}
+inline const std::string& AppBusiBaseStarCompassReq::_internal_sex() const {
+  return sex_.Get();
+}
+inline void AppBusiBaseStarCompassReq::_internal_set_sex(const std::string& value) {
+  
+  sex_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void AppBusiBaseStarCompassReq::set_sex(std::string&& value) {
+  
+  sex_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:trpc.app.AppBusiBaseStarCompassReq.sex)
+}
+inline void AppBusiBaseStarCompassReq::set_sex(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  sex_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:trpc.app.AppBusiBaseStarCompassReq.sex)
+}
+inline void AppBusiBaseStarCompassReq::set_sex(const char* value,
+    size_t size) {
+  
+  sex_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:trpc.app.AppBusiBaseStarCompassReq.sex)
+}
+inline std::string* AppBusiBaseStarCompassReq::_internal_mutable_sex() {
+  
+  return sex_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* AppBusiBaseStarCompassReq::release_sex() {
+  // @@protoc_insertion_point(field_release:trpc.app.AppBusiBaseStarCompassReq.sex)
+  return sex_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void AppBusiBaseStarCompassReq::set_allocated_sex(std::string* sex) {
+  if (sex != nullptr) {
+    
+  } else {
+    
+  }
+  sex_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), sex,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:trpc.app.AppBusiBaseStarCompassReq.sex)
+}
+
+// uint32 is_marriage = 3;
+inline void AppBusiBaseStarCompassReq::clear_is_marriage() {
+  is_marriage_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppBusiBaseStarCompassReq::_internal_is_marriage() const {
+  return is_marriage_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppBusiBaseStarCompassReq::is_marriage() const {
+  // @@protoc_insertion_point(field_get:trpc.app.AppBusiBaseStarCompassReq.is_marriage)
+  return _internal_is_marriage();
+}
+inline void AppBusiBaseStarCompassReq::_internal_set_is_marriage(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  is_marriage_ = value;
+}
+inline void AppBusiBaseStarCompassReq::set_is_marriage(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_is_marriage(value);
+  // @@protoc_insertion_point(field_set:trpc.app.AppBusiBaseStarCompassReq.is_marriage)
+}
+
+// -------------------------------------------------------------------
+
+// AppBusiBaseStarCompassRsp
+
+// uint32 user_main_z_idx = 1;
+inline void AppBusiBaseStarCompassRsp::clear_user_main_z_idx() {
+  user_main_z_idx_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppBusiBaseStarCompassRsp::_internal_user_main_z_idx() const {
+  return user_main_z_idx_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppBusiBaseStarCompassRsp::user_main_z_idx() const {
+  // @@protoc_insertion_point(field_get:trpc.app.AppBusiBaseStarCompassRsp.user_main_z_idx)
+  return _internal_user_main_z_idx();
+}
+inline void AppBusiBaseStarCompassRsp::_internal_set_user_main_z_idx(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  user_main_z_idx_ = value;
+}
+inline void AppBusiBaseStarCompassRsp::set_user_main_z_idx(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_user_main_z_idx(value);
+  // @@protoc_insertion_point(field_set:trpc.app.AppBusiBaseStarCompassRsp.user_main_z_idx)
+}
+
+// uint32 cur_year_shift_step = 3;
+inline void AppBusiBaseStarCompassRsp::clear_cur_year_shift_step() {
+  cur_year_shift_step_ = 0u;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppBusiBaseStarCompassRsp::_internal_cur_year_shift_step() const {
+  return cur_year_shift_step_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppBusiBaseStarCompassRsp::cur_year_shift_step() const {
+  // @@protoc_insertion_point(field_get:trpc.app.AppBusiBaseStarCompassRsp.cur_year_shift_step)
+  return _internal_cur_year_shift_step();
+}
+inline void AppBusiBaseStarCompassRsp::_internal_set_cur_year_shift_step(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  cur_year_shift_step_ = value;
+}
+inline void AppBusiBaseStarCompassRsp::set_cur_year_shift_step(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  _internal_set_cur_year_shift_step(value);
+  // @@protoc_insertion_point(field_set:trpc.app.AppBusiBaseStarCompassRsp.cur_year_shift_step)
+}
+
+// repeated string z_names = 4;
+inline int AppBusiBaseStarCompassRsp::_internal_z_names_size() const {
+  return z_names_.size();
+}
+inline int AppBusiBaseStarCompassRsp::z_names_size() const {
+  return _internal_z_names_size();
+}
+inline void AppBusiBaseStarCompassRsp::clear_z_names() {
+  z_names_.Clear();
+}
+inline std::string* AppBusiBaseStarCompassRsp::add_z_names() {
+  // @@protoc_insertion_point(field_add_mutable:trpc.app.AppBusiBaseStarCompassRsp.z_names)
+  return _internal_add_z_names();
+}
+inline const std::string& AppBusiBaseStarCompassRsp::_internal_z_names(int index) const {
+  return z_names_.Get(index);
+}
+inline const std::string& AppBusiBaseStarCompassRsp::z_names(int index) const {
+  // @@protoc_insertion_point(field_get:trpc.app.AppBusiBaseStarCompassRsp.z_names)
+  return _internal_z_names(index);
+}
+inline std::string* AppBusiBaseStarCompassRsp::mutable_z_names(int index) {
+  // @@protoc_insertion_point(field_mutable:trpc.app.AppBusiBaseStarCompassRsp.z_names)
+  return z_names_.Mutable(index);
+}
+inline void AppBusiBaseStarCompassRsp::set_z_names(int index, const std::string& value) {
+  // @@protoc_insertion_point(field_set:trpc.app.AppBusiBaseStarCompassRsp.z_names)
+  z_names_.Mutable(index)->assign(value);
+}
+inline void AppBusiBaseStarCompassRsp::set_z_names(int index, std::string&& value) {
+  // @@protoc_insertion_point(field_set:trpc.app.AppBusiBaseStarCompassRsp.z_names)
+  z_names_.Mutable(index)->assign(std::move(value));
+}
+inline void AppBusiBaseStarCompassRsp::set_z_names(int index, const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  z_names_.Mutable(index)->assign(value);
+  // @@protoc_insertion_point(field_set_char:trpc.app.AppBusiBaseStarCompassRsp.z_names)
+}
+inline void AppBusiBaseStarCompassRsp::set_z_names(int index, const char* value, size_t size) {
+  z_names_.Mutable(index)->assign(
+    reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_set_pointer:trpc.app.AppBusiBaseStarCompassRsp.z_names)
+}
+inline std::string* AppBusiBaseStarCompassRsp::_internal_add_z_names() {
+  return z_names_.Add();
+}
+inline void AppBusiBaseStarCompassRsp::add_z_names(const std::string& value) {
+  z_names_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add:trpc.app.AppBusiBaseStarCompassRsp.z_names)
+}
+inline void AppBusiBaseStarCompassRsp::add_z_names(std::string&& value) {
+  z_names_.Add(std::move(value));
+  // @@protoc_insertion_point(field_add:trpc.app.AppBusiBaseStarCompassRsp.z_names)
+}
+inline void AppBusiBaseStarCompassRsp::add_z_names(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  z_names_.Add()->assign(value);
+  // @@protoc_insertion_point(field_add_char:trpc.app.AppBusiBaseStarCompassRsp.z_names)
+}
+inline void AppBusiBaseStarCompassRsp::add_z_names(const char* value, size_t size) {
+  z_names_.Add()->assign(reinterpret_cast<const char*>(value), size);
+  // @@protoc_insertion_point(field_add_pointer:trpc.app.AppBusiBaseStarCompassRsp.z_names)
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>&
+AppBusiBaseStarCompassRsp::z_names() const {
+  // @@protoc_insertion_point(field_list:trpc.app.AppBusiBaseStarCompassRsp.z_names)
+  return z_names_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
+AppBusiBaseStarCompassRsp::mutable_z_names() {
+  // @@protoc_insertion_point(field_mutable_list:trpc.app.AppBusiBaseStarCompassRsp.z_names)
+  return &z_names_;
+}
+
+// repeated .trpc.app.StarCompassAssemble base_sc_front = 5;
+inline int AppBusiBaseStarCompassRsp::_internal_base_sc_front_size() const {
+  return base_sc_front_.size();
+}
+inline int AppBusiBaseStarCompassRsp::base_sc_front_size() const {
+  return _internal_base_sc_front_size();
+}
+inline void AppBusiBaseStarCompassRsp::clear_base_sc_front() {
+  base_sc_front_.Clear();
+}
+inline ::trpc::app::StarCompassAssemble* AppBusiBaseStarCompassRsp::mutable_base_sc_front(int index) {
+  // @@protoc_insertion_point(field_mutable:trpc.app.AppBusiBaseStarCompassRsp.base_sc_front)
+  return base_sc_front_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::trpc::app::StarCompassAssemble >*
+AppBusiBaseStarCompassRsp::mutable_base_sc_front() {
+  // @@protoc_insertion_point(field_mutable_list:trpc.app.AppBusiBaseStarCompassRsp.base_sc_front)
+  return &base_sc_front_;
+}
+inline const ::trpc::app::StarCompassAssemble& AppBusiBaseStarCompassRsp::_internal_base_sc_front(int index) const {
+  return base_sc_front_.Get(index);
+}
+inline const ::trpc::app::StarCompassAssemble& AppBusiBaseStarCompassRsp::base_sc_front(int index) const {
+  // @@protoc_insertion_point(field_get:trpc.app.AppBusiBaseStarCompassRsp.base_sc_front)
+  return _internal_base_sc_front(index);
+}
+inline ::trpc::app::StarCompassAssemble* AppBusiBaseStarCompassRsp::_internal_add_base_sc_front() {
+  return base_sc_front_.Add();
+}
+inline ::trpc::app::StarCompassAssemble* AppBusiBaseStarCompassRsp::add_base_sc_front() {
+  // @@protoc_insertion_point(field_add:trpc.app.AppBusiBaseStarCompassRsp.base_sc_front)
+  return _internal_add_base_sc_front();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::trpc::app::StarCompassAssemble >&
+AppBusiBaseStarCompassRsp::base_sc_front() const {
+  // @@protoc_insertion_point(field_list:trpc.app.AppBusiBaseStarCompassRsp.base_sc_front)
+  return base_sc_front_;
+}
+
+// repeated .trpc.app.StarCompassAssemble base_sc_rear = 6;
+inline int AppBusiBaseStarCompassRsp::_internal_base_sc_rear_size() const {
+  return base_sc_rear_.size();
+}
+inline int AppBusiBaseStarCompassRsp::base_sc_rear_size() const {
+  return _internal_base_sc_rear_size();
+}
+inline void AppBusiBaseStarCompassRsp::clear_base_sc_rear() {
+  base_sc_rear_.Clear();
+}
+inline ::trpc::app::StarCompassAssemble* AppBusiBaseStarCompassRsp::mutable_base_sc_rear(int index) {
+  // @@protoc_insertion_point(field_mutable:trpc.app.AppBusiBaseStarCompassRsp.base_sc_rear)
+  return base_sc_rear_.Mutable(index);
+}
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::trpc::app::StarCompassAssemble >*
+AppBusiBaseStarCompassRsp::mutable_base_sc_rear() {
+  // @@protoc_insertion_point(field_mutable_list:trpc.app.AppBusiBaseStarCompassRsp.base_sc_rear)
+  return &base_sc_rear_;
+}
+inline const ::trpc::app::StarCompassAssemble& AppBusiBaseStarCompassRsp::_internal_base_sc_rear(int index) const {
+  return base_sc_rear_.Get(index);
+}
+inline const ::trpc::app::StarCompassAssemble& AppBusiBaseStarCompassRsp::base_sc_rear(int index) const {
+  // @@protoc_insertion_point(field_get:trpc.app.AppBusiBaseStarCompassRsp.base_sc_rear)
+  return _internal_base_sc_rear(index);
+}
+inline ::trpc::app::StarCompassAssemble* AppBusiBaseStarCompassRsp::_internal_add_base_sc_rear() {
+  return base_sc_rear_.Add();
+}
+inline ::trpc::app::StarCompassAssemble* AppBusiBaseStarCompassRsp::add_base_sc_rear() {
+  // @@protoc_insertion_point(field_add:trpc.app.AppBusiBaseStarCompassRsp.base_sc_rear)
+  return _internal_add_base_sc_rear();
+}
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::trpc::app::StarCompassAssemble >&
+AppBusiBaseStarCompassRsp::base_sc_rear() const {
+  // @@protoc_insertion_point(field_list:trpc.app.AppBusiBaseStarCompassRsp.base_sc_rear)
+  return base_sc_rear_;
+}
+
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
