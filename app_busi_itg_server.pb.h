@@ -234,20 +234,13 @@ class AppBusiBirthdateConvertReq PROTOBUF_FINAL :
   std::string* _internal_mutable_birthdate();
   public:
 
-  // string sex = 2;
+  // uint32 sex = 2;
   void clear_sex();
-  const std::string& sex() const;
-  void set_sex(const std::string& value);
-  void set_sex(std::string&& value);
-  void set_sex(const char* value);
-  void set_sex(const char* value, size_t size);
-  std::string* mutable_sex();
-  std::string* release_sex();
-  void set_allocated_sex(std::string* sex);
+  ::PROTOBUF_NAMESPACE_ID::uint32 sex() const;
+  void set_sex(::PROTOBUF_NAMESPACE_ID::uint32 value);
   private:
-  const std::string& _internal_sex() const;
-  void _internal_set_sex(const std::string& value);
-  std::string* _internal_mutable_sex();
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_sex() const;
+  void _internal_set_sex(::PROTOBUF_NAMESPACE_ID::uint32 value);
   public:
 
   // uint32 marriage = 3;
@@ -267,7 +260,7 @@ class AppBusiBirthdateConvertReq PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr birthdate_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr sex_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 sex_;
   ::PROTOBUF_NAMESPACE_ID::uint32 marriage_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_app_5fbusi_5fitg_5fserver_2eproto;
@@ -631,20 +624,13 @@ class AppBusiBaseAuguryReq PROTOBUF_FINAL :
   std::string* _internal_mutable_birthdate();
   public:
 
-  // string sex = 2;
+  // uint32 sex = 2;
   void clear_sex();
-  const std::string& sex() const;
-  void set_sex(const std::string& value);
-  void set_sex(std::string&& value);
-  void set_sex(const char* value);
-  void set_sex(const char* value, size_t size);
-  std::string* mutable_sex();
-  std::string* release_sex();
-  void set_allocated_sex(std::string* sex);
+  ::PROTOBUF_NAMESPACE_ID::uint32 sex() const;
+  void set_sex(::PROTOBUF_NAMESPACE_ID::uint32 value);
   private:
-  const std::string& _internal_sex() const;
-  void _internal_set_sex(const std::string& value);
-  std::string* _internal_mutable_sex();
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_sex() const;
+  void _internal_set_sex(::PROTOBUF_NAMESPACE_ID::uint32 value);
   public:
 
   // uint32 is_marriage = 3;
@@ -664,7 +650,7 @@ class AppBusiBaseAuguryReq PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr birthdate_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr sex_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 sex_;
   ::PROTOBUF_NAMESPACE_ID::uint32 is_marriage_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_app_5fbusi_5fitg_5fserver_2eproto;
@@ -1664,20 +1650,13 @@ class AppBusiBaseStarCompassReq PROTOBUF_FINAL :
   std::string* _internal_mutable_birthdate();
   public:
 
-  // string sex = 2;
+  // uint32 sex = 2;
   void clear_sex();
-  const std::string& sex() const;
-  void set_sex(const std::string& value);
-  void set_sex(std::string&& value);
-  void set_sex(const char* value);
-  void set_sex(const char* value, size_t size);
-  std::string* mutable_sex();
-  std::string* release_sex();
-  void set_allocated_sex(std::string* sex);
+  ::PROTOBUF_NAMESPACE_ID::uint32 sex() const;
+  void set_sex(::PROTOBUF_NAMESPACE_ID::uint32 value);
   private:
-  const std::string& _internal_sex() const;
-  void _internal_set_sex(const std::string& value);
-  std::string* _internal_mutable_sex();
+  ::PROTOBUF_NAMESPACE_ID::uint32 _internal_sex() const;
+  void _internal_set_sex(::PROTOBUF_NAMESPACE_ID::uint32 value);
   public:
 
   // uint32 is_marriage = 3;
@@ -1697,7 +1676,7 @@ class AppBusiBaseStarCompassReq PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr birthdate_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr sex_;
+  ::PROTOBUF_NAMESPACE_ID::uint32 sex_;
   ::PROTOBUF_NAMESPACE_ID::uint32 is_marriage_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_app_5fbusi_5fitg_5fserver_2eproto;
@@ -1988,65 +1967,24 @@ inline void AppBusiBirthdateConvertReq::set_allocated_birthdate(std::string* bir
   // @@protoc_insertion_point(field_set_allocated:trpc.app.AppBusiBirthdateConvertReq.birthdate)
 }
 
-// string sex = 2;
+// uint32 sex = 2;
 inline void AppBusiBirthdateConvertReq::clear_sex() {
-  sex_.ClearToEmpty();
+  sex_ = 0u;
 }
-inline const std::string& AppBusiBirthdateConvertReq::sex() const {
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppBusiBirthdateConvertReq::_internal_sex() const {
+  return sex_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppBusiBirthdateConvertReq::sex() const {
   // @@protoc_insertion_point(field_get:trpc.app.AppBusiBirthdateConvertReq.sex)
   return _internal_sex();
 }
-inline void AppBusiBirthdateConvertReq::set_sex(const std::string& value) {
+inline void AppBusiBirthdateConvertReq::_internal_set_sex(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  sex_ = value;
+}
+inline void AppBusiBirthdateConvertReq::set_sex(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   _internal_set_sex(value);
   // @@protoc_insertion_point(field_set:trpc.app.AppBusiBirthdateConvertReq.sex)
-}
-inline std::string* AppBusiBirthdateConvertReq::mutable_sex() {
-  // @@protoc_insertion_point(field_mutable:trpc.app.AppBusiBirthdateConvertReq.sex)
-  return _internal_mutable_sex();
-}
-inline const std::string& AppBusiBirthdateConvertReq::_internal_sex() const {
-  return sex_.Get();
-}
-inline void AppBusiBirthdateConvertReq::_internal_set_sex(const std::string& value) {
-  
-  sex_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
-}
-inline void AppBusiBirthdateConvertReq::set_sex(std::string&& value) {
-  
-  sex_.Set(
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:trpc.app.AppBusiBirthdateConvertReq.sex)
-}
-inline void AppBusiBirthdateConvertReq::set_sex(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  sex_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:trpc.app.AppBusiBirthdateConvertReq.sex)
-}
-inline void AppBusiBirthdateConvertReq::set_sex(const char* value,
-    size_t size) {
-  
-  sex_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:trpc.app.AppBusiBirthdateConvertReq.sex)
-}
-inline std::string* AppBusiBirthdateConvertReq::_internal_mutable_sex() {
-  
-  return sex_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
-}
-inline std::string* AppBusiBirthdateConvertReq::release_sex() {
-  // @@protoc_insertion_point(field_release:trpc.app.AppBusiBirthdateConvertReq.sex)
-  return sex_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void AppBusiBirthdateConvertReq::set_allocated_sex(std::string* sex) {
-  if (sex != nullptr) {
-    
-  } else {
-    
-  }
-  sex_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), sex,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:trpc.app.AppBusiBirthdateConvertReq.sex)
 }
 
 // uint32 marriage = 3;
@@ -2401,65 +2339,24 @@ inline void AppBusiBaseAuguryReq::set_allocated_birthdate(std::string* birthdate
   // @@protoc_insertion_point(field_set_allocated:trpc.app.AppBusiBaseAuguryReq.birthdate)
 }
 
-// string sex = 2;
+// uint32 sex = 2;
 inline void AppBusiBaseAuguryReq::clear_sex() {
-  sex_.ClearToEmpty();
+  sex_ = 0u;
 }
-inline const std::string& AppBusiBaseAuguryReq::sex() const {
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppBusiBaseAuguryReq::_internal_sex() const {
+  return sex_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppBusiBaseAuguryReq::sex() const {
   // @@protoc_insertion_point(field_get:trpc.app.AppBusiBaseAuguryReq.sex)
   return _internal_sex();
 }
-inline void AppBusiBaseAuguryReq::set_sex(const std::string& value) {
+inline void AppBusiBaseAuguryReq::_internal_set_sex(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  sex_ = value;
+}
+inline void AppBusiBaseAuguryReq::set_sex(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   _internal_set_sex(value);
   // @@protoc_insertion_point(field_set:trpc.app.AppBusiBaseAuguryReq.sex)
-}
-inline std::string* AppBusiBaseAuguryReq::mutable_sex() {
-  // @@protoc_insertion_point(field_mutable:trpc.app.AppBusiBaseAuguryReq.sex)
-  return _internal_mutable_sex();
-}
-inline const std::string& AppBusiBaseAuguryReq::_internal_sex() const {
-  return sex_.Get();
-}
-inline void AppBusiBaseAuguryReq::_internal_set_sex(const std::string& value) {
-  
-  sex_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
-}
-inline void AppBusiBaseAuguryReq::set_sex(std::string&& value) {
-  
-  sex_.Set(
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:trpc.app.AppBusiBaseAuguryReq.sex)
-}
-inline void AppBusiBaseAuguryReq::set_sex(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  sex_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:trpc.app.AppBusiBaseAuguryReq.sex)
-}
-inline void AppBusiBaseAuguryReq::set_sex(const char* value,
-    size_t size) {
-  
-  sex_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:trpc.app.AppBusiBaseAuguryReq.sex)
-}
-inline std::string* AppBusiBaseAuguryReq::_internal_mutable_sex() {
-  
-  return sex_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
-}
-inline std::string* AppBusiBaseAuguryReq::release_sex() {
-  // @@protoc_insertion_point(field_release:trpc.app.AppBusiBaseAuguryReq.sex)
-  return sex_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void AppBusiBaseAuguryReq::set_allocated_sex(std::string* sex) {
-  if (sex != nullptr) {
-    
-  } else {
-    
-  }
-  sex_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), sex,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:trpc.app.AppBusiBaseAuguryReq.sex)
 }
 
 // uint32 is_marriage = 3;
@@ -3470,65 +3367,24 @@ inline void AppBusiBaseStarCompassReq::set_allocated_birthdate(std::string* birt
   // @@protoc_insertion_point(field_set_allocated:trpc.app.AppBusiBaseStarCompassReq.birthdate)
 }
 
-// string sex = 2;
+// uint32 sex = 2;
 inline void AppBusiBaseStarCompassReq::clear_sex() {
-  sex_.ClearToEmpty();
+  sex_ = 0u;
 }
-inline const std::string& AppBusiBaseStarCompassReq::sex() const {
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppBusiBaseStarCompassReq::_internal_sex() const {
+  return sex_;
+}
+inline ::PROTOBUF_NAMESPACE_ID::uint32 AppBusiBaseStarCompassReq::sex() const {
   // @@protoc_insertion_point(field_get:trpc.app.AppBusiBaseStarCompassReq.sex)
   return _internal_sex();
 }
-inline void AppBusiBaseStarCompassReq::set_sex(const std::string& value) {
+inline void AppBusiBaseStarCompassReq::_internal_set_sex(::PROTOBUF_NAMESPACE_ID::uint32 value) {
+  
+  sex_ = value;
+}
+inline void AppBusiBaseStarCompassReq::set_sex(::PROTOBUF_NAMESPACE_ID::uint32 value) {
   _internal_set_sex(value);
   // @@protoc_insertion_point(field_set:trpc.app.AppBusiBaseStarCompassReq.sex)
-}
-inline std::string* AppBusiBaseStarCompassReq::mutable_sex() {
-  // @@protoc_insertion_point(field_mutable:trpc.app.AppBusiBaseStarCompassReq.sex)
-  return _internal_mutable_sex();
-}
-inline const std::string& AppBusiBaseStarCompassReq::_internal_sex() const {
-  return sex_.Get();
-}
-inline void AppBusiBaseStarCompassReq::_internal_set_sex(const std::string& value) {
-  
-  sex_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
-}
-inline void AppBusiBaseStarCompassReq::set_sex(std::string&& value) {
-  
-  sex_.Set(
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:trpc.app.AppBusiBaseStarCompassReq.sex)
-}
-inline void AppBusiBaseStarCompassReq::set_sex(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  sex_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:trpc.app.AppBusiBaseStarCompassReq.sex)
-}
-inline void AppBusiBaseStarCompassReq::set_sex(const char* value,
-    size_t size) {
-  
-  sex_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:trpc.app.AppBusiBaseStarCompassReq.sex)
-}
-inline std::string* AppBusiBaseStarCompassReq::_internal_mutable_sex() {
-  
-  return sex_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
-}
-inline std::string* AppBusiBaseStarCompassReq::release_sex() {
-  // @@protoc_insertion_point(field_release:trpc.app.AppBusiBaseStarCompassReq.sex)
-  return sex_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void AppBusiBaseStarCompassReq::set_allocated_sex(std::string* sex) {
-  if (sex != nullptr) {
-    
-  } else {
-    
-  }
-  sex_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), sex,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:trpc.app.AppBusiBaseStarCompassReq.sex)
 }
 
 // uint32 is_marriage = 3;

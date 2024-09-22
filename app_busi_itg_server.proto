@@ -11,7 +11,7 @@ service AppBusiItgService {
 
 message AppBusiBirthdateConvertReq {
   string birthdate = 1;
-  string sex = 2;
+  uint32 sex = 2;
   uint32 marriage = 3;
 }
 
@@ -25,7 +25,7 @@ message AppBusiBirthdateConvertRsp {
 
 message AppBusiBaseAuguryReq {
   string birthdate = 1;
-  string sex = 2;
+  uint32 sex = 2;
   uint32 is_marriage = 3;
 }
 
@@ -62,7 +62,7 @@ message StarCompassAssemble {
 
 message AppBusiBaseStarCompassReq {
   string birthdate = 1;
-  string sex = 2;
+  uint32 sex = 2;
   uint32 is_marriage = 3;
 }
 

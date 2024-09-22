@@ -21,7 +21,7 @@ namespace app {
 constexpr AppBusiBirthdateConvertReq::AppBusiBirthdateConvertReq(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : birthdate_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , sex_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , sex_(0u)
   , marriage_(0u){}
 struct AppBusiBirthdateConvertReqDefaultTypeInternal {
   constexpr AppBusiBirthdateConvertReqDefaultTypeInternal()
@@ -52,7 +52,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT AppBusiBirthdateConvertRspDefau
 constexpr AppBusiBaseAuguryReq::AppBusiBaseAuguryReq(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : birthdate_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , sex_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , sex_(0u)
   , is_marriage_(0u){}
 struct AppBusiBaseAuguryReqDefaultTypeInternal {
   constexpr AppBusiBaseAuguryReqDefaultTypeInternal()
@@ -132,7 +132,7 @@ PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT StarCompassAssembleDefaultTypeI
 constexpr AppBusiBaseStarCompassReq::AppBusiBaseStarCompassReq(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
   : birthdate_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , sex_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , sex_(0u)
   , is_marriage_(0u){}
 struct AppBusiBaseStarCompassReqDefaultTypeInternal {
   constexpr AppBusiBaseStarCompassReqDefaultTypeInternal()
@@ -277,12 +277,12 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 const char descriptor_table_protodef_app_5fbusi_5fitg_5fserver_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\031app_busi_itg_server.proto\022\010trpc.app\"N\n"
   "\032AppBusiBirthdateConvertReq\022\021\n\tbirthdate"
-  "\030\001 \001(\t\022\013\n\003sex\030\002 \001(\t\022\020\n\010marriage\030\003 \001(\r\"s\n"
+  "\030\001 \001(\t\022\013\n\003sex\030\002 \001(\r\022\020\n\010marriage\030\003 \001(\r\"s\n"
   "\032AppBusiBirthdateConvertRsp\022\021\n\tbirthdate"
   "\030\001 \001(\t\022\016\n\006st_idx\030\002 \001(\r\022\017\n\007st_name\030\003 \001(\t\022"
   "\017\n\007gz_idxs\030\004 \003(\r\022\020\n\010gz_names\030\005 \003(\t\"K\n\024Ap"
   "pBusiBaseAuguryReq\022\021\n\tbirthdate\030\001 \001(\t\022\013\n"
-  "\003sex\030\002 \001(\t\022\023\n\013is_marriage\030\003 \001(\r\"U\n\006SixGo"
+  "\003sex\030\002 \001(\r\022\023\n\013is_marriage\030\003 \001(\r\"U\n\006SixGo"
   "d\022\013\n\003idx\030\001 \001(\r\022\r\n\005g_idx\030\002 \001(\r\022\016\n\006g_name\030"
   "\003 \001(\t\022\016\n\006z_idxs\030\004 \003(\r\022\017\n\007z_names\030\005 \003(\t\"\354"
   "\001\n\024AppBusiBaseAuguryRsp\022\021\n\tbirthdate\030\001 \001"
@@ -295,7 +295,7 @@ const char descriptor_table_protodef_app_5fbusi_5fitg_5fserver_2eproto[] PROTOBU
   "\"=\n\023StarCompassAssemble\022&\n\007sc_list\030\001 \003(\013"
   "2\025.trpc.app.StarCompass\"P\n\031AppBusiBaseSt"
   "arCompassReq\022\021\n\tbirthdate\030\001 \001(\t\022\013\n\003sex\030\002"
-  " \001(\t\022\023\n\013is_marriage\030\003 \001(\r\"\315\001\n\031AppBusiBas"
+  " \001(\r\022\023\n\013is_marriage\030\003 \001(\r\"\315\001\n\031AppBusiBas"
   "eStarCompassRsp\022\027\n\017user_main_z_idx\030\001 \001(\r"
   "\022\033\n\023cur_year_shift_step\030\003 \001(\r\022\017\n\007z_names"
   "\030\004 \003(\t\0224\n\rbase_sc_front\030\005 \003(\0132\035.trpc.app"
@@ -349,19 +349,18 @@ AppBusiBirthdateConvertReq::AppBusiBirthdateConvertReq(const AppBusiBirthdateCon
     birthdate_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_birthdate(), 
       GetArena());
   }
-  sex_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_sex().empty()) {
-    sex_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_sex(), 
-      GetArena());
-  }
-  marriage_ = from.marriage_;
+  ::memcpy(&sex_, &from.sex_,
+    static_cast<size_t>(reinterpret_cast<char*>(&marriage_) -
+    reinterpret_cast<char*>(&sex_)) + sizeof(marriage_));
   // @@protoc_insertion_point(copy_constructor:trpc.app.AppBusiBirthdateConvertReq)
 }
 
 void AppBusiBirthdateConvertReq::SharedCtor() {
 birthdate_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-sex_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-marriage_ = 0u;
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&sex_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&marriage_) -
+    reinterpret_cast<char*>(&sex_)) + sizeof(marriage_));
 }
 
 AppBusiBirthdateConvertReq::~AppBusiBirthdateConvertReq() {
@@ -373,7 +372,6 @@ AppBusiBirthdateConvertReq::~AppBusiBirthdateConvertReq() {
 void AppBusiBirthdateConvertReq::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   birthdate_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  sex_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void AppBusiBirthdateConvertReq::ArenaDtor(void* object) {
@@ -393,8 +391,9 @@ void AppBusiBirthdateConvertReq::Clear() {
   (void) cached_has_bits;
 
   birthdate_.ClearToEmpty();
-  sex_.ClearToEmpty();
-  marriage_ = 0u;
+  ::memset(&sex_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&marriage_) -
+      reinterpret_cast<char*>(&sex_)) + sizeof(marriage_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -414,12 +413,10 @@ const char* AppBusiBirthdateConvertReq::_InternalParse(const char* ptr, ::PROTOB
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string sex = 2;
+      // uint32 sex = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          auto str = _internal_mutable_sex();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.AppBusiBirthdateConvertReq.sex"));
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          sex_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -468,14 +465,10 @@ failure:
         1, this->_internal_birthdate(), target);
   }
 
-  // string sex = 2;
-  if (this->sex().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_sex().data(), static_cast<int>(this->_internal_sex().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "trpc.app.AppBusiBirthdateConvertReq.sex");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_sex(), target);
+  // uint32 sex = 2;
+  if (this->sex() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->_internal_sex(), target);
   }
 
   // uint32 marriage = 3;
@@ -507,10 +500,10 @@ size_t AppBusiBirthdateConvertReq::ByteSizeLong() const {
         this->_internal_birthdate());
   }
 
-  // string sex = 2;
-  if (this->sex().size() > 0) {
+  // uint32 sex = 2;
+  if (this->sex() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
         this->_internal_sex());
   }
 
@@ -555,7 +548,7 @@ void AppBusiBirthdateConvertReq::MergeFrom(const AppBusiBirthdateConvertReq& fro
   if (from.birthdate().size() > 0) {
     _internal_set_birthdate(from._internal_birthdate());
   }
-  if (from.sex().size() > 0) {
+  if (from.sex() != 0) {
     _internal_set_sex(from._internal_sex());
   }
   if (from.marriage() != 0) {
@@ -585,8 +578,12 @@ void AppBusiBirthdateConvertReq::InternalSwap(AppBusiBirthdateConvertReq* other)
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   birthdate_.Swap(&other->birthdate_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  sex_.Swap(&other->sex_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(marriage_, other->marriage_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(AppBusiBirthdateConvertReq, marriage_)
+      + sizeof(AppBusiBirthdateConvertReq::marriage_)
+      - PROTOBUF_FIELD_OFFSET(AppBusiBirthdateConvertReq, sex_)>(
+          reinterpret_cast<char*>(&sex_),
+          reinterpret_cast<char*>(&other->sex_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata AppBusiBirthdateConvertReq::GetMetadata() const {
@@ -955,19 +952,18 @@ AppBusiBaseAuguryReq::AppBusiBaseAuguryReq(const AppBusiBaseAuguryReq& from)
     birthdate_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_birthdate(), 
       GetArena());
   }
-  sex_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_sex().empty()) {
-    sex_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_sex(), 
-      GetArena());
-  }
-  is_marriage_ = from.is_marriage_;
+  ::memcpy(&sex_, &from.sex_,
+    static_cast<size_t>(reinterpret_cast<char*>(&is_marriage_) -
+    reinterpret_cast<char*>(&sex_)) + sizeof(is_marriage_));
   // @@protoc_insertion_point(copy_constructor:trpc.app.AppBusiBaseAuguryReq)
 }
 
 void AppBusiBaseAuguryReq::SharedCtor() {
 birthdate_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-sex_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-is_marriage_ = 0u;
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&sex_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&is_marriage_) -
+    reinterpret_cast<char*>(&sex_)) + sizeof(is_marriage_));
 }
 
 AppBusiBaseAuguryReq::~AppBusiBaseAuguryReq() {
@@ -979,7 +975,6 @@ AppBusiBaseAuguryReq::~AppBusiBaseAuguryReq() {
 void AppBusiBaseAuguryReq::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   birthdate_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  sex_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void AppBusiBaseAuguryReq::ArenaDtor(void* object) {
@@ -999,8 +994,9 @@ void AppBusiBaseAuguryReq::Clear() {
   (void) cached_has_bits;
 
   birthdate_.ClearToEmpty();
-  sex_.ClearToEmpty();
-  is_marriage_ = 0u;
+  ::memset(&sex_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&is_marriage_) -
+      reinterpret_cast<char*>(&sex_)) + sizeof(is_marriage_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -1020,12 +1016,10 @@ const char* AppBusiBaseAuguryReq::_InternalParse(const char* ptr, ::PROTOBUF_NAM
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string sex = 2;
+      // uint32 sex = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          auto str = _internal_mutable_sex();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.AppBusiBaseAuguryReq.sex"));
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          sex_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1074,14 +1068,10 @@ failure:
         1, this->_internal_birthdate(), target);
   }
 
-  // string sex = 2;
-  if (this->sex().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_sex().data(), static_cast<int>(this->_internal_sex().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "trpc.app.AppBusiBaseAuguryReq.sex");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_sex(), target);
+  // uint32 sex = 2;
+  if (this->sex() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->_internal_sex(), target);
   }
 
   // uint32 is_marriage = 3;
@@ -1113,10 +1103,10 @@ size_t AppBusiBaseAuguryReq::ByteSizeLong() const {
         this->_internal_birthdate());
   }
 
-  // string sex = 2;
-  if (this->sex().size() > 0) {
+  // uint32 sex = 2;
+  if (this->sex() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
         this->_internal_sex());
   }
 
@@ -1161,7 +1151,7 @@ void AppBusiBaseAuguryReq::MergeFrom(const AppBusiBaseAuguryReq& from) {
   if (from.birthdate().size() > 0) {
     _internal_set_birthdate(from._internal_birthdate());
   }
-  if (from.sex().size() > 0) {
+  if (from.sex() != 0) {
     _internal_set_sex(from._internal_sex());
   }
   if (from.is_marriage() != 0) {
@@ -1191,8 +1181,12 @@ void AppBusiBaseAuguryReq::InternalSwap(AppBusiBaseAuguryReq* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   birthdate_.Swap(&other->birthdate_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  sex_.Swap(&other->sex_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(is_marriage_, other->is_marriage_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(AppBusiBaseAuguryReq, is_marriage_)
+      + sizeof(AppBusiBaseAuguryReq::is_marriage_)
+      - PROTOBUF_FIELD_OFFSET(AppBusiBaseAuguryReq, sex_)>(
+          reinterpret_cast<char*>(&sex_),
+          reinterpret_cast<char*>(&other->sex_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata AppBusiBaseAuguryReq::GetMetadata() const {
@@ -2539,19 +2533,18 @@ AppBusiBaseStarCompassReq::AppBusiBaseStarCompassReq(const AppBusiBaseStarCompas
     birthdate_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_birthdate(), 
       GetArena());
   }
-  sex_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_sex().empty()) {
-    sex_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_sex(), 
-      GetArena());
-  }
-  is_marriage_ = from.is_marriage_;
+  ::memcpy(&sex_, &from.sex_,
+    static_cast<size_t>(reinterpret_cast<char*>(&is_marriage_) -
+    reinterpret_cast<char*>(&sex_)) + sizeof(is_marriage_));
   // @@protoc_insertion_point(copy_constructor:trpc.app.AppBusiBaseStarCompassReq)
 }
 
 void AppBusiBaseStarCompassReq::SharedCtor() {
 birthdate_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-sex_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-is_marriage_ = 0u;
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&sex_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&is_marriage_) -
+    reinterpret_cast<char*>(&sex_)) + sizeof(is_marriage_));
 }
 
 AppBusiBaseStarCompassReq::~AppBusiBaseStarCompassReq() {
@@ -2563,7 +2556,6 @@ AppBusiBaseStarCompassReq::~AppBusiBaseStarCompassReq() {
 void AppBusiBaseStarCompassReq::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   birthdate_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  sex_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 void AppBusiBaseStarCompassReq::ArenaDtor(void* object) {
@@ -2583,8 +2575,9 @@ void AppBusiBaseStarCompassReq::Clear() {
   (void) cached_has_bits;
 
   birthdate_.ClearToEmpty();
-  sex_.ClearToEmpty();
-  is_marriage_ = 0u;
+  ::memset(&sex_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&is_marriage_) -
+      reinterpret_cast<char*>(&sex_)) + sizeof(is_marriage_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -2604,12 +2597,10 @@ const char* AppBusiBaseStarCompassReq::_InternalParse(const char* ptr, ::PROTOBU
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // string sex = 2;
+      // uint32 sex = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          auto str = _internal_mutable_sex();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "trpc.app.AppBusiBaseStarCompassReq.sex"));
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
+          sex_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -2658,14 +2649,10 @@ failure:
         1, this->_internal_birthdate(), target);
   }
 
-  // string sex = 2;
-  if (this->sex().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_sex().data(), static_cast<int>(this->_internal_sex().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "trpc.app.AppBusiBaseStarCompassReq.sex");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_sex(), target);
+  // uint32 sex = 2;
+  if (this->sex() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt32ToArray(2, this->_internal_sex(), target);
   }
 
   // uint32 is_marriage = 3;
@@ -2697,10 +2684,10 @@ size_t AppBusiBaseStarCompassReq::ByteSizeLong() const {
         this->_internal_birthdate());
   }
 
-  // string sex = 2;
-  if (this->sex().size() > 0) {
+  // uint32 sex = 2;
+  if (this->sex() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt32Size(
         this->_internal_sex());
   }
 
@@ -2745,7 +2732,7 @@ void AppBusiBaseStarCompassReq::MergeFrom(const AppBusiBaseStarCompassReq& from)
   if (from.birthdate().size() > 0) {
     _internal_set_birthdate(from._internal_birthdate());
   }
-  if (from.sex().size() > 0) {
+  if (from.sex() != 0) {
     _internal_set_sex(from._internal_sex());
   }
   if (from.is_marriage() != 0) {
@@ -2775,8 +2762,12 @@ void AppBusiBaseStarCompassReq::InternalSwap(AppBusiBaseStarCompassReq* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   birthdate_.Swap(&other->birthdate_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  sex_.Swap(&other->sex_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(is_marriage_, other->is_marriage_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(AppBusiBaseStarCompassReq, is_marriage_)
+      + sizeof(AppBusiBaseStarCompassReq::is_marriage_)
+      - PROTOBUF_FIELD_OFFSET(AppBusiBaseStarCompassReq, sex_)>(
+          reinterpret_cast<char*>(&sex_),
+          reinterpret_cast<char*>(&other->sex_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata AppBusiBaseStarCompassReq::GetMetadata() const {
